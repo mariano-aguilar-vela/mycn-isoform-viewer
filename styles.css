@@ -1,0 +1,230 @@
+/* MYCN isoform-stack viewer — custom d3 SVG, superset of the igv viewer.
+   Header (ideogram + ruler + reference strip) + zoom/pan + base level + collapsible drawers.
+   Same v3.10 palette + detail-card format as the igv viewer, so both read as one project. */
+
+:root{
+  --accent:#4A6FA5;
+  --ink:#222a2e; --ink-soft:#5f6a66; --line:#e3e7e9;
+  --bg:#ffffff; --bg-soft:#f7f8f9;
+  --font:"Inter", system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --mono:ui-monospace, "SF Mono", "Cascadia Code", "Roboto Mono", Menlo, Consolas, monospace;
+  --drawer-w:326px; --details-w:346px; --strip-w:34px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0; font-family:var(--font); color:var(--ink); background:var(--bg);
+  -webkit-font-smoothing:antialiased; display:flex; flex-direction:column; overflow:hidden}
+
+/* ---------- control bar ---------- */
+#topbar{flex:0 0 auto; height:52px; display:flex; align-items:center; justify-content:space-between;
+  gap:14px; padding:0 16px; background:var(--bg); border-bottom:1px solid var(--line); z-index:40}
+.tb-title{font-size:15px; font-weight:600; letter-spacing:.1px; white-space:nowrap}
+.tb-title .tb-sub{font-weight:400; color:var(--ink-soft)}
+.tb-dot{display:inline-block; width:10px; height:10px; border-radius:50%; background:var(--accent); margin-right:9px}
+.tb-controls{display:flex; align-items:center; gap:9px}
+#locus-form{display:flex; align-items:center; gap:6px}
+#locus-input{width:210px; height:31px; padding:0 10px; font-family:var(--mono); font-size:12px;
+  color:var(--ink); background:var(--bg-soft); border:1px solid var(--line); border-radius:7px; outline:none}
+#locus-input:focus{border-color:var(--accent); background:#fff}
+#locus-input.bad{border-color:#a5322c; background:#fbeceb}   /* T2.3: flash on unparseable locus input */
+#locus-form button, .tb-zoom button, .tb-btn{height:31px; padding:0 12px; font-size:13px; font-weight:600;
+  border:1px solid var(--line); border-radius:7px; cursor:pointer; line-height:1; background:#eef1f5; color:var(--accent)}
+#locus-form button{color:#fff; background:var(--accent); min-width:32px; border-color:var(--accent)}
+.tb-zoom{display:flex; gap:4px}
+.tb-zoom button{min-width:32px; padding:0; font-size:15px}
+.tb-btn.primary{background:var(--accent); color:#fff; border-color:var(--accent)}
+#locus-form button:hover, .tb-zoom button:hover, .tb-btn:hover{filter:brightness(1.04)}
+
+/* ---------- workspace: left drawer (push) | viewer (header + stack, one column) ---------- */
+#workspace{flex:1 1 auto; display:flex; flex-direction:row; min-height:0; overflow:hidden}
+#viewer{flex:1 1 auto; display:flex; flex-direction:column; min-width:0; overflow:hidden}
+
+/* ideogram + genomic header — svg width is set to the viewer width by JS so it aligns with the stack */
+#ideo-wrap{flex:0 0 auto; background:var(--bg); padding:5px 0 2px}
+#ideo{display:block; height:56px}
+#hdr-wrap{flex:0 0 auto; background:var(--bg); border-bottom:1px solid var(--line)}
+#hdr{display:block}
+
+/* ---------- stage: stack (+ right overlay drawer) ---------- */
+#stage{flex:1 1 auto; position:relative; min-height:0; overflow:hidden}
+#stackwrap{position:absolute; inset:0; display:flex; flex-direction:column}
+#stack-scroll{flex:1 1 auto; overflow-y:auto; overflow-x:hidden; background:#fff}
+#stack{display:block}
+
+/* wayfinding marker — a slim static bar in its OWN lane ABOVE the stack
+   (single line, can never wrap down onto the transcript rows or overlap the drawer) */
+#nowshowing{flex:0 0 auto; display:flex; align-items:center; gap:8px; flex-wrap:nowrap; overflow:hidden;
+  /* T2.5: reserve the Details-tab width on the right so the hint can NEVER run under the docked tab */
+  padding:5px calc(var(--strip-w) + 12px) 5px 14px; min-height:28px; font-size:12px;
+  background:var(--bg-soft); border-bottom:1px solid var(--line)}
+#ns-name{font-weight:600; color:var(--ink); white-space:nowrap; flex:0 0 auto}
+#nowshowing .ns-sep{color:var(--ink-soft); flex:0 0 auto}
+#ns-coord{font-family:var(--mono); font-size:11px; color:var(--ink-soft); white-space:nowrap; flex:0 0 auto}
+/* T2.5: hint is LEFT-aligned (no margin-left:auto) and shrinks with ellipsis INSIDE the reserved
+   content box, so it stays clear of the Details tab at every width / drawer state */
+#nowshowing .ns-hint{font-size:10.5px; color:var(--ink-soft); white-space:nowrap;
+  min-width:0; flex:0 1 auto; overflow:hidden; text-overflow:ellipsis; margin-left:auto; margin-right:auto}
+
+/* ---------- LEFT drawer pushes (flex item); RIGHT drawer overlays the stack ---------- */
+.drawer{background:var(--bg-soft); overflow-y:auto; padding:14px 15px 40px}
+.drawer[hidden]{display:none}
+.drawer.left{position:relative; flex:0 0 var(--drawer-w); width:var(--drawer-w);
+  border-right:1px solid var(--line); box-shadow:2px 0 12px rgba(0,0,0,.04)}
+.drawer.right{position:absolute; top:0; bottom:0; right:0; z-index:20; width:var(--details-w);
+  border-left:1px solid var(--line); box-shadow:0 0 22px rgba(0,0,0,.07)}
+.drawer-head{padding-top:2px}
+/* per-drawer collapse control (word strips reopen; these collapse) */
+.drawer-collapse{position:absolute; top:8px; width:24px; height:24px; border:1px solid var(--line);
+  background:#fff; color:var(--ink-soft); border-radius:6px; cursor:pointer; font-size:15px; line-height:1;
+  display:flex; align-items:center; justify-content:center; z-index:22}
+.drawer-collapse:hover{border-color:#c3d0e2; color:var(--accent)}
+.drawer-collapse.left{right:10px}
+.drawer-collapse.right{right:10px}
+.drawer.left .lens-toggle{padding-right:30px}
+.drawer.right .rail-body{padding-top:6px}
+.drawer.right .rail-body h2{padding-right:26px}
+
+/* LEFT strip is a flex item (push); RIGHT strip overlays at the stage right edge */
+.strip{background:var(--bg-soft); border:0; cursor:pointer; padding:12px 0;
+  display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--ink-soft)}
+.strip[hidden]{display:none}
+.strip.left{position:relative; flex:0 0 var(--strip-w); width:var(--strip-w); border-right:1px solid var(--line)}
+.strip.right{position:absolute; top:0; bottom:0; right:0; z-index:21; width:var(--strip-w); border-left:1px solid var(--line)}
+.strip:hover{background:#eef1f5; color:var(--accent)}
+.strip-word{writing-mode:vertical-rl; text-orientation:mixed; font-size:12.5px; font-weight:600; letter-spacing:1px}
+.strip-chev{font-size:14px}
+
+/* ---------- lens toggle ---------- */
+.lens-toggle{display:flex; align-items:center; gap:6px; margin-bottom:10px}
+.lens-label{font-size:11px; font-weight:600; color:var(--ink-soft); white-space:nowrap}
+.lens-btn{flex:1 1 auto; height:29px; font:inherit; font-size:11.5px; font-weight:600; cursor:pointer;
+  border:1px solid var(--line); background:#fff; color:var(--ink-soft); border-radius:7px; padding:0 6px}
+.lens-btn.active{background:var(--accent); color:#fff; border-color:var(--accent)}
+.lens-btn:hover:not(.active){border-color:#c3d0e2; color:var(--accent)}
+
+.cue{position:relative; font-size:12px; color:#31527e; background:#eaf0f8; border:1px solid #d6e2f1;
+  border-radius:7px; padding:7px 26px 7px 10px; margin-bottom:9px}
+.cue-x{position:absolute; right:6px; top:5px; border:0; background:none; color:#7c93b3; font-size:15px; cursor:pointer; line-height:1}
+.cue[hidden]{display:none}
+#feature-search{width:100%; height:31px; padding:0 10px; font-size:12px; color:var(--ink);
+  background:#fff; border:1px solid var(--line); border-radius:7px; outline:none; margin-bottom:12px}
+#feature-search:focus{border-color:var(--accent)}
+
+/* ---------- feature list (both lenses) ---------- */
+.feature-list{display:flex; flex-direction:column; gap:12px}
+.fgroup{display:flex; flex-direction:column; gap:3px}
+.fghead{font-size:10.5px; text-transform:uppercase; letter-spacing:.7px; color:var(--ink-soft); font-weight:600; margin-bottom:3px}
+.fghead.sub{opacity:.85; margin-top:8px}
+.frow,.trow{display:flex; align-items:center; gap:9px; width:100%; text-align:left; cursor:pointer;
+  background:#fff; border:1px solid var(--line); border-radius:7px; padding:7px 9px; font:inherit; color:var(--ink)}
+.frow:hover,.trow:hover{border-color:#c3d0e2; background:#fbfcfe}
+.frow.active,.trow.active{border-color:var(--accent); background:#eef3fa; box-shadow:inset 3px 0 0 var(--accent)}
+.frow .sw{width:12px; height:12px; border-radius:3px; flex:0 0 auto}
+.frow .ftxt{flex:1 1 auto; font-size:12px; line-height:1.3}
+.frow .cdot{width:9px; height:9px; border-radius:50%; flex:0 0 auto; border:1.5px solid var(--ink-soft)}
+.frow .cdot.on{background:#2F7A57; border-color:#2F7A57}
+.frow .cdot.off{background:transparent}
+.frow .ntag{font-size:10px; color:var(--ink-soft); font-family:var(--mono); flex:0 0 auto; white-space:nowrap}
+.frow.uniq{border-color:#bcd0ec; background:#f2f6fc}
+.trow .tchev{font-size:11px; color:var(--ink-soft); width:11px; flex:0 0 auto}
+.trow.active .tchev{color:var(--accent)}
+.trow .tname{font-weight:600; font-size:13px; flex:0 0 auto}
+.trow .tmeta{flex:1 1 auto; font-size:11px; color:var(--ink-soft); text-align:right; font-variant-numeric:tabular-nums}
+.trow .tnc{color:#a5322c; font-weight:600}
+.novel-toggle{width:100%; text-align:left; background:#eef1f5; border:1px dashed #c9d2dc; border-radius:7px;
+  padding:8px 10px; font:inherit; font-size:12px; font-weight:600; color:var(--accent); cursor:pointer}
+.novel-toggle:hover{background:#e6ebf2}
+.novel-toggle .chev{display:inline-block; width:14px}
+.novel-body{display:flex; flex-direction:column; gap:3px; margin-top:8px}
+.novel-body[hidden]{display:none}
+.fsub{display:flex; flex-direction:column; gap:3px}
+
+/* legend */
+.legend{border-top:1px solid var(--line); padding-top:13px; margin-top:15px}
+.legend-title{font-size:10.5px; text-transform:uppercase; letter-spacing:.7px; color:var(--ink-soft); margin-bottom:8px}
+.legend ul{list-style:none; margin:0; padding:0; display:grid; gap:6px}
+.legend li{display:flex; align-items:center; font-size:11.5px; color:var(--ink)}
+/* T2.5: all legend swatches uniform squares (swatch shows colour only, not in-plot thickness) */
+.legend i{width:13px; height:13px; border-radius:2px; margin-right:9px; flex:0 0 auto}
+
+/* ---------- SVG stack elements (interaction cursors/hover; colours set as attributes) ---------- */
+.gutter-hit{cursor:pointer}
+.tx-label,.tx-meta,.tx-chev,.orf-lbl,.grp-lbl,.shared-toggle-lbl,.ruler-lbl,.base-let{pointer-events:none}
+.exon,.orf-bar{cursor:pointer}
+.exon:hover,.orf-bar:hover{stroke:#33404a; stroke-width:1}
+.shared-toggle-hit{cursor:pointer}
+
+/* tooltip */
+.tip{position:fixed; z-index:60; pointer-events:none; background:var(--ink); color:#fff; font-size:11.5px;
+  line-height:1.35; padding:6px 9px; border-radius:6px; max-width:270px; box-shadow:0 4px 16px rgba(0,0,0,.18)}
+.tip[hidden]{display:none}
+.tip b{font-weight:600}
+.tip .dim{color:#c7cfd4}
+
+/* ---------- detail rail / card (identical format to the igv viewer) ---------- */
+.rail-body{min-height:100%}
+.rail-empty{font-size:12.5px; color:var(--ink-soft); line-height:1.5; padding-top:6px}
+.rail-body h2, .exon-detail h2{font-size:12px; text-transform:uppercase; letter-spacing:.8px; color:var(--ink-soft); margin:0 0 10px; font-weight:600}
+.exon-detail .exon-title{font-size:18px; font-weight:700; margin:0 0 10px}
+.orf-id{font-size:22px; font-weight:700; letter-spacing:-.2px; margin:0}
+.orf-id .orf-alias{font-size:15px; font-weight:600; color:var(--accent); margin-left:6px}
+.orf-class{font-size:12.5px; color:var(--ink-soft); margin:2px 0 12px}
+.orf-swatch{display:inline-block; width:13px; height:13px; border-radius:3px; vertical-align:-1px; margin-right:7px}
+.badges{display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px}
+.badge{font-size:11px; font-weight:600; padding:3px 9px; border-radius:999px; letter-spacing:.2px}
+.badge.cons{background:#e5f0ea; color:#2F7A57}
+/* conservation absence = neutral informational chip (outlined data field), never a fail/verdict */
+.badge.noncons{background:#f4f6f7; color:var(--ink-soft); border:1px solid #dfe3e5; font-weight:500}
+.badge.gold{background:#f6edcf; color:#8a6d12; border:1px solid #e6d38f}
+.badge.canon{background:#e6ecf5; color:var(--accent)}
+.badge.cand{background:#eef2f7; color:#5b6b82}
+.badge.ri{background:#dcebe2; color:#8a3f66}
+table.props{width:100%; border-collapse:collapse; margin:2px 0 18px; font-size:12.5px}
+table.props td{padding:5px 0; border-bottom:1px solid var(--line); vertical-align:top}
+table.props td.k{color:var(--ink-soft); white-space:nowrap; padding-right:12px}
+table.props td.v{text-align:right; font-variant-numeric:tabular-nums; font-family:var(--mono); font-size:12px}
+.seqblock{margin:0 0 16px}
+.seqhead{display:flex; justify-content:space-between; align-items:baseline; margin-bottom:6px}
+.seqhead .lbl{font-size:10.5px; text-transform:uppercase; letter-spacing:.7px; color:var(--ink-soft)}
+.seqhead .copy{font-size:11px; color:var(--accent); background:none; border:0; cursor:pointer; padding:0}
+.seqhead .copy:hover{text-decoration:underline}
+.seqhead .copy.ok{color:#2F7A57}
+.seqhead .copy.err{color:#a5322c}
+.seq{font-family:var(--mono); font-size:11px; line-height:1.5; color:var(--ink); background:#fff;
+  border:1px solid var(--line); border-radius:7px; padding:9px 10px; word-break:break-all;
+  max-height:150px; overflow:auto; user-select:all}
+.codon-wrap{background:#fff; border:1px solid var(--line); border-radius:7px; padding:9px;
+  overflow-x:auto; white-space:nowrap; margin-bottom:6px}
+.codon{display:inline-flex; flex-direction:column; align-items:center; font-family:var(--mono);
+  margin-right:3px; padding:3px 3px 2px; border-radius:4px; background:#f4f6f8}
+.codon b{font-size:10.5px; font-weight:600; letter-spacing:.5px; color:var(--ink)}
+.codon i{font-size:11px; font-style:normal; color:var(--ink-soft); margin-top:1px}
+.codon.start{background:#d9efe1} .codon.start b, .codon.start i{color:#1f6b45}
+.codon.stop{background:#f3dcda} .codon.stop b, .codon.stop i{color:#a5322c}
+.codon-legend{font-size:11px; color:var(--ink-soft); display:flex; gap:14px; margin-bottom:18px}
+.codon-legend span::before{content:""; display:inline-block; width:9px; height:9px; border-radius:2px; margin-right:5px}
+.codon-legend .s::before{background:#d9efe1} .codon-legend .e::before{background:#f3dcda}
+.provenance{font-size:11.5px; color:var(--ink-soft); line-height:1.5; border-top:1px solid var(--line); padding-top:12px}
+.provenance .acc{font-family:var(--mono); color:var(--ink)}
+
+/* loading toast */
+.loadmsg{position:fixed; left:50%; top:64px; transform:translateX(-50%); background:var(--ink); color:#fff;
+  font-size:12.5px; padding:8px 16px; border-radius:8px; box-shadow:0 4px 18px rgba(0,0,0,.16); z-index:50}
+.loadmsg.hide{display:none}
+.loadmsg.err{background:#8a2f2a}
+
+/* ---------- ruler brush-to-zoom ---------- */
+.ruler-brush .selection{fill:var(--accent); fill-opacity:.16; stroke:var(--accent); stroke-opacity:.5}
+.ruler-brush .overlay{cursor:ew-resize}
+#hdr{cursor:default}
+
+/* transcript/ORF drawer rows must never clip their labels */
+.trow{min-width:0}
+.trow .tname{white-space:nowrap; flex:0 0 auto}
+.trow .tmeta{min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+.frow .ftxt{min-width:0; overflow:hidden; text-overflow:ellipsis}
+
+/* scientific-accuracy notes in the detail card (factual, low-key; not warnings) */
+.scope-note{font-size:11px; color:var(--ink-soft); margin:0 0 10px; font-style:italic}
+.cons-note{font-size:11px; line-height:1.45; color:var(--ink-soft); background:var(--bg-soft);
+  border:1px solid var(--line); border-radius:7px; padding:7px 10px; margin:0 0 14px}

@@ -1,0 +1,47 @@
+##gff-version 3
+##sequence-region chr2 15938000 15947200
+chr2	MYCN_viewer	gene	15938396	15947022	.	+	.	ID=MYCN;Name=MYCN
+chr2	MYCN_viewer	mRNA	15940550	15947004	.	+	.	ID=MYCN-201;Parent=MYCN;Name=MYCN-201;transcript_id=ENST00000281043.4;color=#4A6FA5;source_provenance=GENCODE v49;Note=GENCODE v49
+chr2	MYCN_viewer	exon	15940550	15940743	.	+	.	Parent=MYCN-201
+chr2	MYCN_viewer	exon	15941948	15942854	.	+	.	Parent=MYCN-201
+chr2	MYCN_viewer	exon	15945493	15947004	.	+	.	Parent=MYCN-201
+chr2	MYCN_viewer	CDS	15942065	15942854	.	+	0	Parent=MYCN-201;color=#4A6FA5
+chr2	MYCN_viewer	CDS	15945493	15946094	.	+	0	Parent=MYCN-201;color=#4A6FA5
+chr2	MYCN_viewer	mRNA	15940566	15947007	.	+	.	ID=MYCN-202;Parent=MYCN;Name=MYCN-202;transcript_id=ENST00000638417.1;color=#D98A3D;source_provenance=GENCODE v49;Note=GENCODE v49
+chr2	MYCN_viewer	exon	15940566	15940743	.	+	.	Parent=MYCN-202
+chr2	MYCN_viewer	exon	15945493	15947007	.	+	.	Parent=MYCN-202
+chr2	MYCN_viewer	CDS	15940587	15940743	.	+	0	Parent=MYCN-202;color=#D98A3D
+chr2	MYCN_viewer	CDS	15945493	15946094	.	+	0	Parent=MYCN-202;color=#D98A3D
+chr2	MYCN_viewer	mRNA	15943557	15946539	.	+	.	ID=MYCN-203;Parent=MYCN;Name=MYCN-203;transcript_id=ENST00000703162.1;color=#C7CFCC;source_provenance=GENCODE v49;Note=GENCODE v49
+chr2	MYCN_viewer	exon	15943557	15943695	.	+	.	Parent=MYCN-203
+chr2	MYCN_viewer	exon	15945493	15946539	.	+	.	Parent=MYCN-203
+chr2	MYCN_viewer	mRNA	15938396	15947004	.	+	.	ID=MYCN-204;Parent=MYCN;Name=MYCN-204;transcript_id=ENST00000885101.1;color=#4A6FA5;source_provenance=GENCODE v49;Note=GENCODE v49
+chr2	MYCN_viewer	exon	15938396	15938653	.	+	.	Parent=MYCN-204
+chr2	MYCN_viewer	exon	15939543	15940743	.	+	.	Parent=MYCN-204
+chr2	MYCN_viewer	exon	15940904	15941053	.	+	.	Parent=MYCN-204
+chr2	MYCN_viewer	exon	15941948	15942854	.	+	.	Parent=MYCN-204
+chr2	MYCN_viewer	exon	15945493	15947004	.	+	.	Parent=MYCN-204
+chr2	MYCN_viewer	CDS	15942065	15942854	.	+	0	Parent=MYCN-204;color=#4A6FA5
+chr2	MYCN_viewer	CDS	15945493	15946094	.	+	0	Parent=MYCN-204;color=#4A6FA5
+chr2	MYCN_viewer	mRNA	15940473	15947017	.	+	.	ID=MYCN-205;Parent=MYCN;Name=MYCN-205;transcript_id=ENST00000930195.1;color=#4A6FA5;source_provenance=GENCODE v49;Note=GENCODE v49
+chr2	MYCN_viewer	exon	15940473	15941053	.	+	.	Parent=MYCN-205
+chr2	MYCN_viewer	exon	15941948	15942854	.	+	.	Parent=MYCN-205
+chr2	MYCN_viewer	exon	15945493	15947017	.	+	.	Parent=MYCN-205
+chr2	MYCN_viewer	CDS	15942065	15942854	.	+	0	Parent=MYCN-205;color=#4A6FA5
+chr2	MYCN_viewer	CDS	15945493	15946094	.	+	0	Parent=MYCN-205;color=#4A6FA5
+chr2	MYCN_viewer	mRNA	15940502	15947022	.	+	.	ID=MYCN-206;Parent=MYCN;Name=MYCN-206;transcript_id=ENST00000930196.1;color=#4A6FA5;source_provenance=GENCODE v49;Note=GENCODE v49
+chr2	MYCN_viewer	exon	15940502	15942854	.	+	.	Parent=MYCN-206
+chr2	MYCN_viewer	exon	15945493	15947022	.	+	.	Parent=MYCN-206
+chr2	MYCN_viewer	CDS	15942065	15942854	.	+	0	Parent=MYCN-206;color=#4A6FA5
+chr2	MYCN_viewer	CDS	15945493	15946094	.	+	0	Parent=MYCN-206;color=#4A6FA5
+chr2	MYCN_viewer	mRNA	15940550	15947022	.	+	.	ID=MYCN-207;Parent=MYCN;Name=MYCN-207;transcript_id=ENST00001138178.1;color=#4A6FA5;source_provenance=GENCODE v50;Note=GENCODE v50
+chr2	MYCN_viewer	exon	15940550	15940743	.	+	.	Parent=MYCN-207
+chr2	MYCN_viewer	exon	15941948	15942854	.	+	.	Parent=MYCN-207
+chr2	MYCN_viewer	exon	15945493	15947022	.	+	.	Parent=MYCN-207
+chr2	MYCN_viewer	CDS	15942065	15942854	.	+	0	Parent=MYCN-207;color=#4A6FA5
+chr2	MYCN_viewer	CDS	15945493	15946094	.	+	0	Parent=MYCN-207;color=#4A6FA5
+chr2	MYCN_viewer	mRNA	15941799	15947004	.	+	.	ID=MYCN-XM;Parent=MYCN;Name=MYCN-XM;transcript_id=NM_001446166.1;color=#4A6FA5;source_provenance=RefSeq NM_001446166.1%3B genomic exon model confirmed vs NCBI XM_047444434.1 (byte-identical mRNA%2C full md5 882366312f718378c8c6aed8d616b2dc)%2C GRCh38 RS_2025_08 placement on NC_000002.12%2C all 4 boundaries exact%3B NM_001446166.1 (13-MAR-2026) postdates RS_2025_08 so is not itself in the released annotation;Note=RefSeq NM_001446166.1%3B genomic exon model confirmed vs NCBI XM_047444434.1 (byte-identical mRNA%2C full md5 882366312f718378c8c6aed8d616b2dc)%2C GRCh38 RS_2025_08 placement on NC_000002.12%2C all 4 boundaries exact%3B NM_001446166.1 (13-MAR-2026) postdates RS_2025_08 so is not itself in the released annotation
+chr2	MYCN_viewer	exon	15941799	15942854	.	+	.	Parent=MYCN-XM
+chr2	MYCN_viewer	exon	15945493	15947004	.	+	.	Parent=MYCN-XM
+chr2	MYCN_viewer	CDS	15942065	15942854	.	+	0	Parent=MYCN-XM;color=#4A6FA5
+chr2	MYCN_viewer	CDS	15945493	15946094	.	+	0	Parent=MYCN-XM;color=#4A6FA5

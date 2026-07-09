@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MYCN isoform stack — transcripts, ORFs &amp; base-level browser</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- control bar (igv-style header) -->
+  <header id="topbar">
+    <div class="tb-title">
+      <span class="tb-dot"></span>
+      <span id="tb-head">MYCN locus</span>
+      <span class="tb-sub" id="tb-sub">— isoform stack</span>
+    </div>
+    <div class="tb-controls">
+      <form id="locus-form" autocomplete="off">
+        <input id="locus-input" type="text" spellcheck="false"
+               placeholder="chr2:15,938,000-15,947,200" aria-label="locus">
+        <button type="submit" title="Go to locus">Go</button>
+      </form>
+      <div class="tb-zoom" role="group" aria-label="zoom">
+        <button id="zoom-out" title="Zoom out">&minus;</button>
+        <button id="zoom-in" title="Zoom in">+</button>
+      </div>
+      <button id="reset-view" class="tb-btn" title="Reset to full locus">Reset</button>
+      <button id="expand-all" class="tb-btn" title="Expand all transcripts">Expand all</button>
+      <button id="collapse-all" class="tb-btn" title="Collapse all expanded transcripts">Collapse all</button>
+      <button id="download-svg" class="tb-btn" title="Download figure as SVG">SVG</button>
+      <button id="download-png" class="tb-btn primary" title="Download figure as PNG">PNG</button>
+    </div>
+  </header>
+
+  <!-- workspace: left drawer (push) | viewer (header + stack share one x-aligned column) -->
+  <div id="workspace">
+    <!-- LEFT drawer: browse index (lens toggle + search + grouped list + legend) -->
+    <aside id="features" class="drawer left open">
+      <button id="features-collapse" class="drawer-collapse left" title="Collapse Features" aria-label="collapse features">‹</button>
+      <div class="drawer-head">
+        <div class="lens-toggle" role="group" aria-label="browse lens">
+          <span class="lens-label">Browse:</span>
+          <button id="lens-tx" class="lens-btn active" data-lens="tx">by transcript</button>
+          <button id="lens-orf" class="lens-btn" data-lens="orf">by ORF</button>
+        </div>
+        <div id="cue" class="cue">Click a transcript to see the proteins it encodes.
+          <button id="cue-dismiss" class="cue-x" title="dismiss" aria-label="dismiss">×</button>
+        </div>
+        <input id="feature-search" type="text" spellcheck="false"
+               placeholder="Search id, class, carrier, conserved, accession…" aria-label="search features">
+      </div>
+      <div id="feature-list" class="feature-list"></div>
+      <div class="legend">
+        <div class="legend-title">Legend</div>
+        <ul id="legend-list"></ul>
+      </div>
+    </aside>
+    <button id="features-strip" class="strip left" hidden>
+      <span class="strip-word">Features</span><span class="strip-chev">›</span>
+    </button>
+
+    <!-- VIEWER: ideogram + genomic ruler/ref strip + stack, all on ONE shared x-scale/width -->
+    <section id="viewer">
+      <div id="ideo-wrap"><svg id="ideo" xmlns="http://www.w3.org/2000/svg"></svg></div>
+      <div id="hdr-wrap"><svg id="hdr" xmlns="http://www.w3.org/2000/svg"></svg></div>
+
+      <div id="stage">
+        <section id="stackwrap">
+          <div id="nowshowing" aria-live="polite">
+            <span id="ns-name">MYCN locus</span>
+            <span class="ns-sep">·</span>
+            <span id="ns-coord">chr2:15,938,000-15,947,200</span>
+            <span class="ns-hint">scroll to zoom · drag to move · drag ruler to zoom</span>
+          </div>
+          <div id="stack-scroll"><svg id="stack" xmlns="http://www.w3.org/2000/svg"></svg></div>
+        </section>
+
+        <!-- RIGHT drawer: detail rail (overlays the stack) -->
+        <aside id="details" class="drawer right" hidden>
+          <button id="details-close" class="drawer-collapse right" title="Collapse Details" aria-label="collapse details">›</button>
+          <div id="rail-body" class="rail-body">
+            <div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>
+          </div>
+        </aside>
+        <button id="details-strip" class="strip right">
+          <span class="strip-chev">‹</span><span class="strip-word">Details</span>
+        </button>
+      </div>
+    </section>
+  </div>
+
+  <div id="tip" class="tip" hidden></div>
+  <div id="loadmsg" class="loadmsg">Loading MYCN data…</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <script src="app.js"></script>
+</body>
+</html>
