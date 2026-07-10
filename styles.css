@@ -48,7 +48,8 @@ body{margin:0; font-family:var(--font); color:var(--ink); background:var(--bg);
 /* ---------- stage: stack (+ right overlay drawer) ---------- */
 #stage{flex:1 1 auto; position:relative; min-height:0; overflow:hidden}
 #stackwrap{position:absolute; inset:0; display:flex; flex-direction:column}
-#stack-scroll{flex:1 1 auto; overflow-y:auto; overflow-x:hidden; background:#fff}
+/* touch-action:none -> the custom touch handlers own pan/zoom on the plot (page scroll stays native elsewhere) */
+#stack-scroll{flex:1 1 auto; overflow-y:auto; overflow-x:hidden; background:#fff; touch-action:none}
 #stack{display:block}
 
 /* wayfinding marker — a slim static bar in its OWN lane ABOVE the stack
@@ -228,3 +229,51 @@ table.props td.v{text-align:right; font-variant-numeric:tabular-nums; font-famil
 .scope-note{font-size:11px; color:var(--ink-soft); margin:0 0 10px; font-style:italic}
 .cons-note{font-size:11px; line-height:1.45; color:var(--ink-soft); background:var(--bg-soft);
   border:1px solid var(--line); border-radius:7px; padding:7px 10px; margin:0 0 14px}
+
+/* ==================================================================
+   RESPONSIVE — reflow (not scale-down): desktop >=1024, tablet 640-1023, phone <640.
+   The SVG width W + GUTTER are recomputed fluidly in JS (computeW/computeGutter);
+   these rules reflow the CHROME (control bar, drawers, strips, legend). No horizontal
+   page overflow at any width (body/#workspace/#viewer/#stack-scroll all clip x).
+   ================================================================== */
+
+/* legend collapse toggle (used on phone; harmless elsewhere) */
+.legend-title{cursor:pointer; user-select:none}
+.legend.collapsed #legend-list{display:none}
+
+/* ---------- TABLET (<=1023px): narrower drawers/fonts, wrapping control bar ---------- */
+@media (max-width:1023px){
+  :root{ --drawer-w:264px; --details-w:300px; }
+  #topbar{ height:auto; min-height:52px; flex-wrap:wrap; gap:8px; padding:7px 12px; }
+  .tb-controls{ gap:7px; flex-wrap:wrap; }
+  #locus-input{ width:160px; }
+}
+
+/* ---------- PHONE (<640px): full-width one-at-a-time overlay sheets ---------- */
+@media (max-width:639px){
+  #topbar{ padding:6px 10px; gap:6px; }
+  .tb-title{ font-size:14px; flex:0 0 auto }
+  .tb-title .tb-sub{ display:none }                 /* condense: drop the subtitle on phone */
+  .tb-controls{ gap:6px; width:100%; justify-content:flex-start }
+  #locus-form{ flex:1 1 100%; order:3 }             /* locus box on its own full-width row */
+  #locus-input{ flex:1 1 auto; width:auto }
+  .tb-zoom, #reset-view{ order:1 }
+  .tb-btn, .tb-zoom button, #locus-form button{ height:30px }
+
+  /* BOTH drawers become full-screen sheets, one visible at a time (JS enforces exclusivity) */
+  .drawer.left, .drawer.right{
+    position:fixed; top:0; left:0; right:0; bottom:0; width:100%; z-index:60;
+    border:0; box-shadow:none; padding:16px 15px 40px; }
+
+  /* strips = small edge tabs overlaying the plot edges (tap to open the sheet) */
+  .strip.left, .strip.right{
+    position:fixed; top:50%; transform:translateY(-50%); width:26px; height:auto;
+    padding:12px 0; z-index:55; background:#fff; border:1px solid var(--line);
+    box-shadow:0 2px 10px rgba(0,0,0,.14) }
+  .strip.left{ left:0; border-left:0; border-radius:0 9px 9px 0 }
+  .strip.right{ right:0; border-right:0; border-radius:9px 0 0 9px }
+
+  /* legend collapsed by default on phone (JS sets .collapsed); title acts as the toggle */
+  .legend-title::after{ content:" ▾"; color:var(--ink-soft) }
+  .legend.collapsed .legend-title::after{ content:" ▸" }
+}

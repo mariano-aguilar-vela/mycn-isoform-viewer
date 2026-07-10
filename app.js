@@ -92,10 +92,20 @@
     svg = d3s("stack"); hdr = d3s("hdr"); ideo = d3s("ideo");
     zt = d3.zoomIdentity;
     setupZoom();
+    setupTouch();
     renderFeatureList();
-    setLeft(true); openRight(false);
+    wireLegendToggle();
+    // phone starts with side sheets CLOSED so the stack gets the full width (details-on-demand)
+    setLeft(!isPhone()); openRight(false);
     rebuild();
-    window.addEventListener("resize", onResize);
+    window.addEventListener("resize", onResizeDebounced);
+  }
+  // legend collapses behind its title on phone (saves vertical space); expanded elsewhere
+  function wireLegendToggle(){
+    var lg=document.querySelector(".legend"), tt=document.querySelector(".legend-title");
+    if (!lg || !tt) return;
+    if (isPhone()) lg.classList.add("collapsed");
+    tt.addEventListener("click", function(){ lg.classList.toggle("collapsed"); });
   }
 
   // ---- derivations from meta ----
@@ -201,10 +211,12 @@
 
   // ================= drawers =================
   // LEFT (Features) pushes: collapsing/opening changes the viewer width -> rebuild() re-lays out.
-  function setLeft(open){ $("features").hidden=!open; $("features-strip").hidden=open; }   // T2.4: dropped vestigial .open class (no CSS reads it; hidden controls visibility)
+  // On phone the drawers are full-screen sheets, so only ONE may be open at a time (opening one closes
+  // the other). The guards can't recurse: setLeft only calls openRight when opening, and vice versa.
+  function setLeft(open){ if(open && isPhone()) openRight(false); $("features").hidden=!open; $("features-strip").hidden=open; }   // T2.4: dropped vestigial .open class (no CSS reads it; hidden controls visibility)
   // RIGHT (Details): ONE explicit source of truth. Always writes both DOM states to match `open`
   // (never a blind toggle), so every selection path lands in the same, correct state.
-  function openRight(open){ rightOpen=!!open; $("details").hidden=!rightOpen; $("details-strip").hidden=rightOpen; }
+  function openRight(open){ rightOpen=!!open; if(rightOpen && isPhone()) setLeft(false); $("details").hidden=!rightOpen; $("details-strip").hidden=rightOpen; }
 
   // ================= zoom / navigation =================
   function plotL(){ return GUTTER; }
@@ -216,6 +228,7 @@
     // The ruler (hdr) gets a brush (drag-select-to-zoom) — distinct target, no conflict.
     zoom = d3.zoom()
       .clickDistance(6)                    // moves < 6px still count as a click -> selection fires reliably
+      .touchable(function(){ return false; })   // touch is handled by setupTouch() (pan+scroll+pinch), not d3
       .filter(zoomFilter)
       .on("start", function(ev){ dragPrevY = (ev.sourceEvent && ev.sourceEvent.clientY!=null) ? ev.sourceEvent.clientY : null; })
       .on("zoom", onZoom)
@@ -224,6 +237,66 @@
       .on("end", function(){ dragPrevY = null; try{ svg.property("__zoom", zt); }catch(e){} });
     svg.call(zoom);
   }
+  // ---- touch gestures (the touch equivalents of the mouse scheme) ----
+  //   ONE finger  = pan (horizontal genomic pan + vertical stack scroll), like a mouse drag
+  //   TWO fingers = pinch-zoom the genomic X axis, centred on the pinch midpoint (like scroll-zoom)
+  //   TAP (no move past threshold) = falls through to the native emulated click -> the SVG element's
+  //     own click handler fires (expand transcript / select ORF). preventDefault only once a gesture
+  //     starts, so a tap is never swallowed and a pan never fires a select.
+  // d3-zoom's own touch is disabled (touchable=false) so these are the single touch code-path.
+  var TCH = null, TAP_SLOP = 8;
+  function svgScaleX(){ var r=svg.node().getBoundingClientRect(); return r.width ? (W/r.width) : 1; }
+  function svgUserX(clientX){ var r=svg.node().getBoundingClientRect(); return (clientX-r.left)*(r.width?(W/r.width):1); }
+  function setupTouch(){
+    var node=svg.node();
+    node.addEventListener("touchstart", tStart, {passive:false});
+    node.addEventListener("touchmove",  tMove,  {passive:false});
+    node.addEventListener("touchend",   tEnd,   {passive:false});
+    node.addEventListener("touchcancel",tEnd,   {passive:false});
+  }
+  function tStart(ev){
+    if (ev.touches.length===1){
+      var t=ev.touches[0], sc=$("stack-scroll");
+      TCH={ mode:"one", x0:t.clientX, y0:t.clientY, view0:viewG.slice(),
+            st0:sc?sc.scrollTop:0, moved:false };
+    } else if (ev.touches.length>=2){
+      var a=ev.touches[0], b=ev.touches[1], mid=(a.clientX+b.clientX)/2;
+      TCH={ mode:"pinch", dist0:Math.max(1,Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)),
+            view0:viewG.slice(), anchorG:x.invert(svgUserX(mid)), moved:true };
+      ev.preventDefault();   // two-finger gesture is unambiguously a pinch -> own it immediately
+    }
+  }
+  function tMove(ev){
+    if (!TCH) return;
+    if (TCH.mode==="one" && ev.touches.length===1){
+      var t=ev.touches[0], dx=t.clientX-TCH.x0, dy=t.clientY-TCH.y0;
+      if (!TCH.moved && Math.hypot(dx,dy) < TAP_SLOP) return;   // still a tap candidate: let native click stand
+      TCH.moved=true; ev.preventDefault();
+      var wbp=TCH.view0[1]-TCH.view0[0];
+      var bpPerUser=wbp/Math.max(1,(plotR()-plotL()));
+      var a=TCH.view0[0] - dx*svgScaleX()*bpPerUser;         // horizontal genomic pan (absolute from start)
+      applyRange(a, a+wbp, false);
+      var sc=$("stack-scroll"); if(sc) sc.scrollTop=Math.max(0, TCH.st0 - dy);   // vertical stack scroll
+    } else if (TCH.mode==="pinch" && ev.touches.length>=2){
+      ev.preventDefault();
+      var a2=ev.touches[0], b2=ev.touches[1], mid=(a2.clientX+b2.clientX)/2;
+      var dist=Math.max(1,Math.hypot(a2.clientX-b2.clientX,a2.clientY-b2.clientY));
+      var wbp=clamp((TCH.view0[1]-TCH.view0[0])/(dist/TCH.dist0), 20, DMAX-DMIN);
+      var f=clamp((svgUserX(mid)-plotL())/Math.max(1,(plotR()-plotL())),0,1);
+      var a=TCH.anchorG - f*wbp;                              // keep the anchored base under the pinch midpoint
+      applyRange(a, a+wbp, false);
+    }
+  }
+  function tEnd(ev){
+    if (TCH && TCH.mode==="pinch" && ev.touches.length===1){
+      // lifted to one finger mid-pinch: reseed a pan from the remaining finger so there's no jump
+      var t=ev.touches[0], sc=$("stack-scroll");
+      TCH={ mode:"one", x0:t.clientX, y0:t.clientY, view0:viewG.slice(), st0:sc?sc.scrollTop:0, moved:true };
+      return;
+    }
+    if (ev.touches.length===0) TCH=null;   // a no-move tap emulates a click -> element handler selects/expands
+  }
+
   function zoomFilter(ev){
     if (ev.type === "wheel") return true;      // plain wheel zooms (cursor-centred)
     if (ev.type === "dblclick") return false;
@@ -299,7 +372,24 @@
   }
 
   // ================= layout =================
-  function computeW(){ var box=$("stack-scroll"); W = Math.max(720, (box?box.clientWidth:900)-2); }
+  // device class from the VIEWPORT width (what "phone/tablet/desktop" means), independent of drawer state
+  function vpW(){ return (typeof window!=="undefined" && window.innerWidth) ? window.innerWidth : 1024; }
+  function isPhone(){ return vpW() < 640; }
+  function isTablet(){ var w=vpW(); return w>=640 && w<1024; }
+  // GUTTER (label lane) + PADR shrink on small screens so the plot isn't crowded; W tracks the container
+  function computeGutter(){
+    if (isPhone()){ GUTTER=92; PADR=8; }
+    else if (isTablet()){ GUTTER=150; PADR=12; }
+    else { GUTTER=200; PADR=18; }
+  }
+  function computeW(){
+    computeGutter();
+    var box=$("stack-scroll"), cw=(box?box.clientWidth:900);
+    var floor = isPhone()?300:(isTablet()?480:720);   // desktop/jsdom (cw=0) -> 720, as before
+    W = Math.max(floor, cw-2);
+  }
+  var SHORT_LBL_MAX = 130;   // GUTTER below this -> shorten transcript labels ("201", not "MYCN-201")
+  function shortLabels(){ return GUTTER < SHORT_LBL_MAX; }
   function layout(){
     var rows=[], y=8;
     TX_ORDER.forEach(function(t){
@@ -337,6 +427,9 @@
     draw();
   }
   function onResize(){ var v=viewG.slice(); rebuild(); applyRange(v[0],v[1],false); }
+  // debounced resize: recompute GUTTER + W, relayout, and redraw at the new width, keeping the current view
+  var resizeTimer=null;
+  function onResizeDebounced(){ if(resizeTimer) clearTimeout(resizeTimer); resizeTimer=setTimeout(onResize,120); }
 
   function draw(){
     x = zt.rescaleX(x0);
@@ -585,11 +678,14 @@
       .attr("fill","transparent").on("click",function(){ pickTx(t); })
       .on("mouseenter",function(ev){ tip(ev,"<b>MYCN-"+t+"</b> · "+orfIdsOfTx(t).length+" ORFs<br><span class='dim'>click to "+(state[t].open?"collapse":"expand")+"</span>"); })
       .on("mousemove",moveTip).on("mouseleave",hideTip);
+    // on a narrow (phone) gutter, shorten "MYCN-201" -> "201" and drop "coding ·" from the meta line;
+    // the full name + ORF count stay reachable via the row tooltip (hover) and tap-to-expand.
+    var sh=shortLabels(), nOrf=orfIdsOfTx(t).length;
     g.append("text").attr("class","tx-label").attr("x",14).attr("y",mid-3).attr("font-size",13).attr("font-weight",600)
-      .attr("fill",selectedTx===t?PAL.nmyc:"#222a2e").text("MYCN-"+t);
+      .attr("fill",selectedTx===t?PAL.nmyc:"#222a2e").text(sh ? t : "MYCN-"+t);
     var coding=txCoding(t);
     g.append("text").attr("class","tx-meta").attr("x",14).attr("y",mid+12).attr("font-size",10.5)
-      .attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66").text(coding+" · "+orfIdsOfTx(t).length+" ORFs");
+      .attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66").text(sh ? (nOrf+" ORFs") : (coding+" · "+nOrf+" ORFs"));
     g.append("text").attr("class","tx-chev").attr("x",GUTTER-20).attr("y",mid+4).attr("font-size",12)
       .attr("fill","#5f6a66").attr("text-anchor","middle").text(state[t].open?"▾":"▸");
     // ---- structure (clipped) ----
@@ -633,8 +729,10 @@
       .on("mouseenter",function(ev){ tip(ev,orfTip(id)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
     g.append("rect").attr("class","orf-sw").attr("x",24).attr("y",mid-5).attr("width",10).attr("height",10).attr("rx",2).attr("fill",o.color);
     var nm=NAME[id]?(" "+NAME[id]):"", TAGX=GUTTER-8, LBLX=42;
+    // narrow (phone) gutter: tag shows only carrier count so the id+name column keeps room before truncation
+    var tagStr=shortLabels() ? (carrierCount(id)+"c") : (o.aa_len+"aa · "+carrierCount(id)+"c");
     var tag=g.append("text").attr("class","orf-tag").attr("x",TAGX).attr("y",mid+3.5).attr("text-anchor","end")
-      .attr("font-size",10).attr("fill","#5f6a66").text(o.aa_len+"aa · "+carrierCount(id)+"c");
+      .attr("font-size",10).attr("fill","#5f6a66").text(tagStr);
     var lbl=g.append("text").attr("class","orf-lbl").attr("x",LBLX).attr("y",mid+3.5).attr("font-size",11)
       .attr("fill","#222a2e").on("click",function(){ pickOrf(id); }).text("ORF"+id+nm);
     // measured truncation (browser): keep >= 8px between the id+name and the tag column
