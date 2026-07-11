@@ -701,7 +701,16 @@
     var coding=txCoding(t);
     g.append("text").attr("class","tx-meta").attr("x",14).attr("y",mid+12).attr("font-size",10.5)
       .attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66").text(sh ? (nOrf+" ORFs") : (coding+" · "+nOrf+" ORFs"));
-    g.append("text").attr("class","tx-chev").attr("x",GUTTER-20).attr("y",mid+4).attr("font-size",12)
+    // right-edge controls, stacked: (upper) an explicit "zoom to transcript" magnifier — the ONLY
+    // per-row navigation affordance, distinct from the expand chevron; (lower) the expand chevron.
+    var zx=GUTTER-16;
+    var zg=g.append("g").attr("class","tx-zoom").style("cursor","pointer")
+      .on("click",function(ev){ ev.stopPropagation(); zoomToTx(t); })
+      .on("mouseenter",function(ev){ tip(ev,"zoom to MYCN-"+t); }).on("mousemove",moveTip).on("mouseleave",hideTip);
+    zg.append("rect").attr("x",zx-9).attr("y",mid-18).attr("width",18).attr("height",17).attr("fill","transparent");
+    zg.append("circle").attr("cx",zx-1.5).attr("cy",mid-10).attr("r",3.3).attr("fill","none").attr("stroke","#7c858b").attr("stroke-width",1.3);
+    zg.append("line").attr("x1",zx+1).attr("y1",mid-7.5).attr("x2",zx+3.6).attr("y2",mid-4.9).attr("stroke","#7c858b").attr("stroke-width",1.3);
+    g.append("text").attr("class","tx-chev").attr("x",zx).attr("y",mid+13).attr("font-size",12)
       .attr("fill","#5f6a66").attr("text-anchor","middle").text(state[t].open?"▾":"▸");
     // ---- structure (clipped) ----
     var x0e=x(tx.exons[0][0]), x1e=x(tx.exons[tx.exons.length-1][1]+1);
@@ -790,17 +799,26 @@
     openRight(false);
   }
   function pickTx(t){
-    if (selectedOrf!=null) clearOrfSelection();   // FIX 1: acting on a transcript ALWAYS escapes an ORF selection
+    if (selectedOrf!=null) clearOrfSelection();   // acting on a transcript ALWAYS escapes an ORF selection
     state[t].open=!state[t].open; if(!state[t].open) state[t].sharedOpen=false;
     selectedTx = state[t].open ? t : null;
     rebuild();
-    if (state[t].open){ var sp=txSpan(t); setNow("MYCN-"+t, sp); flyTo(sp[0],sp[1],true); }
-    else setNow("MYCN locus", null);
+    // ONE ACTION, ONE EFFECT: expanding a row is DISCLOSURE, not NAVIGATION. Do NOT change the
+    // zoom/pan/locus — the 8 isoforms share ONE genomic axis so they can be compared, and the ORFs
+    // render at their real coordinates within the current view. Navigation is deliberate: the row's
+    // separate zoom-to control (or the locus box / +- / ruler-brush). The now-showing NAME updates;
+    // the coordinate stays = the current view (pass null -> viewG).
+    setNow(state[t].open ? ("MYCN-"+t) : "MYCN locus", null);
     renderFeatureList();
   }
+  // FIX 1: explicit, deliberate "zoom to this transcript" — the ONLY per-row navigation action.
+  function zoomToTx(t){ var sp=txSpan(t); setNow("MYCN-"+t, sp); flyTo(sp[0],sp[1],true); }
   // FIX 1: SINGLE explicit selection state-setter. pickOrf(id) selects+highlights; pickOrf(null) fully
   // clears (restore every row to full opacity, remove highlight, close/empty Details). Never a blind toggle.
   function pickOrf(id){
+    // FIX 2: repeating the action reverses it — clicking the SAME (selected) ORF toggles it off.
+    // A DIFFERENT ORF moves the selection. State stays explicit (falls into the null branch below).
+    if (id!=null && id===selectedOrf) id=null;
     if (id==null){
       clearOrfSelection();
       setNow(selectedTx?("MYCN-"+selectedTx):"MYCN locus", selectedTx?txSpan(selectedTx):null);

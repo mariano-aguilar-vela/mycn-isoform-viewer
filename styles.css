@@ -154,6 +154,9 @@ body{margin:0; font-family:var(--font); color:var(--ink); background:var(--bg);
 .exon,.orf-bar{cursor:pointer}
 .exon:hover,.orf-bar:hover{stroke:#33404a; stroke-width:1}
 .shared-toggle-hit{cursor:pointer}
+/* per-row "zoom to transcript" magnifier — brightens to the accent on hover (distinct from expand chevron) */
+.tx-zoom{cursor:pointer}
+.tx-zoom:hover circle, .tx-zoom:hover line{stroke:var(--accent)}
 
 /* tooltip */
 .tip{position:fixed; z-index:60; pointer-events:none; background:var(--ink); color:#fff; font-size:11.5px;
