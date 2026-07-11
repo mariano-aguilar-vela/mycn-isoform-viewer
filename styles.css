@@ -71,8 +71,10 @@ body{margin:0; font-family:var(--font); color:var(--ink); background:var(--bg);
 .drawer[hidden]{display:none}
 .drawer.left{position:relative; flex:0 0 var(--drawer-w); width:var(--drawer-w);
   border-right:1px solid var(--line); box-shadow:2px 0 12px rgba(0,0,0,.04)}
-.drawer.right{position:absolute; top:0; bottom:0; right:0; z-index:20; width:var(--details-w);
-  border-left:1px solid var(--line); box-shadow:0 0 22px rgba(0,0,0,.07)}
+/* FIX 2: Details is an IN-FLOW column on desktop/tablet — it PUSHES the viewer (never overlays the
+   plot), so the selected ORF stays visible. (Phone media query makes it a full-width fixed sheet.) */
+.drawer.right{position:relative; flex:0 0 var(--details-w); width:var(--details-w);
+  border-left:1px solid var(--line); box-shadow:-2px 0 12px rgba(0,0,0,.04)}
 .drawer-head{padding-top:2px}
 /* per-drawer collapse control (word strips reopen; these collapse) */
 .drawer-collapse{position:absolute; top:8px; width:24px; height:24px; border:1px solid var(--line);
@@ -85,12 +87,14 @@ body{margin:0; font-family:var(--font); color:var(--ink); background:var(--bg);
 .drawer.right .rail-body{padding-top:6px}
 .drawer.right .rail-body h2{padding-right:26px}
 
-/* LEFT strip is a flex item (push); RIGHT strip overlays at the stage right edge */
+/* LEFT strip is a flex item (push, used on desktop). RIGHT strip is NOT used on desktop (the push
+   Details panel + same-ORF toggle replace the collapse-tab); it only appears as an edge tab on phone. */
 .strip{background:var(--bg-soft); border:0; cursor:pointer; padding:12px 0;
   display:flex; flex-direction:column; align-items:center; gap:10px; color:var(--ink-soft)}
 .strip[hidden]{display:none}
 .strip.left{position:relative; flex:0 0 var(--strip-w); width:var(--strip-w); border-right:1px solid var(--line)}
-.strip.right{position:absolute; top:0; bottom:0; right:0; z-index:21; width:var(--strip-w); border-left:1px solid var(--line)}
+/* the right (Details) reopen tab is not used on desktop/tablet — push panel + same-ORF toggle replace it */
+@media (min-width:640px){ .strip.right{display:none} }
 .strip:hover{background:#eef1f5; color:var(--accent)}
 .strip-word{writing-mode:vertical-rl; text-orientation:mixed; font-size:12.5px; font-weight:600; letter-spacing:1px}
 .strip-chev{font-size:14px}
@@ -150,13 +154,10 @@ body{margin:0; font-family:var(--font); color:var(--ink); background:var(--bg);
 
 /* ---------- SVG stack elements (interaction cursors/hover; colours set as attributes) ---------- */
 .gutter-hit{cursor:pointer}
-.tx-label,.tx-meta,.tx-chev,.orf-lbl,.grp-lbl,.shared-toggle-lbl,.ruler-lbl,.base-let{pointer-events:none}
-.exon,.orf-bar{cursor:pointer}
+.tx-label,.tx-meta,.tx-chev,.orf-lbl,.grp-lbl,.shared-toggle-lbl,.ruler-lbl,.base-let,.orf-hl-halo,.orf-sel{pointer-events:none}
+.exon,.orf-bar,.orf-hl{cursor:pointer}
 .exon:hover,.orf-bar:hover{stroke:#33404a; stroke-width:1}
 .shared-toggle-hit{cursor:pointer}
-/* per-row "zoom to transcript" magnifier — brightens to the accent on hover (distinct from expand chevron) */
-.tx-zoom{cursor:pointer}
-.tx-zoom:hover circle, .tx-zoom:hover line{stroke:var(--accent)}
 
 /* tooltip */
 .tip{position:fixed; z-index:60; pointer-events:none; background:var(--ink); color:#fff; font-size:11.5px;
@@ -273,7 +274,8 @@ table.props td.v{text-align:right; font-variant-numeric:tabular-nums; font-famil
      together and stay x-aligned. */
   #viewer{ margin:0 30px }
 
-  /* strips = small edge tabs overlaying the plot edges (tap to open the sheet) */
+  /* strips = small edge tabs overlaying the plot edges (tap to open the sheet); on phone the right
+     tab IS used (the min-width:640 hide does not apply here), and [hidden] still controls visibility. */
   .strip.left, .strip.right{
     position:fixed; top:50%; transform:translateY(-50%); width:26px; height:auto;
     padding:12px 0; z-index:55; background:#fff; border:1px solid var(--line);

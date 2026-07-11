@@ -189,7 +189,9 @@
     });
     $("collapse-all").addEventListener("click", function(){
       TX_ORDER.forEach(function(t){ state[t].open=false; state[t].sharedOpen=false; });
-      selectedTx=null; rebuild(); renderFeatureList();
+      selectedTx=null;
+      pickOrf(null);            // FIX 3: also clear any ORF selection + close Details (single-writer); this rebuilds + re-fits
+      renderFeatureList();
     });
     $("download-svg").addEventListener("click", downloadSVG);
     $("download-png").addEventListener("click", downloadPNG);
@@ -206,14 +208,16 @@
     $("features-strip").addEventListener("click", function(){ var v=viewG.slice(); setLeft(true); rebuild(); applyRange(v[0],v[1],false); });
     $("features-collapse").addEventListener("click", function(){ var v=viewG.slice(); setLeft(false); rebuild(); applyRange(v[0],v[1],false); });
     $("details-strip").addEventListener("click", function(){ if (railHasContent) openRight(true); });
-    $("details-close").addEventListener("click", function(){ openRight(false); });
+    // FIX 1 (desync): closing the panel DESELECTS via the single writer, so the variable and DOM never diverge
+    $("details-close").addEventListener("click", function(){ pickOrf(null); });
   }
 
   // ================= drawers =================
   // LEFT (Features) pushes: collapsing/opening changes the viewer width -> rebuild() re-lays out.
   // On phone the drawers are full-screen sheets, so only ONE may be open at a time (opening one closes
   // the other). The guards can't recurse: setLeft only calls openRight when opening, and vice versa.
-  function setLeft(open){ if(open && isPhone()) openRight(false); $("features").hidden=!open; $("features-strip").hidden=open; }   // T2.4: dropped vestigial .open class (no CSS reads it; hidden controls visibility)
+  function setLeft(open){ if(open && isPhone() && selectedOrf!=null) pickOrf(null);   // phone: opening Features deselects (keeps panel-visibility === selection, no desync)
+    $("features").hidden=!open; $("features-strip").hidden=open; }
   // RIGHT (Details): ONE explicit source of truth. Always writes both DOM states to match `open`
   // (never a blind toggle), so every selection path lands in the same, correct state.
   function openRight(open){ rightOpen=!!open; if(rightOpen && isPhone()) setLeft(false); $("details").hidden=!rightOpen; $("details-strip").hidden=rightOpen; }
@@ -354,10 +358,9 @@
   }
   var NOANIM = false;   // set true only by headless tests so transitions apply synchronously
   function resetView(){
-    selectedOrf=null; selectedTx=null; railHasContent=false;
-    $("rail-body").innerHTML = '<div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>';
-    openRight(false);
-    flyTo(DMIN, DMAX, true);
+    selectedTx=null;
+    pickOrf(null);              // single-writer clear of the ORF selection (closes Details, clears highlight/dim)
+    flyTo(DMIN, DMAX, true);    // then reset the view to the full locus
     setNow("MYCN locus", null);
     renderFeatureList();
   }
@@ -665,12 +668,19 @@
   function drawOrfHighlight(gClip, orfId, mid){
     var o=META.orfs[orfId];
     var b0=x(o.blocks[0][0]), b1=x(o.blocks[o.blocks.length-1][1]+1);
-    gClip.append("line").attr("x1",b0).attr("x2",b1).attr("y1",mid).attr("y2",mid).attr("stroke",PAL.nmyc).attr("stroke-width",1).attr("opacity",.55);
+    gClip.append("line").attr("x1",b0).attr("x2",b1).attr("y1",mid).attr("y2",mid).attr("stroke",PAL.nmyc).attr("stroke-width",1).attr("opacity",.55).style("pointer-events","none");
     o.blocks.forEach(function(b){
       var xa=x(b[0]), xb=x(b[1]+1), w=Math.max(2,xb-xa);
       gClip.append("rect").attr("class","orf-hl-halo").attr("x",xa-1.5).attr("y",mid-8).attr("width",w+3).attr("height",16).attr("rx",3).attr("fill",o.color).attr("opacity",.30);
+      // FIX 1(b): the highlighted ORF block on a carrier row is the OBVIOUS toggle target, so give it the ORF's
+      // own click -> pickOrf(orfId), which CLOSES on a second click (orfId===selectedOrf here). Previously it was
+      // a filled, handler-less rect painted OVER the exon: it swallowed the click, so the toggle never fired and
+      // only a white-space click closed the panel. (.orf-hl-halo/.orf-sel/the connector line are pointer-events:
+      // none decoration — see styles.css:157 — so only this .orf-hl block is clickable.)
       gClip.append("rect").attr("class","orf-hl").attr("x",xa).attr("y",mid-6).attr("width",w).attr("height",12).attr("rx",2.5)
-        .attr("fill",o.color).attr("stroke",PAL.nmyc).attr("stroke-width",1.6);
+        .attr("fill",o.color).attr("stroke",PAL.nmyc).attr("stroke-width",1.6)
+        .on("click",function(ev){ ev.stopPropagation(); pickOrf(orfId); })
+        .on("mouseenter",function(ev){ tip(ev,orfTip(orfId)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
     });
   }
   // bring the first carrier transcript row into view (vertical scroll only; do not fly-zoom away)
@@ -701,16 +711,12 @@
     var coding=txCoding(t);
     g.append("text").attr("class","tx-meta").attr("x",14).attr("y",mid+12).attr("font-size",10.5)
       .attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66").text(sh ? (nOrf+" ORFs") : (coding+" · "+nOrf+" ORFs"));
-    // right-edge controls, stacked: (upper) an explicit "zoom to transcript" magnifier — the ONLY
-    // per-row navigation affordance, distinct from the expand chevron; (lower) the expand chevron.
+    // right-edge expand chevron (row disclosure indicator; the whole gutter row is the click target via
+    // gutter-hit -> pickTx). FIX 5: the per-row "zoom to transcript" magnifier was removed — zooming to one
+    // of 8 near-identical ~9 kb isoforms barely differs and clips the others out of frame; the locus box,
+    // +/-, scroll/pinch, ruler-brush and Reset cover every real navigation need.
     var zx=GUTTER-16;
-    var zg=g.append("g").attr("class","tx-zoom").style("cursor","pointer")
-      .on("click",function(ev){ ev.stopPropagation(); zoomToTx(t); })
-      .on("mouseenter",function(ev){ tip(ev,"zoom to MYCN-"+t); }).on("mousemove",moveTip).on("mouseleave",hideTip);
-    zg.append("rect").attr("x",zx-9).attr("y",mid-18).attr("width",18).attr("height",17).attr("fill","transparent");
-    zg.append("circle").attr("cx",zx-1.5).attr("cy",mid-10).attr("r",3.3).attr("fill","none").attr("stroke","#7c858b").attr("stroke-width",1.3);
-    zg.append("line").attr("x1",zx+1).attr("y1",mid-7.5).attr("x2",zx+3.6).attr("y2",mid-4.9).attr("stroke","#7c858b").attr("stroke-width",1.3);
-    g.append("text").attr("class","tx-chev").attr("x",zx).attr("y",mid+13).attr("font-size",12)
+    g.append("text").attr("class","tx-chev").attr("x",zx).attr("y",mid+4).attr("font-size",12)
       .attr("fill","#5f6a66").attr("text-anchor","middle").text(state[t].open?"▾":"▸");
     // ---- structure (clipped) ----
     var x0e=x(tx.exons[0][0]), x1e=x(tx.exons[tx.exons.length-1][1]+1);
@@ -792,50 +798,58 @@
   }
 
   // ================= interactions =================
-  // FIX 1: clear ORF-selection DOM state (highlight/dim removed on next rebuild; details closed)
-  function clearOrfSelection(){
-    selectedOrf=null; railHasContent=false;
-    $("rail-body").innerHTML='<div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>';
-    openRight(false);
-  }
+  function paddedSpan(sp){ var pad=Math.max(30,(sp[1]-sp[0])*0.12); return [clamp(sp[0]-pad,DMIN,DMAX), clamp(sp[1]+pad,DMIN,DMAX)]; }
   function pickTx(t){
-    if (selectedOrf!=null) clearOrfSelection();   // acting on a transcript ALWAYS escapes an ORF selection
+    if (selectedOrf!=null) pickOrf(null);   // acting on a transcript ALWAYS escapes an ORF selection (single-writer)
     state[t].open=!state[t].open; if(!state[t].open) state[t].sharedOpen=false;
     selectedTx = state[t].open ? t : null;
-    rebuild();
+    rebuild();   // expanding changes only the stack HEIGHT (not W) -> view is stable; no re-fit needed
     // ONE ACTION, ONE EFFECT: expanding a row is DISCLOSURE, not NAVIGATION. Do NOT change the
     // zoom/pan/locus — the 8 isoforms share ONE genomic axis so they can be compared, and the ORFs
-    // render at their real coordinates within the current view. Navigation is deliberate: the row's
-    // separate zoom-to control (or the locus box / +- / ruler-brush). The now-showing NAME updates;
-    // the coordinate stays = the current view (pass null -> viewG).
+    // render at their real coordinates within the current view. Navigation is deliberate: the locus
+    // box / +- / scroll-pinch / ruler-brush / Reset. Name updates; coord stays = view.
     setNow(state[t].open ? ("MYCN-"+t) : "MYCN locus", null);
     renderFeatureList();
   }
-  // FIX 1: explicit, deliberate "zoom to this transcript" — the ONLY per-row navigation action.
-  function zoomToTx(t){ var sp=txSpan(t); setNow("MYCN-"+t, sp); flyTo(sp[0],sp[1],true); }
-  // FIX 1: SINGLE explicit selection state-setter. pickOrf(id) selects+highlights; pickOrf(null) fully
-  // clears (restore every row to full opacity, remove highlight, close/empty Details). Never a blind toggle.
+
+  // ================= SINGLE-WRITER selection (FIX 1) =================
+  // pickOrf(id|null) is the ONLY place `selectedOrf` is assigned in the whole file, so the variable and
+  // the DOM can never diverge (that divergence — a control closing the panel without clearing the
+  // variable — was what made the same-ORF toggle drift out of phase).
+  // The Details panel PUSHES on desktop/tablet (in-flow column) and OVERLAYS as a full-width sheet on
+  // phone. Opening/closing it is a WIDTH change, so we rebuild at the new width and re-apply the view —
+  // the same "capture view -> rebuild -> applyRange" machinery a window resize uses. The genomic window
+  // is preserved (the plot just gets narrower/wider); the view is NOT panned or zoomed (FIX 2).
   function pickOrf(id){
-    // FIX 2: repeating the action reverses it — clicking the SAME (selected) ORF toggles it off.
-    // A DIFFERENT ORF moves the selection. State stays explicit (falls into the null branch below).
-    if (id!=null && id===selectedOrf) id=null;
+    // FIX 1(a): normalise the id type at the single boundary. Measurement showed every call site already
+    // passes a String ORF id, but coercing here GUARANTEES the strict `id===selectedOrf` toggle test always
+    // compares like types (never string-vs-number) regardless of any future datum-typed caller. Keys in
+    // META.orfs are strings, so lookups are unaffected. (Never loose ==, per the stop-gate.)
+    id = (id==null) ? null : String(id);
+    if (id!=null && id===selectedOrf) id=null;   // clicking the SAME (selected) ORF toggles it off
+    selectedOrf = id;                            // <-- the ONLY assignment to selectedOrf anywhere
+    var target = viewG.slice();                  // default: keep the current genomic window across the resize
     if (id==null){
-      clearOrfSelection();
+      railHasContent=false;
+      $("rail-body").innerHTML='<div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>';
+      openRight(false);
       setNow(selectedTx?("MYCN-"+selectedTx):"MYCN locus", selectedTx?txSpan(selectedTx):null);
-      rebuild(); markFeatureActive();
-      return;
+    } else {
+      var o=META.orfs[id], sp=o.span;
+      $("rail-body").innerHTML = renderCard(id,o); wireCard();
+      railHasContent=true;
+      // FIX 4: expand the carrier the view scrolls to, so the selected ORF is actually VISIBLE on the stack
+      // (e.g. after Collapse all) instead of hidden inside a collapsed transcript. Completes the action.
+      var fc = TX_ORDER.filter(function(tt){ return carriers(id).indexOf(tt)>=0; })[0];
+      if (fc) state[fc].open = true;
+      var visible = (sp[1] >= viewG[0] && sp[0] <= viewG[1]);
+      if (!visible) target = paddedSpan(sp);     // ORF off-screen -> bring it into view
+      setNow("ORF"+id+(NAME[id]?" · "+NAME[id]:""), visible ? null : sp);
+      openRight(true);                           // desktop: viewer narrows; phone: full-screen sheet
     }
-    selectedOrf=id;
-    var o=META.orfs[id], sp=o.span;
-    $("rail-body").innerHTML = renderCard(id,o); wireCard();
-    railHasContent=true; openRight(true);
-    // FIX D: highlight on all carriers + dim non-carriers happens in renderStack; here we only
-    // navigate MINIMALLY — fly horizontally ONLY if the ORF is off the current x-view.
-    var visible = (sp[1] >= viewG[0] && sp[0] <= viewG[1]);
-    setNow("ORF"+id+(NAME[id]?" · "+NAME[id]:""), visible ? null : sp);
-    if (!visible) flyTo(sp[0], sp[1], true);
-    rebuild();                       // redraw highlight/dim/band
-    scrollCarrierIntoView(id);       // vertical scroll: bring a carrier row into view
+    rebuild();                                   // recompute W at the new panel width; apply highlight/dim
+    applyRange(target[0], target[1], false);     // re-fit the view at the new width (window preserved, or ORF span)
+    scrollCarrierIntoView(id);
     markFeatureActive();
   }
   function showExon(t,exon,ei){
@@ -853,6 +867,9 @@
     h+='<p class="rail-empty">Click an ORF (expand the transcript) to see its protein detail.</p></div>';
     $("rail-body").innerHTML=h; railHasContent=true; openRight(true);
     setNow("MYCN-"+t+" exon "+(ei+1), exon);
+    // FIX 2: opening Details is a WIDTH change on desktop/tablet — re-render at the new width NOW (mirror
+    // pickOrf's tail) instead of waiting for the next resize, preserving the genomic window (no pan/zoom).
+    var target = viewG.slice(); rebuild(); applyRange(target[0], target[1], false);
   }
 
   // tooltips
