@@ -74,19 +74,20 @@
           </div>
           <div id="stack-scroll"><svg id="stack" xmlns="http://www.w3.org/2000/svg"></svg></div>
         </section>
-
-        <!-- RIGHT drawer: detail rail (overlays the stack) -->
-        <aside id="details" class="drawer right" hidden>
-          <button id="details-close" class="drawer-collapse right" title="Collapse Details" aria-label="collapse details">›</button>
-          <div id="rail-body" class="rail-body">
-            <div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>
-          </div>
-        </aside>
-        <button id="details-strip" class="strip right">
-          <span class="strip-chev">‹</span><span class="strip-word">Details</span>
-        </button>
       </div>
     </section>
+
+    <!-- RIGHT drawer: Details — its OWN column beside the plot on desktop/tablet (PUSHES, never overlays,
+         so the selected ORF stays visible); a full-width sheet on phone. -->
+    <aside id="details" class="drawer right" hidden>
+      <button id="details-close" class="drawer-collapse right" title="Close Details" aria-label="close details">›</button>
+      <div id="rail-body" class="rail-body">
+        <div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>
+      </div>
+    </aside>
+    <button id="details-strip" class="strip right" hidden>
+      <span class="strip-chev">‹</span><span class="strip-word">Details</span>
+    </button>
   </div>
 
   <div id="tip" class="tip" hidden></div>
