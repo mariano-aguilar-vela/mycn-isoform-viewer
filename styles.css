@@ -265,6 +265,11 @@ table.props td.v{text-align:right; font-variant-numeric:tabular-nums; font-famil
     position:fixed; top:0; left:0; right:0; bottom:0; width:100%; z-index:60;
     border:0; box-shadow:none; padding:16px 15px 40px; }
 
+  /* FIX 2: reserve an edge lane on each side for the fixed Features/Details tabs so they NEVER
+     overlay the transcript-label column (left) or the plot (right); the header + stack shift inward
+     together and stay x-aligned. */
+  #viewer{ margin:0 30px }
+
   /* strips = small edge tabs overlaying the plot edges (tap to open the sheet) */
   .strip.left, .strip.right{
     position:fixed; top:50%; transform:translateY(-50%); width:26px; height:auto;

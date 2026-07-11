@@ -534,12 +534,20 @@
     // ruler (clipped to the plot)
     var g=hdr.append("g").attr("clip-path","url(#hdr-clip)");
     g.append("line").attr("x1",plotL()).attr("x2",plotR()).attr("y1",rulerY).attr("y2",rulerY).attr("stroke","#d7dde1");
-    x.ticks(8).forEach(function(v){
+    // FIX 3: responsive tick density — target count from plot width, then greedily drop any label that
+    // would come within 8px of the previous one (measured), so labels are never a mashed-together smear.
+    var plotW=plotR()-plotL();
+    var target=Math.max(2, Math.min(8, Math.round(plotW/90)));   // ~90px per label incl. gap
+    var lastRight=-1e9;
+    x.ticks(target).forEach(function(v){
       var xp=x(v); if (xp<plotL()-1||xp>plotR()+1) return;
       g.append("line").attr("x1",xp).attr("x2",xp).attr("y1",rulerY-4).attr("y2",rulerY).attr("stroke","#c4ccd1");
-      g.append("text").attr("class","ruler-lbl").attr("x",xp).attr("y",rulerY-6).attr("text-anchor","middle")
+      var txt=g.append("text").attr("class","ruler-lbl").attr("x",xp).attr("y",rulerY-6).attr("text-anchor","middle")
         .attr("font-size",9.5).attr("font-family",MONO).attr("fill","#5f6a66")
         .text((v/1000).toFixed(2)+" kb");
+      var w=(txt.node().getComputedTextLength?txt.node().getComputedTextLength():0);
+      if (w && (xp - w/2) < lastRight + 8) txt.remove();          // would overlap the previous label -> drop it
+      else lastRight = xp + (w||0)/2;
     });
     hdr.append("text").attr("x",12).attr("y",stripY+stripH-3).attr("font-size",9.5).attr("font-weight",600)
       .attr("fill","#5f6a66").text("ref");
@@ -624,17 +632,24 @@
     svg.append("defs").append("clipPath").attr("id","plot-clip").append("rect")
       .attr("x",plotL()).attr("y",0).attr("width",Math.max(1,plotR()-plotL())).attr("height",H);
     gMain = svg.append("g");
+    // FIX 1: empty-space deselect catcher at the BOTTOM — a tap on empty plot/gutter clears the ORF
+    // selection. Decorative layers above are pointer-events:none so the click reaches this catcher;
+    // feature hit-rects (drawn later, on top) still capture their own clicks. A drag (>clickDistance)
+    // is a pan (d3-zoom on the svg), never a deselect.
+    gMain.append("rect").attr("class","deselect-catcher").attr("x",0).attr("y",0).attr("width",W).attr("height",H)
+      .attr("fill","transparent").on("click",function(){ pickOrf(null); });
     // opaque gutter background (belt-and-braces: nothing genomic ever shows under the labels)
-    gMain.append("rect").attr("class","gutter-bg").attr("x",0).attr("y",0).attr("width",plotL()-1).attr("height",H).attr("fill","#ffffff");
-    // gridlines + selection band -> clipped to the plot
-    var gGrid=clipped(gMain);
+    gMain.append("rect").attr("class","gutter-bg").attr("x",0).attr("y",0).attr("width",plotL()-1).attr("height",H)
+      .attr("fill","#ffffff").style("pointer-events","none");
+    // gridlines + selection band -> clipped to the plot; decorative -> pointer-events:none
+    var gGrid=clipped(gMain).style("pointer-events","none");
     x.ticks(8).forEach(function(v){ var xp=x(v); if (xp<plotL()||xp>plotR()) return;
       gGrid.append("line").attr("x1",xp).attr("x2",xp).attr("y1",0).attr("y2",H).attr("stroke","#eef1f3"); });
     if (selectedOrf){ var sp=META.orfs[selectedOrf].span;
       gGrid.append("rect").attr("x",x(sp[0])).attr("y",0).attr("width",Math.max(1.5,x(sp[1]+1)-x(sp[0])))
         .attr("height",H).attr("fill",PAL.nmyc).attr("opacity",0.06); }
-    // gutter divider (label lane, unclipped)
-    gMain.append("line").attr("x1",plotL()-6).attr("x2",plotL()-6).attr("y1",0).attr("y2",H).attr("stroke","#e3e7e9");
+    // gutter divider (label lane, unclipped, decorative)
+    gMain.append("line").attr("x1",plotL()-6).attr("x2",plotL()-6).attr("y1",0).attr("y2",H).attr("stroke","#e3e7e9").style("pointer-events","none");
     ROWS.forEach(function(r){
       if (r.kind==="tx") drawTx(r);
       else if (r.kind==="grp") drawGroup(r);
@@ -768,7 +783,14 @@
   }
 
   // ================= interactions =================
+  // FIX 1: clear ORF-selection DOM state (highlight/dim removed on next rebuild; details closed)
+  function clearOrfSelection(){
+    selectedOrf=null; railHasContent=false;
+    $("rail-body").innerHTML='<div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>';
+    openRight(false);
+  }
   function pickTx(t){
+    if (selectedOrf!=null) clearOrfSelection();   // FIX 1: acting on a transcript ALWAYS escapes an ORF selection
     state[t].open=!state[t].open; if(!state[t].open) state[t].sharedOpen=false;
     selectedTx = state[t].open ? t : null;
     rebuild();
@@ -776,7 +798,15 @@
     else setNow("MYCN locus", null);
     renderFeatureList();
   }
+  // FIX 1: SINGLE explicit selection state-setter. pickOrf(id) selects+highlights; pickOrf(null) fully
+  // clears (restore every row to full opacity, remove highlight, close/empty Details). Never a blind toggle.
   function pickOrf(id){
+    if (id==null){
+      clearOrfSelection();
+      setNow(selectedTx?("MYCN-"+selectedTx):"MYCN locus", selectedTx?txSpan(selectedTx):null);
+      rebuild(); markFeatureActive();
+      return;
+    }
     selectedOrf=id;
     var o=META.orfs[id], sp=o.span;
     $("rail-body").innerHTML = renderCard(id,o); wireCard();
