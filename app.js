@@ -1005,6 +1005,26 @@
     for (var i=0;i<nt.length;i+=3){ var codon=nt.substr(i,3), idx=i/3, res=idx<aa.length?aa[idx]:"*";
       var cls=i===0?"start":(idx>=aa.length?"stop":""); out.push('<span class="codon '+cls+'"><b>'+esc(codon)+'</b><i>'+esc(res)+"</i></span>"); }
     return out.join(""); }
+  // MS / protein-evidence axis (parallel to conserved / catalogue). Values from o.ms (mycn_orfs.meta.json).
+  function msSummary(o){
+    var m=o.ms; if(!m) return "not assessed";
+    var s=m.state;
+    if(s==="detected"){
+      var t=m.peptides_unique+" unique peptide"+(m.peptides_unique===1?"":"s")+" · MS-lysate";
+      if(m.openprot_acc) t+=" · OpenProt "+m.openprot_acc;
+      if(m.peptides&&m.peptides.length) t+=" ("+m.peptides.join(", ")+")";
+      return t;
+    }
+    if(s==="detected-subthreshold") return (m.peptides_unique+" peptide (below OpenProt ≥2 threshold) · MS-lysate"+(m.openprot_acc?" · OpenProt "+m.openprot_acc:""));
+    if(s==="present-not-detected") return ("present in OpenProt, 0 peptides detected"+(m.openprot_acc?" · OpenProt "+m.openprot_acc:""));
+    if(s==="absent-from-MS-catalogue") return "absent from MS catalogue (checked, not found)";
+    return "not assessed";
+  }
+  function msCaveat(id,o){
+    if(id==="24") return "Evidence is lysate mass spectrometry — the lower-confidence MS assay type — and 2 unique peptides is OpenProt's minimum threshold (the floor). Both peptides are unique across the human proteome and frame-disjoint from N-Myc, so they are not fragments of the canonical protein it is nested inside. No HLA-immunopeptidomics evidence was tested (Ouspenskaia elutions — not checked). No ribosome-profiling support on any of the 8 Ribo-seq datasets. MYCNOT is MS-detected at 7 peptides, which shows the MS assay is live at this locus and makes the negatives meaningful rather than under-powered. A bounded protein-level positive, not a discovery — detection is not function.";
+    if(id==="9")  return "MYCNOT is detected by lysate MS at 7 unique peptides — the control that proves the MS axis is live at this locus, which is what licenses the MS negatives elsewhere in the set.";
+    return "";
+  }
   function renderCard(id,o){
     var swatch='<span class="orf-swatch" style="background:'+esc(o.color)+'"></span>';
     var span=o.span?("chr2:"+o.span[0].toLocaleString()+"–"+o.span[1].toLocaleString()):"", carr=(o.carriers||[]).join(", ");
@@ -1017,11 +1037,15 @@
     h+='<div class="badges">'+badgesFor(id,o)+"</div>";
     // FIX 1: conservation caveat next to the badge, shown for conservation-negative ORFs (the honest case)
     if (!cons) h+='<p class="cons-note">Conservation is a weak discriminator for short uORFs: the known functional uORFs MYCNOT and MUSEP are both conservation-negative.</p>';
+    // MS / protein-evidence caveat (parallel to the conservation caveat), shown for MS-detected ORFs
+    if (o.ms && o.ms.state==="detected" && msCaveat(id,o)) h+='<p class="ms-note">'+esc(msCaveat(id,o))+'</p>';
     h+="<table class=\"props\">";
     h+=propRow("Length",(o.aa_len!=null?o.aa_len+" aa":""));
     h+=propRow("Genomic span",span); h+=propRow("Carrier transcripts",carr);
     h+=propRow("Kozak (−3/+4)",o.kozak); h+=propRow("PhyloCSF",o.phylocsf); h+=propRow("phyloP (100-way)",o.phylop);
-    h+=propRow("In Ribo-seq catalogue",o.catalogue); h+=propRow("MW (Da)",o.mw); h+=propRow("pI",o.pI);
+    h+=propRow("In Ribo-seq catalogue",o.catalogue);
+    h+=propRow("MS / protein evidence",msSummary(o));
+    h+=propRow("MW (Da)",o.mw); h+=propRow("pI",o.pI);
     h+=propRow("GRAVY",o.gravy); h+=propRow("Net charge (pH 7)",o.netq); h+=propRow("Instability index",o.instab);
     h+="</table>";
     h+='<div class="seqblock"><div class="seqhead"><span class="lbl">codons</span></div><div class="codon-wrap">'+codonStrip(o.nt,o.aa)+"</div>";

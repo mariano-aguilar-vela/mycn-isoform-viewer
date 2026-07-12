@@ -13,12 +13,21 @@ genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
 - Transcript models and the ORF set were derived in the thesis project (MYCN transcript-isoform
   characterisation). The staged locus reference sequence is the GRCh38 slice `chr2:15,938,000–15,947,200`.
 - Per-ORF metrics shown: amino-acid length, Kozak context, PhyloCSF, phyloP, MW / pI / GRAVY, net charge,
-  instability index, conservation, catalogue status, accession, and the carrier transcripts.
+  instability index, conservation, Ribo-seq catalogue status, **MS / protein evidence**, accession, and the
+  carrier transcripts.
 - **Conservation caveat:** conservation is a *weak discriminator for short uORFs* — the known functional uORFs
   **MYCNOT** (ORF9) and **MUSEP** (ORF10) are both conservation-negative yet functional. The viewer therefore
   presents conservation as evidence, not a verdict.
-- **Status of the ORFs:** apart from the annotated proteins (N-Myc, ΔMYCN) and the known functional uORFs
-  (MYCNOT, MUSEP), the ORFs shown are **predictions**.
+- **MS / protein-evidence caveat:** the MS axis is **lysate mass spectrometry** (OpenProt), the lower-confidence
+  MS assay. Detection is shown at three states — *detected* (≥2 unique peptides), *present-not-detected*
+  (in the catalogue, 0 peptides), and *absent-from-MS-catalogue* (checked, not found) — kept distinct from
+  *not-assessed*. **MYCNOT is MS-detected at 7 unique peptides**, the control proving the assay is live at this
+  locus. No HLA-immunopeptidomics was tested; the earned claim is *no Ribo-seq consensus support and no MS-lysate
+  support*, never *no immunopeptidomic support*.
+- **Status of the ORFs:** apart from the annotated proteins (N-Myc, ΔMYCN), the known functional uORFs
+  (MYCNOT, MUSEP), and **ORF 24 — OpenProt IP_083082, which now carries direct protein-level evidence (2 unique
+  peptides by lysate MS, two-executor confirmed, frame-disjoint from N-Myc)** — the ORFs shown are **predictions**.
+  ORF 24 is a bounded protein-level positive at the detection floor, not a discovery.
 
 ## How to use
 
