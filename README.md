@@ -21,11 +21,29 @@ genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
 - **Conservation caveat:** conservation is a *weak discriminator for short uORFs* — the known functional uORFs
   **MYCNOT** (ORF9) and **MUSEP** (ORF10) are both conservation-negative yet functional. The viewer therefore
   presents conservation as evidence, not a verdict.
-- **MS / protein-evidence caveat:** the MS axis is **lysate mass spectrometry** (OpenProt), the lower-confidence
-  MS assay. Detection is shown at three states — *detected* (≥2 unique peptides), *present-not-detected*
-  (in the catalogue, 0 peptides), and *absent-from-MS-catalogue* (checked, not found) — kept distinct from
-  *not-assessed*. **MYCNOT is MS-detected at 7 unique peptides**, the control proving the assay is live at this
-  locus. No HLA-immunopeptidomics was tested, so *no immunopeptidomic support* is never an earned claim.
+- **MS / protein evidence — the axis has TWO limits, and both bound every cell.**
+  The MS axis is **lysate mass spectrometry** (OpenProt 2.2), the lower-confidence MS assay.
+  - **COVERAGE.** **MYCNOT is MS-detected at 7 unique peptides** — the control proving the **assay fires** at
+    this locus. **It does not extend the search space.** OpenProt catalogues only **9 of the 763** ORFs; an ORF
+    with no OpenProt accession was **never in the search space and was therefore never searched** →
+    **NOT-ASSESSED, not a negative.** *Absent from the catalogue is not absent from the lysate.* The only real
+    MS negatives are the **3** ORFs that **are** catalogued and returned 0 peptides (*present-not-detected*).
+  - **ATTRIBUTION.** **No ORF at this locus is start-discriminated by lysate MS.** The locus is a dense nest of
+    same-stop ORFs, and **every MS-detected ORF has a same-stop host that contains it in its entirety** (N-Myc
+    18 hosts, MUSEP 5, ORF 24 two, ΔMYCN 1, **MYCNOT 1 — the control included**), so no peptide of it can ever
+    exclude that host. All four detections are therefore **`DETECTED (GROUP-LEVEL)`**, and the viewer draws the
+    evidence mark **once per stop group, never once per ORF** — a mark per ORF would let a reader count *N*
+    detections where the evidence supports **one**. **The named proteins are identified by ANNOTATION, not by
+    MS.** The honest ceiling of the axis is: ***"a protein from this stop group is translated."***
+  - **Peptide uniqueness is bounded.** Proteome-uniqueness **excludes a canonical-fragment explanation**; it
+    **cannot attribute the start**. The uniqueness search compared against four named proteins plus UniProt
+    (UP000005640, 147,506 seqs) — **and five of the six Region-1 candidates are absent from every reference
+    proteome**, so it ran against a database that **did not contain the competitors**. It was never capable of
+    discriminating them.
+  - No HLA-immunopeptidomics was tested, so *no immunopeptidomic support* is never an earned claim.
+  - Accessions follow **Table B's namespace** (`XP_047300390.1`, `ENSP00000491476.1`). The RefSeq ids
+    (`NP_001280157.1`, `NP_001280160.1`) are **aliases of the same proteins**, listed on one OpenProt record —
+    a database-namespace difference, **not a conflict**. Recorded so it is not "corrected" back.
 - **Ribo-seq is not one axis, and its absences are not all negatives.** Evidence is reported per resource, in
   five states that are never conflated: *DETECTED*, *SUB-THRESHOLD*, *PRESENT-NOT-DETECTED*, *ABSENT*, and
   *NOT-ASSESSED* (always with its reason). Only **nuORFdb v1.2** is both powered and in scope here, so only its

@@ -17,8 +17,34 @@
               // the fill channel means class. This marks "protein detected", nothing more.
               evid:"#1F6B47" };
   // The MS axis is POWERED here (MYCNOT = 7 peptides, the live control), so a detection is
-  // real. It is still ONE axis, and it says nothing about function.
+  // real. It is still ONE axis, it says nothing about function, and — decisively — it says
+  // nothing about WHICH START produced the protein: tryptic peptides at this locus are
+  // START-BLIND. Every MS-detected ORF has a same-stop host that contains it entirely.
   function msDetected(o){ return !!(o && o.ms && o.ms.state==="detected"); }
+  // The shared stop IS the event. An MS detection belongs to the stop group, not to one start.
+  function stopOf(o){ return o && o.blocks && o.blocks.length ? o.blocks[o.blocks.length-1][1] : null; }
+  // Stop groups that carry an MS detection -> keyed by stop coordinate.
+  // The group is EVERY ORF sharing that stop — not only the detected one. That is the point:
+  // the peptides cannot say which of them produced the protein, so the mark must span them all.
+  // Collecting only the detected ORF would put the mark back on a single bar and re-assert the
+  // start claim we are removing.
+  function msStopGroups(){
+    var byStop={};
+    for (var id in META.orfs){
+      var s=stopOf(META.orfs[id]); if(s==null) continue;
+      (byStop[s]=byStop[s]||[]).push(id);
+    }
+    var g={};
+    Object.keys(byStop).forEach(function(s){
+      var any=byStop[s].some(function(i){ return msDetected(META.orfs[i]); });
+      if(any) g[s]=byStop[s];                  // ALL members of the stop group, detected or not
+    });
+    return g;                                  // { stopCoord: [orfId, ...] }
+  }
+  function msGroupOf(id){                      // the stop group this ORF belongs to, if it has one
+    var o=META.orfs[id], s=stopOf(o); if(s==null) return null;
+    var g=msStopGroups(); return g[s] ? {stop:s, members:g[s]} : null;
+  }
   var BACKBONE = "#b9c2c0";
   var FONT = "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
   var MONO = "ui-monospace, 'SF Mono', 'Roboto Mono', Menlo, Consolas, monospace";
@@ -187,7 +213,8 @@
       [PAL.pred_ext,"predicted N-term ext",false], [PAL.mycnot,"MYCNOT uORF",false],
       [PAL.musep,"MUSEP uORF",false], [PAL.term,"novel ORF",false],
       // Evidence, not class — hence a separate legend entry rather than a fill colour.
-      [PAL.evid,"● protein-detected (MS-lysate)",false]
+      // And STOP-GROUP-level, not per-ORF: the mark sits at the shared stop, once per group.
+      [PAL.evid,"◆ MS-detected — stop group (start not established)",false]
     ];
   }
   function buildLegend(){   // T2.5: uniform swatches (no per-entry 'thin' class)
@@ -673,6 +700,52 @@
       else if (r.kind==="orf") drawOrf(r);
       else if (r.kind==="shared") drawShared(r);
     });
+    drawMsGroups();
+  }
+  // ONE MS mark per STOP GROUP, not one per ORF.
+  // The MS peptides are start-blind: every MS-detected ORF here has a same-stop host that
+  // contains it entirely, so the evidence says "a protein from this stop group is translated",
+  // never "this start produced it". Marking each member would let a reader COUNT N detections
+  // where there is one — the exact miscount the tables spent the day removing, as a picture.
+  // Drawn per (stop group x transcript block), because within one transcript that IS one event.
+  function drawMsGroups(){
+    var gc=clipped(gMain);
+    var groups=msStopGroups();
+    Object.keys(groups).forEach(function(stop){
+      var ids=groups[stop];
+      // the rows, per transcript, where a member of this stop group is drawn
+      var byTx={};
+      ROWS.forEach(function(r){
+        if (r.kind!=="orf" || ids.indexOf(r.id)<0) return;
+        (byTx[r.t]=byTx[r.t]||[]).push(r);
+      });
+      Object.keys(byTx).forEach(function(t){
+        var rs=byTx[t];
+        var y0=d3.min(rs,function(r){return r.y;})+ORFH/2;
+        var y1=d3.max(rs,function(r){return r.y;})+ORFH/2;
+        var xs=x(+stop+1)+7;                       // just past the shared stop
+        var mid=(y0+y1)/2;
+        var g=gc.append("g").attr("class","ms-group").attr("data-stop",stop)
+                 .attr("data-members",ids.join(","));
+        if (y1>y0){                                 // a bracket, so the mark reads as "these, together"
+          g.append("path").attr("class","ms-group-brace")
+            .attr("d","M"+(xs-3)+","+y0+" H"+xs+" V"+y1+" H"+(xs-3))
+            .attr("fill","none").attr("stroke",PAL.evid).attr("stroke-width",1.2);
+        }
+        g.append("circle").attr("class","ms-group-mark").attr("cx",xs).attr("cy",mid).attr("r",3.2)
+          .attr("fill",PAL.evid)
+          .on("mouseenter",function(ev){ tip(ev,msGroupTip(stop,ids)); })
+          .on("mousemove",moveTip).on("mouseleave",hideTip);
+      });
+    });
+  }
+  function msGroupTip(stop,ids){
+    var det=ids.filter(function(i){ return msDetected(META.orfs[i]); });
+    var n=+stop+3;                                  // stop codon end
+    return "<b>MS-lysate detection — STOP GROUP</b><br>shared stop chr2:"+n.toLocaleString()+
+      "<br><span class='dim'>A protein from this stop group IS translated.<br>"+
+      "WHICH START produced it is NOT established — the peptides are start-blind.</span>"+
+      "<br>OpenProt record on: ORF "+det.join(", ORF ");
   }
   // T2.1: the ΔMYCN transcript is the one carrying ORF2 (ΔMYCN) — derived, not hardcoded "202"
   function dmycnTx(){ return (META.orfs["2"] && META.orfs["2"].carriers[0]) || "202"; }
@@ -799,13 +872,10 @@
         .attr("rx",2).attr("fill",o.color).on("click",function(){ pickOrf(id); })
         .on("mouseenter",function(ev){ tip(ev,orfTip(id)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
     });
-    // Protein-evidence mark: ONE dot per ORF (at its start), not one per block — the mark
-    // must count ORFs, not exons. It says "protein detected", nothing about class or function.
-    if (msDetected(o)){
-      gc.append("circle").attr("class","orf-evid").attr("cx",b0-5).attr("cy",mid).attr("r",2.6)
-        .attr("fill",PAL.evid)
-        .on("mouseenter",function(ev){ tip(ev,msSummary(o)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
-    }
+    // NO per-ORF evidence mark. The peptides are START-BLIND: they cannot say WHICH of the
+    // ORFs sharing this stop produced the protein. A dot per ORF would render N detections
+    // where the evidence has exactly ONE. The mark is drawn once per STOP GROUP, in
+    // drawMsGroups() below — one mark per EVENT, never one per record.
     if (selectedOrf===id){
       gc.append("rect").attr("class","orf-sel").attr("x",b0-3).attr("y",mid-ORF_THICK/2-3).attr("width",(b1-b0)+6).attr("height",ORF_THICK+6)
         .attr("rx",4).attr("fill","none").attr("stroke",PAL.nmyc).attr("stroke-width",1.6);
@@ -1016,10 +1086,16 @@
     b.push('<span class="badge '+(cons?"cons":"noncons")+'">'+(cons?"conservation-supported":"not conservation-supported")+"</span>");
     if (id==="9")  b.push('<span class="badge gold">known functional uORF · MYCNOT</span>');
     if (id==="10") b.push('<span class="badge gold">known functional uORF · MUSEP</span>');
-    // Protein evidence as EVIDENCE, on one axis, with its bound stated. Deliberately NOT
-    // the gold badge — gold means "known functional" here, and detection is not function.
-    if (msDetected(o)) b.push('<span class="badge evid">MS-detected · '+o.ms.peptides_unique+
-      ' unique peptide'+(o.ms.peptides_unique===1?"":"s")+(o.ms.peptides_unique===2?" (OpenProt floor)":"")+'</span>');
+    // Protein evidence as EVIDENCE, on one axis, at STOP-GROUP level — never as a start claim.
+    // Deliberately NOT the gold badge: gold means "known functional" here, and detection is
+    // neither function nor attribution.
+    if (msDetected(o)){
+      var grp=msGroupOf(id), n=grp?grp.members.length:1;
+      b.push('<span class="badge evid">MS-detected · GROUP-LEVEL · '+o.ms.peptides_unique+
+        ' unique peptide'+(o.ms.peptides_unique===1?"":"s")+
+        (o.ms.peptides_unique===2?" (OpenProt floor)":"")+'</span>');
+      b.push('<span class="badge evid-warn">start NOT established'+(n>1?" · "+n+" ORFs share this stop":"")+'</span>');
+    }
     // T2.1: aa counts derived from o.aa_len (not hardcoded 593/575)
     if (id==="3")  b.push('<span class="badge canon">canonical '+o.aa_len+' aa · two-executor confirmed</span>');
     if (id==="4")  b.push('<span class="badge cand">second candidate ('+o.aa_len+' aa)</span>');
@@ -1035,14 +1111,21 @@
   function propRowNA(k,reason){ return '<tr><td class="k">'+esc(k)+'</td><td class="v na">'+esc(reason)+"</td></tr>"; }
   // Per-resource translation evidence. Cell text is copied VERBATIM from the publication
   // table (Table B) via META; the states are its states. Re-wording a gated cell is a new claim.
+  function slug(s){ return String(s).toLowerCase().replace(/[^a-z]+/g,"-").replace(/^-|-$/g,""); }
   function evidenceBlock(o){
     var res=META.evidence_resources;
     if(!o.ev||!res||!res.length) return "";
     var h='<div class="evblock"><div class="evhead">Translation evidence · per resource</div>';
+    // The MS axis's SCOPE, where a reader hits it — not buried. Verbatim from Table B's
+    // corrected column header: the two limits (coverage, and attribution) that bound every
+    // MS cell below it.
+    if (META.ms_axis_scope)
+      h+='<details class="evscope"><summary>MS-axis scope — read this before any MS cell</summary>'+
+         '<p>'+esc(META.ms_axis_scope)+'</p></details>';
     res.forEach(function(r){
       var e=o.ev[r.key]; if(!e) return;
       h+='<div class="evrow"><div class="evres">'+esc(r.label)+'</div><div class="evval">';
-      if(e.state) h+='<span class="evstate s-'+esc(e.state.toLowerCase())+'">'+esc(e.state)+'</span>';
+      if(e.state) h+='<span class="evstate s-'+slug(e.state)+'">'+esc(e.state)+'</span>';
       h+='<span class="evtext">'+esc(e.text)+'</span></div>';
       if(r.caveat) h+='<div class="evcav">'+esc(r.caveat)+'</div>';
       h+='</div>';
@@ -1058,19 +1141,26 @@
     var m=o.ms; if(!m) return "not assessed";
     var s=m.state;
     if(s==="detected"){
-      var t=m.peptides_unique+" unique peptide"+(m.peptides_unique===1?"":"s")+" · MS-lysate";
+      // GROUP-LEVEL, stated in the value itself — not only in a caveat further down. The
+      // peptides establish that a protein from this stop group is translated, nothing more.
+      var t="GROUP-LEVEL · "+m.peptides_unique+" unique peptide"+(m.peptides_unique===1?"":"s")+" · MS-lysate";
       if(m.openprot_acc) t+=" · OpenProt "+m.openprot_acc;
       if(m.peptides&&m.peptides.length) t+=" ("+m.peptides.join(", ")+")";
       return t;
     }
     if(s==="detected-subthreshold") return (m.peptides_unique+" peptide (below OpenProt ≥2 threshold) · MS-lysate"+(m.openprot_acc?" · OpenProt "+m.openprot_acc:""));
     if(s==="present-not-detected") return ("present in OpenProt, 0 peptides detected"+(m.openprot_acc?" · OpenProt "+m.openprot_acc:""));
-    if(s==="absent-from-MS-catalogue") return "absent from MS catalogue (checked, not found)";
+    // NOT "checked, not found". An ORF with no OpenProt accession was never in the MS search
+    // space, so it was NEVER SEARCHED. Absent from the CATALOGUE is not absent from the LYSATE.
+    if(s==="absent-from-MS-catalogue")
+      return "NOT-ASSESSED — not catalogued by OpenProt, so never in the MS search space and never searched. NOT a negative.";
     return "not assessed";
   }
   function msCaveat(id,o){
-    if(id==="24") return "Evidence is lysate mass spectrometry — the lower-confidence MS assay type — and 2 unique peptides is OpenProt's minimum threshold (the floor). Both peptides are unique across the human proteome and frame-disjoint from N-Myc, so they are not fragments of the canonical protein it is nested inside. No HLA-immunopeptidomics evidence was tested (Ouspenskaia elutions — not checked). Ribosome profiling reports 1,540 reads at these coordinates (sORFs.org, werner_2015), but the read phasing is OUT-OF-FRAME (frame 2; in-frame counts 61/152/840; ORFscore -10.77), consistent with translation of the HOST N-Myc CDS within which this ORF is nested. It is also one of EIGHT nested starts sharing a single stop (15,945,657) and a single read pile, from one study. This is ribosome OCCUPANCY at the locus, NOT own-frame translational evidence. It is ABSENT from nuORFdb, the one ribosome-profiling resource both powered here and in scope. Five previously cited Ribo-seq resources return zero records anywhere at MYCN and are NOT-ASSESSED, not negative. MYCNOT is MS-detected at 7 peptides, which shows the MS assay is live at this locus and makes the negatives meaningful rather than under-powered. A bounded protein-level positive, not a discovery — detection is not function.";
-    if(id==="9")  return "MYCNOT is detected by lysate MS at 7 unique peptides — the control that proves the MS axis is live at this locus, which is what licenses the MS negatives elsewhere in the set.";
+    if(id==="24") return "Evidence is lysate mass spectrometry — the lower-confidence MS assay type — and 2 unique peptides is OpenProt's minimum threshold (the floor). THE PEPTIDES DO NOT DISCRIMINATE THE START. SGVPPPTPR and LSPHSPSLCVPR are contained in 6 of the 8 sORFs.org-detected Region-1 members, and in 16 ORFs across the full 763-ORF catalogue — every one of them an exact C-terminal suffix sharing one frame and stop 15,945,657. Any of them would yield exactly these two peptides. The peptides EXCLUDE ORF 51 (contains neither) and cannot be explained by ORF 50 alone. The Ribo-seq cluster (8) and the MS candidate set (16) are different sets with different denominators. A PROTEIN IS TRANSLATED FROM THIS STOP GROUP; WHICH START PRODUCED IT IS NOT ESTABLISHED. The peptides are frame-disjoint from N-Myc, so they are not fragments of the canonical protein it is nested inside — but proteome-uniqueness EXCLUDES a canonical-fragment explanation, it CANNOT ATTRIBUTE THE START: five of the six candidates are absent from every reference proteome, so the uniqueness test ran against a database that did not contain the competitors. No HLA-immunopeptidomics evidence was tested (Ouspenskaia elutions — not checked). Ribosome profiling reports 1,540 reads at these coordinates (sORFs.org, werner_2015), but the read phasing is OUT-OF-FRAME (frame 2; in-frame counts 61/152/840; ORFscore -10.77), consistent with translation of the HOST N-Myc CDS within which this ORF is nested — ribosome OCCUPANCY at the locus, NOT own-frame translational evidence. It is ABSENT from nuORFdb, the one ribosome-profiling resource both powered here and in scope. Five previously cited Ribo-seq resources return zero records anywhere at MYCN and are NOT-ASSESSED, not negative. A bounded protein-level positive, not a discovery — detection is not function; and here, detection is not attribution.";
+    if(id==="9")  return "MYCNOT is detected by lysate MS at 7 unique peptides — the LIVE POSITIVE CONTROL: it proves the MS ASSAY FIRES at this locus, and it is what makes the three genuine MS negatives informative rather than under-powered. IT DOES NOT DISCRIMINATE ITS OWN START: MYCNOT shares its stop with 23 other ORFs in the 763-ORF catalogue, and NC-EXT-035 (CTG, 119 aa) contains MYCNOT in its entirety, so its 7 peptides cannot exclude it. THE CONTROL'S SCOPE IS THE ASSAY, NOT ATTRIBUTION — INCLUDING ITS OWN. It licenses the claim that a protein from this stop group is translated; it licenses nothing about which start produced it, and it does NOT extend the search space (OpenProt catalogues only 9 of the 763 ORFs).";
+    if(id==="1")  return "N-Myc is MS-detected at 3 unique peptides — but ATTRIBUTION IS NOT ESTABLISHED BY MS, and cannot be: 18 same-stop ORFs in the 763-ORF catalogue CONTAIN N-Myc's entire sequence, so no peptide of N-Myc can ever exclude them, whatever those three peptides are. N-Myc's identity here rests on ANNOTATION, not on these peptides — annotation is not MS evidence. What the MS establishes is that a protein from this stop group is translated.";
+    if(id==="2")  return "ΔMYCN is MS-detected at 4 unique peptides — but ATTRIBUTION IS IMPOSSIBLE IN PRINCIPLE, proven by in-silico tryptic digest without needing the peptides themselves. ΔMYCN's 253 aa = a 52-aa N-terminal leader shared verbatim with MYCNOT, MUSEP and ORF 11, plus a 201-aa C-terminal block shared verbatim with N-Myc. 52 + 201 = 253: ΔMYCN has ZERO residues of its own. Only a peptide spanning the 52|53 junction could discriminate it, and of its 41 MS-detectable tryptic peptides, none is unique — the shortest junction-spanning peptide is 33 aa, past the 30-aa detectability ceiling, and all six are shared with other near-cognate ORFs anyway. OpenProt's 4 peptides therefore cannot be discriminating peptides. A protein from this stop group is translated; which start produced it is not established.";
     return "";
   }
   function renderCard(id,o){
@@ -1087,6 +1177,13 @@
     if (!cons) h+='<p class="cons-note">Conservation is a weak discriminator for short uORFs: the known functional uORFs MYCNOT and MUSEP are both conservation-negative.</p>';
     // MS / protein-evidence caveat (parallel to the conservation caveat), shown for MS-detected ORFs
     if (o.ms && o.ms.state==="detected" && msCaveat(id,o)) h+='<p class="ms-note">'+esc(msCaveat(id,o))+'</p>';
+    // The bound on peptide uniqueness — it never travels without it. Uniqueness excludes a
+    // canonical-fragment explanation; it cannot attribute a start.
+    if (o.ms && o.ms.state==="detected" && META.uniqueness_bound)
+      h+='<p class="uniq-note">'+esc(META.uniqueness_bound)+'</p>';
+    // Accessions: the viewer cites Table B's namespace. Where a RefSeq alias also exists, SAY SO —
+    // otherwise someone "corrects" it back in six weeks and silently breaks the trace to the table.
+    if (o.ms && o.ms.acc_alias_note) h+='<p class="acc-note">'+esc(o.ms.acc_alias_note)+'</p>';
     h+="<table class=\"props\">";
     h+=propRow("Length",(o.aa_len!=null?o.aa_len+" aa":""));
     h+=propRow("Genomic span",span); h+=propRow("Carrier transcripts",carr);

@@ -274,11 +274,13 @@
    "ms": {
     "state": "detected",
     "assay": "MS-lysate",
-    "openprot_acc": "NP_001280157.1",
+    "openprot_acc": "XP_047300390.1",
     "openprot_type": "RefProt",
     "peptides_unique": 3,
     "confirmation": "single-executor (OpenProt slice)",
-    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)",
+    "level": "group",
+    "acc_alias_note": "XP_047300390.1 (Table B / the OpenProt join) and NP_001280157.1 (RefSeq) are ALIASES of the SAME protein — OpenProt lists them on one record. This is a DATABASE-NAMESPACE difference, not a conflict. The viewer cites Table B's namespace so the two agree."
    },
    "mw": 49560.8,
    "pI": 5.45,
@@ -328,8 +330,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "DETECTED — 3 unique peptides (OpenProt XP_047300390.1)",
-     "state": "DETECTED"
+     "text": "DETECTED (GROUP-LEVEL) — 3 unique peptides (OpenProt XP_047300390.1). ATTRIBUTION NOT ESTABLISHED BY MS, AND NOT ESTABLISHABLE: 18 same-stop ORFs in the 763-ORF catalogue CONTAIN N-Myc's entire sequence (ATG-001 at 593 aa, ATG-002 at 575 aa, and 16 near-cognate extensions), so NO peptide of N-Myc can EVER exclude them — this holds whatever the three peptides are. N-Myc's identity rests on ANNOTATION, not on these peptides; annotation is not MS evidence. What the MS establishes is that A PROTEIN FROM THIS STOP GROUP IS TRANSLATED.",
+     "state": "DETECTED (GROUP-LEVEL)"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -376,11 +378,13 @@
    "ms": {
     "state": "detected",
     "assay": "MS-lysate",
-    "openprot_acc": "NP_001280160.1",
+    "openprot_acc": "ENSP00000491476.1",
     "openprot_type": "RefProt",
     "peptides_unique": 4,
     "confirmation": "single-executor (OpenProt slice)",
-    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)",
+    "level": "group",
+    "acc_alias_note": "ENSP00000491476.1 (Table B / the OpenProt join) and NP_001280160.1 (RefSeq) are ALIASES of the SAME protein — OpenProt lists them on one record. This is a DATABASE-NAMESPACE difference, not a conflict. The viewer cites Table B's namespace so the two agree."
    },
    "mw": 28359.6,
    "pI": 9.06,
@@ -410,8 +414,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "DETECTED — 4 unique peptides (OpenProt ENSP00000491476.1)",
-     "state": "DETECTED"
+     "text": "DETECTED (GROUP-LEVEL) — 4 unique peptides (OpenProt ENSP00000491476.1). ATTRIBUTION IS IMPOSSIBLE IN PRINCIPLE, PROVEN BY IN-SILICO TRYPTIC DIGEST (dmycn_digest.py; no OpenProt peptide retrieval required). dMYCN's 253 aa = a 52-aa N-terminal leader SHARED VERBATIM with MYCNOT, MUSEP and ORF 11, plus a 201-aa C-terminal block SHARED VERBATIM with N-Myc. 52 + 201 = 253: dMYCN HAS ZERO RESIDUES OF ITS OWN. Only a peptide SPANNING the 52|53 junction could discriminate it; of its 41 MS-detectable tryptic peptides, ZERO are unique. The shortest junction-spanning peptide is 33 aa (AESPPDPLQSAGDDEDDEEEDEEEEIDVVTVEK, residues 41-73) — PAST the 30-aa detectability ceiling — and all six junction peptides are in any case SHARED with NC-EXT-033 and NC-NEST-013/-014/-015. Impossible on TWO INDEPENDENT GROUNDS, robust across windows 7-30 through 7-50 aa and 2 missed cleavages. OpenProt's 4 peptides therefore CANNOT be discriminating peptides: they must lie in the shared leader or the shared C-terminal block. A PROTEIN FROM THIS STOP GROUP IS TRANSLATED; WHICH START PRODUCED IT IS NOT ESTABLISHED.",
+     "state": "DETECTED (GROUP-LEVEL)"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -492,8 +496,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -574,8 +578,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -681,8 +685,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -788,8 +792,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -895,8 +899,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -1002,8 +1006,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -1051,14 +1055,15 @@
    "ms": {
     "state": "detected",
     "assay": "MS-lysate",
-    "openprot_acc": "Q9H224 / NP_001280162.1",
+    "openprot_acc": "NP_001280162.1/Q9H224",
     "openprot_type": "RefProt",
     "peptides_unique": 7,
     "confirmation": "two-executor",
     "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)",
     "peptides": null,
     "role": "control — MS axis proven live at this locus (7 peptides)",
-    "peptides_note": "individual peptide sequences NOT RECORDED (not retrieved from OpenProt)"
+    "peptides_note": "individual peptide sequences NOT RECORDED (not retrieved from OpenProt)",
+    "level": "group"
    },
    "mw": 11765.1,
    "pI": 11.22,
@@ -1092,8 +1097,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "DETECTED — 7 unique peptides (OpenProt NP_001280162.1/Q9H224)",
-     "state": "DETECTED"
+     "text": "DETECTED (GROUP-LEVEL) — 7 unique peptides (OpenProt NP_001280162.1/Q9H224). MYCNOT IS THE LIVE POSITIVE CONTROL: it proves the MS ASSAY FIRES at this locus — a short regulatory ORF at MYCN IS detectable by lysate MS — and it is what makes the THREE genuine MS negatives (MUSEP, ATG-015, ATG-022) informative rather than under-powered. IT DOES NOT DISCRIMINATE ITS OWN START: MYCNOT shares its stop with 23 other ORFs in the 763-ORF catalogue, and NC-EXT-035 (CTG, 119 aa) CONTAINS MYCNOT IN ITS ENTIRETY — its 7 peptides cannot exclude it. THE CONTROL'S SCOPE IS THE ASSAY, NOT ATTRIBUTION — INCLUDING ITS OWN. It licenses the claim 'a protein from this stop group is translated'; it licenses NOTHING about which start produced it, and it does NOT extend the SEARCH SPACE.",
+     "state": "DETECTED (GROUP-LEVEL)"
     },
     "sorfs": {
      "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
@@ -1175,7 +1180,7 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "PRESENT-NOT-DETECTED — in OpenProt records, 0 peptides",
+     "text": "PRESENT-NOT-DETECTED — catalogued by OpenProt (II_2387201) and therefore SEARCHED; 0 peptides detected. This IS a real negative: the ORF WAS in the search space. (One of only THREE real MS negatives in the whole catalogue. The MYCNOT control is what makes these informative rather than under-powered.)",
      "state": "PRESENT-NOT-DETECTED"
     },
     "sorfs": {
@@ -1257,8 +1262,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -1335,8 +1340,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -1417,8 +1422,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -1500,7 +1505,7 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "PRESENT-NOT-DETECTED — in OpenProt records, 0 peptides",
+     "text": "PRESENT-NOT-DETECTED — catalogued by OpenProt (A0A166VE84) and therefore SEARCHED; 0 peptides detected. This IS a real negative: the ORF WAS in the search space. (One of only THREE real MS negatives in the whole catalogue. The MYCNOT control is what makes these informative rather than under-powered.)",
      "state": "PRESENT-NOT-DETECTED"
     },
     "sorfs": {
@@ -1582,8 +1587,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -1660,8 +1665,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -1739,8 +1744,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -1818,8 +1823,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -1897,8 +1902,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -1976,8 +1981,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -2065,8 +2070,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -2144,8 +2149,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -2248,7 +2253,7 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "SUB-THRESHOLD — 1 peptide (below OpenProt's 2-peptide reporting floor)",
+     "text": "SUB-THRESHOLD — 1 peptide, below OpenProt's >=2 reporting floor (IP_083083). NOTE: accession IP_083083 is matched by BOTH ATG-010 and NC-EXT-050 — ONE ACCESSION, TWO ORF RECORDS. Records != events, in the accession space.",
      "state": "SUB-THRESHOLD"
     },
     "sorfs": {
@@ -2320,7 +2325,8 @@
     ],
     "unique_in_proteome": true,
     "frame_disjoint": true,
-    "role": "novel ORF — first in the 763 with direct protein evidence"
+    "role": "novel ORF — first in the 763 with direct protein evidence",
+    "level": "group"
    },
    "mw": 6114.3,
    "pI": 12,
@@ -2374,8 +2380,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "DETECTED — 2 unique peptides (OpenProt IP_083082)",
-     "state": "DETECTED"
+     "text": "DETECTED (GROUP-LEVEL) — THE PEPTIDES DO NOT DISCRIMINATE THE START. OpenProt IP_083082 reports 2 unique peptides (SGVPPPTPR, LSPHSPSLCVPR) at the OpenProt reporting floor, across 3 lysate datasets. THE TWO PEPTIDES ARE CONTAINED IN 6 OF THE 8 sORFs.org-DETECTED REGION-1 MEMBERS, AND IN 16 ORFs ACROSS THE FULL 763-ORF CATALOGUE (2 ATC/ATT extensions LARGER than ATG-016, the 5 ATG starts, and near-cognates down to NC-NEST-092; 2 further ORFs contain one peptide). THE RIBO-SEQ CLUSTER (8) AND THE MS CANDIDATE SET (16) ARE DIFFERENT SETS WITH DIFFERENT DENOMINATORS — records != events, on two axes, with two bases. Any of the 16 would yield exactly these two peptides. The peptides EXCLUDE NC-NEST-128 (contains neither) and cannot be explained by NC-NEST-108 alone (contains only LSPHSPSLCVPR). The other starts are NOT catalogued by OpenProt and were NEVER SEARCHED — NOT-ASSESSED, not ABSENT. A PROTEIN IS TRANSLATED FROM THIS STOP GROUP; WHICH START PRODUCED IT IS NOT ESTABLISHED. Proteome-uniqueness EXCLUDES a canonical-fragment explanation; it CANNOT ATTRIBUTE THE START — the uniqueness search (uniqueness_digest.py, b0514f64) compared against FOUR hard-coded proteins plus UniProt, a database that does NOT contain the nested competitors. The peptides ARE frame-disjoint from N-Myc/dMYCN, so they are not fragments of the canonical protein. Detection is not function; and here, detection is not attribution.",
+     "state": "DETECTED (GROUP-LEVEL)"
     },
     "sorfs": {
      "text": "DETECTED (1,540 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -2487,8 +2493,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE. Its sequence CONTAINS BOTH peptides of the Region-1 detection (SGVPPPTPR, LSPHSPSLCVPR) — it is one of the CANDIDATE SOURCES; the peptides cannot exclude it.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "DETECTED (1,540 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -2600,8 +2606,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE. Its sequence CONTAINS BOTH peptides of the Region-1 detection (SGVPPPTPR, LSPHSPSLCVPR) — it is one of the CANDIDATE SOURCES; the peptides cannot exclude it.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "DETECTED (1,534 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -2713,8 +2719,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE. Its sequence CONTAINS BOTH peptides of the Region-1 detection (SGVPPPTPR, LSPHSPSLCVPR) — it is one of the CANDIDATE SOURCES; the peptides cannot exclude it.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "DETECTED (1,531 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -2826,8 +2832,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE. Its sequence CONTAINS BOTH peptides of the Region-1 detection (SGVPPPTPR, LSPHSPSLCVPR) — it is one of the CANDIDATE SOURCES; the peptides cannot exclude it.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "DETECTED (1,454 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -2939,7 +2945,7 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "PRESENT-NOT-DETECTED — in OpenProt records, 0 peptides",
+     "text": "PRESENT-NOT-DETECTED — catalogued by OpenProt (IP_083084) and therefore SEARCHED; 0 peptides detected. This IS a real negative: the ORF WAS in the search space. (One of only THREE real MS negatives in the whole catalogue. The MYCNOT control is what makes these informative rather than under-powered.)",
      "state": "PRESENT-NOT-DETECTED"
     },
     "sorfs": {
@@ -3047,8 +3053,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -3161,8 +3167,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "DETECTED (1,002 reads) — Region 6 member; out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -3275,8 +3281,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "DETECTED (559 reads) — Region 2 member; out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -3389,8 +3395,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "DETECTED (562 reads) — Region 2 member; out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -3503,8 +3509,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -3617,8 +3623,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -3731,8 +3737,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -3840,8 +3846,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -3954,8 +3960,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "DETECTED (114 reads) — Region 5 member; out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
@@ -4063,8 +4069,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -4172,8 +4178,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -4286,8 +4292,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -4395,8 +4401,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -4504,8 +4510,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -4618,8 +4624,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -4727,8 +4733,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -4836,8 +4842,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -4945,8 +4951,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -5054,8 +5060,8 @@
    },
    "ev": {
     "ms_lysate": {
-     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
     },
     "sorfs": {
      "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
@@ -5084,8 +5090,8 @@
   {
    "key": "ms_lysate",
    "label": "MS-lysate (OpenProt 2.2)",
-   "caveat": "POWERED — MYCNOT 7 pep = live control; absences are REAL",
-   "header_verbatim": "MS-lysate: OpenProt 2.2 (POWERED — MYCNOT 7 pep = live control; absences are REAL)"
+   "caveat": "READ THE TWO LIMITS OF THIS AXIS BEFORE READING ANY CELL. (1) COVERAGE: the MYCNOT 7-peptide control proves the ASSAY FIRES at this locus; it does NOT extend the SEARCH SPACE. OpenProt catalogues only 9 of the 763 ORFs; every ORF without an accession was NEVER IN THE SEARCH SPACE and so was NEVER SEARCHED = NOT-ASSESSED, NOT a negative. The ONLY real MS negatives are the 3 ORFs that ARE catalogued and returned 0 peptides. (2) ATTRIBUTION: NO ORF AT THIS LOCUS IS START-DISCRIMINATED BY LYSATE MS. The locus is a dense nest of same-stop ORFs, and EVERY MS-detected ORF has a same-stop host that contains it in its entirety (N-Myc 18 hosts, MUSEP 5, ATG-016 2, dMYCN 1, MYCNOT 1 — the control included), so no peptide of it can ever exclude that host. Peptide-level START attribution is STRUCTURALLY IMPOSSIBLE here — everywhere, not only in Region 1. THE NAMED PROTEINS ARE IDENTIFIED BY ANNOTATION, NOT BY MS. THE HONEST CEILING OF THIS AXIS IS: 'A PROTEIN FROM THIS STOP GROUP IS TRANSLATED' — FOR ALL FOUR DETECTIONS, N-MYC INCLUDED. Proteome-uniqueness EXCLUDES a canonical-fragment explanation; it CANNOT ATTRIBUTE THE START.)",
+   "header_verbatim": "MS-lysate: OpenProt 2.2 — READ THE TWO LIMITS OF THIS AXIS BEFORE READING ANY CELL. (1) COVERAGE: the MYCNOT 7-peptide control proves the ASSAY FIRES at this locus; it does NOT extend the SEARCH SPACE. OpenProt catalogues only 9 of the 763 ORFs; every ORF without an accession was NEVER IN THE SEARCH SPACE and so was NEVER SEARCHED = NOT-ASSESSED, NOT a negative. The ONLY real MS negatives are the 3 ORFs that ARE catalogued and returned 0 peptides. (2) ATTRIBUTION: NO ORF AT THIS LOCUS IS START-DISCRIMINATED BY LYSATE MS. The locus is a dense nest of same-stop ORFs, and EVERY MS-detected ORF has a same-stop host that contains it in its entirety (N-Myc 18 hosts, MUSEP 5, ATG-016 2, dMYCN 1, MYCNOT 1 — the control included), so no peptide of it can ever exclude that host. Peptide-level START attribution is STRUCTURALLY IMPOSSIBLE here — everywhere, not only in Region 1. THE NAMED PROTEINS ARE IDENTIFIED BY ANNOTATION, NOT BY MS. THE HONEST CEILING OF THIS AXIS IS: 'A PROTEIN FROM THIS STOP GROUP IS TRANSLATED' — FOR ALL FOUR DETECTIONS, N-MYC INCLUDED. Proteome-uniqueness EXCLUDES a canonical-fragment explanation; it CANNOT ATTRIBUTE THE START.)"
   },
   {
    "key": "sorfs",
@@ -5117,5 +5123,7 @@
    "caveat": "UNPOWERED — 0 records anywhere at the MYCN locus",
    "header_verbatim": "Ribo-seq: 5 consensus catalogues (UNPOWERED — 0 records anywhere at the MYCN locus)"
   }
- ]
+ ],
+ "ms_axis_scope": "MS-lysate: OpenProt 2.2 — READ THE TWO LIMITS OF THIS AXIS BEFORE READING ANY CELL. (1) COVERAGE: the MYCNOT 7-peptide control proves the ASSAY FIRES at this locus; it does NOT extend the SEARCH SPACE. OpenProt catalogues only 9 of the 763 ORFs; every ORF without an accession was NEVER IN THE SEARCH SPACE and so was NEVER SEARCHED = NOT-ASSESSED, NOT a negative. The ONLY real MS negatives are the 3 ORFs that ARE catalogued and returned 0 peptides. (2) ATTRIBUTION: NO ORF AT THIS LOCUS IS START-DISCRIMINATED BY LYSATE MS. The locus is a dense nest of same-stop ORFs, and EVERY MS-detected ORF has a same-stop host that contains it in its entirety (N-Myc 18 hosts, MUSEP 5, ATG-016 2, dMYCN 1, MYCNOT 1 — the control included), so no peptide of it can ever exclude that host. Peptide-level START attribution is STRUCTURALLY IMPOSSIBLE here — everywhere, not only in Region 1. THE NAMED PROTEINS ARE IDENTIFIED BY ANNOTATION, NOT BY MS. THE HONEST CEILING OF THIS AXIS IS: 'A PROTEIN FROM THIS STOP GROUP IS TRANSLATED' — FOR ALL FOUR DETECTIONS, N-MYC INCLUDED. Proteome-uniqueness EXCLUDES a canonical-fragment explanation; it CANNOT ATTRIBUTE THE START.)",
+ "uniqueness_bound": "Proteome-uniqueness EXCLUDES a canonical-fragment explanation. It CANNOT ATTRIBUTE THE START. The two peptides are unique across the human reference proteome (UniProt UP000005640, 147,506 sequences) — but five of the six Region-1 candidates are ABSENT FROM EVERY REFERENCE PROTEOME, so the uniqueness test ran against a database that DID NOT CONTAIN THE COMPETITORS. It was never capable of discriminating them. (Preserved: uniqueness_digest.py, md5 b0514f64, lines 10–18 — the comparison set was FOUR named proteins plus UniProt, never the Region-1 siblings. Demonstrated, not inferred.)"
 }
