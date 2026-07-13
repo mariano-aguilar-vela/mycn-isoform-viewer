@@ -341,8 +341,8 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -425,8 +425,8 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -507,8 +507,8 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -589,8 +589,8 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -696,8 +696,8 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -803,8 +803,8 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -910,8 +910,8 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -1017,8 +1017,8 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -1108,12 +1108,12 @@
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1184,19 +1184,19 @@
      "state": "PRESENT-NOT-DETECTED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1266,19 +1266,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1344,19 +1344,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1426,19 +1426,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1509,19 +1509,19 @@
      "state": "PRESENT-NOT-DETECTED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1591,19 +1591,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1669,19 +1669,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1748,19 +1748,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1827,19 +1827,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1906,19 +1906,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -1985,19 +1985,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -2074,19 +2074,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -2153,19 +2153,19 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
-     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — Ribo-uORF is a CATALOGUE OF POSITIVES: its 4,668,018 rows are per-sample uORF CALLS, not a candidate set. It does not publish what it tested, so an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. NOT a negative. (Its OUT-OF-CLASS cells remain NOT-ASSESSED for the separate and correct reason that Ribo-uORF covers the uORF/uTIS class only.)",
+     "state": "NOT-ASSESSED"
     },
     "consensus": {
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
@@ -2257,15 +2257,15 @@
      "state": "SUB-THRESHOLD"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -2391,8 +2391,8 @@
      "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -2504,8 +2504,8 @@
      "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -2617,8 +2617,8 @@
      "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -2730,8 +2730,8 @@
      "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -2843,8 +2843,8 @@
      "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -2949,15 +2949,15 @@
      "state": "PRESENT-NOT-DETECTED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3057,15 +3057,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3178,8 +3178,8 @@
      "text": "Region 6 (15,945,982-15,946,068) — members: ORFs 31, 56 (ATG-024, NC-EXT-110). Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3292,8 +3292,8 @@
      "text": "Region 2 (15,945,668-15,945,753) — members: ORFs 32, 33, 52 (ATG-030 [frame 2]; ATG-031 + NC-EXT-149 [frame 1, shared stop 15,945,753]). ATG-031 + NC-EXT-149 share stop 15,945,753. Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3406,8 +3406,8 @@
      "text": "Region 2 (15,945,668-15,945,753) — members: ORFs 32, 33, 52 (ATG-030 [frame 2]; ATG-031 + NC-EXT-149 [frame 1, shared stop 15,945,753]). ATG-031 + NC-EXT-149 share stop 15,945,753. Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3513,15 +3513,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3627,15 +3627,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3741,15 +3741,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3850,15 +3850,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -3971,8 +3971,8 @@
      "text": "Region 5 (15,945,943-15,945,972) — members: ORF 38 (ATG-037). Records != events."
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4073,15 +4073,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4182,15 +4182,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4296,15 +4296,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4405,15 +4405,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4514,15 +4514,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4628,15 +4628,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4737,15 +4737,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4846,15 +4846,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -4955,15 +4955,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -5064,15 +5064,15 @@
      "state": "NOT-ASSESSED"
     },
     "sorfs": {
-     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — sORFs.org is UNPOWERED FOR NEGATIVES at this locus, and this is DEMONSTRATED, not inferred: MUSEP (86 aa, a KNOWN FUNCTIONAL uORF, squarely IN SCOPE at <=100 aa) is MISSED ENTIRELY. All 17 sORFs.org hits fall in ONE ~575 bp island. A CATALOGUE PROVEN TO MISS AN IN-SCOPE TRUE POSITIVE AT THE VERY LOCUS UNDER STUDY CANNOT SUPPLY A RELIABLE NEGATIVE THERE. The prior cell read 'ABSENT — in scope, searched, not found' while recording, in the same sentence, that MUSEP was missed: it refuted itself. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "cluster": {
      "text": "n/a (no sORFs.org record)"
     },
     "nuorfdb": {
-     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
-     "state": "ABSENT"
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
     },
     "ribouorf": {
      "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
@@ -5096,8 +5096,8 @@
   {
    "key": "sorfs",
    "label": "Ribo-seq (sORFs.org)",
-   "caveat": "scope <=100 aa; NON-EXHAUSTIVE — 17 hits in ONE ~575bp island; in-scope MUSEP missed",
-   "header_verbatim": "Ribo-seq: sORFs.org (scope <=100 aa; NON-EXHAUSTIVE — 17 hits in ONE ~575bp island; in-scope MUSEP missed)"
+   "caveat": "in-scope MUSEP (86 aa, a known functional uORF) is MISSED ENTIRELY, and all 17 hits fall in ONE ~575 bp island. NO DEFENSIBLE NEGATIVES. The POSITIVES stand; every absence is NOT-ASSESSED.]",
+   "header_verbatim": "Ribo-seq: sORFs.org [<=100 aa scope. NON-EXHAUSTIVE **and UNPOWERED FOR NEGATIVES** — in-scope MUSEP (86 aa, a known functional uORF) is MISSED ENTIRELY, and all 17 hits fall in ONE ~575 bp island. NO DEFENSIBLE NEGATIVES. The POSITIVES stand; every absence is NOT-ASSESSED.]"
   },
   {
    "key": "cluster",
@@ -5108,14 +5108,14 @@
   {
    "key": "nuorfdb",
    "label": "Ribo-seq (nuORFdb v1.2)",
-   "caveat": "POWERED, in-scope; absences are REAL",
-   "header_verbatim": "Ribo-seq: nuORFdb v1.2 (POWERED, in-scope; absences are REAL)"
+   "caveat": "it publishes its CALLS, not its CANDIDATE SET. NO DEFENSIBLE NEGATIVES: an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. Its single MYCN record (NC-NEST-090) is NOT in this table. Firing once proves the pipeline works; it says nothing about coverage.]",
+   "header_verbatim": "Ribo-seq: nuORFdb v1.2 [CATALOGUE OF POSITIVES — it publishes its CALLS, not its CANDIDATE SET. NO DEFENSIBLE NEGATIVES: an absence cannot distinguish 'tested, no evidence' from 'never a candidate'. Its single MYCN record (NC-NEST-090) is NOT in this table. Firing once proves the pipeline works; it says nothing about coverage.]"
   },
   {
    "key": "ribouorf",
    "label": "Ribo-seq (Ribo-uORF)",
-   "caveat": "uORF/uTIS class ONLY",
-   "header_verbatim": "Ribo-seq: Ribo-uORF (uORF/uTIS class ONLY)"
+   "caveat": "out-of-class ORFs are NOT-ASSESSED for that reason. CATALOGUE OF POSITIVES: publishes calls, not candidates, so in-class absences are NOT-ASSESSED too. NO DEFENSIBLE NEGATIVES.]",
+   "header_verbatim": "Ribo-seq: Ribo-uORF [uORF/uTIS class ONLY — out-of-class ORFs are NOT-ASSESSED for that reason. CATALOGUE OF POSITIVES: publishes calls, not candidates, so in-class absences are NOT-ASSESSED too. NO DEFENSIBLE NEGATIVES.]"
   },
   {
    "key": "consensus",

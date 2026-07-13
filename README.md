@@ -44,16 +44,32 @@ genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
   - Accessions follow **Table B's namespace** (`XP_047300390.1`, `ENSP00000491476.1`). The RefSeq ids
     (`NP_001280157.1`, `NP_001280160.1`) are **aliases of the same proteins**, listed on one OpenProt record —
     a database-namespace difference, **not a conflict**. Recorded so it is not "corrected" back.
-- **Ribo-seq is not one axis, and its absences are not all negatives.** Evidence is reported per resource, in
-  five states that are never conflated: *DETECTED*, *SUB-THRESHOLD*, *PRESENT-NOT-DETECTED*, *ABSENT*, and
-  *NOT-ASSESSED* (always with its reason). Only **nuORFdb v1.2** is both powered and in scope here, so only its
-  absences are real negatives. **sORFs.org** is non-exhaustive and scoped to ≤100 aa; **Ribo-uORF** covers the
-  uORF/uTIS class only; and **five consensus catalogues return zero records anywhere at the MYCN locus** — they
-  are **UNPOWERED and NOT-ASSESSED, not negative**. A *no Ribo-seq support* claim across all of them would be
-  false, and is not made.
-- **Status of the ORFs:** apart from the annotated proteins (N-Myc, ΔMYCN), the known functional uORFs
-  (MYCNOT, MUSEP), and **ORF 24 — OpenProt IP_083082, which now carries direct protein-level evidence (2 unique
-  peptides by lysate MS, two-executor confirmed, frame-disjoint from N-Myc)** — the ORFs shown are **predictions**.
+- **THE RIBO-SEQ AXIS HAS NO DEFENSIBLE NEGATIVES AT THIS LOCUS.** Evidence is reported per resource, in states
+  that are never conflated: *DETECTED*, *SUB-THRESHOLD*, *PRESENT-NOT-DETECTED* and *NOT-ASSESSED* (always with
+  its reason). **`ABSENT` is now UNUSED on every axis — no ORF qualifies for it.**
+  - **A catalogue's coverage is not an assay's power.** Every Ribo-seq resource here is a **catalogue of
+    positives**: it publishes the ORFs it **called**, not the candidate set it **tested**. An absence therefore
+    cannot distinguish *"tested, no evidence"* from *"never a candidate"* — **and neither is provable from the
+    artifact**, so an absence is unfalsifiable.
+  - **nuORFdb v1.2** — its **single** MYCN record (**NC-NEST-090**) is **not one of the ORFs in this table**.
+    Emitting one record proves the pipeline *can* call an ORF here; it says nothing about the search space.
+  - **sORFs.org** — **unpowered for negatives, and demonstrably so**: **MUSEP** (86 aa, a known functional uORF,
+    squarely in scope at ≤100 aa) is **missed entirely**, and all 17 hits fall in one ~575 bp island. A catalogue
+    proven to miss an in-scope true positive at this locus cannot supply a reliable negative here.
+  - **Ribo-uORF** covers the **uORF/uTIS class only**, and its records are per-sample **calls**, not candidates.
+  - **Five consensus catalogues return zero records anywhere at the MYCN locus** — **UNPOWERED, NOT-ASSESSED.**
+  - **What the axis has is POSITIVES:** 17 sORFs.org records (7 terminating ORFs across 6 regions, **one study**,
+    one ~575 bp island, **out-of-frame phasing where tested**), 1 nuORFdb record, 1 Ribo-uORF record.
+    **It can say nothing about anything it did not find.**
+- **The two axes agree on the ceiling.** MS: *"a protein from this stop group is translated"* — no start
+  discrimination. Ribo-seq: *"reads are present at these coordinates"* — no defensible absence. **The ORF
+  landscape is a search space with a handful of positives and no reliable negatives on either axis.**
+- **Status of the ORFs:** apart from the annotated proteins (N-Myc, ΔMYCN) and the known functional uORFs
+  (MYCNOT, MUSEP), the ORFs shown are **predictions**. **ORF 24** (OpenProt IP_083082) carries protein-level
+  evidence — 2 unique peptides by lysate MS, two-executor confirmed, frame-disjoint from N-Myc — **but at
+  GROUP LEVEL, not as a start claim**: those peptides are contained in 6 of the 8 Region-1 members and in 16
+  ORFs across the full 763-ORF catalogue, so **a protein IS translated from that stop group, but WHICH START
+  produced it is NOT established**. Detection is not function; and here, detection is not attribution.
   ORF 24 is a bounded protein-level positive at the detection floor, not a discovery.
 
 ## How to use
