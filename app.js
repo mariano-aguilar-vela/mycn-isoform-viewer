@@ -12,7 +12,13 @@
   // ---- palette (loaded from META.palette at boot; these are v3.10 fallbacks) ----
   var PAL = { nmyc:"#4A6FA5", dmycn:"#D98A3D", mycnot:"#C0504D", musep:"#B0568C",
               ri_line:"#2F7A57", ri_bg:"#C3E0D4", pred_ext:"#8FA9C9", utr:"#C7CFCC",
-              term:"#8A9791", gold:"#C9A227" };
+              term:"#8A9791", gold:"#C9A227",
+              // Evidence ink. NOT a class colour and never used as a fill for an ORF body —
+              // the fill channel means class. This marks "protein detected", nothing more.
+              evid:"#1F6B47" };
+  // The MS axis is POWERED here (MYCNOT = 7 peptides, the live control), so a detection is
+  // real. It is still ONE axis, and it says nothing about function.
+  function msDetected(o){ return !!(o && o.ms && o.ms.state==="detected"); }
   var BACKBONE = "#b9c2c0";
   var FONT = "Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif";
   var MONO = "ui-monospace, 'SF Mono', 'Roboto Mono', Menlo, Consolas, monospace";
@@ -171,9 +177,17 @@
   function buildLegendData(){
     LEGEND = [
       [PAL.nmyc,"N-Myc-frame CDS",false], [PAL.dmycn,"ΔMYCN (202) CDS",false],
-      [PAL.ri_line,"206 retained intron",true], [PAL.utr,"UTR / non-coding",true],
+      [PAL.ri_line,"206 retained intron",true],
+      // This colour is OVERLOADED: it paints transcript UTR segments (segFill) AND the 26
+      // novel-other ORF bodies. 11 of those 26 sit in CDS-region (alt/out-of-frame), and one
+      // (ORF 24) is MS-detected protein — so the old label "UTR / non-coding" called a
+      // protein-detected ORF non-coding. The label now names both uses; un-overloading the
+      // colour itself is a 26-bar recolour and belongs with the Stage-3 class rebuild.
+      [PAL.utr,"UTR (transcript) · novel-other ORF",true],
       [PAL.pred_ext,"predicted N-term ext",false], [PAL.mycnot,"MYCNOT uORF",false],
-      [PAL.musep,"MUSEP uORF",false], [PAL.term,"novel ORF",false]
+      [PAL.musep,"MUSEP uORF",false], [PAL.term,"novel ORF",false],
+      // Evidence, not class — hence a separate legend entry rather than a fill colour.
+      [PAL.evid,"● protein-detected (MS-lysate)",false]
     ];
   }
   function buildLegend(){   // T2.5: uniform swatches (no per-entry 'thin' class)
@@ -757,7 +771,10 @@
     g.append("rect").attr("class","orf-hit").attr("x",22).attr("y",r.y).attr("width",GUTTER-30).attr("height",ORFH).attr("fill","transparent")
       .style("cursor","pointer").on("click",function(){ pickOrf(id); })
       .on("mouseenter",function(ev){ tip(ev,orfTip(id)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
-    g.append("rect").attr("class","orf-sw").attr("x",24).attr("y",mid-5).attr("width",10).attr("height",10).attr("rx",2).attr("fill",o.color);
+    g.append("rect").attr("class","orf-sw").attr("x",24).attr("y",mid-5).attr("width",10).attr("height",10).attr("rx",2).attr("fill",o.color)
+      // Protein evidence is NOT a class, so it does not take the class colour channel.
+      // It gets its own mark. (Same reason conservation is a badge, never a fill.)
+      .attr("stroke", msDetected(o)?PAL.evid:"none").attr("stroke-width", msDetected(o)?1.6:0);
     var nm=NAME[id]?(" "+NAME[id]):"", TAGX=GUTTER-8, LBLX=42;
     // narrow (phone) gutter: tag shows only carrier count so the id+name column keeps room before truncation
     var tagStr=shortLabels() ? (carrierCount(id)+"c") : (o.aa_len+"aa · "+carrierCount(id)+"c");
@@ -782,6 +799,13 @@
         .attr("rx",2).attr("fill",o.color).on("click",function(){ pickOrf(id); })
         .on("mouseenter",function(ev){ tip(ev,orfTip(id)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
     });
+    // Protein-evidence mark: ONE dot per ORF (at its start), not one per block — the mark
+    // must count ORFs, not exons. It says "protein detected", nothing about class or function.
+    if (msDetected(o)){
+      gc.append("circle").attr("class","orf-evid").attr("cx",b0-5).attr("cy",mid).attr("r",2.6)
+        .attr("fill",PAL.evid)
+        .on("mouseenter",function(ev){ tip(ev,msSummary(o)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
+    }
     if (selectedOrf===id){
       gc.append("rect").attr("class","orf-sel").attr("x",b0-3).attr("y",mid-ORF_THICK/2-3).attr("width",(b1-b0)+6).attr("height",ORF_THICK+6)
         .attr("rx",4).attr("fill","none").attr("stroke",PAL.nmyc).attr("stroke-width",1.6);
@@ -992,6 +1016,10 @@
     b.push('<span class="badge '+(cons?"cons":"noncons")+'">'+(cons?"conservation-supported":"not conservation-supported")+"</span>");
     if (id==="9")  b.push('<span class="badge gold">known functional uORF · MYCNOT</span>');
     if (id==="10") b.push('<span class="badge gold">known functional uORF · MUSEP</span>');
+    // Protein evidence as EVIDENCE, on one axis, with its bound stated. Deliberately NOT
+    // the gold badge — gold means "known functional" here, and detection is not function.
+    if (msDetected(o)) b.push('<span class="badge evid">MS-detected · '+o.ms.peptides_unique+
+      ' unique peptide'+(o.ms.peptides_unique===1?"":"s")+(o.ms.peptides_unique===2?" (OpenProt floor)":"")+'</span>');
     // T2.1: aa counts derived from o.aa_len (not hardcoded 593/575)
     if (id==="3")  b.push('<span class="badge canon">canonical '+o.aa_len+' aa · two-executor confirmed</span>');
     if (id==="4")  b.push('<span class="badge cand">second candidate ('+o.aa_len+' aa)</span>');
@@ -1001,6 +1029,26 @@
     return b.join("");
   }
   function propRow(k,v){ return (v===null||v===undefined||v==="")?"":'<tr><td class="k">'+esc(k)+'</td><td class="v">'+esc(v)+"</td></tr>"; }
+  // A value that is UNDEFINED, not zero and not missing. propRow() drops empties and would
+  // silently delete the row; a 0 would read as a measurement. Neither is honest, so an
+  // undefined quantity renders as a blank WITH ITS REASON.
+  function propRowNA(k,reason){ return '<tr><td class="k">'+esc(k)+'</td><td class="v na">'+esc(reason)+"</td></tr>"; }
+  // Per-resource translation evidence. Cell text is copied VERBATIM from the publication
+  // table (Table B) via META; the states are its states. Re-wording a gated cell is a new claim.
+  function evidenceBlock(o){
+    var res=META.evidence_resources;
+    if(!o.ev||!res||!res.length) return "";
+    var h='<div class="evblock"><div class="evhead">Translation evidence · per resource</div>';
+    res.forEach(function(r){
+      var e=o.ev[r.key]; if(!e) return;
+      h+='<div class="evrow"><div class="evres">'+esc(r.label)+'</div><div class="evval">';
+      if(e.state) h+='<span class="evstate s-'+esc(e.state.toLowerCase())+'">'+esc(e.state)+'</span>';
+      h+='<span class="evtext">'+esc(e.text)+'</span></div>';
+      if(r.caveat) h+='<div class="evcav">'+esc(r.caveat)+'</div>';
+      h+='</div>';
+    });
+    return h+"</div>";
+  }
   function codonStrip(nt,aa){ nt=String(nt||""); aa=String(aa||""); var out=[];
     for (var i=0;i<nt.length;i+=3){ var codon=nt.substr(i,3), idx=i/3, res=idx<aa.length?aa[idx]:"*";
       var cls=i===0?"start":(idx>=aa.length?"stop":""); out.push('<span class="codon '+cls+'"><b>'+esc(codon)+'</b><i>'+esc(res)+"</i></span>"); }
@@ -1021,7 +1069,7 @@
     return "not assessed";
   }
   function msCaveat(id,o){
-    if(id==="24") return "Evidence is lysate mass spectrometry — the lower-confidence MS assay type — and 2 unique peptides is OpenProt's minimum threshold (the floor). Both peptides are unique across the human proteome and frame-disjoint from N-Myc, so they are not fragments of the canonical protein it is nested inside. No HLA-immunopeptidomics evidence was tested (Ouspenskaia elutions — not checked). No ribosome-profiling support on any of the 8 Ribo-seq datasets. MYCNOT is MS-detected at 7 peptides, which shows the MS assay is live at this locus and makes the negatives meaningful rather than under-powered. A bounded protein-level positive, not a discovery — detection is not function.";
+    if(id==="24") return "Evidence is lysate mass spectrometry — the lower-confidence MS assay type — and 2 unique peptides is OpenProt's minimum threshold (the floor). Both peptides are unique across the human proteome and frame-disjoint from N-Myc, so they are not fragments of the canonical protein it is nested inside. No HLA-immunopeptidomics evidence was tested (Ouspenskaia elutions — not checked). Ribosome profiling reports 1,540 reads at these coordinates (sORFs.org, werner_2015), but the read phasing is OUT-OF-FRAME (frame 2; in-frame counts 61/152/840; ORFscore -10.77), consistent with translation of the HOST N-Myc CDS within which this ORF is nested. It is also one of EIGHT nested starts sharing a single stop (15,945,657) and a single read pile, from one study. This is ribosome OCCUPANCY at the locus, NOT own-frame translational evidence. It is ABSENT from nuORFdb, the one ribosome-profiling resource both powered here and in scope. Five previously cited Ribo-seq resources return zero records anywhere at MYCN and are NOT-ASSESSED, not negative. MYCNOT is MS-detected at 7 peptides, which shows the MS assay is live at this locus and makes the negatives meaningful rather than under-powered. A bounded protein-level positive, not a discovery — detection is not function.";
     if(id==="9")  return "MYCNOT is detected by lysate MS at 7 unique peptides — the control that proves the MS axis is live at this locus, which is what licenses the MS negatives elsewhere in the set.";
     return "";
   }
@@ -1043,11 +1091,16 @@
     h+=propRow("Length",(o.aa_len!=null?o.aa_len+" aa":""));
     h+=propRow("Genomic span",span); h+=propRow("Carrier transcripts",carr);
     h+=propRow("Kozak (−3/+4)",o.kozak); h+=propRow("PhyloCSF",o.phylocsf); h+=propRow("phyloP (100-way)",o.phylop);
-    h+=propRow("In Ribo-seq catalogue",o.catalogue);
     h+=propRow("MS / protein evidence",msSummary(o));
     h+=propRow("MW (Da)",o.mw); h+=propRow("pI",o.pI);
-    h+=propRow("GRAVY",o.gravy); h+=propRow("Net charge (pH 7)",o.netq); h+=propRow("Instability index",o.instab);
+    h+=propRow("GRAVY",o.gravy); h+=propRow("Net charge (pH 7)",o.netq);
+    // GRAVY is uncalibrated, not undefined — it is kept for every ORF. The instability
+    // index genuinely IS undefined below 30 aa, so it renders as a reasoned blank.
+    h+=(o.instab!==null&&o.instab!==undefined)
+        ? propRow("Instability index",o.instab)
+        : propRowNA("Instability index", o.instab_note||"not computed");
     h+="</table>";
+    h+=evidenceBlock(o);
     h+='<div class="seqblock"><div class="seqhead"><span class="lbl">codons</span></div><div class="codon-wrap">'+codonStrip(o.nt,o.aa)+"</div>";
     h+='<div class="codon-legend"><span class="s">start (ATG→M)</span><span class="e">stop</span></div></div>';
     h+='<div class="seqblock"><div class="seqhead"><span class="lbl">amino-acid sequence ('+(o.aa?o.aa.length:0)+' aa)</span>'+

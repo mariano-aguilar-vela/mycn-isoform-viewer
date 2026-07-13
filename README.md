@@ -13,8 +13,11 @@ genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
 - Transcript models and the ORF set were derived in the thesis project (MYCN transcript-isoform
   characterisation). The staged locus reference sequence is the GRCh38 slice `chr2:15,938,000–15,947,200`.
 - Per-ORF metrics shown: amino-acid length, Kozak context, PhyloCSF, phyloP, MW / pI / GRAVY, net charge,
-  instability index, conservation, Ribo-seq catalogue status, **MS / protein evidence**, accession, and the
-  carrier transcripts.
+  instability index, conservation, the **per-resource translation-evidence block**, **MS / protein evidence**,
+  accession, and the carrier transcripts.
+- **Instability index is blank below 30 aa**, with its reason shown in place. The dipeptide-weighted index is
+  undefined at that length, so for those ORFs the viewer renders *not computed* rather than a number. A blank
+  is not a zero, and GRAVY (uncalibrated, but defined) is retained for every ORF.
 - **Conservation caveat:** conservation is a *weak discriminator for short uORFs* — the known functional uORFs
   **MYCNOT** (ORF9) and **MUSEP** (ORF10) are both conservation-negative yet functional. The viewer therefore
   presents conservation as evidence, not a verdict.
@@ -22,8 +25,14 @@ genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
   MS assay. Detection is shown at three states — *detected* (≥2 unique peptides), *present-not-detected*
   (in the catalogue, 0 peptides), and *absent-from-MS-catalogue* (checked, not found) — kept distinct from
   *not-assessed*. **MYCNOT is MS-detected at 7 unique peptides**, the control proving the assay is live at this
-  locus. No HLA-immunopeptidomics was tested; the earned claim is *no Ribo-seq consensus support and no MS-lysate
-  support*, never *no immunopeptidomic support*.
+  locus. No HLA-immunopeptidomics was tested, so *no immunopeptidomic support* is never an earned claim.
+- **Ribo-seq is not one axis, and its absences are not all negatives.** Evidence is reported per resource, in
+  five states that are never conflated: *DETECTED*, *SUB-THRESHOLD*, *PRESENT-NOT-DETECTED*, *ABSENT*, and
+  *NOT-ASSESSED* (always with its reason). Only **nuORFdb v1.2** is both powered and in scope here, so only its
+  absences are real negatives. **sORFs.org** is non-exhaustive and scoped to ≤100 aa; **Ribo-uORF** covers the
+  uORF/uTIS class only; and **five consensus catalogues return zero records anywhere at the MYCN locus** — they
+  are **UNPOWERED and NOT-ASSESSED, not negative**. A *no Ribo-seq support* claim across all of them would be
+  false, and is not made.
 - **Status of the ORFs:** apart from the annotated proteins (N-Myc, ΔMYCN), the known functional uORFs
   (MYCNOT, MUSEP), and **ORF 24 — OpenProt IP_083082, which now carries direct protein-level evidence (2 unique
   peptides by lysate MS, two-executor confirmed, frame-disjoint from N-Myc)** — the ORFs shown are **predictions**.

@@ -271,7 +271,6 @@
    "phylocsf": 6.1,
    "phylop": 2.61,
    "conserved": "YES",
-   "catalogue": "No",
    "ms": {
     "state": "detected",
     "assay": "MS-lysate",
@@ -326,6 +325,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "DETECTED — 3 unique peptides (OpenProt XP_047300390.1)",
+     "state": "DETECTED"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "2": {
@@ -349,7 +373,6 @@
    "phylocsf": 4.67,
    "phylop": 2.92,
    "conserved": "YES",
-   "catalogue": "No",
    "ms": {
     "state": "detected",
     "assay": "MS-lysate",
@@ -384,6 +407,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "DETECTED — 4 unique peptides (OpenProt ENSP00000491476.1)",
+     "state": "DETECTED"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "3": {
@@ -407,7 +455,6 @@
    "phylocsf": 3.32,
    "phylop": 2.19,
    "conserved": "YES",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -442,6 +489,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "4": {
@@ -465,7 +537,6 @@
    "phylocsf": 3.59,
    "phylop": 2.23,
    "conserved": "YES",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -500,6 +571,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "5": {
@@ -528,7 +624,6 @@
    "phylocsf": 6.14,
    "phylop": 2.62,
    "conserved": "YES",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -583,6 +678,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "6": {
@@ -611,7 +731,6 @@
    "phylocsf": 6.15,
    "phylop": 2.63,
    "conserved": "YES",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -666,6 +785,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "7": {
@@ -694,7 +838,6 @@
    "phylocsf": 6.23,
    "phylop": 2.4,
    "conserved": "YES",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -749,6 +892,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "8": {
@@ -777,7 +945,6 @@
    "phylocsf": 6.23,
    "phylop": 2.41,
    "conserved": "YES",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -832,6 +999,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "9": {
@@ -856,7 +1048,6 @@
    "phylocsf": -4.03,
    "phylop": 1.26,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "detected",
     "assay": "MS-lysate",
@@ -898,6 +1089,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "DETECTED — 7 unique peptides (OpenProt NP_001280162.1/Q9H224)",
+     "state": "DETECTED"
+    },
+    "sorfs": {
+     "text": "NOT-ASSESSED (length scope: >100 aa; sORFs.org max observed = 100 aa). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "10": {
@@ -922,7 +1138,6 @@
    "phylocsf": -4.02,
    "phylop": 0.8,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "present-not-detected",
     "assay": "MS-lysate",
@@ -957,6 +1172,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "PRESENT-NOT-DETECTED — in OpenProt records, 0 peptides",
+     "state": "PRESENT-NOT-DETECTED"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "11": {
@@ -980,7 +1220,6 @@
    "phylocsf": -4.77,
    "phylop": 0.76,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1015,6 +1254,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "12": {
@@ -1038,7 +1302,6 @@
    "phylocsf": -3.67,
    "phylop": 1.38,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1069,6 +1332,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "13": {
@@ -1092,7 +1380,6 @@
    "phylocsf": -6.84,
    "phylop": -0.23,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1127,6 +1414,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "14": {
@@ -1151,7 +1463,6 @@
    "phylocsf": -6.37,
    "phylop": 0.39,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "present-not-detected",
     "assay": "MS-lysate",
@@ -1186,6 +1497,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "PRESENT-NOT-DETECTED — in OpenProt records, 0 peptides",
+     "state": "PRESENT-NOT-DETECTED"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "15": {
@@ -1209,7 +1545,6 @@
    "phylocsf": -7.57,
    "phylop": -0.25,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1244,6 +1579,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "16": {
@@ -1267,7 +1627,6 @@
    "phylocsf": -7.13,
    "phylop": -0.44,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1281,7 +1640,7 @@
    "pI": 8.84,
    "gravy": 0.33,
    "netq": 1.6,
-   "instab": 15.8,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MSTYYIQVHCCAVRIPSGAKLTQVTG",
@@ -1298,7 +1657,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (26 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "17": {
    "id": 17,
@@ -1321,7 +1706,6 @@
    "phylocsf": -6.79,
    "phylop": 0.21,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1335,7 +1719,7 @@
    "pI": 9.21,
    "gravy": 0.73,
    "netq": 2.5,
-   "instab": 18.3,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MPRGVCSNLGRGRICGYGCLLLVSV",
@@ -1352,7 +1736,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (25 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "18": {
    "id": 18,
@@ -1375,7 +1785,6 @@
    "phylocsf": -4.46,
    "phylop": 1.32,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1389,7 +1798,7 @@
    "pI": 8.59,
    "gravy": -0.4,
    "netq": 0.9,
-   "instab": 37.7,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MAVSKVAEPRHHPLHLHAPSHPLS",
@@ -1406,7 +1815,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (24 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "19": {
    "id": 19,
@@ -1429,7 +1864,6 @@
    "phylocsf": -7.31,
    "phylop": -0.17,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1443,7 +1877,7 @@
    "pI": 9.98,
    "gravy": -0.49,
    "netq": 1.6,
-   "instab": 52.3,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MVALKRLTWEPWGRLQGTYAHSP",
@@ -1460,7 +1894,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (23 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "20": {
    "id": 20,
@@ -1483,7 +1943,6 @@
    "phylocsf": -7.79,
    "phylop": 0.49,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1497,7 +1956,7 @@
    "pI": 8.68,
    "gravy": 0.95,
    "netq": 1.5,
-   "instab": 26.7,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MGVCCWSLSRERLFFICKVF",
@@ -1514,7 +1973,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (20 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "21": {
    "id": 21,
@@ -1539,7 +2024,6 @@
    "phylocsf": -6.52,
    "phylop": 0.15,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1553,7 +2037,7 @@
    "pI": 11.71,
    "gravy": -0.25,
    "netq": 3.5,
-   "instab": 109.5,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MASAKRNSLGSRRSVCV",
@@ -1578,7 +2062,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (17 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "22": {
    "id": 22,
@@ -1601,7 +2111,6 @@
    "phylocsf": -4.51,
    "phylop": 2.56,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1615,7 +2124,7 @@
    "pI": 9.35,
    "gravy": -0.67,
    "netq": 0.5,
-   "instab": 117.9,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MEIRRAG",
@@ -1632,7 +2141,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "ABSENT — in scope (uORF class), searched, not found (POWERED: emits 3 MYCN records)",
+     "state": "ABSENT"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "23": {
    "id": 23,
@@ -1660,7 +2195,6 @@
    "phylocsf": -5.98,
    "phylop": 3.25,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "detected-subthreshold",
     "assay": "MS-lysate",
@@ -1711,6 +2245,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "SUB-THRESHOLD — 1 peptide (below OpenProt's 2-peptide reporting floor)",
+     "state": "SUB-THRESHOLD"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "24": {
@@ -1741,7 +2300,6 @@
    "phylocsf": -9.51,
    "phylop": 3.5,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "detected",
     "assay": "MS-lysate",
@@ -1813,6 +2371,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "DETECTED — 2 unique peptides (OpenProt IP_083082)",
+     "state": "DETECTED"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,540 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "25": {
@@ -1843,7 +2426,6 @@
    "phylocsf": -9.56,
    "phylop": 3.55,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1902,6 +2484,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,540 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "26": {
@@ -1932,7 +2539,6 @@
    "phylocsf": -9.49,
    "phylop": 3.53,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -1991,6 +2597,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,534 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "27": {
@@ -2021,7 +2652,6 @@
    "phylocsf": -9.43,
    "phylop": 3.48,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2080,6 +2710,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,531 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "28": {
@@ -2110,7 +2765,6 @@
    "phylocsf": -9.48,
    "phylop": 3.29,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2169,6 +2823,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,454 reads) — NESTED START of Region 1. NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): periodicity is in frame 2, consistent with the HOST N-Myc CDS, NOT this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "29": {
@@ -2199,7 +2878,6 @@
    "phylocsf": -6.84,
    "phylop": 1.62,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "present-not-detected",
     "assay": "MS-lysate",
@@ -2258,6 +2936,31 @@
      "FULL",
      1.0
     ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "PRESENT-NOT-DETECTED — in OpenProt records, 0 peptides",
+     "state": "PRESENT-NOT-DETECTED"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
    }
   },
   "30": {
@@ -2287,7 +2990,6 @@
    "phylocsf": -4.73,
    "phylop": 4.99,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2301,7 +3003,7 @@
    "pI": 4.51,
    "gravy": 0.92,
    "netq": -2.4,
-   "instab": 67,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MFEEHVLYTNILLISVMYCTNSYTACIL",
@@ -2342,7 +3044,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (28 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "31": {
    "id": 31,
@@ -2372,7 +3100,6 @@
    "phylocsf": -6.87,
    "phylop": 3.46,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2386,7 +3113,7 @@
    "pI": 10.13,
    "gravy": -1.35,
    "netq": 4.5,
-   "instab": 132.9,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MSTPSRPRSTSFCWKRKNCRQDSSSC",
@@ -2431,7 +3158,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,002 reads) — Region 6 member; out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 6 (15,945,982-15,946,068) — members: ORFs 31, 56 (ATG-024, NC-EXT-110). Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (26 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "32": {
    "id": 32,
@@ -2461,7 +3214,6 @@
    "phylocsf": -8.92,
    "phylop": 3.86,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2475,7 +3227,7 @@
    "pI": 8.02,
    "gravy": -0.43,
    "netq": 0.6,
-   "instab": 73.3,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MPSHPPAAQLCRPLSLRGE",
@@ -2520,7 +3272,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "DETECTED (559 reads) — Region 2 member; out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 2 (15,945,668-15,945,753) — members: ORFs 32, 33, 52 (ATG-030 [frame 2]; ATG-031 + NC-EXT-149 [frame 1, shared stop 15,945,753]). ATG-031 + NC-EXT-149 share stop 15,945,753. Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (19 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "33": {
    "id": 33,
@@ -2550,7 +3328,6 @@
    "phylocsf": -10.26,
    "phylop": 3.15,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2564,7 +3341,7 @@
    "pI": 12,
    "gravy": -1.48,
    "netq": 4.7,
-   "instab": 151.5,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MPPPLPTWRVRMHPHRRR",
@@ -2609,7 +3386,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "DETECTED (562 reads) — Region 2 member; out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 2 (15,945,668-15,945,753) — members: ORFs 32, 33, 52 (ATG-030 [frame 2]; ATG-031 + NC-EXT-149 [frame 1, shared stop 15,945,753]). ATG-031 + NC-EXT-149 share stop 15,945,753. Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (18 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "34": {
    "id": 34,
@@ -2639,7 +3442,6 @@
    "phylocsf": -5.65,
    "phylop": 2.35,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2653,7 +3455,7 @@
    "pI": 5.27,
    "gravy": 0.73,
    "netq": -0.5,
-   "instab": 33.5,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MLVYFQIGPLSSSALGGQ",
@@ -2698,7 +3500,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (18 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "35": {
    "id": 35,
@@ -2728,7 +3556,6 @@
    "phylocsf": -5.89,
    "phylop": 3.55,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2742,7 +3569,7 @@
    "pI": 10,
    "gravy": 0.25,
    "netq": 1.6,
-   "instab": 55.9,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MVLKFQQMPHKGFAI",
@@ -2787,7 +3614,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (15 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "36": {
    "id": 36,
@@ -2817,7 +3670,6 @@
    "phylocsf": -7.3,
    "phylop": 0.55,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2831,7 +3683,7 @@
    "pI": 5.28,
    "gravy": 0.05,
    "netq": -0.5,
-   "instab": 97,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MLGGPAASSTSPP",
@@ -2876,7 +3728,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (13 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "37": {
    "id": 37,
@@ -2905,7 +3783,6 @@
    "phylocsf": -4.06,
    "phylop": 5.19,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -2919,7 +3796,7 @@
    "pI": 5.27,
    "gravy": 0.72,
    "netq": -0.5,
-   "instab": 89.1,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MYCTNSYTACIL",
@@ -2960,7 +3837,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (12 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "38": {
    "id": 38,
@@ -2990,7 +3893,6 @@
    "phylocsf": -8.39,
    "phylop": 4.89,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3004,7 +3906,7 @@
    "pI": 12,
    "gravy": -1.52,
    "netq": 2.5,
-   "instab": 162.2,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MRRPPRWSF",
@@ -3049,7 +3951,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "DETECTED (114 reads) — Region 5 member; out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 5 (15,945,943-15,945,972) — members: ORF 38 (ATG-037). Records != events."
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "39": {
    "id": 39,
@@ -3078,7 +4006,6 @@
    "phylocsf": -4.12,
    "phylop": 3.54,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3092,7 +4019,7 @@
    "pI": 7.98,
    "gravy": -0.37,
    "netq": 0.5,
-   "instab": -3.6,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MRGGFCGQY",
@@ -3133,7 +4060,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "40": {
    "id": 40,
@@ -3162,7 +4115,6 @@
    "phylocsf": -0.2,
    "phylop": 6.42,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3176,7 +4128,7 @@
    "pI": 4.85,
    "gravy": -0.38,
    "netq": -1.5,
-   "instab": 151.6,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MKMSCESFE",
@@ -3217,7 +4169,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "41": {
    "id": 41,
@@ -3247,7 +4225,6 @@
    "phylocsf": -7.24,
    "phylop": 2.54,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3261,7 +4238,7 @@
    "pI": 8.52,
    "gravy": 0.24,
    "netq": 0.6,
-   "instab": 82.7,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MPHKGFAI",
@@ -3306,7 +4283,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "42": {
    "id": 42,
@@ -3335,7 +4338,6 @@
    "phylocsf": -2.43,
    "phylop": 5.12,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3349,7 +4351,7 @@
    "pI": 5.27,
    "gravy": 1.74,
    "netq": -0.5,
-   "instab": 8.8,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MFCIQIYC",
@@ -3390,7 +4392,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "43": {
    "id": 43,
@@ -3419,7 +4447,6 @@
    "phylocsf": -4.36,
    "phylop": 5.18,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3433,7 +4460,7 @@
    "pI": 5.27,
    "gravy": 1.66,
    "netq": -0.5,
-   "instab": 27.7,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MYLFMFGA",
@@ -3474,7 +4501,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "44": {
    "id": 44,
@@ -3504,7 +4557,6 @@
    "phylocsf": -10.08,
    "phylop": 2.73,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3518,7 +4570,7 @@
    "pI": 12,
    "gravy": -2.8,
    "netq": 2.7,
-   "instab": 249.9,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MHPHRRR",
@@ -3563,7 +4615,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "45": {
    "id": 45,
@@ -3592,7 +4670,6 @@
    "phylocsf": -0.7,
    "phylop": 5.93,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3606,7 +4683,7 @@
    "pI": 4.24,
    "gravy": -0.2,
    "netq": -2.5,
-   "instab": 145.4,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MSCESFE",
@@ -3647,7 +4724,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "46": {
    "id": 46,
@@ -3676,7 +4779,6 @@
    "phylocsf": -4.99,
    "phylop": 5.99,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3690,7 +4792,7 @@
    "pI": 6.49,
    "gravy": 0.47,
    "netq": -0.4,
-   "instab": 63.6,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MTLIHN",
@@ -3731,7 +4833,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (6 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "47": {
    "id": 47,
@@ -3760,7 +4888,6 @@
    "phylocsf": -5.36,
    "phylop": 4.2,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3774,7 +4901,7 @@
    "pI": 5.28,
    "gravy": 0.57,
    "netq": -0.5,
-   "instab": 165.5,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MPFS",
@@ -3815,7 +4942,33 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (4 aa — the dipeptide-weighted index is undefined below 30 aa)"
   },
   "48": {
    "id": 48,
@@ -3844,7 +4997,6 @@
    "phylocsf": -4.54,
    "phylop": 5.33,
    "conserved": "no",
-   "catalogue": "No",
    "ms": {
     "state": "absent-from-MS-catalogue",
     "assay": null,
@@ -3858,7 +5010,7 @@
    "pI": 5.28,
    "gravy": 1.52,
    "netq": -0.5,
-   "instab": -13.7,
+   "instab": null,
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14)",
    "aa": "MFGA",
@@ -3899,7 +5051,71 @@
      "FULL",
      1.0
     ]
-   }
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "ABSENT — in scope, searched, not found (axis POWERED: MYCNOT control fires at 7 pep)",
+     "state": "ABSENT"
+    },
+    "sorfs": {
+     "text": "ABSENT — in scope (<=100 aa), searched, not found. INHERITS the non-exhaustive bound (one ~575bp island; in-scope MUSEP missed).",
+     "state": "ABSENT"
+    },
+    "cluster": {
+     "text": "n/a (no sORFs.org record)"
+    },
+    "nuorfdb": {
+     "text": "ABSENT — in scope, searched, not found (POWERED: emits a MYCN record, NC-NEST-088)",
+     "state": "ABSENT"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only). NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "not computed (4 aa — the dipeptide-weighted index is undefined below 30 aa)"
   }
- }
+ },
+ "evidence_resources": [
+  {
+   "key": "ms_lysate",
+   "label": "MS-lysate (OpenProt 2.2)",
+   "caveat": "POWERED — MYCNOT 7 pep = live control; absences are REAL",
+   "header_verbatim": "MS-lysate: OpenProt 2.2 (POWERED — MYCNOT 7 pep = live control; absences are REAL)"
+  },
+  {
+   "key": "sorfs",
+   "label": "Ribo-seq (sORFs.org)",
+   "caveat": "scope <=100 aa; NON-EXHAUSTIVE — 17 hits in ONE ~575bp island; in-scope MUSEP missed",
+   "header_verbatim": "Ribo-seq: sORFs.org (scope <=100 aa; NON-EXHAUSTIVE — 17 hits in ONE ~575bp island; in-scope MUSEP missed)"
+  },
+  {
+   "key": "cluster",
+   "label": "Ribo-seq cluster",
+   "caveat": "records are NOT events",
+   "header_verbatim": "Ribo-seq cluster (sORFs.org) — records are NOT events"
+  },
+  {
+   "key": "nuorfdb",
+   "label": "Ribo-seq (nuORFdb v1.2)",
+   "caveat": "POWERED, in-scope; absences are REAL",
+   "header_verbatim": "Ribo-seq: nuORFdb v1.2 (POWERED, in-scope; absences are REAL)"
+  },
+  {
+   "key": "ribouorf",
+   "label": "Ribo-seq (Ribo-uORF)",
+   "caveat": "uORF/uTIS class ONLY",
+   "header_verbatim": "Ribo-seq: Ribo-uORF (uORF/uTIS class ONLY)"
+  },
+  {
+   "key": "consensus",
+   "label": "Ribo-seq (5 consensus catalogues)",
+   "caveat": "UNPOWERED — 0 records anywhere at the MYCN locus",
+   "header_verbatim": "Ribo-seq: 5 consensus catalogues (UNPOWERED — 0 records anywhere at the MYCN locus)"
+  }
+ ]
 }
