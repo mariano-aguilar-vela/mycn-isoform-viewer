@@ -386,3 +386,10 @@ button.memb:hover{color:#222a2e}
 .obs{font-size:9px; font-weight:700; letter-spacing:.6px; color:#a5322c; border:1px solid #a5322c;
   border-radius:3px; padding:0 3px; margin-left:4px; vertical-align:1px}
 .txnote.mane{color:#1F6B47; border-left-color:#1F6B47}
+
+/* The records/events definition list. The word "event" is load-bearing; its definition lives ON the
+   page, in text — never only in a tooltip. */
+.landing dl.defs{margin:0 0 8px; padding:8px 10px; border:1px solid var(--line); border-radius:7px}
+.landing dl.defs dt{font-size:10px; font-weight:700; letter-spacing:.6px; color:#222a2e; margin-top:4px}
+.landing dl.defs dt:first-child{margin-top:0}
+.landing dl.defs dd{margin:1px 0 0; font-size:11px; line-height:1.45; color:#5f6a66}

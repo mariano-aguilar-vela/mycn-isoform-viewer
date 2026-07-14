@@ -15,7 +15,20 @@
               term:"#8A9791", gold:"#C9A227",
               // Evidence ink. NOT a class colour and never used as a fill for an ORF body —
               // the fill channel means class. This marks "protein detected", nothing more.
-              evid:"#1F6B47" };
+              // EVIDENCE INK. WAS #1F6B47 -- a green 2 HUE-DEGREES AND deltaE 6.0 FROM PAL.ri_line
+              // (#2F7A57, "206 retained intron"). THAT IS A CATEGORY ERROR, NOT A PALETTE PROBLEM:
+              //   ri_line  = a STRUCTURAL ANNOTATION -- what a transcript IS.
+              //   evid     = an EVIDENCE STATE       -- what the assay FOUND.
+              // TWO DIFFERENT KINDS OF CLAIM IN THE SAME COLOUR. Second failure of this channel;
+              // #C7CFCC is already the default for 26 of 48 ORFs. The colour channel was carrying
+              // more than it can distinguish.
+              //
+              // SEPARATED BY HUE, NOT BY SHADE -- a shade difference dies in greyscale and for
+              // colourblind readers. Chosen by computation, not taste: #2B2BB5 maximises the minimum
+              // deltaE to every colour the viewer actually renders (60.9) AND under a deuteranopia
+              // simulation (28.3; the next best candidate scored 18.5). vs ri_line: deltaE 116.5,
+              // hue 144 degrees apart.
+              evid:"#2B2BB5" };
   // The MS axis is POWERED here (MYCNOT = 7 peptides, the live control), so a detection is
   // real. It is still ONE axis, it says nothing about function, and — decisively — it says
   // nothing about WHICH START produced the protein: tryptic peptides at this locus are
@@ -259,7 +272,7 @@
   function buildLegendData(){
     LEGEND = [
       [PAL.nmyc,"N-Myc-frame CDS",false], [PAL.dmycn,"ΔMYCN (202) CDS",false],
-      [PAL.ri_line,"206 retained intron",true],
+      [PAL.ri_line,"206 retained intron — STRUCTURAL ANNOTATION (what the transcript is)",true],
       // This colour is OVERLOADED: it paints transcript UTR segments (segFill) AND the 26
       // novel-other ORF bodies. 11 of those 26 sit in CDS-region (alt/out-of-frame), and one
       // (ORF 24) is MS-detected protein — so the old label "UTR / non-coding" called a
@@ -270,7 +283,7 @@
       [PAL.musep,"MUSEP uORF",false], [PAL.term,"novel ORF",false],
       // Evidence, not class — hence a separate legend entry rather than a fill colour.
       // And STOP-GROUP-level, not per-ORF: the mark sits at the shared stop, once per group.
-      [PAL.evid,"◆ MS-detected — stop group (start not established)",false]
+      [PAL.evid,"◆ MS-detected — EVIDENCE STATE (what the assay found) — stop group; start not established",false]
     ];
   }
   function buildLegend(){   // T2.5: uniform swatches (no per-entry 'thin' class)
@@ -1044,6 +1057,21 @@
     });
     h+='</div>';
     h+='<p class="keynote">selection key: <span class="mono">'+esc(L.annotation_independent.selection_key)+'</span></p>';
+
+    // THE WORD "EVENT" IS LOAD-BEARING AND THE PAGE NEVER SAID WHAT IT MEANT.
+    // The entire redesign exists because 40 bars where there are 29 events tells a reader there are
+    // 40 DISTINGUISHABLE PROTEINS. THERE ARE NOT. So the definition goes WHERE THE WORD IS USED --
+    // on the page, in text. NOT in a tooltip: a datum that lives only in a tooltip is a datum a
+    // screenshot loses.
+    h+='<h2 class="r1">Records and events</h2>';
+    h+='<dl class="defs">';
+    h+='<dt>RECORD</dt><dd>A row in Table B — one ORF: one start, one stop.</dd>';
+    h+='<dt>EVENT</dt><dd>ONE THING THE EVIDENCE CAN DISTINGUISH.</dd>';
+    h+='</dl>';
+    h+='<p class="why">Region 1 is <b>8 records</b> (eight starts, one stop) and <b>1 event</b>: the '
+      +'evidence CANNOT resolve which start produced the protein. That is why the rail reads '
+      +'<b>&ldquo;40 records &middot; 29 events&rdquo;</b> and not &ldquo;40 ORFs&rdquo; — both bases, stated. '
+      +'A count that disagrees with what you can count IS the miscount.</p>';
 
     var R=L.region1_result;
     h+='<h2 class="r1">'+esc(R.title)+'</h2>';
