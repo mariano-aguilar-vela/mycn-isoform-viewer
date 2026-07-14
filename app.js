@@ -81,6 +81,7 @@
   var W = 900, H = 400;
   var ROWS = [];
   var lens = "tx", selectedOrf = null, selectedTx = null, novelOpen = false, railHasContent = false, rightOpen = false;
+  var selectedRegion = null;   // D1: a collapsed REGION row can be the selection (it is an EVENT, like an ORF)
   var viewG = [DMIN, DMAX];
   var state = {};
   var CANON_INTRONS = [], RETAINED = {}, CDS_PHASE = {}, GPOS = {};
@@ -146,6 +147,24 @@
   function orfIdsOfTx(t){ return Object.keys(META.orfs).filter(function(id){ return carriers(id).indexOf(t)>=0; }); }
   function orfsOfClass(cls){ return Object.keys(META.orfs).filter(function(id){ return META.orfs[id].cls===cls; })
       .sort(function(a,b){ return (+a)-(+b); }); }
+  // B-ADD — THE IDENTIFIER, NOT THE DISPLAY NAME.
+  // "MYCN-201" is an Ensembl DISPLAY NAME: not citable, not stable across releases. The accessions
+  // were in the data all along and NOTHING RENDERED THEM. And the display names conceal a real
+  // finding: THE VIEWER MIXES THREE ANNOTATION SOURCES. GENCODE v49 -- the annotation the benchmark
+  // used -- has only SIX MYCN transcripts. MYCN-207 is GENCODE v50; MYCN-XM is a RefSeq model in no
+  // GENCODE release at all. "MYCN-XM" LOOKS official and is not.
+  // A field is never blank: a blank is indistinguishable from an oversight.
+  function txAcc(t){ var x=META.transcripts[t]||{}; return x.transcript_id || "[no accession on record]"; }
+  function txSrc(t){ var x=META.transcripts[t]||{}; return x.source || "[source not on record]"; }
+  function txRel(t){ var x=META.transcripts[t]||{}; return x.gencode_release || "[release not on record]"; }
+  function txOffV49(t){ var x=META.transcripts[t]||{}; return x.in_v49 === false; }   // explicit, not falsy
+  // the short tag the rail/drawer carry beside the accession, so a reader sees the source WITHOUT
+  // opening anything -- the data must not live only in a panel nobody clicks.
+  function txTag(t){ var x=META.transcripts[t]||{};
+    if (x.in_v49 === true) return "";                       // the v49 baseline: no tag needed
+    if (x.source && /RefSeq/i.test(x.source)) return " · RefSeq (not in GENCODE)";
+    if (x.gencode_release) return " · GENCODE " + x.gencode_release + " — NOT in v49";
+    return " · [provenance not on record]"; }
   function txCoding(t){ var c=META.transcripts[t].cds; return (c&&c.length)?"coding":"non-coding"; }
   function txSpan(t){ var e=META.transcripts[t].exons; return [e[0][0], e[e.length-1][1]]; }
 
@@ -443,7 +462,11 @@
         y=pushGroup(rows,"Unique to MYCN-"+t,g.uniq,true,t,y);
         if (g.shared.length){
           rows.push({kind:"shared",t:t,y:y,n:g.shared.length}); y+=SHH;
-          if (state[t].sharedOpen) g.shared.forEach(function(id){ rows.push({kind:"orf",t:t,id:id,uniq:false,y:y}); y+=ORFH; });
+          if (state[t].sharedOpen) eventsOf(g.shared).forEach(function(e){
+            if (e.kind==="region") rows.push({kind:"region",t:t,rid:e.rid,ids:e.ids,uniq:false,y:y});
+            else                   rows.push({kind:"orf",t:t,id:e.id,uniq:false,y:y});
+            y+=ORFH;
+          });
         }
         y+=EXPAD;
       }
@@ -454,7 +477,13 @@
   function pushGroup(rows,label,ids,uniq,t,y){
     if (!ids.length) return y;
     rows.push({kind:"grp",label:label,uniq:uniq,y:y}); y+=GRPH;
-    ids.forEach(function(id){ rows.push({kind:"orf",t:t,id:id,uniq:uniq,y:y}); y+=ORFH; });
+    // ONE ROW PER EVENT PER LANE. The unit a reader counts is the LABELLED ROW, so the collapse must
+    // happen HERE, at row-build -- not as a decoration on 8 rows that are still 8 rows.
+    eventsOf(ids).forEach(function(e){
+      if (e.kind==="region") rows.push({kind:"region",t:t,rid:e.rid,ids:e.ids,uniq:uniq,y:y});
+      else                   rows.push({kind:"orf",t:t,id:e.id,uniq:uniq,y:y});
+      y+=ORFH;
+    });
     return y;
   }
 
@@ -698,6 +727,7 @@
       if (r.kind==="tx") drawTx(r);
       else if (r.kind==="grp") drawGroup(r);
       else if (r.kind==="orf") drawOrf(r);
+      else if (r.kind==="region") drawRegion(r);
       else if (r.kind==="shared") drawShared(r);
     });
     drawMsGroups();
@@ -716,7 +746,14 @@
       // the rows, per transcript, where a member of this stop group is drawn
       var byTx={};
       ROWS.forEach(function(r){
-        if (r.kind!=="orf" || ids.indexOf(r.id)<0) return;
+        // D1: after the collapse a stop group's members may live on a REGION row rather than on their
+        // own ORF rows. Region 1's eight members are ONE row now -- so this yields ONE mark and NO
+        // brace, which is exactly right: the brace existed to say "these, together", and after the
+        // collapse the row ITSELF says it. One event, one mark.
+        var hit = (r.kind==="orf")    ? (ids.indexOf(r.id)>=0)
+                : (r.kind==="region") ? r.ids.some(function(i){ return ids.indexOf(i)>=0; })
+                : false;
+        if (!hit) return;
         (byTx[r.t]=byTx[r.t]||[]).push(r);
       });
       Object.keys(byTx).forEach(function(t){
@@ -797,7 +834,8 @@
       .attr("fill",selectedTx===t?PAL.nmyc:"#222a2e").text(sh ? t : "MYCN-"+t);
     var coding=txCoding(t);
     g.append("text").attr("class","tx-meta").attr("x",14).attr("y",mid+12).attr("font-size",10.5)
-      .attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66").text(sh ? (nOrf+" ORFs") : (coding+" · "+nOrf+" ORFs"));
+      .attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66")
+      .text(sh ? (nOrf+" ORFs") : (txAcc(t)+txTag(t)+" · "+coding+" · "+nOrf+" ORFs"));
     // right-edge expand chevron (row disclosure indicator; the whole gutter row is the click target via
     // gutter-hit -> pickTx). FIX 5: the per-row "zoom to transcript" magnifier was removed — zooming to one
     // of 8 near-identical ~9 kb isoforms barely differs and clips the others out of frame; the locus box,
@@ -836,6 +874,148 @@
     g.append("text").attr("class","shared-toggle-lbl").attr("x",30).attr("y",r.y+SHH/2+2).attr("font-size",11)
       .attr("font-weight",600).attr("fill",PAL.nmyc).text((state[t].sharedOpen?"▾ hide ":"▸ show ")+r.n+" shared ORFs");
   }
+  // ================= D1 — THE COLLAPSE RULE =================
+  // ONE BAR PER START THE EVIDENCE CAN DISTINGUISH. The rest of a REGION collapses into ONE bar with
+  // INTERNAL START TICKS.  BAR COUNT = EVENT COUNT. ONE ROW PER EVENT PER LANE.
+  //
+  // THE KEY IS THE **REGION** -- Table B's own cluster assignment -- **NOT THE SHARED STOP**.
+  // A region is a SHARED READ PILE: the thing the evidence cannot resolve into separate starts.
+  // A shared stop is a COORDINATE COINCIDENCE. They are different partitions and this is PROVEN:
+  //     stop group 15,945,750 = {33, 44, 52}      (geometry)
+  //     Region 2              = {32, 33, 52}      (the read pile)
+  // ORF 32 is a Region-2 member with a DIFFERENT STOP AND FRAME; ORF 44 shares the stop but has NO
+  // sORFs.org record at all. They coincide ONLY in Region 1 -- which is exactly why a rule validated
+  // there breaks everywhere else.
+  //
+  // COLLAPSING ON GEOMETRY WOULD MERGE N-Myc WITH dMYCN (8 ORFs share stop 15,946,094). Under the
+  // REGION key they cannot merge: ORFs 1-8 carry NO region, so they draw alone BY CONSTRUCTION --
+  // not as a special case, not as an exception that has to be remembered.
+  function regionOf(id){ var o=META.orfs[id]; return (o && o.region_id) ? o.region_id : null; }
+  function regionRec(rid){ return (META.regions||{})[rid] || null; }
+  // a region with ONE member is not a collapse -- it draws as itself.
+  function regionCollapses(rid){ var R=regionRec(rid); return !!(R && R.members && R.members.length>1); }
+  function regionMembers(rid){ var R=regionRec(rid); return R ? R.members.map(String) : []; }
+
+  // Collapse an ordered ORF-id list into EVENTS. Every ORF in NO region draws on its own -- that is
+  // what "the evidence cannot distinguish its start from its siblings'" means when IT HAS NO SIBLINGS.
+  function eventsOf(ids){
+    var out=[], seen={};
+    ids.forEach(function(id){
+      var rid=regionOf(id);
+      if (rid && regionCollapses(rid)){
+        if (seen[rid]) return;                       // the event is already on this lane
+        seen[rid]=1;
+        var mem=regionMembers(rid).filter(function(m){ return ids.indexOf(m)>=0; });
+        // Every region's members share ONE carrier set (verified on all 6), so a region can never be
+        // split across the unique/shared buckets. If that ever changes, a PARTIAL region row would
+        // silently under-count the event -- so say so loudly rather than draw a lie.
+        if (mem.length !== regionMembers(rid).length)
+          console.warn("PARTIAL REGION "+rid+": "+mem.length+"/"+regionMembers(rid).length+" members on this lane");
+        out.push({kind:"region", rid:rid, ids:mem});
+        return;
+      }
+      out.push({kind:"orf", id:id});
+    });
+    return out;
+  }
+  // distinct reading frames in a region, DERIVED (stop mod 3) -- two ORFs sharing a stop share a frame.
+  function regionFrames(rid){ var R=regionRec(rid); if(!R) return 1;
+    var f={}; R.members.forEach(function(i){ var o=META.orfs[String(i)]; if(o) f[o.span[1]%3]=1; });
+    return Object.keys(f).length; }
+
+  // D1/D2 — THE REGION ROW. It is ONE EVENT, and it must READ as one.
+  //
+  // Drawn naively, Region 1 is EIGHT SEPARATE DETECTED BARS AT ONE LOCUS -- the exact miscount both
+  // tables spent a day removing, AS A PICTURE. A reader who will skim eight cells of qualifying text
+  // CANNOT skim eight bars, and AN EXPANDED SCREENSHOT OUTLIVES ITS TOOLTIP.
+  //
+  // But a single SMOOTH SOLID bar is a miscount of a DIFFERENT KIND: it implies ONE ORF, ONE FRAME,
+  // one contiguous coding interval. Region 2 has TWO STOPS AND TWO FRAMES. So the bar is drawn as a
+  // CLUSTER EXTENT -- an open rule with end caps and INTERNAL START TICKS -- never as an ORF body.
+  //
+  // The extent comes from TABLE B's OWN CLUSTER CELL. It is NOT reconstructed geometrically.
+  //
+  // DATA MUST NEVER LIVE ONLY IN A COLOUR -- OR ONLY IN A SHAPE. Every fact here is also in the row's
+  // TEXT: "Region 2 · 3 starts · 2 stops · 2 frames · CLUSTER EXTENT". Greyscale, colourblind and
+  // copy-paste all survive it.
+  function drawRegion(r){
+    var rid=r.rid, R=regionRec(rid), mid=r.y+ORFH/2;
+    var g=gMain.append("g").attr("class","region-g").attr("data-region",rid).attr("data-tx",r.t)
+               .attr("data-members",r.ids.join(","))
+               .attr("data-starts",String(r.ids.length))
+               .attr("data-stops",String((R.distinct_stops||[]).length));
+    var gc=clipped(g);
+    var nS=r.ids.length, nStop=(R.distinct_stops||[]).length, nF=regionFrames(rid);
+
+    g.append("rect").attr("class","orf-hit").attr("x",22).attr("y",r.y).attr("width",GUTTER-30).attr("height",ORFH)
+      .attr("fill","transparent").style("cursor","pointer").on("click",function(){ pickRegion(rid); })
+      .on("mouseenter",function(ev){ tip(ev,regionTip(rid)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
+    // the swatch is an OUTLINE, not a fill — it is not one ORF's class colour
+    g.append("rect").attr("class","region-sw").attr("x",24).attr("y",mid-5).attr("width",10).attr("height",10)
+      .attr("rx",2).attr("fill","none").attr("stroke","#5f6a66").attr("stroke-width",1.2);
+
+    var sh=shortLabels();
+    // THE TEXT CARRIES THE STRUCTURE. Not the shape, not the colour.
+    var tagStr = sh ? (nS+"st") : (nS+" starts · "+nStop+" stop"+(nStop===1?"":"s")+(nF>1?" · "+nF+" frames":""));
+    g.append("text").attr("class","orf-tag").attr("x",GUTTER-8).attr("y",mid+3.5).attr("text-anchor","end")
+      .attr("font-size",10).attr("fill","#5f6a66").text(tagStr);
+    g.append("text").attr("class","region-lbl").attr("x",42).attr("y",mid+3.5).attr("font-size",11)
+      .attr("font-weight",600).attr("fill","#222a2e").style("cursor","pointer")
+      .on("click",function(){ pickRegion(rid); })
+      .text(sh ? rid : (rid+" · CLUSTER EXTENT"));
+
+    // ---- the extent: FROM TABLE B'S CELL, not reconstructed ----
+    var ext=R.extent, xa=x(ext[0]), xb=x(ext[1]+1);
+    gc.append("line").attr("class","region-rule").attr("x1",xa).attr("x2",xb).attr("y1",mid).attr("y2",mid)
+      .attr("stroke","#5f6a66").attr("stroke-width",1.4);
+    [xa,xb].forEach(function(cx){                      // end caps: |———| reads as an EXTENT, not a body
+      gc.append("line").attr("class","region-cap").attr("x1",cx).attr("x2",cx)
+        .attr("y1",mid-ORF_THICK/2).attr("y2",mid+ORF_THICK/2).attr("stroke","#5f6a66").attr("stroke-width",1.4);
+    });
+    // a light open band, so the extent is findable — but NOT a solid ORF body
+    gc.append("rect").attr("class","region-band").attr("x",xa).attr("y",mid-ORF_THICK/2)
+      .attr("width",Math.max(1,xb-xa)).attr("height",ORF_THICK).attr("rx",2)
+      .attr("fill","#C7CFCC").attr("fill-opacity",0.28)
+      .attr("stroke","#5f6a66").attr("stroke-width",1).attr("stroke-dasharray","3,2")
+      .style("cursor","pointer").on("click",function(){ pickRegion(rid); })
+      .on("mouseenter",function(ev){ tip(ev,regionTip(rid)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
+
+    // ---- INTERNAL START TICKS: one per start the evidence CANNOT distinguish ----
+    (R.start_ticks||[]).forEach(function(tk){
+      if (r.ids.indexOf(String(tk.orf))<0) return;
+      var tx0=x(tk.start);
+      gc.append("line").attr("class","region-tick").attr("data-orf",String(tk.orf))
+        .attr("x1",tx0).attr("x2",tx0).attr("y1",mid-ORF_THICK/2-2).attr("y2",mid+ORF_THICK/2+2)
+        .attr("stroke",PAL.nmyc).attr("stroke-width",1.4).style("cursor","pointer")
+        .on("click",function(){ pickOrf(String(tk.orf)); })
+        .on("mouseenter",function(ev){ tip(ev,"<b>start · ORF"+tk.orf+"</b><br><span class='dim'>"+
+             esc(tk.start_codon)+" @ chr2:"+tk.start.toLocaleString()+" · "+tk.aa_len+" aa · stop "+
+             tk.stop.toLocaleString()+"<br>NOT an independent event — the evidence cannot say which start fired.</span>"); })
+        .on("mousemove",moveTip).on("mouseleave",hideTip);
+    });
+    // ---- STOP MARKS: a region with TWO stops must not read as one contiguous frame ----
+    (R.distinct_stops||[]).forEach(function(sp){
+      var sx=x(sp+3);
+      gc.append("rect").attr("class","region-stop").attr("data-stop",String(sp))
+        .attr("x",sx-1.6).attr("y",mid-3).attr("width",3.2).attr("height",6).attr("fill","#5f6a66")
+        .on("mouseenter",function(ev){ tip(ev,"<b>stop</b><br><span class='dim'>chr2:"+(sp+3).toLocaleString()+"</span>"); })
+        .on("mousemove",moveTip).on("mouseleave",hideTip);
+    });
+    if (selectedRegion===rid){
+      gc.append("rect").attr("class","region-sel").attr("x",xa-3).attr("y",mid-ORF_THICK/2-3)
+        .attr("width",(xb-xa)+6).attr("height",ORF_THICK+6).attr("rx",4)
+        .attr("fill","none").attr("stroke",PAL.nmyc).attr("stroke-width",1.6);
+    }
+  }
+  function regionTip(rid){
+    var R=regionRec(rid), nF=regionFrames(rid);
+    return "<b>"+rid+" — CLUSTER EXTENT</b><br><span class='dim'>"+
+      R.n_records+" records → <b>1 event</b>. "+R.members.length+" starts · "+
+      (R.distinct_stops||[]).length+" stop(s)"+(nF>1?" · "+nF+" frames":"")+
+      "<br>One shared read pile. The evidence CANNOT resolve it into separate starts.<br>"+
+      "This is a cluster extent, NOT one ORF. Click for every member.</span>";
+  }
+
   function drawOrf(r){
     var id=r.id, o=META.orfs[id], mid=r.y+ORFH/2;
     var g=gMain.append("g").attr("class","orf-g").attr("data-id",id);
@@ -914,6 +1094,49 @@
   // phone. Opening/closing it is a WIDTH change, so we rebuild at the new width and re-apply the view —
   // the same "capture view -> rebuild -> applyRange" machinery a window resize uses. The genomic window
   // is preserved (the plot just gets narrower/wider); the view is NOT panned or zoomed (FIX 2).
+  // D1 — selecting an EVENT. A collapsed region is selectable exactly like an ORF, and its card
+  // lists EVERY member so nothing the collapse hides is unreachable. THE COLLAPSE REMOVES A MISCOUNT,
+  // IT MUST NOT REMOVE ACCESS.
+  function pickRegion(rid){
+    rid = (rid==null) ? null : String(rid);
+    if (rid!=null && rid===selectedRegion) rid=null;      // toggles, like pickOrf
+    selectedRegion = rid;
+    selectedOrf = null;
+    if (rid==null){
+      railHasContent=false;
+      $("rail-body").innerHTML='<div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>';
+    } else {
+      $("rail-body").innerHTML = renderRegionCard(rid); wireCard();
+      railHasContent=true; openRight(true);
+    }
+    rebuild();
+  }
+  function renderRegionCard(rid){
+    var R=regionRec(rid), nF=regionFrames(rid), stops=(R.distinct_stops||[]);
+    var h='<h2>Region detail</h2>';
+    h+='<h3 class="orf-title">'+esc(rid)+' — CLUSTER EXTENT</h3>';
+    h+='<p class="orf-class">'+R.n_records+' records → <b>1 event</b> · '+R.members.length+' starts · '+
+       stops.length+' stop'+(stops.length===1?'':'s')+(nF>1?' · '+nF+' reading frames':'')+'</p>';
+    h+='<p class="txnote warn">ONE SHARED READ PILE. The evidence CANNOT resolve this region into '+
+       'separate starts, so it is drawn as ONE event with one tick per start. It is a CLUSTER EXTENT, '+
+       'NOT a single ORF'+(nF>1?' — and it spans '+nF+' reading frames, so it is not one contiguous coding interval':'')+'.</p>';
+    h+='<table class="props">';
+    h+='<tr><td class="k">Extent (Table B)</td><td class="v mono">chr2:'+R.extent[0].toLocaleString()+'–'+R.extent[1].toLocaleString()+'</td></tr>';
+    h+='<tr><td class="k">Stop(s)</td><td class="v mono">'+stops.map(function(v){return (v+3).toLocaleString();}).join(', ')+'</td></tr>';
+    h+='<tr><td class="k">Records → events</td><td class="v">'+R.n_records+' → 1</td></tr></table>';
+    h+='<p class="seqhead" style="margin-top:10px"><span class="lbl">members — every start, and none of them discriminated</span></p>';
+    h+='<table class="props members">';
+    h+='<tr><th>ORF</th><th>start</th><th>codon</th><th>aa</th><th>stop</th></tr>';
+    (R.start_ticks||[]).forEach(function(tk){
+      var nm=NAME[String(tk.orf)]?(" "+NAME[String(tk.orf)]):"";
+      h+='<tr><td><button class="memb" data-orf="'+tk.orf+'">ORF'+tk.orf+esc(nm)+'</button></td>'+
+         '<td class="mono">'+tk.start.toLocaleString()+'</td><td class="mono">'+esc(tk.start_codon)+'</td>'+
+         '<td class="mono">'+tk.aa_len+'</td><td class="mono">'+tk.stop.toLocaleString()+'</td></tr>';
+    });
+    h+='</table>';
+    h+='<p class="txnote">'+esc(R.cluster_text)+'</p>';   // VERBATIM from Table B col P
+    return h;
+  }
   function pickOrf(id){
     // FIX 1(a): normalise the id type at the single boundary. Measurement showed every call site already
     // passes a String ORF id, but coercing here GUARANTEES the strict `id===selectedOrf` toggle test always
@@ -922,6 +1145,7 @@
     id = (id==null) ? null : String(id);
     if (id!=null && id===selectedOrf) id=null;   // clicking the SAME (selected) ORF toggles it off
     selectedOrf = id;                            // <-- the ONLY assignment to selectedOrf anywhere
+    if (id!=null) selectedRegion = null;         // selecting a member leaves the region selection
     var target = viewG.slice();                  // default: keep the current genomic window across the resize
     if (id==null){
       railHasContent=false;
@@ -957,7 +1181,17 @@
     h+='<tr><td class="k">Content</td><td class="v">'+(isCds?"coding (CDS)":"non-coding (UTR)")+'</td></tr>';
     if (isCds) h+='<tr><td class="k">CDS phase (+ strand)</td><td class="v">'+phase+'</td></tr>';
     if (riHit) h+='<tr><td class="k">Retained intron</td><td class="v">yes ('+esc(t)+')</td></tr>';
-    h+='<tr><td class="k">Strand</td><td class="v">'+esc(META.transcripts[t].strand)+'</td></tr></table>';
+    h+='<tr><td class="k">Strand</td><td class="v">'+esc(META.transcripts[t].strand)+'</td></tr>';
+    // B-ADD: the identifier IN FULL. source + gencode_release are RENDERED, not merely stored.
+    var _x=META.transcripts[t]||{};
+    h+='<tr><td class="k">Transcript ID</td><td class="v mono">'+esc(txAcc(t))+'</td></tr>';
+    h+='<tr><td class="k">Source</td><td class="v">'+esc(txSrc(t))+'</td></tr>';
+    h+='<tr><td class="k">GENCODE release</td><td class="v">'+esc(txRel(t))+'</td></tr>';
+    if(_x.refseq_id) h+='<tr><td class="k">RefSeq</td><td class="v mono">'+esc(_x.refseq_id)+'</td></tr>';
+    if(_x.refseq_newer_id) h+='<tr><td class="k">RefSeq (newer)</td><td class="v mono">'+esc(_x.refseq_newer_id)+'</td></tr>';
+    h+='</table>';
+    if(_x.refseq_newer_note) h+='<p class="txnote">'+esc(_x.refseq_newer_note)+'</p>';
+    if(_x.id_note) h+='<p class="txnote warn">'+esc(_x.id_note)+'</p>';
     h+='<p class="rail-empty">Click an ORF (expand the transcript) to see its protein detail.</p></div>';
     $("rail-body").innerHTML=h; railHasContent=true; openRight(true);
     setNow("MYCN-"+t+" exon "+(ei+1), exon);
@@ -1000,6 +1234,7 @@
       h+='<button class="trow" data-tx="'+t+'" title="MYCN-'+t+'">'+
          '<span class="tchev">'+(state[t].open?"▾":"▸")+'</span>'+
          '<span class="tname">MYCN-'+esc(t)+'</span>'+
+         '<span class="tacc'+(txOffV49(t)?' toff':'')+'">'+esc(txAcc(t))+esc(txTag(t))+'</span>'+
          '<span class="tmeta">'+n+' ORFs · <span class="'+(coding==="non-coding"?"tnc":"")+'">'+coding+'</span></span></button>';
     });
     h+='</div>'; host.innerHTML=h;
@@ -1064,6 +1299,10 @@
     var body=$("rail-body");
     Array.prototype.forEach.call(body.querySelectorAll("button.copy"),function(btn){
       btn.addEventListener("click",function(){ copySeq(btn); });
+    });
+    // every collapsed member is reachable by a REAL click, from the region card
+    Array.prototype.forEach.call(body.querySelectorAll("button.memb"),function(btn){
+      btn.addEventListener("click",function(){ pickOrf(btn.getAttribute("data-orf")); });
     });
   }
   function copySeq(btn){
@@ -1199,10 +1438,14 @@
     h+="</table>";
     h+=evidenceBlock(o);
     h+='<div class="seqblock"><div class="seqhead"><span class="lbl">codons</span></div><div class="codon-wrap">'+codonStrip(o.nt,o.aa)+"</div>";
-    h+='<div class="codon-legend"><span class="s">start (ATG→M)</span><span class="e">stop</span></div></div>';
+    // B2: the start codon is DATA, not a constant. ORFs 49-56 are CTG/GTG and translate to L/V,
+    // so a hard-coded "ATG→M" was false in BOTH halves. Derive both from the record; if the
+    // field is missing, SAY SO — never silently default to ATG.
+    var sc=o.start_codon||"?", r1=(o.aa&&o.aa.length)?o.aa[0]:"?";
+    h+='<div class="codon-legend"><span class="s">start ('+esc(sc)+'→'+esc(r1)+')</span><span class="e">stop</span></div></div>';
     h+='<div class="seqblock"><div class="seqhead"><span class="lbl">amino-acid sequence ('+(o.aa?o.aa.length:0)+' aa)</span>'+
        '<button class="copy" data-seq="'+esc(o.aa)+'">copy</button></div><div class="seq">'+esc(o.aa)+"</div></div>";
-    h+='<div class="seqblock"><div class="seqhead"><span class="lbl">coding nt (ATG→stop, '+(o.nt?o.nt.length:0)+' nt)</span>'+
+    h+='<div class="seqblock"><div class="seqhead"><span class="lbl">coding nt ('+esc(sc)+'→stop, '+(o.nt?o.nt.length:0)+' nt)</span>'+
        '<button class="copy" data-seq="'+esc(o.nt)+'">copy</button></div><div class="seq">'+esc(o.nt)+"</div></div>";
     h+='<div class="provenance">Accession: <span class="acc">'+esc(o.acc||"—")+"</span><br>"+esc(o.source||"")+"</div>";
     return h;

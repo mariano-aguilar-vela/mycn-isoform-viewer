@@ -41,7 +41,13 @@
     ]
    ],
    "mlen": 2613,
-   "src": "GENCODE v49"
+   "src": "GENCODE v49",
+   "display_name": "MYCN-201",
+   "transcript_id": "ENST00000281043.4",
+   "refseq_id": "[not established - no RefSeq<->Ensembl mapping derivable from the annotations on disk]",
+   "source": "GENCODE v49",
+   "gencode_release": "v49",
+   "in_v49": true
   },
   "202": {
    "id": "ENST00000638417.1",
@@ -68,7 +74,13 @@
     ]
    ],
    "mlen": 1693,
-   "src": "GENCODE v49"
+   "src": "GENCODE v49",
+   "display_name": "MYCN-202",
+   "transcript_id": "ENST00000638417.1",
+   "refseq_id": "[not established - no RefSeq<->Ensembl mapping derivable from the annotations on disk]",
+   "source": "GENCODE v49",
+   "gencode_release": "v49",
+   "in_v49": true
   },
   "203": {
    "id": "ENST00000703162.1",
@@ -86,7 +98,13 @@
    ],
    "cds": [],
    "mlen": 1186,
-   "src": "GENCODE v49"
+   "src": "GENCODE v49",
+   "display_name": "MYCN-203",
+   "transcript_id": "ENST00000703162.1",
+   "refseq_id": "[not established - no RefSeq<->Ensembl mapping derivable from the annotations on disk]",
+   "source": "GENCODE v49",
+   "gencode_release": "v49",
+   "in_v49": true
   },
   "204": {
    "id": "ENST00000885101.1",
@@ -125,7 +143,13 @@
     ]
    ],
    "mlen": 4028,
-   "src": "GENCODE v49"
+   "src": "GENCODE v49",
+   "display_name": "MYCN-204",
+   "transcript_id": "ENST00000885101.1",
+   "refseq_id": "[not established - no RefSeq<->Ensembl mapping derivable from the annotations on disk]",
+   "source": "GENCODE v49",
+   "gencode_release": "v49",
+   "in_v49": true
   },
   "205": {
    "id": "ENST00000930195.1",
@@ -156,7 +180,13 @@
     ]
    ],
    "mlen": 3013,
-   "src": "GENCODE v49"
+   "src": "GENCODE v49",
+   "display_name": "MYCN-205",
+   "transcript_id": "ENST00000930195.1",
+   "refseq_id": "[not established - no RefSeq<->Ensembl mapping derivable from the annotations on disk]",
+   "source": "GENCODE v49",
+   "gencode_release": "v49",
+   "in_v49": true
   },
   "206": {
    "id": "ENST00000930196.1",
@@ -183,7 +213,13 @@
     ]
    ],
    "mlen": 3883,
-   "src": "GENCODE v49"
+   "src": "GENCODE v49",
+   "display_name": "MYCN-206",
+   "transcript_id": "ENST00000930196.1",
+   "refseq_id": "[not established - no RefSeq<->Ensembl mapping derivable from the annotations on disk]",
+   "source": "GENCODE v49",
+   "gencode_release": "v49",
+   "in_v49": true
   },
   "207": {
    "id": "ENST00001138178.1",
@@ -214,7 +250,14 @@
     ]
    ],
    "mlen": 2631,
-   "src": "GENCODE v50"
+   "src": "GENCODE v50",
+   "display_name": "MYCN-207",
+   "transcript_id": "ENST00001138178.1",
+   "refseq_id": "[not established - no RefSeq<->Ensembl mapping derivable from the annotations on disk]",
+   "source": "GENCODE v50",
+   "gencode_release": "v50",
+   "in_v49": false,
+   "id_note": "NOT IN GENCODE v49 - the annotation the benchmark used. GENCODE v49 contains only SIX MYCN transcripts (201-206). This transcript first appears in GENCODE v50, so it CANNOT be cross-referenced to any v49 tool output."
   },
   "XM": {
    "id": "NM_001446166.1",
@@ -241,7 +284,16 @@
     ]
    ],
    "mlen": 2568,
-   "src": "RefSeq NM_001446166.1; genomic exon model confirmed vs NCBI XM_047444434.1 (byte-identical mRNA, full md5 882366312f718378c8c6aed8d616b2dc), GRCh38 RS_2025_08 placement on NC_000002.12, all 4 boundaries exact; NM_001446166.1 (13-MAR-2026) postdates RS_2025_08 so is not itself in the released annotation"
+   "src": "RefSeq NM_001446166.1; genomic exon model confirmed vs NCBI XM_047444434.1 (byte-identical mRNA, full md5 882366312f718378c8c6aed8d616b2dc), GRCh38 RS_2025_08 placement on NC_000002.12, all 4 boundaries exact; NM_001446166.1 (13-MAR-2026) postdates RS_2025_08 so is not itself in the released annotation",
+   "display_name": "MYCN-XM",
+   "transcript_id": "XM_047444434.1",
+   "refseq_id": "XM_047444434.1",
+   "refseq_newer_id": "NM_001446166.1",
+   "refseq_newer_note": "NM_001446166.1 (13-MAR-2026) is the newer RefSeq equivalent. It POSTDATES RS_2025_08 and is in NO released annotation on disk - verified: absent from GENCODE v49, GENCODE v50, and RefSeq RS_2025_08. Carried, not dropped.",
+   "source": "RefSeq RS_2025_08",
+   "gencode_release": "[NOT IN GENCODE - RefSeq model]",
+   "in_v49": false,
+   "id_note": "THE LABEL 'MYCN-XM' IS NOT AN OFFICIAL NAME. This is a RefSeq model, NOT a GENCODE transcript, and it is NOT in the annotation the benchmark used (GENCODE v49)."
   }
  },
  "orfs": {
@@ -352,6 +404,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "annotation - a separately annotated protein with an official accession (NP_005369.2). Its identity does not rest on the translation assay."
    }
   },
   "2": {
@@ -436,6 +495,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "annotation - a separately annotated protein with an official accession (NP_001280160.1). Its identity does not rest on the translation assay."
    }
   },
   "3": {
@@ -518,6 +584,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "4": {
@@ -600,6 +673,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "5": {
@@ -707,6 +787,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "6": {
@@ -814,6 +901,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "7": {
@@ -921,6 +1015,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "8": {
@@ -1028,6 +1129,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "9": {
@@ -1119,6 +1227,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "annotation - a separately annotated protein with an official accession (AAG40001.1). Its identity does not rest on the translation assay."
    }
   },
   "10": {
@@ -1202,6 +1317,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "annotation - a separately annotated protein with an official accession (CAA68677.1). Its identity does not rest on the translation assay."
    }
   },
   "11": {
@@ -1284,6 +1406,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "12": {
@@ -1362,6 +1491,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "13": {
@@ -1444,6 +1580,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "14": {
@@ -1527,6 +1670,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "15": {
@@ -1609,6 +1759,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "16": {
@@ -1688,7 +1845,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (26 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (26 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "17": {
    "id": 17,
@@ -1767,7 +1931,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (25 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (25 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "18": {
    "id": 18,
@@ -1846,7 +2017,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (24 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (24 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "19": {
    "id": 19,
@@ -1925,7 +2103,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (23 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (23 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "20": {
    "id": 20,
@@ -2004,7 +2189,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (20 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (20 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "21": {
    "id": 21,
@@ -2093,7 +2285,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (17 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (17 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "22": {
    "id": 22,
@@ -2172,7 +2371,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "23": {
    "id": 23,
@@ -2275,6 +2481,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "24": {
@@ -2402,6 +2615,22 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": "Region 1",
+   "region_members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
    }
   },
   "25": {
@@ -2515,6 +2744,22 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": "Region 1",
+   "region_members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
    }
   },
   "26": {
@@ -2628,6 +2873,22 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": "Region 1",
+   "region_members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
    }
   },
   "27": {
@@ -2741,6 +3002,22 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": "Region 1",
+   "region_members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
    }
   },
   "28": {
@@ -2854,6 +3131,22 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": "Region 1",
+   "region_members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
    }
   },
   "29": {
@@ -2967,6 +3260,13 @@
      "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (981f026c).",
      "state": "NOT-ASSESSED"
     }
+   },
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
    }
   },
   "30": {
@@ -3076,7 +3376,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (28 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (28 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "31": {
    "id": 31,
@@ -3190,7 +3497,17 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (26 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (26 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": "Region 6",
+   "region_members": [
+    31,
+    56
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
   },
   "32": {
    "id": 32,
@@ -3304,7 +3621,18 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (19 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (19 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": "Region 2",
+   "region_members": [
+    32,
+    33,
+    52
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
   },
   "33": {
    "id": 33,
@@ -3418,7 +3746,18 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (18 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (18 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": "Region 2",
+   "region_members": [
+    32,
+    33,
+    52
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
   },
   "34": {
    "id": 34,
@@ -3532,7 +3871,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (18 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (18 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "35": {
    "id": 35,
@@ -3646,7 +3992,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (15 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (15 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "36": {
    "id": 36,
@@ -3760,7 +4113,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (13 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (13 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "37": {
    "id": 37,
@@ -3869,7 +4229,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (12 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (12 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "38": {
    "id": 38,
@@ -3983,7 +4350,16 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": "Region 5",
+   "region_members": [
+    38
+   ],
+   "evidence_independent": {
+    "value": true,
+    "basis": "sole member of its region (Region 5) - no sibling shares its read pile."
+   }
   },
   "39": {
    "id": 39,
@@ -4092,7 +4468,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "40": {
    "id": 40,
@@ -4201,7 +4584,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "41": {
    "id": 41,
@@ -4315,7 +4705,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "42": {
    "id": 42,
@@ -4424,7 +4821,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "43": {
    "id": 43,
@@ -4533,7 +4937,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "44": {
    "id": 44,
@@ -4647,7 +5058,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "45": {
    "id": 45,
@@ -4756,7 +5174,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "46": {
    "id": 46,
@@ -4865,7 +5290,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (6 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (6 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "47": {
    "id": 47,
@@ -4974,7 +5406,14 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (4 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (4 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
   },
   "48": {
    "id": 48,
@@ -5083,7 +5522,1021 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (4 aa — the dipeptide-weighted index is undefined below 30 aa)"
+   "instab_note": "not computed (4 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "start_codon": "ATG",
+   "region_id": null,
+   "region_members": [],
+   "evidence_independent": {
+    "value": true,
+    "basis": "no region - it shares a read pile with nothing (no sORFs.org record), so there is no sibling whose start could be confused with its own."
+   }
+  },
+  "49": {
+   "id": 49,
+   "cls": "nested",
+   "evidence": "predicted (near-cognate)",
+   "carriers": [
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "XM"
+   ],
+   "carriers_raw": "201,202,203,204,205,206,207,XM",
+   "span": [
+    15945544,
+    15945654
+   ],
+   "host": "201",
+   "m1": 1153,
+   "m2": 1266,
+   "location": "CDS-region (near-cognate)",
+   "aa_len": 37,
+   "kozak": "weak(T/T)",
+   "phylocsf": -9.3,
+   "phylop": 2.53,
+   "conserved": "no",
+   "start_codon": "CTG",
+   "ms": {
+    "state": "absent-from-MS-catalogue",
+    "assay": null,
+    "openprot_acc": null,
+    "openprot_type": null,
+    "peptides_unique": null,
+    "confirmation": null,
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+   },
+   "mw": 3915.5,
+   "pI": 11.7,
+   "gravy": -0.36,
+   "netq": 2.8,
+   "instab": 97.4,
+   "acc": "none - predicted",
+   "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
+   "aa": "LWRSGVPPPTPRLSPHSPSLCVPRTQPWVPGGLSPAS",
+   "nt": "CTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGC",
+   "blocks": [
+    [
+     15945544,
+     15945657
+    ]
+   ],
+   "color": "#C7CFCC",
+   "carrier_verdicts": {
+    "201": [
+     "FULL",
+     1.0
+    ],
+    "202": [
+     "FULL",
+     1.0
+    ],
+    "203": [
+     "FULL",
+     1.0
+    ],
+    "204": [
+     "FULL",
+     1.0
+    ],
+    "205": [
+     "FULL",
+     1.0
+    ],
+    "206": [
+     "FULL",
+     1.0
+    ],
+    "207": [
+     "FULL",
+     1.0
+    ],
+    "XM": [
+     "FULL",
+     1.0
+    ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE. Its sequence CONTAINS BOTH peptides of the Region-1 detection (SGVPPPTPR, LSPHSPSLCVPR) — it is one of the CANDIDATE SOURCES; the peptides cannot exclude it.",
+     "state": "NOT-ASSESSED"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,315 reads) — NESTED START of Region 1 — NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): the periodicity is in frame 2, consistent with the HOST N-Myc CDS, not this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+    },
+    "nuorfdb": {
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only)",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (cec8e3f6).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "region_id": "Region 1",
+   "region_members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
+  },
+  "50": {
+   "id": 50,
+   "cls": "nested",
+   "evidence": "predicted (near-cognate)",
+   "carriers": [
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "XM"
+   ],
+   "carriers_raw": "201,202,203,204,205,206,207,XM",
+   "span": [
+    15945580,
+    15945654
+   ],
+   "host": "201",
+   "m1": 1189,
+   "m2": 1266,
+   "location": "CDS-region (near-cognate)",
+   "aa_len": 25,
+   "kozak": "moderate(A/T)",
+   "phylocsf": -9.29,
+   "phylop": 2.15,
+   "conserved": "no",
+   "start_codon": "CTG",
+   "ms": {
+    "state": "absent-from-MS-catalogue",
+    "assay": null,
+    "openprot_acc": null,
+    "openprot_type": null,
+    "peptides_unique": null,
+    "confirmation": null,
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+   },
+   "mw": 2570.9,
+   "pI": 8.26,
+   "gravy": -0.12,
+   "netq": 0.8,
+   "instab": null,
+   "acc": "none - predicted",
+   "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
+   "aa": "LSPHSPSLCVPRTQPWVPGGLSPAS",
+   "nt": "CTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGC",
+   "blocks": [
+    [
+     15945580,
+     15945657
+    ]
+   ],
+   "color": "#C7CFCC",
+   "carrier_verdicts": {
+    "201": [
+     "FULL",
+     1.0
+    ],
+    "202": [
+     "FULL",
+     1.0
+    ],
+    "203": [
+     "FULL",
+     1.0
+    ],
+    "204": [
+     "FULL",
+     1.0
+    ],
+    "205": [
+     "FULL",
+     1.0
+    ],
+    "206": [
+     "FULL",
+     1.0
+    ],
+    "207": [
+     "FULL",
+     1.0
+    ],
+    "XM": [
+     "FULL",
+     1.0
+    ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE. Its sequence contains LSPHSPSLCVPR but NOT SGVPPPTPR — since BOTH peptides were observed, it CANNOT be the sole source of the pair.",
+     "state": "NOT-ASSESSED"
+    },
+    "sorfs": {
+     "text": "DETECTED (789 reads) — NESTED START of Region 1 — NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): the periodicity is in frame 2, consistent with the HOST N-Myc CDS, not this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+    },
+    "nuorfdb": {
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only)",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (cec8e3f6).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "Instability index not computed: below the short-peptide threshold (see Table B, SHORT-PEPTIDE THRESHOLD note).",
+   "region_id": "Region 1",
+   "region_members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
+  },
+  "51": {
+   "id": 51,
+   "cls": "nested",
+   "evidence": "predicted (near-cognate)",
+   "carriers": [
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "XM"
+   ],
+   "carriers_raw": "201,202,203,204,205,206,207,XM",
+   "span": [
+    15945601,
+    15945654
+   ],
+   "host": "201",
+   "m1": 1210,
+   "m2": 1266,
+   "location": "CDS-region (near-cognate)",
+   "aa_len": 18,
+   "kozak": "weak(T/T)",
+   "phylocsf": -9.07,
+   "phylop": 1.72,
+   "conserved": "no",
+   "start_codon": "CTG",
+   "ms": {
+    "state": "absent-from-MS-catalogue",
+    "assay": null,
+    "openprot_acc": null,
+    "openprot_type": null,
+    "peptides_unique": null,
+    "confirmation": null,
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+   },
+   "mw": 1865.2,
+   "pI": 8.25,
+   "gravy": 0.11,
+   "netq": 0.8,
+   "instab": null,
+   "acc": "none - predicted",
+   "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
+   "aa": "LCVPRTQPWVPGGLSPAS",
+   "nt": "CTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGC",
+   "blocks": [
+    [
+     15945601,
+     15945657
+    ]
+   ],
+   "color": "#C7CFCC",
+   "carrier_verdicts": {
+    "201": [
+     "FULL",
+     1.0
+    ],
+    "202": [
+     "FULL",
+     1.0
+    ],
+    "203": [
+     "FULL",
+     1.0
+    ],
+    "204": [
+     "FULL",
+     1.0
+    ],
+    "205": [
+     "FULL",
+     1.0
+    ],
+    "206": [
+     "FULL",
+     1.0
+    ],
+    "207": [
+     "FULL",
+     1.0
+    ],
+    "XM": [
+     "FULL",
+     1.0
+    ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE. Its sequence contains NEITHER peptide — it is EXCLUDED as the source of the Region-1 detection.",
+     "state": "NOT-ASSESSED"
+    },
+    "sorfs": {
+     "text": "DETECTED (449 reads) — NESTED START of Region 1 — NOT an independent detection. 8 nested starts share stop 15,945,657 and ONE read pile. OUT-OF-FRAME PHASING (count_0/1/2 = 61/152/840; orfscore -10.77; in_frame No): the periodicity is in frame 2, consistent with the HOST N-Myc CDS, not this ORF's own frame. Occupancy at the locus, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+    },
+    "nuorfdb": {
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only)",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (cec8e3f6).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "Instability index not computed: below the short-peptide threshold (see Table B, SHORT-PEPTIDE THRESHOLD note).",
+   "region_id": "Region 1",
+   "region_members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
+  },
+  "52": {
+   "id": 52,
+   "cls": "extension",
+   "evidence": "predicted (near-cognate)",
+   "carriers": [
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "XM"
+   ],
+   "carriers_raw": "201,202,203,204,205,206,207,XM",
+   "span": [
+    15945724,
+    15945750
+   ],
+   "host": "201",
+   "m1": 1333,
+   "m2": 1362,
+   "location": "CDS-region (near-cognate)",
+   "aa_len": 9,
+   "kozak": "moderate(A/A)",
+   "phylocsf": -9.65,
+   "phylop": 3.06,
+   "conserved": "no",
+   "start_codon": "GTG",
+   "ms": {
+    "state": "absent-from-MS-catalogue",
+    "assay": null,
+    "openprot_acc": null,
+    "openprot_type": null,
+    "peptides_unique": null,
+    "confirmation": null,
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+   },
+   "mw": 1244.5,
+   "pI": 12.0,
+   "gravy": -2.21,
+   "netq": 3.9,
+   "instab": null,
+   "acc": "none - predicted",
+   "source": "GENCODE v49 (GRCh38.p14); start codon GTG",
+   "aa": "VRMHPHRRR",
+   "nt": "GTGAGGATGCACCCCCACAGAAGAAGA",
+   "blocks": [
+    [
+     15945724,
+     15945753
+    ]
+   ],
+   "color": "#C7CFCC",
+   "carrier_verdicts": {
+    "201": [
+     "FULL",
+     1.0
+    ],
+    "202": [
+     "FULL",
+     1.0
+    ],
+    "203": [
+     "FULL",
+     1.0
+    ],
+    "204": [
+     "FULL",
+     1.0
+    ],
+    "205": [
+     "FULL",
+     1.0
+    ],
+    "206": [
+     "FULL",
+     1.0
+    ],
+    "207": [
+     "FULL",
+     1.0
+    ],
+    "XM": [
+     "FULL",
+     1.0
+    ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
+    },
+    "sorfs": {
+     "text": "DETECTED (437 reads) — Region 2 member (15,945,668-15,945,753); out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 2 (15,945,668-15,945,753) — members: ORFs 32, 33, 52 (ATG-030 [frame 2]; ATG-031 + NC-EXT-149 [frame 1, shared stop 15,945,753]). ATG-031 + NC-EXT-149 share stop 15,945,753. Records != events."
+    },
+    "nuorfdb": {
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only)",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (cec8e3f6).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "Instability index not computed: below the short-peptide threshold (see Table B, SHORT-PEPTIDE THRESHOLD note).",
+   "region_id": "Region 2",
+   "region_members": [
+    32,
+    33,
+    52
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
+  },
+  "53": {
+   "id": 53,
+   "cls": "novel",
+   "evidence": "predicted (near-cognate)",
+   "carriers": [
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "XM"
+   ],
+   "carriers_raw": "201,202,203,204,205,206,207,XM",
+   "span": [
+    15945784,
+    15945810
+   ],
+   "host": "201",
+   "m1": 1393,
+   "m2": 1422,
+   "location": "CDS-region (near-cognate)",
+   "aa_len": 9,
+   "kozak": "moderate(A/T)",
+   "phylocsf": -8.77,
+   "phylop": 1.91,
+   "conserved": "no",
+   "start_codon": "GTG",
+   "ms": {
+    "state": "absent-from-MS-catalogue",
+    "assay": null,
+    "openprot_acc": null,
+    "openprot_type": null,
+    "peptides_unique": null,
+    "confirmation": null,
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+   },
+   "mw": 1013.2,
+   "pI": 12.0,
+   "gravy": -0.66,
+   "netq": 1.7,
+   "instab": null,
+   "acc": "none - predicted",
+   "source": "GENCODE v49 (GRCh38.p14); start codon GTG",
+   "aa": "VSSPQRLRA",
+   "nt": "GTGTCATCCCCCCAAAGGCTAAGAGCT",
+   "blocks": [
+    [
+     15945784,
+     15945813
+    ]
+   ],
+   "color": "#C7CFCC",
+   "carrier_verdicts": {
+    "201": [
+     "FULL",
+     1.0
+    ],
+    "202": [
+     "FULL",
+     1.0
+    ],
+    "203": [
+     "FULL",
+     1.0
+    ],
+    "204": [
+     "FULL",
+     1.0
+    ],
+    "205": [
+     "FULL",
+     1.0
+    ],
+    "206": [
+     "FULL",
+     1.0
+    ],
+    "207": [
+     "FULL",
+     1.0
+    ],
+    "XM": [
+     "FULL",
+     1.0
+    ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
+    },
+    "sorfs": {
+     "text": "DETECTED (347 reads) — Region 3 member (15,945,784-15,945,813); out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 3 (15,945,784-15,945,813) — members: ORF 53 (NC-NOV-275). Records != events."
+    },
+    "nuorfdb": {
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only)",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (cec8e3f6).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "Instability index not computed: below the short-peptide threshold (see Table B, SHORT-PEPTIDE THRESHOLD note).",
+   "region_id": "Region 3",
+   "region_members": [
+    53
+   ],
+   "evidence_independent": {
+    "value": true,
+    "basis": "sole member of its region (Region 3) - no sibling shares its read pile."
+   }
+  },
+  "54": {
+   "id": 54,
+   "cls": "novel",
+   "evidence": "predicted (near-cognate)",
+   "carriers": [
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "XM"
+   ],
+   "carriers_raw": "201,202,203,204,205,206,207,XM",
+   "span": [
+    15945826,
+    15945936
+   ],
+   "host": "201",
+   "m1": 1435,
+   "m2": 1548,
+   "location": "CDS-region (near-cognate)",
+   "aa_len": 37,
+   "kozak": "moderate(A/A)",
+   "phylocsf": -7.53,
+   "phylop": 4.91,
+   "conserved": "no",
+   "start_codon": "CTG",
+   "ms": {
+    "state": "absent-from-MS-catalogue",
+    "assay": null,
+    "openprot_acc": null,
+    "openprot_type": null,
+    "peptides_unique": null,
+    "confirmation": null,
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+   },
+   "mw": 3939.3,
+   "pI": 11.52,
+   "gravy": -0.22,
+   "netq": 2.8,
+   "instab": 60.4,
+   "acc": "none - predicted",
+   "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
+   "aa": "LTRRTVSVAETTTSWSASAATTFGPAFSRSGTTCRSW",
+   "nt": "CTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGG",
+   "blocks": [
+    [
+     15945826,
+     15945939
+    ]
+   ],
+   "color": "#C7CFCC",
+   "carrier_verdicts": {
+    "201": [
+     "FULL",
+     1.0
+    ],
+    "202": [
+     "FULL",
+     1.0
+    ],
+    "203": [
+     "FULL",
+     1.0
+    ],
+    "204": [
+     "FULL",
+     1.0
+    ],
+    "205": [
+     "FULL",
+     1.0
+    ],
+    "206": [
+     "FULL",
+     1.0
+    ],
+    "207": [
+     "FULL",
+     1.0
+    ],
+    "XM": [
+     "FULL",
+     1.0
+    ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,419 reads) — Region 4 member (15,945,826-15,945,939); out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 4 (15,945,826-15,945,939) — members: ORFs 54, 55 (NC-NOV-147, NC-NOV-164). Records != events."
+    },
+    "nuorfdb": {
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only)",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (cec8e3f6).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "region_id": "Region 4",
+   "region_members": [
+    54,
+    55
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
+  },
+  "55": {
+   "id": 55,
+   "cls": "novel",
+   "evidence": "predicted (near-cognate)",
+   "carriers": [
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "XM"
+   ],
+   "carriers_raw": "201,202,203,204,205,206,207,XM",
+   "span": [
+    15945841,
+    15945936
+   ],
+   "host": "201",
+   "m1": 1450,
+   "m2": 1548,
+   "location": "CDS-region (near-cognate)",
+   "aa_len": 32,
+   "kozak": "moderate(A/A)",
+   "phylocsf": -7.36,
+   "phylop": 4.85,
+   "conserved": "no",
+   "start_codon": "GTG",
+   "ms": {
+    "state": "absent-from-MS-catalogue",
+    "assay": null,
+    "openprot_acc": null,
+    "openprot_type": null,
+    "peptides_unique": null,
+    "confirmation": null,
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+   },
+   "mw": 3311.5,
+   "pI": 8.22,
+   "gravy": -0.05,
+   "netq": 0.7,
+   "instab": 50.4,
+   "acc": "none - predicted",
+   "source": "GENCODE v49 (GRCh38.p14); start codon GTG",
+   "aa": "VSVAETTTSWSASAATTFGPAFSRSGTTCRSW",
+   "nt": "GTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGG",
+   "blocks": [
+    [
+     15945841,
+     15945939
+    ]
+   ],
+   "color": "#C7CFCC",
+   "carrier_verdicts": {
+    "201": [
+     "FULL",
+     1.0
+    ],
+    "202": [
+     "FULL",
+     1.0
+    ],
+    "203": [
+     "FULL",
+     1.0
+    ],
+    "204": [
+     "FULL",
+     1.0
+    ],
+    "205": [
+     "FULL",
+     1.0
+    ],
+    "206": [
+     "FULL",
+     1.0
+    ],
+    "207": [
+     "FULL",
+     1.0
+    ],
+    "XM": [
+     "FULL",
+     1.0
+    ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,230 reads) — Region 4 member (15,945,826-15,945,939); out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 4 (15,945,826-15,945,939) — members: ORFs 54, 55 (NC-NOV-147, NC-NOV-164). Records != events."
+    },
+    "nuorfdb": {
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only)",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (cec8e3f6).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "region_id": "Region 4",
+   "region_members": [
+    54,
+    55
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
+  },
+  "56": {
+   "id": 56,
+   "cls": "extension",
+   "evidence": "predicted (near-cognate)",
+   "carriers": [
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+    "XM"
+   ],
+   "carriers_raw": "201,202,203,204,205,206,207,XM",
+   "span": [
+    15945982,
+    15946065
+   ],
+   "host": "201",
+   "m1": 1591,
+   "m2": 1677,
+   "location": "CDS-region (near-cognate)",
+   "aa_len": 28,
+   "kozak": "weak(C/A)",
+   "phylocsf": -6.97,
+   "phylop": 3.33,
+   "conserved": "no",
+   "start_codon": "CTG",
+   "ms": {
+    "state": "absent-from-MS-catalogue",
+    "assay": null,
+    "openprot_acc": null,
+    "openprot_type": null,
+    "peptides_unique": null,
+    "confirmation": null,
+    "source": "OpenProt 2.2 GRCh38; official_records/orf_catalogue_evidence/openprot/ (slice 53f6159b)"
+   },
+   "mw": 3236.6,
+   "pI": 10.13,
+   "gravy": -1.15,
+   "netq": 4.7,
+   "instab": null,
+   "acc": "none - predicted",
+   "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
+   "aa": "LSMSTPSRPRSTSFCWKRKNCRQDSSSC",
+   "nt": "CTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGC",
+   "blocks": [
+    [
+     15945982,
+     15946068
+    ]
+   ],
+   "color": "#C7CFCC",
+   "carrier_verdicts": {
+    "201": [
+     "FULL",
+     1.0
+    ],
+    "202": [
+     "FULL",
+     1.0
+    ],
+    "203": [
+     "FULL",
+     1.0
+    ],
+    "204": [
+     "FULL",
+     1.0
+    ],
+    "205": [
+     "FULL",
+     1.0
+    ],
+    "206": [
+     "FULL",
+     1.0
+    ],
+    "207": [
+     "FULL",
+     1.0
+    ],
+    "XM": [
+     "FULL",
+     1.0
+    ]
+   },
+   "ev": {
+    "ms_lysate": {
+     "text": "NOT-ASSESSED — NOT catalogued by OpenProt (no accession): this ORF was never in the MS search space, so it was NEVER SEARCHED. NOT a negative. The MYCNOT 7-peptide control proves the ASSAY FIRES; it does not extend the SEARCH SPACE.",
+     "state": "NOT-ASSESSED"
+    },
+    "sorfs": {
+     "text": "DETECTED (1,077 reads) — Region 6 member (15,945,982-15,946,068); out-of-frame phasing (in_frame No). Occupancy, NOT own-frame translational evidence. Single study (werner_2015).",
+     "state": "DETECTED"
+    },
+    "cluster": {
+     "text": "Region 6 (15,945,982-15,946,068) — members: ORFs 31, 56 (ATG-024, NC-EXT-110). Records != events."
+    },
+    "nuorfdb": {
+     "text": "NOT-ASSESSED — nuORFdb v1.2 is a CATALOGUE OF POSITIVES (a Ribo-seq nuORF search space). It publishes the ORFs it CALLED, NOT its CANDIDATE SET, so absence from it CANNOT distinguish 'tested, no Ribo-seq evidence' from 'never a candidate' — NEITHER IS PROVABLE FROM THE ARTIFACT. (This is epistemically WORSE than the MS axis, not better: for OpenProt, non-membership of the search space was PROVABLE.) Its SINGLE MYCN record — NC-NEST-090 (uoORF, 114 nt, ACG-initiated, ENST00000281043.3) — is NOT among the ORFs in this table, so the record that supposedly licenses these negatives does not appear beside them. Emitting one record proves the pipeline CAN call an ORF at this locus; it says NOTHING about the search space. NOT a negative.",
+     "state": "NOT-ASSESSED"
+    },
+    "ribouorf": {
+     "text": "NOT-ASSESSED (ORF class: Ribo-uORF covers uORF/uTIS only)",
+     "state": "NOT-ASSESSED"
+    },
+    "consensus": {
+     "text": "NOT-ASSESSED (UNPOWERED: 0 records anywhere at the MYCN locus). NOT a negative. See UNPOWERED_SLICES_RECORD_2026-07-13.md (cec8e3f6).",
+     "state": "NOT-ASSESSED"
+    }
+   },
+   "instab_note": "Instability index not computed: below the short-peptide threshold (see Table B, SHORT-PEPTIDE THRESHOLD note).",
+   "region_id": "Region 6",
+   "region_members": [
+    31,
+    56
+   ],
+   "evidence_independent": {
+    "value": false,
+    "basis": "none - shares all evidence with its nested siblings. Its start is NOT discriminated by any assay in this table."
+   }
   }
  },
  "evidence_resources": [
@@ -5125,5 +6578,293 @@
   }
  ],
  "ms_axis_scope": "MS-lysate: OpenProt 2.2 — READ THE TWO LIMITS OF THIS AXIS BEFORE READING ANY CELL. (1) COVERAGE: the MYCNOT 7-peptide control proves the ASSAY FIRES at this locus; it does NOT extend the SEARCH SPACE. OpenProt catalogues only 9 of the 763 ORFs; every ORF without an accession was NEVER IN THE SEARCH SPACE and so was NEVER SEARCHED = NOT-ASSESSED, NOT a negative. The ONLY real MS negatives are the 3 ORFs that ARE catalogued and returned 0 peptides. (2) ATTRIBUTION: NO ORF AT THIS LOCUS IS START-DISCRIMINATED BY LYSATE MS. The locus is a dense nest of same-stop ORFs, and EVERY MS-detected ORF has a same-stop host that contains it in its entirety (N-Myc 18 hosts, MUSEP 5, ATG-016 2, dMYCN 1, MYCNOT 1 — the control included), so no peptide of it can ever exclude that host. Peptide-level START attribution is STRUCTURALLY IMPOSSIBLE here — everywhere, not only in Region 1. THE NAMED PROTEINS ARE IDENTIFIED BY ANNOTATION, NOT BY MS. THE HONEST CEILING OF THIS AXIS IS: 'A PROTEIN FROM THIS STOP GROUP IS TRANSLATED' — FOR ALL FOUR DETECTIONS, N-MYC INCLUDED. Proteome-uniqueness EXCLUDES a canonical-fragment explanation; it CANNOT ATTRIBUTE THE START.)",
- "uniqueness_bound": "Proteome-uniqueness EXCLUDES a canonical-fragment explanation. It CANNOT ATTRIBUTE THE START. The two peptides are unique across the human reference proteome (UniProt UP000005640, 147,506 sequences) — but five of the six Region-1 candidates are ABSENT FROM EVERY REFERENCE PROTEOME, so the uniqueness test ran against a database that DID NOT CONTAIN THE COMPETITORS. It was never capable of discriminating them. (Preserved: uniqueness_digest.py, md5 b0514f64, lines 10–18 — the comparison set was FOUR named proteins plus UniProt, never the Region-1 siblings. Demonstrated, not inferred.)"
+ "uniqueness_bound": "Proteome-uniqueness EXCLUDES a canonical-fragment explanation. It CANNOT ATTRIBUTE THE START. The two peptides are unique across the human reference proteome (UniProt UP000005640, 147,506 sequences) — but five of the six Region-1 candidates are ABSENT FROM EVERY REFERENCE PROTEOME, so the uniqueness test ran against a database that DID NOT CONTAIN THE COMPETITORS. It was never capable of discriminating them. (Preserved: uniqueness_digest.py, md5 b0514f64, lines 10–18 — the comparison set was FOUR named proteins plus UniProt, never the Region-1 siblings. Demonstrated, not inferred.)",
+ "regions": {
+  "Region 1": {
+   "id": "Region 1",
+   "members": [
+    24,
+    25,
+    26,
+    27,
+    28,
+    49,
+    50,
+    51
+   ],
+   "extent": [
+    15945493,
+    15945657
+   ],
+   "collapses": true,
+   "n_events": 1,
+   "n_records": 8,
+   "distinct_stops": [
+    15945654
+   ],
+   "start_ticks": [
+    {
+     "orf": 24,
+     "start": 15945493,
+     "start_codon": "ATG",
+     "aa_len": 54,
+     "stop": 15945654
+    },
+    {
+     "orf": 25,
+     "start": 15945496,
+     "start_codon": "ATG",
+     "aa_len": 53,
+     "stop": 15945654
+    },
+    {
+     "orf": 26,
+     "start": 15945502,
+     "start_codon": "ATG",
+     "aa_len": 51,
+     "stop": 15945654
+    },
+    {
+     "orf": 27,
+     "start": 15945505,
+     "start_codon": "ATG",
+     "aa_len": 50,
+     "stop": 15945654
+    },
+    {
+     "orf": 28,
+     "start": 15945517,
+     "start_codon": "ATG",
+     "aa_len": 46,
+     "stop": 15945654
+    },
+    {
+     "orf": 49,
+     "start": 15945544,
+     "start_codon": "CTG",
+     "aa_len": 37,
+     "stop": 15945654
+    },
+    {
+     "orf": 50,
+     "start": 15945580,
+     "start_codon": "CTG",
+     "aa_len": 25,
+     "stop": 15945654
+    },
+    {
+     "orf": 51,
+     "start": 15945601,
+     "start_codon": "CTG",
+     "aa_len": 18,
+     "stop": 15945654
+    }
+   ],
+   "cluster_text": "Region 1 (15,945,493-15,945,657) — members: ORFs 24, 25, 26, 27, 28, 49, 50, 51 (ATG-016/017/018/019/020 + NC-NEST-092/-108/-128). ALL EIGHT SHARE STOP 15,945,657 AND ONE READ PILE = ONE ORF, NOT EIGHT. The cluster is COMPLETE in this table (all 8 members present). Records != events."
+  },
+  "Region 2": {
+   "id": "Region 2",
+   "members": [
+    32,
+    33,
+    52
+   ],
+   "extent": [
+    15945668,
+    15945753
+   ],
+   "collapses": true,
+   "n_events": 1,
+   "n_records": 3,
+   "distinct_stops": [
+    15945724,
+    15945750
+   ],
+   "start_ticks": [
+    {
+     "orf": 32,
+     "start": 15945668,
+     "start_codon": "ATG",
+     "aa_len": 19,
+     "stop": 15945724
+    },
+    {
+     "orf": 33,
+     "start": 15945697,
+     "start_codon": "ATG",
+     "aa_len": 18,
+     "stop": 15945750
+    },
+    {
+     "orf": 52,
+     "start": 15945724,
+     "start_codon": "GTG",
+     "aa_len": 9,
+     "stop": 15945750
+    }
+   ],
+   "cluster_text": "Region 2 (15,945,668-15,945,753) — members: ORFs 32, 33, 52 (ATG-030 [frame 2]; ATG-031 + NC-EXT-149 [frame 1, shared stop 15,945,753]). ATG-031 + NC-EXT-149 share stop 15,945,753. Records != events."
+  },
+  "Region 3": {
+   "id": "Region 3",
+   "members": [
+    53
+   ],
+   "extent": [
+    15945784,
+    15945813
+   ],
+   "collapses": false,
+   "n_events": 1,
+   "n_records": 1,
+   "distinct_stops": [
+    15945810
+   ],
+   "start_ticks": [
+    {
+     "orf": 53,
+     "start": 15945784,
+     "start_codon": "GTG",
+     "aa_len": 9,
+     "stop": 15945810
+    }
+   ],
+   "cluster_text": "Region 3 (15,945,784-15,945,813) — members: ORF 53 (NC-NOV-275). Records != events."
+  },
+  "Region 4": {
+   "id": "Region 4",
+   "members": [
+    54,
+    55
+   ],
+   "extent": [
+    15945826,
+    15945939
+   ],
+   "collapses": true,
+   "n_events": 1,
+   "n_records": 2,
+   "distinct_stops": [
+    15945936
+   ],
+   "start_ticks": [
+    {
+     "orf": 54,
+     "start": 15945826,
+     "start_codon": "CTG",
+     "aa_len": 37,
+     "stop": 15945936
+    },
+    {
+     "orf": 55,
+     "start": 15945841,
+     "start_codon": "GTG",
+     "aa_len": 32,
+     "stop": 15945936
+    }
+   ],
+   "cluster_text": "Region 4 (15,945,826-15,945,939) — members: ORFs 54, 55 (NC-NOV-147, NC-NOV-164). Records != events."
+  },
+  "Region 5": {
+   "id": "Region 5",
+   "members": [
+    38
+   ],
+   "extent": [
+    15945943,
+    15945972
+   ],
+   "collapses": false,
+   "n_events": 1,
+   "n_records": 1,
+   "distinct_stops": [
+    15945969
+   ],
+   "start_ticks": [
+    {
+     "orf": 38,
+     "start": 15945943,
+     "start_codon": "ATG",
+     "aa_len": 9,
+     "stop": 15945969
+    }
+   ],
+   "cluster_text": "Region 5 (15,945,943-15,945,972) — members: ORF 38 (ATG-037). Records != events."
+  },
+  "Region 6": {
+   "id": "Region 6",
+   "members": [
+    31,
+    56
+   ],
+   "extent": [
+    15945982,
+    15946068
+   ],
+   "collapses": true,
+   "n_events": 1,
+   "n_records": 2,
+   "distinct_stops": [
+    15946065
+   ],
+   "start_ticks": [
+    {
+     "orf": 56,
+     "start": 15945982,
+     "start_codon": "CTG",
+     "aa_len": 28,
+     "stop": 15946065
+    },
+    {
+     "orf": 31,
+     "start": 15945988,
+     "start_codon": "ATG",
+     "aa_len": 26,
+     "stop": 15946065
+    }
+   ],
+   "cluster_text": "Region 6 (15,945,982-15,946,068) — members: ORFs 31, 56 (ATG-024, NC-EXT-110). Records != events."
+  }
+ },
+ "collapse_rule": "ONE BAR PER START THE EVIDENCE CAN DISTINGUISH. The rest of a REGION collapses into ONE bar with INTERNAL START TICKS. THE KEY IS THE REGION -- Table B's own cluster assignment -- NOT THE SHARED STOP. A region is a SHARED READ PILE: the thing the evidence cannot resolve into separate starts. A shared stop is a coordinate coincidence, and collapsing on it would MERGE N-Myc WITH dMYCN (8 ORFs share stop 15,946,094). ORFs in no region draw on their own -- that is not a special case; it is what 'the evidence cannot distinguish its start from its siblings' means when it has no siblings. BAR COUNT = EVENT COUNT: one row per event per lane.",
+ "start_codon_note": "start_codon is EXPLICIT on all 56 ORFs. The 48 original ORFs are ATG -- stated, not defaulted: a field absent because it was never needed is indistinguishable from a field absent because it was lost. The 8 near-cognates (ORFs 49-56) are 5 CTG + 3 GTG. Derived from the coding nt sequence (Table B col AB) and CROSS-VALIDATED against Table B's own source string (col Z, 'start codon XXX').",
+ "transcript_provenance": {
+  "finding": "THE VIEWER MIXES THREE ANNOTATION SOURCES AND THE DISPLAY NAMES CONCEAL IT. GENCODE v49 - the annotation the benchmark used - contains only SIX MYCN transcripts (MYCN-201..206). TWO OF THE EIGHT RENDERED ISOFORMS ARE NOT IN IT: MYCN-207 is a GENCODE v50 transcript (ENST00001138178.1), and MYCN-XM is a RefSeq model that is in no GENCODE release at all. A display name is not citable and is not stable across releases; 'MYCN-XM' LOOKS official and is not.",
+  "gencode_v49": {
+   "md5": "fd6df041",
+   "mycn_transcripts": [
+    "MYCN-201",
+    "MYCN-202",
+    "MYCN-203",
+    "MYCN-204",
+    "MYCN-205",
+    "MYCN-206"
+   ],
+   "n": 6
+  },
+  "gencode_v50": {
+   "md5": "2d273848",
+   "mycn_transcripts": [
+    "MYCN-201",
+    "MYCN-202",
+    "MYCN-203",
+    "MYCN-204",
+    "MYCN-205",
+    "MYCN-206",
+    "MYCN-207"
+   ],
+   "n": 7
+  },
+  "refseq_rs2025_08": {
+   "md5": "24b73156",
+   "mycn_mrnas": [
+    "NM_001293228.2",
+    "NM_001293231.2",
+    "NM_001293233.2",
+    "NM_005378.6",
+    "XM_047444434.1"
+   ]
+  },
+  "version_pinning": "Versions are PINNED to GENCODE v49. v50 re-versions 202: ENST00000638417.1 -> ENST00000638417.2, 204: ENST00000885101.1 -> ENST00000885101.2, 205: ENST00000930195.1 -> ENST00000930195.2. The viewer carries the v49 versions because that is the annotation the analysis used. An accession without its version is not an identifier."
+ }
 }
