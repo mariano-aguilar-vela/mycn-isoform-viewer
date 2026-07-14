@@ -28,7 +28,16 @@
               // deltaE to every colour the viewer actually renders (60.9) AND under a deuteranopia
               // simulation (28.3; the next best candidate scored 18.5). vs ri_line: deltaE 116.5,
               // hue 144 degrees apart.
-              evid:"#2B2BB5" };
+              evid:"#2B2BB5",
+              // POSITION marks (start ticks). NOT PAL.nmyc: blue already carries N-Myc-frame CDS,
+              // which is STRUCTURE. A start tick is POSITION. Two KINDS of claim must not share a
+              // channel -- and the tick is additionally distinguished BY GLYPH (a mark above the bar,
+              // never a line through it).
+              // Chosen BY COMPUTATION: #222A2E was deltaE 27.8 from #5F6A66 (the STRUCTURE grey) --
+              // the audit caught my own fix. #000000 maximises the minimum deltaE to every rendered
+              // colour (44.1) and under deuteranopia (35.8). POSITION is ALSO distinguished BY GLYPH
+              // (a mark above the bar; a stop square) -- hue AND glyph, never shade.
+              ink:"#000000" };
   // The MS axis is POWERED here (MYCNOT = 7 peptides, the live control), so a detection is
   // real. It is still ONE axis, it says nothing about function, and — decisively — it says
   // nothing about WHICH START produced the protein: tryptic peptides at this locus are
@@ -283,7 +292,10 @@
       [PAL.musep,"MUSEP uORF",false], [PAL.term,"novel ORF",false],
       // Evidence, not class — hence a separate legend entry rather than a fill colour.
       // And STOP-GROUP-level, not per-ORF: the mark sits at the shared stop, once per group.
-      [PAL.evid,"◆ MS-detected — EVIDENCE STATE (what the assay found) — stop group; start not established",false]
+      [PAL.evid,"◆ MS-detected — EVIDENCE STATE (what the assay found) — stop group; start not established",false],
+      // DATA MUST NEVER LIVE ONLY IN A COLOUR — OR ONLY IN A SHAPE. The POSITION channel gets its own
+      // named row, so a start tick and a stop mark are recoverable from TEXT, not only from the glyph.
+      [PAL.ink,"│ start tick · ▪ stop — POSITION (where a start/stop is). A tick is a MARK ON the collapsed bar, NEVER a division of it: the bar is ONE event.",false]
     ];
   }
   function buildLegend(){   // T2.5: uniform swatches (no per-entry 'thin' class)
@@ -1102,7 +1114,7 @@
       .attr("fill","transparent").style("cursor","pointer").on("click",function(){ pickRegion(rid); })
       .on("mouseenter",function(ev){ tip(ev,regionTip(rid)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
     // the swatch is an OUTLINE, not a fill — it is not one ORF's class colour
-    g.append("rect").attr("class","region-sw").attr("x",24).attr("y",mid-5).attr("width",10).attr("height",10)
+    g.append("rect").attr("class","region-sw").attr("x",SWX).attr("y",r.y+8).attr("width",SWW).attr("height",SWW)
       .attr("rx",2).attr("fill","none").attr("stroke","#5f6a66").attr("stroke-width",1.2);
 
     var sh=shortLabels();
@@ -1116,7 +1128,11 @@
     // So: give it the box it needs, and PACK the structure text BY MEASUREMENT across as many lines as
     // it takes. NO NUMBER IS EVER ELLIPSED AWAY. A truncation that eats the noun -- or the warning, or
     // the count -- is a lost datum.
-    var LBLX=24, AVAILR=(GUTTER-8)-LBLX;              // no right-aligned tag now: use the whole lane
+    // THE SWATCH SQUARE SAT ON TOP OF THE BADGE ("[#]USTER EXTENT"). When this row was repacked it
+    // took LBLX=24 -- the swatch's OWN x. g.orf-g keeps its text at 42 and is clean; the region row
+    // inherited a coordinate that was never valid for it. Derive the text x FROM THIS ROW'S LAYOUT:
+    // the swatch occupies [SWX, SWX+SWW]; text starts clear of it.
+    var SWX=24, SWW=10, LBLX=SWX+SWW+6, AVAILR=(GUTTER-8)-LBLX;
     var yy=r.y+13;
     function line(cls,txt,fs,fw,fill){
       var t=g.append("text").attr("class",cls).attr("x",LBLX).attr("y",yy).attr("font-size",fs)
@@ -1173,9 +1189,20 @@
     (R.start_ticks||[]).forEach(function(tk){
       if (r.ids.indexOf(String(tk.orf))<0) return;
       var tx0=x(tk.start);
+      // THE TICKS ARE CORRECT. THE GLYPH WAS NOT.
+      // A line spanning the FULL HEIGHT of the bar reads as a BOUNDARY -- it PARTITIONS the bar,
+      // exactly like the exon divisions elsewhere in this figure. A reader who does not read the label
+      // COUNTS EIGHT SEGMENTS. THAT IS THE MISCOUNT THE COLLAPSE RULE EXISTS TO REMOVE, SMUGGLED BACK
+      // IN BY THE GLYPH. "Can a reader miscount it?" -- yes, and the glyph was how.
+      //
+      // A tick must read as a MARK ON the bar, not a DIVISION OF it. It now sits ABOVE the bar and
+      // never crosses it: THE BAR REMAINS VISIBLY ONE OBJECT WITH MARKS ON IT.
+      // The colour is INK, not PAL.nmyc: blue already carries N-Myc-frame CDS (STRUCTURE), and a start
+      // tick is POSITION. Two kinds of claim must not share a channel.
+      var barTop = mid-ORF_THICK/2;
       gc.append("line").attr("class","region-tick").attr("data-orf",String(tk.orf))
-        .attr("x1",tx0).attr("x2",tx0).attr("y1",mid-ORF_THICK/2-2).attr("y2",mid+ORF_THICK/2+2)
-        .attr("stroke",PAL.nmyc).attr("stroke-width",1.4).style("cursor","pointer")
+        .attr("x1",tx0).attr("x2",tx0).attr("y1",barTop-7).attr("y2",barTop-1)
+        .attr("stroke",PAL.ink).attr("stroke-width",1.4).style("cursor","pointer")
         .on("click",function(){ pickOrf(String(tk.orf)); })
         .on("mouseenter",function(ev){ tip(ev,"<b>start · ORF"+tk.orf+"</b><br><span class='dim'>"+
              esc(tk.start_codon)+" @ chr2:"+tk.start.toLocaleString()+" · "+tk.aa_len+" aa · stop "+
@@ -1185,8 +1212,11 @@
     // ---- STOP MARKS: a region with TWO stops must not read as one contiguous frame ----
     (R.distinct_stops||[]).forEach(function(sp){
       var sx=x(sp+3);
+      // POSITION, not STRUCTURE. It shared #5F6A66 with the extent rule and the region swatch --
+      // a category error the DOM audit found and nobody had named. Stops now live in the POSITION
+      // channel with the start ticks (PAL.ink), and are additionally distinguished BY GLYPH.
       gc.append("rect").attr("class","region-stop").attr("data-stop",String(sp))
-        .attr("x",sx-1.6).attr("y",mid-3).attr("width",3.2).attr("height",6).attr("fill","#5f6a66")
+        .attr("x",sx-1.6).attr("y",mid-3).attr("width",3.2).attr("height",6).attr("fill",PAL.ink)
         .on("mouseenter",function(ev){ tip(ev,"<b>stop</b><br><span class='dim'>chr2:"+(sp+3).toLocaleString()+"</span>"); })
         .on("mousemove",moveTip).on("mouseleave",hideTip);
     });
