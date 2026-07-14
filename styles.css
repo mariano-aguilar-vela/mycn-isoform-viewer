@@ -328,7 +328,10 @@ table.props td.v.na{font-family:inherit; font-size:11.5px; font-style:italic; co
    TEXT, never as a colour alone: a colourblind reader, a greyscale print and a copy-paste must all
    still carry "GENCODE v50 — NOT in v49". Colour only REINFORCES what the text already says. */
 .tacc{display:block; font-family:var(--mono); font-size:10px; color:#5f6a66; letter-spacing:.2px;
-      line-height:1.35; margin-top:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+      line-height:1.35; margin-top:1px; white-space:normal; overflow-wrap:anywhere}
+/* The drawer WRAPS rather than ellipsing. The SVG rail must clip (SVG text cannot wrap), so the
+   drawer is the place the full accession is ALWAYS readable without hovering anything. A datum that
+   only exists in a tooltip is a datum a screenshot loses. */
 .tacc.toff{color:#a5322c}                     /* not in v49 — and the TEXT says so too */
 .txnote{margin:8px 0 0; font-size:11px; line-height:1.45; color:#5f6a66;
         border-left:2px solid var(--line); padding-left:8px}
@@ -377,3 +380,9 @@ button.memb:hover{color:#222a2e}
 .landing .excl summary{font-size:11px; color:#5f6a66; cursor:pointer}
 .landing .excl ul{margin:6px 0 0; padding-left:16px}
 .landing .excl li{font-size:11px; line-height:1.5; color:#5f6a66; margin-bottom:4px}
+
+/* MANE Select + the obsolete accession. Both are TEXT — the state never lives in the colour alone:
+   the word OBSOLETE is printed, and the colour only reinforces it. */
+.obs{font-size:9px; font-weight:700; letter-spacing:.6px; color:#a5322c; border:1px solid #a5322c;
+  border-radius:3px; padding:0 3px; margin-left:4px; vertical-align:1px}
+.txnote.mane{color:#1F6B47; border-left-color:#1F6B47}

@@ -65,7 +65,11 @@
 
   // ---- geometry ----
   var GUTTER = 200, PADR = 18;   // wider label lane so ORF-row columns (swatch/id+name/aa·carrier) never collide
-  var TXH = 50, ORFH = 23, GRPH = 20, SHH = 27, EXPAD = 8;
+  // TXH 50 -> 64: the rail row carries THREE lines now (name / accession+source / counts). The
+  // accession line was added WITHOUT giving the row the height it needs -- MEASURED: at a 760px
+  // viewport, MYCN-203, MYCN-207 and MYCN-XM ran past the gutter and over the plot. SVG TEXT DOES
+  // NOT WRAP: it just keeps going.
+  var TXH = 64, ORFH = 23, GRPH = 20, SHH = 27, EXPAD = 8;
   var THICK = 15, THIN = 6, RIH = 9, ORF_THICK = 11;
   var DMIN = 15938000, DMAX = 15947200;       // locus extent (matches staged sequence)
   var CHR2LEN = 242193529;                     // chr2 length (fallback; real value from CYTO.length)
@@ -164,11 +168,25 @@
   function txOffV49(t){ var x=META.transcripts[t]||{}; return x.in_v49 === false; }   // explicit, not falsy
   // the short tag the rail/drawer carry beside the accession, so a reader sees the source WITHOUT
   // opening anything -- the data must not live only in a panel nobody clicks.
+  function txMane(t){ var x=META.transcripts[t]||{}; return x.mane_select && x.mane_select.is_mane_select; }
   function txTag(t){ var x=META.transcripts[t]||{};
+    if (txMane(t)) return " · MANE Select";                 // the representative transcript for the gene
     if (x.in_v49 === true) return "";                       // the v49 baseline: no tag needed
-    if (x.source && /RefSeq/i.test(x.source)) return " · RefSeq (not in GENCODE)";
+    if (x.source && /RefSeq/i.test(x.source)) return " · RefSeq — NOT in GENCODE";
     if (x.gencode_release) return " · GENCODE " + x.gencode_release + " — NOT in v49";
     return " · [provenance not on record]"; }
+  // RECORDS != EVENTS, and the rail must not say otherwise. It used to read "40 ORFs" while the
+  // stack drew 29 ROWS for MYCN-201 -- the collapse means a transcript carries more RECORDS than it
+  // draws EVENTS. A count that disagrees with what the reader can count IS the miscount this whole
+  // correction removes. So say BOTH, in text.
+  function eventCountOfTx(t){
+    var ids=orfIdsOfTx(t), seen={}, n=0;
+    ids.forEach(function(id){
+      var rid=regionOf(id);
+      if (rid && regionCollapses(rid)){ if(seen[rid]) return; seen[rid]=1; }
+      n++;
+    });
+    return n; }
   function txCoding(t){ var c=META.transcripts[t].cds; return (c&&c.length)?"coding":"non-coding"; }
   function txSpan(t){ var e=META.transcripts[t].exons; return [e[0][0], e[e.length-1][1]]; }
 
@@ -829,17 +847,41 @@
     // ---- labels (unclipped, gutter lane) ----
     g.append("rect").attr("class","gutter-hit").attr("x",0).attr("y",r.y).attr("width",GUTTER-8).attr("height",TXH)
       .attr("fill","transparent").on("click",function(){ pickTx(t); })
-      .on("mouseenter",function(ev){ tip(ev,"<b>MYCN-"+t+"</b> · "+orfIdsOfTx(t).length+" ORFs<br><span class='dim'>click to "+(state[t].open?"collapse":"expand")+"</span>"); })
+      .on("mouseenter",function(ev){ tip(ev,"<b>MYCN-"+t+"</b><br><span class='mono'>"+esc(txAcc(t))+"</span><br><span class='dim'>"+
+          esc(txSrc(t))+"<br>"+orfIdsOfTx(t).length+" records · "+eventCountOfTx(t)+" events (records are NOT events)<br>click to "+(state[t].open?"collapse":"expand")+"</span>"); })
       .on("mousemove",moveTip).on("mouseleave",hideTip);
     // on a narrow (phone) gutter, shorten "MYCN-201" -> "201" and drop "coding ·" from the meta line;
     // the full name + ORF count stay reachable via the row tooltip (hover) and tap-to-expand.
-    var sh=shortLabels(), nOrf=orfIdsOfTx(t).length;
-    g.append("text").attr("class","tx-label").attr("x",14).attr("y",mid-3).attr("font-size",13).attr("font-weight",600)
-      .attr("fill",selectedTx===t?PAL.nmyc:"#222a2e").text(sh ? t : "MYCN-"+t);
-    var coding=txCoding(t);
-    g.append("text").attr("class","tx-meta").attr("x",14).attr("y",mid+12).attr("font-size",10.5)
-      .attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66")
-      .text(sh ? (nOrf+" ORFs") : (txAcc(t)+txTag(t)+" · "+coding+" · "+nOrf+" ORFs"));
+    var sh=shortLabels(), nOrf=orfIdsOfTx(t).length, coding=txCoding(t);
+    g.append("text").attr("class","tx-label").attr("x",14).attr("y",mid-8).attr("font-size",13).attr("font-weight",600)
+      .attr("fill",selectedTx===t?PAL.nmyc:"#222a2e")
+      .text(sh ? t : ("MYCN-"+t+" · "+coding));
+    // THREE LINES, and every one of them CLIPPED TO THE GUTTER BY MEASUREMENT (getComputedTextLength),
+    // not by a guessed character count. The full string is always recoverable from the tooltip, the
+    // drawer (which wraps) and the detail panel -- so truncation never destroys a datum.
+    var AVAIL = GUTTER - 22;                       // the label column, minus its padding
+    function fit(node, full){
+      node.textContent = full;
+      if (!node.getComputedTextLength) return;
+      if (node.getComputedTextLength() <= AVAIL) return;
+      var s2 = full;
+      while (s2.length > 4 && node.getComputedTextLength() > AVAIL){
+        s2 = s2.slice(0, -1); node.textContent = s2 + "…";
+      }
+    }
+    var nEv = eventCountOfTx(t);
+    var accLine = txAcc(t) + txTag(t);
+    // RECORDS != EVENTS. Both stated, in full, in text -- and short enough that neither is ever
+    // truncated away. (MYCN-203 previously clipped to "12 ev…", losing the word that carries the
+    // meaning. A truncation that eats the noun is a lost datum, not a cosmetic issue.)
+    var cntLine = nOrf + " records · " + nEv + " events";
+    var accN = g.append("text").attr("class","tx-acc").attr("x",14).attr("y",mid+7)
+      .attr("font-size",9.5).attr("font-family",MONO).attr("fill", txOffV49(t) ? "#a5322c" : "#8a9791")
+      .node();
+    try{ fit(accN, sh ? txAcc(t) : accLine); }catch(e){ accN.textContent = txAcc(t); }
+    var metaN = g.append("text").attr("class","tx-meta").attr("x",14).attr("y",mid+21)
+      .attr("font-size",10.5).attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66").node();
+    try{ fit(metaN, sh ? (nEv+" events") : cntLine); }catch(e){ metaN.textContent = cntLine; }
     // right-edge expand chevron (row disclosure indicator; the whole gutter row is the click target via
     // gutter-hit -> pickTx). FIX 5: the per-row "zoom to transcript" magnifier was removed — zooming to one
     // of 8 near-identical ~9 kb isoforms barely differs and clips the others out of frame; the locus box,
@@ -1247,10 +1289,40 @@
     h+='<tr><td class="k">Transcript ID</td><td class="v mono">'+esc(txAcc(t))+'</td></tr>';
     h+='<tr><td class="k">Source</td><td class="v">'+esc(txSrc(t))+'</td></tr>';
     h+='<tr><td class="k">GENCODE release</td><td class="v">'+esc(txRel(t))+'</td></tr>';
-    if(_x.refseq_id) h+='<tr><td class="k">RefSeq</td><td class="v mono">'+esc(_x.refseq_id)+'</td></tr>';
-    if(_x.refseq_newer_id) h+='<tr><td class="k">RefSeq (newer)</td><td class="v mono">'+esc(_x.refseq_newer_id)+'</td></tr>';
+    // BOTH accessions. They are DIFFERENT FACTS and a reader needs both: the one they can look up
+    // TODAY (the current NM), and the one THIS WORK WAS CONFIRMED AGAINST (the superseded XM, which
+    // is the only one that appears in any annotation on this machine). DROP NEITHER.
+    // The OBSOLETE accession is RESTATED, NOT DELETED. It is the provenance of this work -- but it
+    // is NOT the identifier of record, and the panel must say which is which.
+    // FROM THE PRIMARY RECORD. The NM's ACCESSION line ABSORBS BOTH XMs -- same object, curated --
+    // which is exactly why the exon model does not move. Asserted in the build against 2 exons /
+    // 2,568 bp / CDS 267..1661; a disagreement there would be a FINDING and would stop the build.
+    if(_x.refseq_variant) h+='<tr><td class="k">Variant</td><td class="v">'+esc(_x.refseq_variant)+'</td></tr>';
+    if(_x.refseq_cds)     h+='<tr><td class="k">CDS (mRNA)</td><td class="v mono">'+esc(_x.refseq_cds)+'</td></tr>';
+    if(_x.refseq_protein) h+='<tr><td class="k">Protein</td><td class="v mono">'+esc(_x.refseq_protein)+'</td></tr>';
+    if(_x.refseq_length_bp) h+='<tr><td class="k">Length</td><td class="v mono">'+_x.refseq_length_bp+
+         ' bp · '+_x.refseq_exons+' exons</td></tr>';
+    if(_x.refseq_obsolete_id)
+      h+='<tr><td class="k">Superseded model</td><td class="v mono">'+esc(_x.refseq_obsolete_id)+
+         ' <span class="obs">OBSOLETE</span></td></tr>';
+    if(_x.refseq_absorbed && _x.refseq_absorbed.length)
+      h+='<tr><td class="k">Absorbed by the NM</td><td class="v mono">'+esc(_x.refseq_absorbed.join(" · "))+'</td></tr>';
+    // MANE Select — the single transcript Ensembl/GENCODE and RefSeq agree is representative.
+    var _m=_x.mane_select;
+    if(_m && _m.is_mane_select){
+      h+='<tr><td class="k">MANE Select</td><td class="v mono">'+esc(_m.ensembl_transcript)+' · '+
+         esc(_m.refseq_transcript)+'</td></tr>';
+      h+='<tr><td class="k">MANE proteins</td><td class="v mono">'+esc(_m.refseq_protein)+' · '+
+         esc(_m.ensembl_protein)+'</td></tr>';
+    }
     h+='</table>';
-    if(_x.refseq_newer_note) h+='<p class="txnote">'+esc(_x.refseq_newer_note)+'</p>';
+    if(_m && _m.is_mane_select){
+      h+='<p class="txnote mane"><b>MANE Select.</b> '+esc(_m.note)+'</p>';
+      h+='<p class="txnote warn">'+esc(_m.version_discrepancy)+'</p>';
+    }
+    if(_x.model_verified)       h+='<p class="txnote mane">'+esc(_x.model_verified)+'</p>';
+    if(_x.refseq_current_note)  h+='<p class="txnote">'+esc(_x.refseq_current_note)+'</p>';
+    if(_x.refseq_obsolete_note) h+='<p class="txnote warn">'+esc(_x.refseq_obsolete_note)+'</p>';
     if(_x.id_note) h+='<p class="txnote warn">'+esc(_x.id_note)+'</p>';
     h+='<p class="rail-empty">Click an ORF (expand the transcript) to see its protein detail.</p></div>';
     $("rail-body").innerHTML=h; railHasContent=true; openRight(true);

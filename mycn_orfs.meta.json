@@ -47,7 +47,17 @@
    "refseq_id": "[not established - no RefSeq<->Ensembl mapping derivable from the annotations on disk]",
    "source": "GENCODE v49",
    "gencode_release": "v49",
-   "in_v49": true
+   "in_v49": true,
+   "mane_select": {
+    "is_mane_select": true,
+    "ensembl_transcript": "ENST00000281043.4",
+    "refseq_transcript": "NM_005378.6",
+    "refseq_protein": "NP_005369.2",
+    "ensembl_protein": "ENSP00000281043.3",
+    "verified_from_disk": "GENCODE v49 tags ENST00000281043.4 MANE_Select + Ensembl_canonical; RefSeq RS_2025_08 cross-references NM_005378.6 -> Ensembl:ENST00000281043.4.",
+    "note": "MANE Select: the single transcript agreed by Ensembl/GENCODE and RefSeq as the representative for this gene. MYCN-201 IS that transcript.",
+    "version_discrepancy": "UniProt 2026_02's RefSeq cross-reference block lists NM_005378.5, while MANE lists NM_005378.6 -- A VERSION BUMP THAT HAS NOT PROPAGATED INSIDE A SINGLE UniProt PAGE. RefSeq RS_2025_08 on disk carries NM_005378.6, agreeing with MANE. THIS IS EXACTLY WHY VERSIONS ARE PINNED: an accession without its version is not an identifier, and here two blocks of one page disagree with each other."
+   }
   },
   "202": {
    "id": "ENST00000638417.1",
@@ -286,14 +296,26 @@
    "mlen": 2568,
    "src": "RefSeq NM_001446166.1; genomic exon model confirmed vs NCBI XM_047444434.1 (byte-identical mRNA, full md5 882366312f718378c8c6aed8d616b2dc), GRCh38 RS_2025_08 placement on NC_000002.12, all 4 boundaries exact; NM_001446166.1 (13-MAR-2026) postdates RS_2025_08 so is not itself in the released annotation",
    "display_name": "MYCN-XM",
-   "transcript_id": "XM_047444434.1",
-   "refseq_id": "XM_047444434.1",
-   "refseq_newer_id": "NM_001446166.1",
-   "refseq_newer_note": "NM_001446166.1 (13-MAR-2026) is the newer RefSeq equivalent. It POSTDATES RS_2025_08 and is in NO released annotation on disk - verified: absent from GENCODE v49, GENCODE v50, and RefSeq RS_2025_08. Carried, not dropped.",
-   "source": "RefSeq RS_2025_08",
-   "gencode_release": "[NOT IN GENCODE - RefSeq model]",
+   "transcript_id": "NM_001446166.1",
+   "refseq_id": "NM_001446166.1",
+   "refseq_curated": true,
+   "refseq_current_note": "NM_001446166.1 is the CURRENT RefSeq record and the identifier of record. It is CURATED (NM_), not a predicted model. It postdates the RS_2025_08 snapshot on disk, which is why it does not appear there -- ABSENCE FROM A SNAPSHOT IS NOT INVALIDITY.",
+   "refseq_obsolete_id": "XM_047444434.1",
+   "refseq_obsolete_note": "XM_047444434.1 is OBSOLETE - replaced by NM_001446166 (NCBI). It is kept because it is THE PROVENANCE OF THIS WORK: it is the model this analysis's exons were confirmed against (its span 15,941,799-15,947,004 is exactly the exon model drawn here), and it is the only one of the two present in RefSeq RS_2025_08. It is NOT the identifier of record.",
+   "refseq_variant": "transcript variant 4",
+   "refseq_cds": "267..1661",
+   "refseq_protein": "NP_001433095.1",
+   "refseq_length_bp": 2568,
+   "refseq_exons": 2,
+   "refseq_absorbed": [
+    "XM_047444434.1",
+    "XM_054342160.1"
+   ],
+   "model_verified": "VERIFIED against the primary record, and it agrees exactly: 2 exons (1,056 + 1,512 = 2,568 bp); CDS start genomic 15,942,065 -> mRNA 267; CDS end stop-inclusive 15,946,097 -> mRNA 1661. NP_001433095.1 is 464 aa - the SAME N-Myc protein as NP_005369.2, under a different RefSeq protein accession.",
+   "source": "RefSeq (curated) - NM_001446166.1, transcript variant 4",
+   "gencode_release": "[NOT IN GENCODE - RefSeq curated transcript]",
    "in_v49": false,
-   "id_note": "THE LABEL 'MYCN-XM' IS NOT AN OFFICIAL NAME. This is a RefSeq model, NOT a GENCODE transcript, and it is NOT in the annotation the benchmark used (GENCODE v49)."
+   "id_note": "THE LABEL 'MYCN-XM' IS NOT AN OFFICIAL NAME, and it is now doubly misleading: the transcript of record is a CURATED NM_, not an XM_ predicted model. This is a RefSeq transcript, NOT a GENCODE one, and it is NOT in the annotation the benchmark used (GENCODE v49)."
   }
  },
  "orfs": {
@@ -6917,5 +6939,9 @@
     "NO ORF 11. Not MS-detected, not annotation-independent. (The selection key excludes it on its own: it is independent only on the basis 'no region'.)"
    ]
   }
+ },
+ "accession_authority": {
+  "rule": "A SNAPSHOT IS NOT AN AUTHORITY. 'Derive from the annotation the analysis used' establishes PROVENANCE; IT DOES NOT ESTABLISH CURRENT VALIDITY. 'Not in our annotation' answers a DIFFERENT QUESTION from 'not valid'. An accession rendered on a PUBLIC FIGURE must be checked against the SOURCE DATABASE, not only against our snapshot. A RETIRED ACCESSION ON A PUBLIC FIGURE IS A FABRICATED VALUE WITH A REAL DERIVATION BEHIND IT -- THE MOST DURABLE KIND.",
+  "case": "XM_047444434.1 was rendered as MYCN-XM's primary identifier because it was the only one of the two present in our RefSeq snapshot (RS_2025_08). NCBI states it is OBSOLETE, replaced by NM_001446166. The absence of NM_001446166.1 from RS_2025_08 meant it POSTDATED the snapshot, not that it was invalid. UniProt 2026_02 ALSO still listed the obsolete XM_ -- TWO SOURCES AGREED AND BOTH WERE STALE. Only the primary record resolved it. AGREEMENT BETWEEN MIRRORS IS NOT CORROBORATION."
  }
 }
