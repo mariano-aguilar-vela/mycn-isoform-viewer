@@ -70,6 +70,10 @@
   // viewport, MYCN-203, MYCN-207 and MYCN-XM ran past the gutter and over the plot. SVG TEXT DOES
   // NOT WRAP: it just keeps going.
   var TXH = 64, ORFH = 23, GRPH = 20, SHH = 27, EXPAD = 8;
+  // REGH: a collapsed-region row is TWO lines (label+badge / n starts · n stops · n frames).
+  // It carries more text than a single-ORF row and must not be given a single-ORF row's box.
+  var REGH = 52;   // 4 text lines' worth: name / badge / structure (which may need 2 lines)
+  function rowH(r){ return r.kind==="region" ? REGH : ORFH; }
   var THICK = 15, THIN = 6, RIH = 9, ORF_THICK = 11;
   var DMIN = 15938000, DMAX = 15947200;       // locus extent (matches staged sequence)
   var CHR2LEN = 242193529;                     // chr2 length (fallback; real value from CYTO.length)
@@ -169,6 +173,17 @@
   // the short tag the rail/drawer carry beside the accession, so a reader sees the source WITHOUT
   // opening anything -- the data must not live only in a panel nobody clicks.
   function txMane(t){ var x=META.transcripts[t]||{}; return x.mane_select && x.mane_select.is_mane_select; }
+  // TWO forms. The RAIL clips to the gutter, so its tag must be SHORT ENOUGH THAT THE WARNING
+  // SURVIVES: measured on the live site, "· GENCODE v50 — NOT in v49" truncated to "· GENCODE v5…",
+  // EATING THE WARNING ITSELF and leaving only the red colour to carry it. DATA MUST NEVER LIVE ONLY
+  // IN A COLOUR — and a truncation that eats the warning is the same defect as one that eats the noun.
+  // The long form (with the release) is kept for the drawer and the panel, which do not clip.
+  function txTagShort(t){ var x=META.transcripts[t]||{};
+    if (txMane(t)) return " · MANE Select";
+    if (x.in_v49 === true) return "";
+    if (x.source && /RefSeq/i.test(x.source)) return " · NOT in GENCODE";
+    if (x.gencode_release) return " · NOT in v49";
+    return " · [no provenance]"; }
   function txTag(t){ var x=META.transcripts[t]||{};
     if (txMane(t)) return " · MANE Select";                 // the representative transcript for the gene
     if (x.in_v49 === true) return "";                       // the v49 baseline: no tag needed
@@ -485,9 +500,8 @@
         if (g.shared.length){
           rows.push({kind:"shared",t:t,y:y,n:g.shared.length}); y+=SHH;
           if (state[t].sharedOpen) eventsOf(g.shared).forEach(function(e){
-            if (e.kind==="region") rows.push({kind:"region",t:t,rid:e.rid,ids:e.ids,uniq:false,y:y});
-            else                   rows.push({kind:"orf",t:t,id:e.id,uniq:false,y:y});
-            y+=ORFH;
+            if (e.kind==="region"){ rows.push({kind:"region",t:t,rid:e.rid,ids:e.ids,uniq:false,y:y}); y+=REGH; }
+            else                  { rows.push({kind:"orf",t:t,id:e.id,uniq:false,y:y});                y+=ORFH; }
           });
         }
         y+=EXPAD;
@@ -502,9 +516,8 @@
     // ONE ROW PER EVENT PER LANE. The unit a reader counts is the LABELLED ROW, so the collapse must
     // happen HERE, at row-build -- not as a decoration on 8 rows that are still 8 rows.
     eventsOf(ids).forEach(function(e){
-      if (e.kind==="region") rows.push({kind:"region",t:t,rid:e.rid,ids:e.ids,uniq:uniq,y:y});
-      else                   rows.push({kind:"orf",t:t,id:e.id,uniq:uniq,y:y});
-      y+=ORFH;
+      if (e.kind==="region"){ rows.push({kind:"region",t:t,rid:e.rid,ids:e.ids,uniq:uniq,y:y}); y+=REGH; }
+      else                  { rows.push({kind:"orf",t:t,id:e.id,uniq:uniq,y:y});                y+=ORFH; }
     });
     return y;
   }
@@ -854,12 +867,16 @@
     // the full name + ORF count stay reachable via the row tooltip (hover) and tap-to-expand.
     var sh=shortLabels(), nOrf=orfIdsOfTx(t).length, coding=txCoding(t);
     g.append("text").attr("class","tx-label").attr("x",14).attr("y",mid-8).attr("font-size",13).attr("font-weight",600)
-      .attr("fill",selectedTx===t?PAL.nmyc:"#222a2e")
-      .text(sh ? t : ("MYCN-"+t+" · "+coding));
+      .attr("fill",selectedTx===t?PAL.nmyc:"#222a2e");
+    // the NAME line was the one line never clipped -- and it ran straight under the chevron.
     // THREE LINES, and every one of them CLIPPED TO THE GUTTER BY MEASUREMENT (getComputedTextLength),
     // not by a guessed character count. The full string is always recoverable from the tooltip, the
     // drawer (which wraps) and the detail panel -- so truncation never destroys a datum.
-    var AVAIL = GUTTER - 22;                       // the label column, minus its padding
+    // The chevron sits at GUTTER-16 (middle-anchored, ~12px wide), so it occupies roughly
+    // GUTTER-22 .. GUTTER-10. Text allowed to run to GUTTER-8 ran STRAIGHT UNDER IT -- measured at
+    // 760px: tx-acc [278..404] against chevron [395..401]. Stop the text clear of the chevron.
+    var AVAIL      = GUTTER - 22;                  // acc + counts: the FULL lane (chevron is off them)
+    var AVAIL_NAME = GUTTER - 44;                 // the NAME line shares its row with the chevron
     function fit(node, full){
       node.textContent = full;
       if (!node.getComputedTextLength) return;
@@ -869,8 +886,10 @@
         s2 = s2.slice(0, -1); node.textContent = s2 + "…";
       }
     }
+    try{ var _sv=AVAIL; AVAIL=AVAIL_NAME;
+         fit(g.select("text.tx-label").node(), sh ? t : ("MYCN-"+t+" · "+coding)); AVAIL=_sv; }catch(e){}
     var nEv = eventCountOfTx(t);
-    var accLine = txAcc(t) + txTag(t);
+    var accLine = txAcc(t) + txTagShort(t);       // SHORT: the warning must survive the clip
     // RECORDS != EVENTS. Both stated, in full, in text -- and short enough that neither is ever
     // truncated away. (MYCN-203 previously clipped to "12 ev…", losing the word that carries the
     // meaning. A truncation that eats the noun is a lost datum, not a cosmetic issue.)
@@ -887,7 +906,9 @@
     // of 8 near-identical ~9 kb isoforms barely differs and clips the others out of frame; the locus box,
     // +/-, scroll/pinch, ruler-brush and Reset cover every real navigation need.
     var zx=GUTTER-16;
-    g.append("text").attr("class","tx-chev").attr("x",zx).attr("y",mid+4).attr("font-size",12)
+    // The chevron used to sit at mid+4 -- ON THE ACCESSION LINE. Clearing it starved the very line
+    // that carries "NOT in v49". It belongs on the NAME line, which is short and never reaches it.
+    g.append("text").attr("class","tx-chev").attr("x",zx).attr("y",r.y+20).attr("font-size",12)
       .attr("fill","#5f6a66").attr("text-anchor","middle").text(state[t].open?"▾":"▸");
     // ---- structure (clipped) ----
     var x0e=x(tx.exons[0][0]), x1e=x(tx.exons[tx.exons.length-1][1]+1);
@@ -1041,7 +1062,7 @@
   }
 
   function drawRegion(r){
-    var rid=r.rid, R=regionRec(rid), mid=r.y+ORFH/2;
+    var rid=r.rid, R=regionRec(rid), mid=r.y+REGH/2;
     var g=gMain.append("g").attr("class","region-g").attr("data-region",rid).attr("data-tx",r.t)
                .attr("data-members",r.ids.join(","))
                .attr("data-starts",String(r.ids.length))
@@ -1049,7 +1070,7 @@
     var gc=clipped(g);
     var nS=r.ids.length, nStop=(R.distinct_stops||[]).length, nF=regionFrames(rid);
 
-    g.append("rect").attr("class","orf-hit").attr("x",22).attr("y",r.y).attr("width",GUTTER-30).attr("height",ORFH)
+    g.append("rect").attr("class","orf-hit").attr("x",22).attr("y",r.y).attr("width",GUTTER-30).attr("height",REGH)
       .attr("fill","transparent").style("cursor","pointer").on("click",function(){ pickRegion(rid); })
       .on("mouseenter",function(ev){ tip(ev,regionTip(rid)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
     // the swatch is an OUTLINE, not a fill — it is not one ORF's class colour
@@ -1059,12 +1080,50 @@
     var sh=shortLabels();
     // THE TEXT CARRIES THE STRUCTURE. Not the shape, not the colour.
     var tagStr = sh ? (nS+"st") : (nS+" starts · "+nStop+" stop"+(nStop===1?"":"s")+(nF>1?" · "+nF+" frames":""));
-    g.append("text").attr("class","orf-tag").attr("x",GUTTER-8).attr("y",mid+3.5).attr("text-anchor","end")
-      .attr("font-size",10).attr("fill","#5f6a66").text(tagStr);
-    g.append("text").attr("class","region-lbl").attr("x",42).attr("y",mid+3.5).attr("font-size",11)
-      .attr("font-weight",600).attr("fill","#222a2e").style("cursor","pointer")
-      .on("click",function(){ pickRegion(rid); })
-      .text(sh ? rid : (rid+" · CLUSTER EXTENT"));
+    // A collapsed-region row carries MORE TEXT than a single-ORF row -- name + CLUSTER EXTENT badge +
+    // "n starts · n stops · n frames" -- and it was handed a SINGLE-ORF ROW'S BOX. Clipping it harder
+    // was the wrong shape: the label truncated to "Regi…" AND STILL COLLIDED, and the clip ATE THE
+    // FRAME COUNT ("· 2 frames"), which is the entire reason Region 2 is not one contiguous ORF.
+    //
+    // So: give it the box it needs, and PACK the structure text BY MEASUREMENT across as many lines as
+    // it takes. NO NUMBER IS EVER ELLIPSED AWAY. A truncation that eats the noun -- or the warning, or
+    // the count -- is a lost datum.
+    var LBLX=24, AVAILR=(GUTTER-8)-LBLX;              // no right-aligned tag now: use the whole lane
+    var yy=r.y+13;
+    function line(cls,txt,fs,fw,fill){
+      var t=g.append("text").attr("class",cls).attr("x",LBLX).attr("y",yy).attr("font-size",fs)
+        .attr("fill",fill).style("cursor","pointer").on("click",function(){ pickRegion(rid); });
+      if(fw) t.attr("font-weight",fw);
+      t.node().textContent = txt; yy += fs+2; return t;
+    }
+    var wOf=function(txt,fs,fw){ var t=g.append("text").attr("font-size",fs);
+      if(fw)t.attr("font-weight",fw); t.node().textContent=txt;
+      var w=t.node().getComputedTextLength?t.node().getComputedTextLength():0; t.remove(); return w; };
+    line("region-lbl", rid, 11, 600, "#222a2e");
+    line("region-badge", "CLUSTER EXTENT", 9, 600, "#5f6a66");
+    // pack "n starts · n stops · n frames" into lines that FIT — never ellipse a number away
+    var parts=[nS+" start"+(nS===1?"":"s"), nStop+" stop"+(nStop===1?"":"s")];
+    if (nF>1) parts.push(nF+" frames");
+    var cur="";
+    parts.forEach(function(pz){
+      var cand = cur ? (cur+" · "+pz) : pz;
+      if (wOf(cand,10) <= AVAILR){ cur=cand; }
+      else { if(cur) line("orf-tag",cur,10,null,"#5f6a66"); cur=pz; }
+    });
+    if (cur) line("orf-tag",cur,10,null,"#5f6a66");
+    // MEASURED TRUNCATION — the same guard drawOrf has had all along, and which drawRegion NEVER GOT.
+    // A collapsed-region row carries MORE text than a single-ORF row (label + CLUSTER EXTENT badge +
+    // "n starts · n stops · n frames") and was handed a single-ORF row's box. Measured: the label ran
+    // [368..546] straight through its own tag [380..518]. The rail was clean and provably so -- and
+    // that told us NOTHING about the rows nobody measured.
+    try{
+      var tn=tag.node(), ln=lbl.node();
+      var tagW=(tn.getComputedTextLength?tn.getComputedTextLength():0);
+      var avail=(TAGX - tagW - 10) - LBLX, full=(sh ? rid : (rid+" · CLUSTER EXTENT")), s2=full;
+      while (ln.getComputedTextLength && ln.getComputedTextLength()>avail && s2.length>4){
+        s2=s2.slice(0,-1); ln.textContent=s2+"…";
+      }
+    }catch(e){}
 
     // ---- the extent: FROM TABLE B'S CELL, not reconstructed ----
     var ext=R.extent, xa=x(ext[0]), xb=x(ext[1]+1);
