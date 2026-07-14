@@ -91,6 +91,8 @@
   // accession line was added WITHOUT giving the row the height it needs -- MEASURED: at a 760px
   // viewport, MYCN-203, MYCN-207 and MYCN-XM ran past the gutter and over the plot. SVG TEXT DOES
   // NOT WRAP: it just keeps going.
+  // TXH and ORFH are DERIVED FROM CONTENT at each rebuild (see txRowH / orfRowH). The literals are
+  // only the pre-measure defaults.
   var TXH = 64, ORFH = 23, GRPH = 20, SHH = 27, EXPAD = 8;
   // REGH: a collapsed-region row is TWO lines (label+badge / n starts · n stops · n frames).
   // It carries more text than a single-ORF row and must not be given a single-ORF row's box.
@@ -516,6 +518,8 @@
   var SHORT_LBL_MAX = 130;   // GUTTER below this -> shorten transcript labels ("201", not "MYCN-201")
   function shortLabels(){ return GUTTER < SHORT_LBL_MAX; }
   function layout(){
+    // SIZE THE BOXES FROM THEIR CONTENT, BY MEASUREMENT — before any row is placed.
+    try{ TXH = txRowH(); ORFH = orfRowH(); }catch(e){}
     var rows=[], y=8;
     TX_ORDER.forEach(function(t){
       rows.push({kind:"tx", t:t, y:y}); y+=TXH;
@@ -891,41 +895,20 @@
     // on a narrow (phone) gutter, shorten "MYCN-201" -> "201" and drop "coding ·" from the meta line;
     // the full name + ORF count stay reachable via the row tooltip (hover) and tap-to-expand.
     var sh=shortLabels(), nOrf=orfIdsOfTx(t).length, coding=txCoding(t);
-    g.append("text").attr("class","tx-label").attr("x",14).attr("y",mid-8).attr("font-size",13).attr("font-weight",600)
-      .attr("fill",selectedTx===t?PAL.nmyc:"#222a2e");
-    // the NAME line was the one line never clipped -- and it ran straight under the chevron.
-    // THREE LINES, and every one of them CLIPPED TO THE GUTTER BY MEASUREMENT (getComputedTextLength),
-    // not by a guessed character count. The full string is always recoverable from the tooltip, the
-    // drawer (which wraps) and the detail panel -- so truncation never destroys a datum.
-    // The chevron sits at GUTTER-16 (middle-anchored, ~12px wide), so it occupies roughly
-    // GUTTER-22 .. GUTTER-10. Text allowed to run to GUTTER-8 ran STRAIGHT UNDER IT -- measured at
-    // 760px: tx-acc [278..404] against chevron [395..401]. Stop the text clear of the chevron.
-    var AVAIL      = GUTTER - 22;                  // acc + counts: the FULL lane (chevron is off them)
-    var AVAIL_NAME = GUTTER - 44;                 // the NAME line shares its row with the chevron
-    function fit(node, full){
-      node.textContent = full;
-      if (!node.getComputedTextLength) return;
-      if (node.getComputedTextLength() <= AVAIL) return;
-      var s2 = full;
-      while (s2.length > 4 && node.getComputedTextLength() > AVAIL){
-        s2 = s2.slice(0, -1); node.textContent = s2 + "…";
-      }
-    }
-    try{ var _sv=AVAIL; AVAIL=AVAIL_NAME;
-         fit(g.select("text.tx-label").node(), sh ? t : ("MYCN-"+t+" · "+coding)); AVAIL=_sv; }catch(e){}
-    var nEv = eventCountOfTx(t);
-    var accLine = txAcc(t) + txTagShort(t);       // SHORT: the warning must survive the clip
-    // RECORDS != EVENTS. Both stated, in full, in text -- and short enough that neither is ever
-    // truncated away. (MYCN-203 previously clipped to "12 ev…", losing the word that carries the
-    // meaning. A truncation that eats the noun is a lost datum, not a cosmetic issue.)
-    var cntLine = nOrf + " records · " + nEv + " events";
-    var accN = g.append("text").attr("class","tx-acc").attr("x",14).attr("y",mid+7)
-      .attr("font-size",9.5).attr("font-family",MONO).attr("fill", txOffV49(t) ? "#a5322c" : "#8a9791")
-      .node();
-    try{ fit(accN, sh ? txAcc(t) : accLine); }catch(e){ accN.textContent = txAcc(t); }
-    var metaN = g.append("text").attr("class","tx-meta").attr("x",14).attr("y",mid+21)
-      .attr("font-size",10.5).attr("fill",coding==="non-coding"?"#a5322c":"#5f6a66").node();
-    try{ fit(metaN, sh ? (nEv+" events") : cntLine); }catch(e){ metaN.textContent = cntLine; }
+    // WRAP, DO NOT ELLIPSE. Lines are packed BY MEASUREMENT and the row was sized to hold them.
+    var yy=r.y+16;
+    txLines(t).forEach(function(L){
+      var tn=g.append("text").attr("class",L.cls).attr("x",14).attr("y",yy).attr("font-size",L.fs)
+        .attr("fill", L.cls==="tx-label" ? (selectedTx===t?PAL.nmyc:"#222a2e")
+                    : L.cls==="tx-acc"   ? (txOffV49(t)?"#a5322c":"#8a9791")
+                    : L.cls==="tx-class" ? (coding==="non-coding"?"#a5322c":"#5f6a66")
+                    : "#5f6a66");
+      if(L.fw)   tn.attr("font-weight",L.fw);
+      if(L.mono) tn.attr("font-family",MONO);
+      tn.node().textContent = L.txt;
+      yy += L.fs + 2.5;
+    });
+
     // right-edge expand chevron (row disclosure indicator; the whole gutter row is the click target via
     // gutter-hit -> pickTx). FIX 5: the per-row "zoom to transcript" magnifier was removed — zooming to one
     // of 8 near-identical ~9 kb isoforms barely differs and clips the others out of frame; the locus box,
@@ -1235,6 +1218,84 @@
       "This is a cluster extent, NOT one ORF. Click for every member.</span>";
   }
 
+  // ================= WRAP, DO NOT ELLIPSE =================
+  // "CLIP HARDER" IS THE WRONG SHAPE -- established when the clip ate "· 2 frames". A truncation that
+  // eats the noun is a LOST DATUM, and it had come back in a different column: the rail rows carry
+  // name · accession · release flag · record count · event count · class -- MORE CONTENT THAN THE BOX
+  // WAS EVER SIZED FOR, and the box had not grown.
+  //
+  // THE RENDERING IS LEGIBLE OR IT IS NOT. So the box is DERIVED FROM ITS CONTENT BY MEASUREMENT
+  // (getComputedTextLength), never a guessed character count, and text WRAPS onto as many lines as it
+  // needs. Nothing is ever ellipsed away.
+  var _mrule=null;
+  // THE RULER MUST USE THE FONT THE TEXT WILL ACTUALLY BE DRAWN IN. Measuring the mono accession
+  // line with the proportional font under-reported its width, and the rail spilled into the plot --
+  // measuring the right thing WITH THE WRONG RULER. Same class as a threshold derived from the wrong
+  // object: everything about the measurement was correct except the instrument it was taken with.
+  function textW(txt,fs,fw,ff){
+    // THE RULER WAS BEING DETACHED. It is cached, and rebuild() clears the SVG -- so from the second
+    // rebuild onward the cached <text> was NOT IN THE DOCUMENT, and a detached SVG text node returns
+    // getComputedTextLength() === 0. EVERY STRING THEREFORE "FITTED", SILENTLY, AND NOTHING WRAPPED.
+    // A measuring instrument that has been unplugged reports zero -- and zero always passes.
+    // Re-attach if it is not connected, and NEVER trust a 0 for a non-empty string.
+    if(!_mrule || !_mrule.node() || !_mrule.node().isConnected){
+      _mrule=svg.append("text").attr("class","measure-only")
+        .attr("x",-9999).attr("y",-9999).attr("visibility","hidden");
+    }
+    _mrule.attr("font-size",fs).attr("font-weight",fw||null).attr("font-family",ff||FONT);
+    _mrule.node().textContent=txt;
+    var w = _mrule.node().getComputedTextLength ? _mrule.node().getComputedTextLength() : 0;
+    // A ZERO WIDTH FOR NON-EMPTY TEXT IS AN INSTRUMENT FAILURE, NOT A MEASUREMENT. Do not let it pass
+    // as "it fits": fall back to a conservative estimate so the text WRAPS rather than silently spills.
+    if (w === 0 && txt && txt.length) w = txt.length * fs * 0.62;
+    return w;
+  }
+  // greedily pack tokens into lines that FIT. A token that cannot fit alone is still emitted whole --
+  // a legible overflow is better than a silent deletion, and the probe will catch it.
+  function packTokens(tokens,avail,fs,fw,ff){
+    var lines=[], cur="";
+    tokens.forEach(function(tk){
+      var cand = cur ? (cur+" · "+tk) : tk;
+      if (textW(cand,fs,fw,ff) <= avail) cur=cand;
+      else { if(cur) lines.push(cur); cur=tk; }
+    });
+    if(cur) lines.push(cur);
+    return lines.length?lines:[""];
+  }
+  // the rail row's content, as LINES. Derived once per rebuild, and the row height follows from it.
+  function txLines(t){
+    var avail = GUTTER - 22 - 14;                 // lane minus padding
+    var coding=txCoding(t), nOrf=orfIdsOfTx(t).length, nEv=eventCountOfTx(t);
+    var out=[];
+    out.push({txt:"MYCN-"+t, fs:13, fw:600, cls:"tx-label"});
+    packTokens([coding], avail, 10.5).forEach(function(l){ out.push({txt:l, fs:10.5, cls:"tx-class"}); });
+    packTokens((txAcc(t)+txTagShort(t)).split(" · "), avail, 9.5, null, MONO).forEach(function(l){
+      out.push({txt:l, fs:9.5, cls:"tx-acc", mono:true}); });
+    packTokens([nOrf+" records", nEv+" events"], avail, 10.5).forEach(function(l){
+      out.push({txt:l, fs:10.5, cls:"tx-meta"}); });
+    return out;
+  }
+  // an ORF row's content, as LINES. "ORF9 MYCNOT" and "112 aa · 8c" sat side-by-side and the LABEL
+  // got clipped ("ORF9 …", "ORF10…"). Stacked and packed, nothing is lost.
+  function orfLines(id){
+    var o=META.orfs[id], avail=GUTTER-8-42, nm=NAME[id]?(" "+NAME[id]):"";
+    var out=[];
+    packTokens(["ORF"+id+nm], avail, 11, 600).forEach(function(l){ out.push({txt:l, fs:11, fw:600, cls:"orf-lbl"}); });
+    packTokens([o.aa_len+" aa", carrierCount(id)+"c"], avail, 10).forEach(function(l){
+      out.push({txt:l, fs:10, cls:"orf-tag"}); });
+    return out;
+  }
+  function orfRowH(){
+    var mx=1;
+    Object.keys(META.orfs).forEach(function(id){ mx=Math.max(mx, orfLines(id).length); });
+    return 6 + mx*12 + 6;
+  }
+  function txRowH(){
+    var mx=1;
+    TX_ORDER.forEach(function(t){ mx=Math.max(mx, txLines(t).length); });
+    return 12 + mx*13 + 6;                        // derived from CONTENT, not guessed
+  }
+
   function drawOrf(r){
     var id=r.id, o=META.orfs[id], mid=r.y+ORFH/2;
     var g=gMain.append("g").attr("class","orf-g").attr("data-id",id);
@@ -1243,24 +1304,22 @@
     g.append("rect").attr("class","orf-hit").attr("x",22).attr("y",r.y).attr("width",GUTTER-30).attr("height",ORFH).attr("fill","transparent")
       .style("cursor","pointer").on("click",function(){ pickOrf(id); })
       .on("mouseenter",function(ev){ tip(ev,orfTip(id)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
-    g.append("rect").attr("class","orf-sw").attr("x",24).attr("y",mid-5).attr("width",10).attr("height",10).attr("rx",2).attr("fill",o.color)
+    g.append("rect").attr("class","orf-sw").attr("x",24).attr("y",r.y+5).attr("width",10).attr("height",10).attr("rx",2).attr("fill",o.color)
       // Protein evidence is NOT a class, so it does not take the class colour channel.
       // It gets its own mark. (Same reason conservation is a badge, never a fill.)
       .attr("stroke", msDetected(o)?PAL.evid:"none").attr("stroke-width", msDetected(o)?1.6:0);
-    var nm=NAME[id]?(" "+NAME[id]):"", TAGX=GUTTER-8, LBLX=42;
-    // narrow (phone) gutter: tag shows only carrier count so the id+name column keeps room before truncation
-    var tagStr=shortLabels() ? (carrierCount(id)+"c") : (o.aa_len+"aa · "+carrierCount(id)+"c");
-    var tag=g.append("text").attr("class","orf-tag").attr("x",TAGX).attr("y",mid+3.5).attr("text-anchor","end")
-      .attr("font-size",10).attr("fill","#5f6a66").text(tagStr);
-    var lbl=g.append("text").attr("class","orf-lbl").attr("x",LBLX).attr("y",mid+3.5).attr("font-size",11)
-      .attr("fill","#222a2e").on("click",function(){ pickOrf(id); }).text("ORF"+id+nm);
-    // measured truncation (browser): keep >= 8px between the id+name and the tag column
-    try{
-      var tn=tag.node(), ln=lbl.node();
-      var tagW=(tn.getComputedTextLength?tn.getComputedTextLength():0);
-      var avail=(TAGX - tagW - 8) - LBLX, full="ORF"+id+nm, s=full;
-      while (ln.getComputedTextLength && ln.getComputedTextLength()>avail && s.length>5){ s=s.slice(0,-1); ln.textContent=s+"…"; }
-    }catch(e){}
+    // WRAP, DO NOT ELLIPSE. The label and the tag sat side-by-side and the LABEL got clipped
+    // ("ORF9 …", "ORF10…"). They are stacked now, packed BY MEASUREMENT, and the row was sized to
+    // hold them. A truncation that eats the noun is a LOST DATUM.
+    var yy2=r.y+13;
+    orfLines(id).forEach(function(L){
+      var tn2=g.append("text").attr("class",L.cls).attr("x",42).attr("y",yy2).attr("font-size",L.fs)
+        .attr("fill", L.cls==="orf-lbl" ? "#222a2e" : "#5f6a66")
+        .style("cursor","pointer").on("click",function(){ pickOrf(id); });
+      if(L.fw) tn2.attr("font-weight",L.fw);
+      tn2.node().textContent = L.txt;
+      yy2 += L.fs + 2;
+    });
     // ---- structure (clipped) ----
     var b0=x(o.blocks[0][0]), b1=x(o.blocks[o.blocks.length-1][1]+1);
     gc.append("line").attr("x1",b0).attr("x2",b1).attr("y1",mid).attr("y2",mid).attr("stroke","#c2ccc9").attr("stroke-width",1);
@@ -1479,12 +1538,12 @@
     novelOpen=false;
     var host=$("feature-list"), h='<div class="fgroup">';
     TX_ORDER.forEach(function(t){
-      var n=orfIdsOfTx(t).length, coding=txCoding(t);
+      var n=orfIdsOfTx(t).length, coding=txCoding(t), nEv=eventCountOfTx(t);
       h+='<button class="trow" data-tx="'+t+'" title="MYCN-'+t+'">'+
          '<span class="tchev">'+(state[t].open?"▾":"▸")+'</span>'+
          '<span class="tname">MYCN-'+esc(t)+'</span>'+
          '<span class="tacc'+(txOffV49(t)?' toff':'')+'">'+esc(txAcc(t))+esc(txTag(t))+'</span>'+
-         '<span class="tmeta">'+n+' ORFs · <span class="'+(coding==="non-coding"?"tnc":"")+'">'+coding+'</span></span></button>';
+         '<span class="tmeta">'+n+' records · '+nEv+' events · <span class="'+(coding==="non-coding"?"tnc":"")+'">'+coding+'</span></span></button>';
     });
     h+='</div>'; host.innerHTML=h;
     Array.prototype.forEach.call(host.querySelectorAll(".trow"),function(btn){

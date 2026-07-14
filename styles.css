@@ -393,3 +393,13 @@ button.memb:hover{color:#222a2e}
 .landing dl.defs dt{font-size:10px; font-weight:700; letter-spacing:.6px; color:#222a2e; margin-top:4px}
 .landing dl.defs dt:first-child{margin-top:0}
 .landing dl.defs dd{margin:1px 0 0; font-size:11px; line-height:1.45; color:#5f6a66}
+
+/* THE DRAWER ROWS WERE CLIPPING ALL EIGHT TRANSCRIPTS (overflow:hidden; MYCN-207 at 93>25 px).
+   WRAP, DO NOT ELLIPSE — a truncation that eats the noun is a lost datum, and "40 ORFs · cod…" ate
+   the class word while "40 OR…" ate the COUNT. The row is a grid now and grows to fit its content. */
+.trow{display:grid !important; grid-template-columns:14px 1fr; align-items:start;
+  height:auto !important; min-height:0; overflow:visible !important; padding:6px 8px}
+.trow .tchev{grid-row:1/span 3; align-self:center}
+.trow .tname,.trow .tacc,.trow .tmeta{grid-column:2; overflow:visible !important;
+  white-space:normal !important; text-overflow:clip !important; word-break:normal; overflow-wrap:anywhere}
+.trow .tmeta{font-size:10px; line-height:1.4; color:#5f6a66}
