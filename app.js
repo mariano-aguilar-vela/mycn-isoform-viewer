@@ -128,6 +128,10 @@
     setupTouch();
     renderFeatureList();
     wireLegendToggle();
+    // D-ADD: THE VIEWER OPENS ON THE PANEL, not on 56 undifferentiated ORFs. The flat opening state
+    // was itself a claim -- that all 56 are the same kind of object. Four are named proteins; the
+    // other 52 are predictions in a search space with no reliable negatives.
+    $("rail-body").innerHTML = renderLanding(); wireCard();
     // phone starts with side sheets CLOSED so the stack gets the full width (details-on-demand)
     setLeft(!isPhone()); openRight(false);
     rebuild();
@@ -938,6 +942,62 @@
   // DATA MUST NEVER LIVE ONLY IN A COLOUR -- OR ONLY IN A SHAPE. Every fact here is also in the row's
   // TEXT: "Region 2 · 3 starts · 2 stops · 2 frames · CLUSTER EXTENT". Greyscale, colourblind and
   // copy-paste all survive it.
+  // ================= D-ADD — THE LANDING PANEL =================
+  // THE VIEWER OPENED ON 56 UNDIFFERENTIATED ORFs, AND THAT FLAT PRESENTATION IS ITSELF A CLAIM:
+  // that all 56 are the same kind of object. THEY ARE NOT. Four are named proteins with accessions.
+  // Fifty-two are predictions in a search space WITH NO RELIABLE NEGATIVES.
+  //
+  // Panel one is chosen BY A QUERY on the promoted table -- evidence_independent.basis == "annotation"
+  // -- NOT by a curated list. The key excludes on its own: ORF 11 is independent only on the basis
+  // "no region", and ORF 24's basis is "shares all evidence with its nested siblings". Neither can
+  // enter, and there is no exclusion list to get wrong later.
+  //
+  // A FEATURED TILE IS THE MOST MISCOUNTABLE OBJECT ON A PAGE. It is read as "this is established" by
+  // everyone who reads nothing else -- AND AN EXPANDED SCREENSHOT OUTLIVES ITS TOOLTIP. So the panel
+  // STATES ITS OWN BASIS, ON THE PANEL, in text. Not in a tooltip. Not in a colour.
+  function landingOrfs(){
+    var L=META.landing; if(!L) return [];
+    // re-derive from the ORF records too, so the panel can never drift from the key it claims to use
+    return (L.annotation_independent.orfs||[]).filter(function(t){
+      var o=META.orfs[String(t.orf)];
+      return o && String(o.evidence_independent && o.evidence_independent.basis||"").indexOf("annotation")===0;
+    });
+  }
+  function renderLanding(){
+    var L=META.landing;
+    if(!L) return '<div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>';
+    var tiles=landingOrfs();
+    var h='<div class="landing">';
+    h+='<h2>'+esc(L.annotation_independent.title)+'</h2>';
+    // THE BASIS, ON THE PANEL — never a tooltip.
+    h+='<p class="basis">'+esc(L.annotation_independent.basis)+'</p>';
+    h+='<div class="tiles">';
+    tiles.forEach(function(t){
+      h+='<button class="tile" data-orf="'+t.orf+'">'+
+           '<span class="tname">'+esc(t.name)+'</span>'+
+           '<span class="tacc mono">'+esc(t.acc)+'</span>'+
+           '<span class="tlen">'+t.aa_len+' aa</span>'+
+         '</button>';
+    });
+    h+='</div>';
+    h+='<p class="keynote">selection key: <span class="mono">'+esc(L.annotation_independent.selection_key)+'</span></p>';
+
+    var R=L.region1_result;
+    h+='<h2 class="r1">'+esc(R.title)+'</h2>';
+    h+='<p class="claim">'+esc(R.claim)+'</p>';
+    h+='<ul class="denoms">';
+    (R.denominators||[]).forEach(function(d){ h+='<li>'+esc(d)+'</li>'; });
+    h+='</ul>';
+    h+='<p class="why">'+esc(R.why)+'</p>';
+
+    var X=L.excluded;
+    h+='<details class="excl"><summary>'+esc(X.note)+'</summary><ul>';
+    (X.items||[]).forEach(function(i){ h+='<li>'+esc(i)+'</li>'; });
+    h+='</ul></details>';
+    h+='</div>';
+    return h;
+  }
+
   function drawRegion(r){
     var rid=r.rid, R=regionRec(rid), mid=r.y+ORFH/2;
     var g=gMain.append("g").attr("class","region-g").attr("data-region",rid).attr("data-tx",r.t)
@@ -1104,7 +1164,7 @@
     selectedOrf = null;
     if (rid==null){
       railHasContent=false;
-      $("rail-body").innerHTML='<div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>';
+      $("rail-body").innerHTML = renderLanding(); wireCard();
     } else {
       $("rail-body").innerHTML = renderRegionCard(rid); wireCard();
       railHasContent=true; openRight(true);
@@ -1149,7 +1209,7 @@
     var target = viewG.slice();                  // default: keep the current genomic window across the resize
     if (id==null){
       railHasContent=false;
-      $("rail-body").innerHTML='<div class="rail-empty">Select an ORF for its protein detail, or click an exon for its coordinates.</div>';
+      $("rail-body").innerHTML = renderLanding(); wireCard();
       openRight(false);
       setNow(selectedTx?("MYCN-"+selectedTx):"MYCN locus", selectedTx?txSpan(selectedTx):null);
     } else {
@@ -1302,6 +1362,9 @@
     });
     // every collapsed member is reachable by a REAL click, from the region card
     Array.prototype.forEach.call(body.querySelectorAll("button.memb"),function(btn){
+      btn.addEventListener("click",function(){ pickOrf(btn.getAttribute("data-orf")); });
+    });
+    Array.prototype.forEach.call(body.querySelectorAll("button.tile"),function(btn){
       btn.addEventListener("click",function(){ pickOrf(btn.getAttribute("data-orf")); });
     });
   }

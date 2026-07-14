@@ -6866,5 +6866,56 @@
    ]
   },
   "version_pinning": "Versions are PINNED to GENCODE v49. v50 re-versions 202: ENST00000638417.1 -> ENST00000638417.2, 204: ENST00000885101.1 -> ENST00000885101.2, 205: ENST00000930195.1 -> ENST00000930195.2. The viewer carries the v49 versions because that is the annotation the analysis used. An accession without its version is not an identifier."
+ },
+ "landing": {
+  "annotation_independent": {
+   "title": "Annotation-independent proteins",
+   "basis": "Annotation-independent: these exist as named proteins with accessions, independently of the evidence axes below.",
+   "selection_key": "evidence_independent.basis == 'annotation'  (a QUERY on the promoted table, not a curated list)",
+   "orfs": [
+    {
+     "orf": 1,
+     "name": "N-Myc",
+     "acc": "NP_005369.2",
+     "aa_len": 464
+    },
+    {
+     "orf": 2,
+     "name": "ΔMYCN",
+     "acc": "NP_001280160.1",
+     "aa_len": 253
+    },
+    {
+     "orf": 9,
+     "name": "MYCNOT",
+     "acc": "AAG40001.1",
+     "aa_len": 112
+    },
+    {
+     "orf": 10,
+     "name": "MUSEP",
+     "acc": "CAA68677.1",
+     "aa_len": 86
+    }
+   ]
+  },
+  "region1_result": {
+   "title": "The Region-1 result",
+   "claim": "A novel protein IS translated from the Region-1 stop group, out-of-frame within the N-Myc CDS, at 2 proteome-unique peptides (SGVPPPTPR, LSPHSPSLCVPR) across 3 lysate datasets. WHICH OF 8 STARTS produced it is NOT ESTABLISHED.",
+   "denominators": [
+    "The 2 peptides are contained in 6 of the 8 Region-1 members (the Ribo-seq read pile).",
+    "They are also contained in 16 ORFs across the full 763-ORF catalogue (the MS candidate set).",
+    "DIFFERENT SETS, DIFFERENT DENOMINATORS, DIFFERENT QUESTIONS. A number without its basis is the defect. Any of the candidates would yield exactly these two peptides."
+   ],
+   "why": "This IS the result. It is worth more than a tile on any single ORF, because it VISIBLY DECLINES THE STRONGER CLAIM: detection is not attribution."
+  },
+  "excluded": {
+   "note": "What is deliberately NOT on this panel, and why. These are not omissions.",
+   "items": [
+    "NO ORF-24 tile. Its state is DETECTED (GROUP-LEVEL). A tile reading 'ORF 24 - protein detected' IS the start claim, in the most prominent position on the site. OpenProt IP_083082 is a CATALOGUE RECORD ID, not an annotation.",
+    "NO 'likely real' tier. There is no probability axis in this data. A tier that cannot be derived is an editorial judgement dressed as a finding.",
+    "NO ORF 11. Not MS-detected, not annotation-independent. (The selection key excludes it on its own: it is independent only on the basis 'no region'.)"
+   ]
+  }
  }
 }

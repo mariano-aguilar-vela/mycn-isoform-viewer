@@ -349,3 +349,31 @@ table.props.members td{padding:2px 6px 2px 0; font-size:11px}
 button.memb{background:none; border:0; padding:0; font:inherit; font-size:11px; font-weight:600;
   color:#4A6FA5; cursor:pointer; text-decoration:underline}
 button.memb:hover{color:#222a2e}
+
+/* D-ADD — the landing panel.
+   A FEATURED TILE IS THE MOST MISCOUNTABLE OBJECT ON A PAGE: it is read as "this is established" by
+   everyone who reads nothing else, and an expanded screenshot outlives its tooltip. So the panel's
+   BASIS is printed ON the panel, as text — not a tooltip, not a colour. Nothing here is encoded in
+   colour alone. */
+.landing h2{font-size:13px; margin:0 0 4px; letter-spacing:.2px}
+.landing h2.r1{margin-top:18px}
+.landing .basis{margin:0 0 10px; font-size:11px; line-height:1.5; color:#5f6a66;
+  border-left:2px solid var(--line); padding-left:8px}
+.landing .tiles{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:6px}
+.landing .tile{display:flex; flex-direction:column; align-items:flex-start; gap:1px; text-align:left;
+  background:#fff; border:1px solid var(--line); border-radius:7px; padding:7px 9px; cursor:pointer;
+  font:inherit}
+.landing .tile:hover{border-color:#4A6FA5}
+.landing .tile .tname{font-size:12px; font-weight:600; color:#222a2e}
+.landing .tile .tacc{font-size:10px; color:#5f6a66; display:block; margin-top:0}
+.landing .tile .tlen{font-size:10px; color:#5f6a66}
+.landing .keynote{margin:8px 0 0; font-size:10px; color:#8a9791; line-height:1.45}
+.landing .claim{margin:0 0 8px; font-size:12px; line-height:1.55; color:#222a2e; font-weight:500}
+.landing .denoms{margin:0 0 8px; padding-left:16px}
+.landing .denoms li{font-size:11px; line-height:1.5; color:#5f6a66; margin-bottom:3px}
+.landing .why{margin:0; font-size:11px; line-height:1.5; color:#1F6B47;
+  border-left:2px solid #1F6B47; padding-left:8px}
+.landing .excl{margin-top:14px}
+.landing .excl summary{font-size:11px; color:#5f6a66; cursor:pointer}
+.landing .excl ul{margin:6px 0 0; padding-left:16px}
+.landing .excl li{font-size:11px; line-height:1.5; color:#5f6a66; margin-bottom:4px}
