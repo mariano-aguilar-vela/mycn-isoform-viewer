@@ -15,7 +15,7 @@ jobs:
         with:
           python-version: '3.13'
       - run: pip install -r requirements-reference.txt
-      - run: python scripts/check_for_reference_updates.py
+      - run: python scripts/check_for_reference_updates.py --manifest-url https://mariano-aguilar-vela.github.io/mycn-isoform-viewer/data/current/manifest.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:

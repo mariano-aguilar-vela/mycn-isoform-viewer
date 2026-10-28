@@ -117,7 +117,7 @@
         el.classList.toggle("err", !!isErr);
     }
     window.addEventListener("DOMContentLoaded", function() {
-        Promise.all([ fetch("data/current/reference.json").then(function(r) {
+        Promise.all([ fetch("data/current/reference.json", {cache:"no-cache"}).then(function(r) {
             if (!r.ok) throw new Error("meta.json HTTP " + r.status);
             return r.json();
         }), fetch("mycn_locus_seq.json").then(function(r) {
