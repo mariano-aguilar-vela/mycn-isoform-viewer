@@ -121,7 +121,8 @@ def build(cache,review):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--cache',required=True);p.add_argument('--review-date',required=True);p.add_argument('--application-commit');args=p.parse_args()
     data,loc=build(Path(args.cache),args.review_date)
-    import subprocess
+    import subprocess,platform,importlib.metadata
+    data['pipeline_versions']={'python':platform.python_version(),'biopython':Bio.__version__,'jsonschema':importlib.metadata.version('jsonschema')}
     data['application_commit']=args.application_commit or subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
     from validate_reference import validate
     validate(data,loc)
@@ -129,7 +130,7 @@ def main():
     previous=json.loads((ROOT/'data/releases/legacy-2026-07/reference.json').read_text())['transcripts']
     for k,t in data['transcripts'].items():t['lab_alias']=aliases.get(t['display_name'],'');t['history']=previous.get(k)
     write(ROOT/'data/current/reference.json',data);write(ROOT/f'data/releases/gencode_v{data["gencode_release"]}/reference.json',data);write(ROOT/'mycn_locus_seq.json',loc)
-    manifest={k:data[k] for k in ['schema_version','application_version','reference_build','status','review_date','assembly','ensembl_release','gencode_release','refseq_accession','prediction_policy','application_commit']};manifest['reference_sha256']=sha((ROOT/'data/current/reference.json').read_text());manifest['sources']=data['official_source_manifest'];write(ROOT/'data/current/manifest.json',manifest);write(ROOT/f'data/manifests/{data["reference_build"]}.json',manifest)
+    manifest={k:data[k] for k in ['schema_version','application_version','reference_build','status','review_date','assembly','ensembl_release','gencode_release','refseq_accession','prediction_policy','application_commit','pipeline_versions']};manifest['reference_sha256']=sha((ROOT/'data/current/reference.json').read_text());manifest['sources']=data['official_source_manifest'];write(ROOT/'data/current/manifest.json',manifest);write(ROOT/f'data/manifests/{data["reference_build"]}.json',manifest)
     # Retain exact official locus subsets with complete-file source hashes in the manifest.
     cache=Path(args.cache);release=data['gencode_release'];sub=[]
     with gzip.open(cache/f'gencode.v{release}.annotation.gtf.gz','rt') as f:
