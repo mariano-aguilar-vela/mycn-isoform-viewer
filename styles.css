@@ -421,3 +421,8 @@ button.memb:hover{color:#222a2e}
 [hidden]{display:none !important}
 
 @media(max-width:1280px){#topbar{height:auto;min-height:52px;flex-wrap:wrap;gap:8px;padding:7px 12px}.tb-controls{gap:7px;flex-wrap:wrap}}
+
+.reference-banner{flex:0 0 auto;margin:0;padding:4px 14px;font-size:12px;background:#eef2f7;color:#33485c;overflow-wrap:anywhere}
+#release-history{max-width:min(850px,94vw);max-height:88vh;overflow:auto;color:#222a2e;background:white;border:1px solid #5f6a66;border-radius:8px}
+#release-history p{line-height:1.5;max-width:80ch} #history-close{float:right;min-height:32px} .rail-body svg{width:100%;height:auto}
+@media(max-width:1500px){#topbar{height:auto;min-height:52px;flex-wrap:wrap;gap:8px;padding:7px 12px}.tb-controls{gap:7px;flex-wrap:wrap}}

@@ -24,7 +24,9 @@
       <span class="tb-sub" id="tb-sub">— isoform stack</span>
     </div>
     <div class="tb-controls">
-      <button id="about-open" class="tb-btn">About the data</button>
+      <button id="about-open" class="tb-btn" aria-label="Reference and evidence">Reference</button>
+      <button id="history-open" class="tb-btn" aria-label="Release history">History</button>
+      <button id="download-data" class="tb-btn">Data JSON</button>
       <form id="locus-form" autocomplete="off">
         <input id="locus-input" type="text" spellcheck="false"
                placeholder="chr2:15,938,000-15,947,200" aria-label="locus">
@@ -42,6 +44,7 @@
     </div>
   </header>
 
+  <p id="reference-banner" class="reference-banner">Current reference loading…</p>
   <!-- workspace: left drawer (push) | viewer (header + stack share one x-aligned column) -->
   <div id="workspace">
     <!-- LEFT drawer: browse index (lens toggle + search + grouped list + legend) -->
@@ -106,15 +109,24 @@
 
   <dialog id="about-data" aria-labelledby="about-title">
     <button id="about-close" autofocus>Close</button>
-    <h2 id="about-title">About the data</h2>
-    <p>Content version: 2026-10-28. GRCh38 transcript models retain their original reference versions: MYCN-201–206 from GENCODE v49, MYCN-207 from GENCODE v50, plus the RefSeq addition MYCN-XM (NM_001446166.1, formerly XM_047444434.1). MYCN-XM is a study-specific display alias, not an official GENCODE name.</p>
-    <p>TV1–TV6, TV2+, and NC are owner-supplied laboratory aliases used by our laboratory. Canonical GENCODE and RefSeq transcript identifiers remain authoritative.</p>
-    <p>The frozen models have not been replaced with a uniform GENCODE v50 reference. The requested v50 versions for MYCN-202, -204 and -205 differ from the retained v49 records; a reference update requires model and sequence reconciliation.</p>
-    <p>For research and educational use; this viewer is not a clinical diagnostic tool. Transcript annotation and laboratory aliases do not establish sample-specific expression or function. ORFs include annotations and predictions; evidence and its limits are shown in the detail panels.</p>
-    <p><a href="https://www.gencodegenes.org/human/release_49.html">GENCODE v49</a> · <a href="https://www.gencodegenes.org/human/release_50.html">GENCODE v50</a> · <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_001446166.1">RefSeq NM_001446166.1</a></p>
+    <h2 id="about-title">Reference and evidence</h2>
+    <p id="reference-summary"></p><p id="reference-version"></p>
+    <p>The default displays the complete current GENCODE MYCN transcript set plus the reviewed RefSeq MYCN transcript variant 4, shown as MYCN-XM (TV4). MYCN-XM is a study display alias, not a GENCODE transcript name.</p>
+    <p>TV1–TV6, TV2+, and NC are laboratory aliases used by our laboratory. Current GENCODE and RefSeq identifiers remain authoritative.</p>
+    <p>ORFs are independently enumerated from the current official transcript sequences: every AUG start to the first in-frame standard-code stop, including nested starts, with a minimum of 8 amino acids. Non-AUG starts and no-stop ORFs are outside this enumeration. ORF numbers are specific to this build and do not map to the former 56-ORF viewer.</p>
+    <p>Annotated CDS: DATABASE_ANNOTATED. Other ORFs and physicochemical properties: COMPUTATIONAL_PREDICTION. Domain coordinates: DATABASE_ANNOTATED, shown only after an exact protein-sequence match to the cited UniProt record. No experimental expression, translation, stability, conservation or functional claim is assigned to a predicted ORF.</p>
+    <p>For research and educational use; this is not a clinical diagnostic tool. Annotation and laboratory nomenclature do not establish sample-specific expression or function. Historical laboratory MS, ribosome-profiling and conservation assertions have been removed from the current factual view because their underlying artifacts were not reproduced.</p>
+    <p id="reference-links"></p>
+    <p><a href="data/current/manifest.json">Source and build manifest</a> · <a href="data/current/reference.json">Complete generated data</a> · <a href="mycn_transcripts.gff3">Transcript GFF3</a> · <a href="mycn_orfs.bed">ORF BED</a> · <a href="data/current/transcripts.fa">Transcript FASTA</a> · <a href="data/current/proteins.fa">Annotated protein FASTA</a></p>
     <h3>Transcript structures (accessible diagram alternative)</h3>
     <p>Coordinates below are 1-based, inclusive, on chr2 (+ strand). CDS intervals exclude the stop codon. Use the transcript and ORF buttons in Features for selection; the locus field, zoom buttons and Reset provide keyboard navigation.</p>
     <div class="table-scroll"><table><thead><tr><th scope="col">Transcript (lab alias)</th><th scope="col">Versioned accession</th><th scope="col">Source</th><th scope="col">Reference release</th><th scope="col">Length (nt)</th><th scope="col">Exons</th><th scope="col">CDS</th></tr></thead><tbody id="transcript-summary"></tbody></table></div>
+  </dialog>
+  <dialog id="release-history" aria-labelledby="history-title"><button id="history-close" autofocus>Close</button><h2 id="history-title">Scientific release history</h2>
+    <p>Application 2.0.0 introduced the complete GENCODE v50 MYCN set plus reviewed RefSeq. MYCN-202 has a changed first exon and 3′ end; MYCN-204 and MYCN-205 have extended 3′ ends. Structures, sequences, CDS checks, ORFs and protein properties were regenerated together.</p>
+    <p>Historical: July 2026 public viewer used GENCODE v49 for MYCN-201–206, v50 for MYCN-207, and RefSeq for MYCN-XM. Its ORF numbering and inherited experimental interpretations are not current annotations.</p>
+    <p><a href="data/current/release-diff.json">Detailed scientific changes</a> · <a href="data/releases/legacy-2026-07/reference.json">Historical structural snapshot</a> · <a href="https://github.com/mariano-aguilar-vela/mycn-isoform-viewer/tree/8e44fe57b2097e02c273fad86e1d996c0a22df7b">Reproducible historical application</a></p>
+    <p>Study-specific abundance estimates are not included or recalculated by this viewer. Future updates follow detect, diff, review, test, deploy; the checker never publishes automatically.</p>
   </dialog>
   <script src="vendor/d3.v7.9.0.min.js"></script>
   <script src="lab-aliases.js"></script>

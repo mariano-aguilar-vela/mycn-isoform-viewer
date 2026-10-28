@@ -1,8 +1,8 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs');
-const lab=require('../lab-aliases.js'),meta=require('../mycn_orfs.meta.json');
+const lab=require('../lab-aliases.js'),meta=require('../data/current/reference.json');
 const expected={'201':'TV2','202':'TV3','203':'NC','204':'TV6','205':'TV1','206':'TV5','207':'TV2+','XM':'TV4'};
-const accessions=['ENST00000281043.4','ENST00000638417.1','ENST00000703162.1','ENST00000885101.1','ENST00000930195.1','ENST00000930196.1','ENST00001138178.1','NM_001446166.1'];
+const accessions=['ENST00000281043.4','ENST00000638417.2','ENST00000703162.1','ENST00000885101.2','ENST00000930195.2','ENST00000930196.1','ENST00001138178.1','NM_001446166.1'];
 assert.equal(Object.keys(lab.aliases).length,8);assert.equal(lab.alias('unknown'),'');
 const ids=new Set();Object.entries(expected).forEach(([t,a],i)=>{
  assert.equal(lab.alias(t),a);assert.equal(meta.transcripts[t].transcript_id,accessions[i]);assert.equal(meta.transcripts[t].id,accessions[i]);assert(!ids.has(accessions[i]));ids.add(accessions[i]);
@@ -12,10 +12,10 @@ const ids=new Set();Object.entries(expected).forEach(([t,a],i)=>{
 });
 assert(!lab.matches('207',accessions[6],'TV2'));assert(!lab.matches('201',accessions[0],'TV2+'));
 assert(!lab.matches('201',accessions[0],'NC','non-coding sequence'));assert(lab.matches('203',accessions[2],'NC'));
-assert.equal(meta.transcripts['207'].gencode_release,'v50');assert.equal(meta.transcripts['202'].gencode_release,'v49');
+assert.equal(meta.transcripts['207'].gencode_release,'v50');assert.equal(meta.transcripts['202'].gencode_release,'v50');
 assert.equal(meta.transcripts.XM.refseq_obsolete_id,'XM_047444434.1');assert.match(meta.transcripts.XM.source,/RefSeq/);
-Object.values(meta.orfs).forEach(o=>{assert.equal(o.aa.length,o.aa_len);assert(o.carriers.every(t=>expected[t]));});
+Object.values(meta.orfs).forEach(o=>{assert.equal(o.aa.length,o.aa_len);assert(o.carriers.every(t=>meta.transcripts[t]));});
 const seq=require('../mycn_locus_seq.json');assert.equal(seq.seq.slice(15942065-seq.start,15942068-seq.start),'ATG');
 Object.values(meta.orfs).forEach(o=>{const nt=o.blocks.map(([a,b])=>seq.seq.slice(a-seq.start,b-seq.start+1)).join('');assert.equal(o.nt.toUpperCase(),nt.toUpperCase());assert(['TAA','TAG','TGA'].includes(o.nt.slice(-3)));assert.equal(o.nt.length,3*(o.aa_len+1));});
 const html=fs.readFileSync('index.html','utf8');assert(!html.includes('cdn.jsdelivr'));assert(html.includes('lab-aliases.js'));assert(html.includes('transcript-summary'));
-console.log('PASS: eight aliases, bounded search, frozen accession pairs, provenance, transcript lengths, ORF lengths and base-map integrity.');
+console.log('PASS: eight aliases, bounded search, current accession pairs, provenance, transcript lengths, ORF lengths and base-map integrity.');

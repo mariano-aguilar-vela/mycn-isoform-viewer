@@ -1,11 +1,14 @@
 {
   "name": "mycn-isoform-viewer",
-  "version": "2026.10.28",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "build": "python3 scripts/build.py",
-    "test": "node tests/data.test.cjs && python3 scripts/downloads.py --check",
-    "test:browser": "node tests/browser.cjs"
+    "test": "node tests/data.test.cjs && python3 -m unittest discover -s tests -p \"test_reference.py\" && python3 scripts/downloads.py --check",
+    "test:browser": "node tests/browser.cjs",
+    "reference:validate": "python3 scripts/validate_reference.py",
+    "reference:diff": "python3 scripts/compare_reference_releases.py",
+    "reference:check": "python3 scripts/check_for_reference_updates.py"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.11.0",

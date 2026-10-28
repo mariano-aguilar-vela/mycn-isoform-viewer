@@ -1,0 +1,4172 @@
+{
+  "previous_status": "HISTORICAL",
+  "current_reference_build": "gencode-50_refseq-NM_001446166.1_mycn-1",
+  "transcripts": [
+    {
+      "canonical_name": "MYCN-201",
+      "classifications": [
+        "UNCHANGED"
+      ],
+      "previous": {
+        "display_name": "MYCN-201",
+        "transcript_id": "ENST00000281043.4",
+        "source": "GENCODE v49",
+        "gencode_release": "v49",
+        "exons": [
+          [
+            15940550,
+            15940743
+          ],
+          [
+            15941948,
+            15942854
+          ],
+          [
+            15945493,
+            15947004
+          ]
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "mlen": 2613,
+        "sequence": "AGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+        "sequence_sha256": "233def4c72f3ecb039e9240a642b59a0141c1cb1445157dd7270c7dfe1589aa0",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "junctions": [
+          [
+            15940743,
+            15941948
+          ],
+          [
+            15942854,
+            15945493
+          ]
+        ]
+      },
+      "current": {
+        "id": "ENST00000281043.4",
+        "transcript_id": "ENST00000281043.4",
+        "display_name": "MYCN-201",
+        "gene_id": "ENSG00000134323.15",
+        "chrom": "chr2",
+        "strand": "+",
+        "exons": [
+          [
+            15940550,
+            15940743
+          ],
+          [
+            15941948,
+            15942854
+          ],
+          [
+            15945493,
+            15947004
+          ]
+        ],
+        "exon_ids": [
+          "ENSE00000804855.6",
+          "ENSE00000999248.3",
+          "ENSE00003847489.1"
+        ],
+        "exon_order": [
+          "",
+          "",
+          ""
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "stop_codon_blocks": [
+          [
+            15946095,
+            15946097
+          ]
+        ],
+        "utr": [
+          [
+            15940550,
+            15940743
+          ],
+          [
+            15941948,
+            15942064
+          ],
+          [
+            15946095,
+            15947004
+          ]
+        ],
+        "utr5": [
+          [
+            15940550,
+            15940743
+          ],
+          [
+            15941948,
+            15942064
+          ]
+        ],
+        "utr3": [
+          [
+            15946098,
+            15947004
+          ]
+        ],
+        "junctions": [
+          [
+            15940743,
+            15941948
+          ],
+          [
+            15942854,
+            15945493
+          ]
+        ],
+        "mlen": 2613,
+        "sequence": "AGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+        "sequence_sha256": "233def4c72f3ecb039e9240a642b59a0141c1cb1445157dd7270c7dfe1589aa0",
+        "protein_accession": "ENSP00000281043.3",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "protein_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec",
+        "cds_transcript_start": 311,
+        "cds_transcript_end": 1703,
+        "source": "GENCODE v50",
+        "src": "GENCODE v50",
+        "gencode_release": "v50",
+        "biotype": "protein_coding",
+        "tags": [
+          "basic",
+          "Ensembl_canonical",
+          "GENCODE_Primary",
+          "MANE_Select",
+          "appris_principal_1",
+          "CCDS"
+        ],
+        "annotation_level": "",
+        "transcript_support_level": "5",
+        "appris": [
+          "appris_principal_1"
+        ],
+        "mane": [
+          "MANE_Select"
+        ],
+        "basic": true,
+        "primary": true,
+        "annotation_attributes": {
+          "gene_id": [
+            "ENSG00000134323.15"
+          ],
+          "transcript_id": [
+            "ENST00000281043.4"
+          ],
+          "gene_type": [
+            "protein_coding"
+          ],
+          "gene_name": [
+            "MYCN"
+          ],
+          "transcript_type": [
+            "protein_coding"
+          ],
+          "transcript_name": [
+            "MYCN-201"
+          ],
+          "protein_id": [
+            "ENSP00000281043.3"
+          ],
+          "transcript_support_level": [
+            "5"
+          ],
+          "hgnc_id": [
+            "HGNC:7559"
+          ],
+          "tag": [
+            "basic",
+            "Ensembl_canonical",
+            "GENCODE_Primary",
+            "MANE_Select",
+            "appris_principal_1",
+            "CCDS"
+          ],
+          "ccdsid": [
+            "CCDS1687.1"
+          ],
+          "havana_gene": [
+            "OTTHUMG00000039579.4"
+          ],
+          "havana_transcript": [
+            "OTTHUMT00000095469.3"
+          ]
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "domains": [
+          {
+            "type": "Domain",
+            "description": "bHLH",
+            "start": 381,
+            "end": 433,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00981"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA",
+            "start": 19,
+            "end": 47,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA and FBXW7",
+            "start": 61,
+            "end": 89,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 129,
+            "end": 172,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 196,
+            "end": 294,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 334,
+            "end": 392,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Leucine-zipper",
+            "start": 433,
+            "end": 454,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Motif",
+            "description": "9aaTAD",
+            "start": 76,
+            "end": 84,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "34342803"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 149,
+            "end": 159,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Gly residues",
+            "start": 160,
+            "end": 170,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 208,
+            "end": 233,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Acidic residues",
+            "start": 259,
+            "end": 278,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          }
+        ],
+        "metadata": {
+          "gencode.v50.metadata.Annotation_remark.gz": [
+            [
+              "ENST00000281043.4",
+              "MANE_select"
+            ]
+          ],
+          "gencode.v50.metadata.Exon_supporting_feature.gz": [
+            [
+              "ENST00000281043.4",
+              "BX393977.2",
+              "EMBL",
+              "ENSE00000804855.6",
+              "chr2:15940550-15940743"
+            ],
+            [
+              "ENST00000281043.4",
+              "BX332091.2",
+              "EMBL",
+              "ENSE00000804855.6",
+              "chr2:15940550-15940743"
+            ],
+            [
+              "ENST00000281043.4",
+              "NM_005378.4",
+              "RefSeq_dna",
+              "ENSE00000804855.6",
+              "chr2:15940550-15940743"
+            ],
+            [
+              "ENST00000281043.4",
+              "AF320053.1",
+              "EMBL",
+              "ENSE00000804855.6",
+              "chr2:15940550-15940743"
+            ],
+            [
+              "ENST00000281043.4",
+              "BC005453.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "BC002712.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "AF320053.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "BX332091.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "BX393977.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "NM_005378.4",
+              "RefSeq_dna",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "BT007384.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "BQ070922.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "AI499031.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "P04198.2",
+              "Uniprot/SWISSPROT",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "Q53XS5.1",
+              "Uniprot/SPTREMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000281043.4",
+              "BQ069056.1",
+              "EMBL",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ],
+            [
+              "ENST00000281043.4",
+              "AI499031.1",
+              "EMBL",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ],
+            [
+              "ENST00000281043.4",
+              "BT007384.1",
+              "EMBL",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ],
+            [
+              "ENST00000281043.4",
+              "BQ070922.1",
+              "EMBL",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ],
+            [
+              "ENST00000281043.4",
+              "BC002712.2",
+              "EMBL",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ],
+            [
+              "ENST00000281043.4",
+              "NM_005378.4",
+              "RefSeq_dna",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ],
+            [
+              "ENST00000281043.4",
+              "BC005453.1",
+              "EMBL",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ],
+            [
+              "ENST00000281043.4",
+              "P04198.2",
+              "Uniprot/SWISSPROT",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ],
+            [
+              "ENST00000281043.4",
+              "Q53XS5.1",
+              "Uniprot/SPTREMBL",
+              "ENSE00003847489.1",
+              "chr2:15945493-15947004"
+            ]
+          ],
+          "gencode.v50.metadata.RefSeq.gz": [
+            [
+              "ENST00000281043.4",
+              "NM_001293233.2",
+              "NP_001280162.1"
+            ],
+            [
+              "ENST00000281043.4",
+              "NM_005378.6",
+              "NP_005369.2"
+            ]
+          ],
+          "gencode.v50.metadata.SwissProt.gz": [
+            [
+              "ENST00000281043.4",
+              "P04198",
+              "P04198.241"
+            ]
+          ],
+          "gencode.v50.metadata.Transcript_source.gz": [
+            [
+              "ENST00000281043.4",
+              "ensembl_havana_transcript_homo_sapiens"
+            ]
+          ],
+          "gencode.v50.metadata.Transcript_supporting_feature.gz": []
+        },
+        "lab_alias": "TV2",
+        "history": {
+          "display_name": "MYCN-201",
+          "transcript_id": "ENST00000281043.4",
+          "source": "GENCODE v49",
+          "gencode_release": "v49",
+          "exons": [
+            [
+              15940550,
+              15940743
+            ],
+            [
+              15941948,
+              15942854
+            ],
+            [
+              15945493,
+              15947004
+            ]
+          ],
+          "cds": [
+            [
+              15942065,
+              15942854
+            ],
+            [
+              15945493,
+              15946094
+            ]
+          ],
+          "mlen": 2613,
+          "sequence": "AGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+          "sequence_sha256": "233def4c72f3ecb039e9240a642b59a0141c1cb1445157dd7270c7dfe1589aa0",
+          "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+          "protein_length": 464,
+          "junctions": [
+            [
+              15940743,
+              15941948
+            ],
+            [
+              15942854,
+              15945493
+            ]
+          ]
+        }
+      },
+      "previous_orf_count": 40,
+      "current_orf_count": 27,
+      "domain_change": "Current domains require exact sequence identity to reviewed UniProt; prior claims not carried forward",
+      "evidence_change": [
+        "EVIDENCE_CHANGE",
+        "REMOVED_UNSUPPORTED_CLAIM"
+      ],
+      "note": "ORF counts use different enumerations and are not directly a gain/loss of expressed proteins."
+    },
+    {
+      "canonical_name": "MYCN-202",
+      "classifications": [
+        "BOUNDARY_CHANGE",
+        "SEQUENCE_CHANGE"
+      ],
+      "previous": {
+        "display_name": "MYCN-202",
+        "transcript_id": "ENST00000638417.1",
+        "source": "GENCODE v49",
+        "gencode_release": "v49",
+        "exons": [
+          [
+            15940566,
+            15940743
+          ],
+          [
+            15945493,
+            15947007
+          ]
+        ],
+        "cds": [
+          [
+            15940587,
+            15940743
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "mlen": 1693,
+        "sequence": "CTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGA",
+        "sequence_sha256": "d1b07197f1436372a5fde75726bf350981c34df6220fe148ba7e09631cb53bec",
+        "protein_sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 253,
+        "junctions": [
+          [
+            15940743,
+            15945493
+          ]
+        ]
+      },
+      "current": {
+        "id": "ENST00000638417.2",
+        "transcript_id": "ENST00000638417.2",
+        "display_name": "MYCN-202",
+        "gene_id": "ENSG00000134323.15",
+        "chrom": "chr2",
+        "strand": "+",
+        "exons": [
+          [
+            15940044,
+            15940743
+          ],
+          [
+            15945493,
+            15947022
+          ]
+        ],
+        "exon_ids": [
+          "ENSE00004792294.1",
+          "ENSE00004792293.1"
+        ],
+        "exon_order": [
+          "",
+          ""
+        ],
+        "cds": [
+          [
+            15940587,
+            15940743
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "stop_codon_blocks": [
+          [
+            15946095,
+            15946097
+          ]
+        ],
+        "utr": [
+          [
+            15940044,
+            15940586
+          ],
+          [
+            15946095,
+            15947022
+          ]
+        ],
+        "utr5": [
+          [
+            15940044,
+            15940586
+          ]
+        ],
+        "utr3": [
+          [
+            15946098,
+            15947022
+          ]
+        ],
+        "junctions": [
+          [
+            15940743,
+            15945493
+          ]
+        ],
+        "mlen": 2230,
+        "sequence": "CGTAATTACACAGGAGCAACCTCCCTGCAAGGCCTTGCTCAACGTTGGCCTCGCGCTCAGCTGCACAACACGCAGTCAAAGCGGGGGCTGGGTTAGAAGCATCGGTCTCCCCTCCCCAACACACACCCCCGGAGCCCTCCGTAATTTTTTTTTCTTTTAATGACAAGCAATTGCCAGGCTCGCAGGGTGGGTGCTGCATTGCACCGCTCCGCGCGCAGCTGGTTCTCAGAGTGCAGCCGGTGCAAGCCCGGGGGTCCAAAAGGGCGGGAGGAGCACACCCTGGGCTTCCCAGCTTTGCAGCCTTCTCTCTGCAAAGAAAAGCAAGTGGCTTTTGGCGCGAAAGCCTTGGCGCCTCCCCTGATTTTTATGGAAATCAGGAGGGCGGGGTAAAGCCGCTTTCCTCTCCTTTCTCCCTCCCCCTTGTCTGCGCCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+        "sequence_sha256": "25bd69f9a3566b4cff8cfa6c1c5aa84d3932c526aa1d2a185c118293d7fa0074",
+        "protein_accession": "ENSP00000491476.1",
+        "protein_sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 253,
+        "protein_sha256": "77350d39392b3bc08ad126c20d8062874afddb716097116826ddc28c477e1b00",
+        "cds_transcript_start": 543,
+        "cds_transcript_end": 1302,
+        "source": "GENCODE v50",
+        "src": "GENCODE v50",
+        "gencode_release": "v50",
+        "biotype": "protein_coding",
+        "tags": [
+          "basic",
+          "CCDS"
+        ],
+        "annotation_level": "",
+        "transcript_support_level": "2",
+        "appris": [],
+        "mane": [],
+        "basic": true,
+        "primary": false,
+        "annotation_attributes": {
+          "gene_id": [
+            "ENSG00000134323.15"
+          ],
+          "transcript_id": [
+            "ENST00000638417.2"
+          ],
+          "gene_type": [
+            "protein_coding"
+          ],
+          "gene_name": [
+            "MYCN"
+          ],
+          "transcript_type": [
+            "protein_coding"
+          ],
+          "transcript_name": [
+            "MYCN-202"
+          ],
+          "protein_id": [
+            "ENSP00000491476.1"
+          ],
+          "transcript_support_level": [
+            "2"
+          ],
+          "hgnc_id": [
+            "HGNC:7559"
+          ],
+          "tag": [
+            "basic",
+            "CCDS"
+          ],
+          "ccdsid": [
+            "CCDS86823.1"
+          ],
+          "havana_gene": [
+            "OTTHUMG00000039579.4"
+          ],
+          "havana_transcript": [
+            "OTTHUMT00000492530.1"
+          ]
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "domains": [],
+        "metadata": {
+          "gencode.v50.metadata.Annotation_remark.gz": [
+            [
+              "ENST00000638417.2",
+              "LEAP_3"
+            ],
+            [
+              "ENST00000638417.2",
+              "LEAP_5"
+            ],
+            [
+              "ENST00000638417.2",
+              "NP_001280160.1"
+            ]
+          ],
+          "gencode.v50.metadata.Exon_supporting_feature.gz": [],
+          "gencode.v50.metadata.RefSeq.gz": [
+            [
+              "ENST00000638417.2",
+              "NM_001293231.2",
+              "NP_001280160.1"
+            ]
+          ],
+          "gencode.v50.metadata.SwissProt.gz": [],
+          "gencode.v50.metadata.Transcript_source.gz": [
+            [
+              "ENST00000638417.2",
+              "havana_homo_sapiens"
+            ]
+          ],
+          "gencode.v50.metadata.Transcript_supporting_feature.gz": []
+        },
+        "lab_alias": "TV3",
+        "history": {
+          "display_name": "MYCN-202",
+          "transcript_id": "ENST00000638417.1",
+          "source": "GENCODE v49",
+          "gencode_release": "v49",
+          "exons": [
+            [
+              15940566,
+              15940743
+            ],
+            [
+              15945493,
+              15947007
+            ]
+          ],
+          "cds": [
+            [
+              15940587,
+              15940743
+            ],
+            [
+              15945493,
+              15946094
+            ]
+          ],
+          "mlen": 1693,
+          "sequence": "CTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGA",
+          "sequence_sha256": "d1b07197f1436372a5fde75726bf350981c34df6220fe148ba7e09631cb53bec",
+          "protein_sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+          "protein_length": 253,
+          "junctions": [
+            [
+              15940743,
+              15945493
+            ]
+          ]
+        }
+      },
+      "previous_orf_count": 34,
+      "current_orf_count": 22,
+      "domain_change": "Current domains require exact sequence identity to reviewed UniProt; prior claims not carried forward",
+      "evidence_change": [
+        "EVIDENCE_CHANGE",
+        "REMOVED_UNSUPPORTED_CLAIM"
+      ],
+      "note": "ORF counts use different enumerations and are not directly a gain/loss of expressed proteins."
+    },
+    {
+      "canonical_name": "MYCN-203",
+      "classifications": [
+        "UNCHANGED"
+      ],
+      "previous": {
+        "display_name": "MYCN-203",
+        "transcript_id": "ENST00000703162.1",
+        "source": "GENCODE v49",
+        "gencode_release": "v49",
+        "exons": [
+          [
+            15943557,
+            15943695
+          ],
+          [
+            15945493,
+            15946539
+          ]
+        ],
+        "cds": [],
+        "mlen": 1186,
+        "sequence": "CTCCCTCCCTCCATTCAGCAGCTGGCTGCAAGTGCAACAGCAGTTGTGTACATTCTCAGGGGGCCTCCTCTTTCCAGTGTGCAGTGGAAACTGGCTGTAGTTTTGTCTTCCAGCCTGAATTCCAGGCCTAATTTGAGATATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGG",
+        "sequence_sha256": "0c8e429310341fe658e94e13c7b85694e45fab55c6d9c2dd4094b472b274d8a5",
+        "protein_sequence": "",
+        "protein_length": 0,
+        "junctions": [
+          [
+            15943695,
+            15945493
+          ]
+        ]
+      },
+      "current": {
+        "id": "ENST00000703162.1",
+        "transcript_id": "ENST00000703162.1",
+        "display_name": "MYCN-203",
+        "gene_id": "ENSG00000134323.15",
+        "chrom": "chr2",
+        "strand": "+",
+        "exons": [
+          [
+            15943557,
+            15943695
+          ],
+          [
+            15945493,
+            15946539
+          ]
+        ],
+        "exon_ids": [
+          "ENSE00003988179.1",
+          "ENSE00003988178.1"
+        ],
+        "exon_order": [
+          "",
+          ""
+        ],
+        "cds": [],
+        "stop_codon_blocks": [],
+        "utr": [],
+        "utr5": [],
+        "utr3": [],
+        "junctions": [
+          [
+            15943695,
+            15945493
+          ]
+        ],
+        "mlen": 1186,
+        "sequence": "CTCCCTCCCTCCATTCAGCAGCTGGCTGCAAGTGCAACAGCAGTTGTGTACATTCTCAGGGGGCCTCCTCTTTCCAGTGTGCAGTGGAAACTGGCTGTAGTTTTGTCTTCCAGCCTGAATTCCAGGCCTAATTTGAGATATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGG",
+        "sequence_sha256": "0c8e429310341fe658e94e13c7b85694e45fab55c6d9c2dd4094b472b274d8a5",
+        "protein_accession": "",
+        "protein_sequence": "",
+        "protein_length": 0,
+        "protein_sha256": null,
+        "cds_transcript_start": null,
+        "cds_transcript_end": null,
+        "source": "GENCODE v50",
+        "src": "GENCODE v50",
+        "gencode_release": "v50",
+        "biotype": "protein_coding_CDS_not_defined",
+        "tags": [
+          "RNA_Seq_supported_only"
+        ],
+        "annotation_level": "",
+        "transcript_support_level": "not supplied",
+        "appris": [],
+        "mane": [],
+        "basic": false,
+        "primary": false,
+        "annotation_attributes": {
+          "gene_id": [
+            "ENSG00000134323.15"
+          ],
+          "transcript_id": [
+            "ENST00000703162.1"
+          ],
+          "gene_type": [
+            "protein_coding"
+          ],
+          "gene_name": [
+            "MYCN"
+          ],
+          "transcript_type": [
+            "protein_coding_CDS_not_defined"
+          ],
+          "transcript_name": [
+            "MYCN-203"
+          ],
+          "hgnc_id": [
+            "HGNC:7559"
+          ],
+          "tag": [
+            "RNA_Seq_supported_only"
+          ],
+          "havana_gene": [
+            "OTTHUMG00000039579.4"
+          ]
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "domains": [],
+        "metadata": {
+          "gencode.v50.metadata.Annotation_remark.gz": [
+            [
+              "ENST00000703162.1",
+              "RNA-Seq supported only"
+            ]
+          ],
+          "gencode.v50.metadata.Exon_supporting_feature.gz": [],
+          "gencode.v50.metadata.RefSeq.gz": [],
+          "gencode.v50.metadata.SwissProt.gz": [],
+          "gencode.v50.metadata.Transcript_source.gz": [
+            [
+              "ENST00000703162.1",
+              "havana_homo_sapiens"
+            ]
+          ],
+          "gencode.v50.metadata.Transcript_supporting_feature.gz": []
+        },
+        "lab_alias": "NC",
+        "history": {
+          "display_name": "MYCN-203",
+          "transcript_id": "ENST00000703162.1",
+          "source": "GENCODE v49",
+          "gencode_release": "v49",
+          "exons": [
+            [
+              15943557,
+              15943695
+            ],
+            [
+              15945493,
+              15946539
+            ]
+          ],
+          "cds": [],
+          "mlen": 1186,
+          "sequence": "CTCCCTCCCTCCATTCAGCAGCTGGCTGCAAGTGCAACAGCAGTTGTGTACATTCTCAGGGGGCCTCCTCTTTCCAGTGTGCAGTGGAAACTGGCTGTAGTTTTGTCTTCCAGCCTGAATTCCAGGCCTAATTTGAGATATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGG",
+          "sequence_sha256": "0c8e429310341fe658e94e13c7b85694e45fab55c6d9c2dd4094b472b274d8a5",
+          "protein_sequence": "",
+          "protein_length": 0,
+          "junctions": [
+            [
+              15943695,
+              15945493
+            ]
+          ]
+        }
+      },
+      "previous_orf_count": 23,
+      "current_orf_count": 14,
+      "domain_change": "Current domains require exact sequence identity to reviewed UniProt; prior claims not carried forward",
+      "evidence_change": [
+        "EVIDENCE_CHANGE",
+        "REMOVED_UNSUPPORTED_CLAIM"
+      ],
+      "note": "ORF counts use different enumerations and are not directly a gain/loss of expressed proteins."
+    },
+    {
+      "canonical_name": "MYCN-204",
+      "classifications": [
+        "BOUNDARY_CHANGE",
+        "SEQUENCE_CHANGE"
+      ],
+      "previous": {
+        "display_name": "MYCN-204",
+        "transcript_id": "ENST00000885101.1",
+        "source": "GENCODE v49",
+        "gencode_release": "v49",
+        "exons": [
+          [
+            15938396,
+            15938653
+          ],
+          [
+            15939543,
+            15940743
+          ],
+          [
+            15940904,
+            15941053
+          ],
+          [
+            15941948,
+            15942854
+          ],
+          [
+            15945493,
+            15947004
+          ]
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "mlen": 4028,
+        "sequence": "GAACCCATCCTGGCCTATTTTCACAGTCTTGCCACAGAAGATCTGGCCACCTTAGAAGGACTCATTCAGTGATCTTGGTCTTGAATAATACCATGAGTACTTACTATATACAGGTACACTGCTGTGCCGTAAGGATTCCCTCTGGAGCAAAACTGACCCAGGTCACAGGTTAGTGAGGGAGACTGAGCCTGTCTTCCACAGTGTCACGGAAGTGAGCACTAAACAAATACTCCCAGGCATGGATCATTACAAATGGAGTTTGGAATCAAGCTGTTTGAGCCGAGGCTGGGTCTCAGGAGGTGTGGACAGCACTTCCATCTCGGTAAATCAGATTCGCCTGCCCATAACTGGGGAGAATGGTGGCTTTGAAAAGGTTAACTTGGGAGCCCTGGGGACGGCTGCAGGGAACGTACGCCCATTCCCCCTAGGAAGCAGAGCCAGGCCGCCTCCTCCTCCGCAGTGGTGAGGACGCGTGGACAGTCCCGCGGGGGCGGCGGGAGACCTGCGGAGTGGCCGCACTCCAGGTCCGCGCCAAGGCCGGGCAGCTCCGCTTTCTGCTCAGTCTCCGCGAGGTGTCGCCTTCGGCCGAAGAAACCACCGCGGCGCCACCCTCGTAGCTCGCACTTATTTATTTATTTATTTTCAAACAAGGGGGGCGCCCCTCTTCTTTCAATTTGAAACTGGAAACATCCAGAGGTCTTGTTCCTAAGGGGGCGCGTCCTCTCCCTGCTATTTTGCACCTTCGGACTAGCCTTCTTTCGTAATTACACAGGAGCAACCTCCCTGCAAGGCCTTGCTCAACGTTGGCCTCGCGCTCAGCTGCACAACACGCAGTCAAAGCGGGGGCTGGGTTAGAAGCATCGGTCTCCCCTCCCCAACACACACCCCCGGAGCCCTCCGTAATTTTTTTTTCTTTTAATGACAAGCAATTGCCAGGCTCGCAGGGTGGGTGCTGCATTGCACCGCTCCGCGCGCAGCTGGTTCTCAGAGTGCAGCCGGTGCAAGCCCGGGGGTCCAAAAGGGCGGGAGGAGCACACCCTGGGCTTCCCAGCTTTGCAGCCTTCTCTCTGCAAAGAAAAGCAAGTGGCTTTTGGCGCGAAAGCCTTGGCGCCTCCCCTGATTTTTATGGAAATCAGGAGGGCGGGGTAAAGCCGCTTTCCTCTCCTTTCTCCCTCCCCCTTGTCTGCGCCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+        "sequence_sha256": "e78c6f8ff2ff19023959c9563c7a8c7441af7048cc7334eee164b22171b72792",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "junctions": [
+          [
+            15938653,
+            15939543
+          ],
+          [
+            15940743,
+            15940904
+          ],
+          [
+            15941053,
+            15941948
+          ],
+          [
+            15942854,
+            15945493
+          ]
+        ]
+      },
+      "current": {
+        "id": "ENST00000885101.2",
+        "transcript_id": "ENST00000885101.2",
+        "display_name": "MYCN-204",
+        "gene_id": "ENSG00000134323.15",
+        "chrom": "chr2",
+        "strand": "+",
+        "exons": [
+          [
+            15938396,
+            15938653
+          ],
+          [
+            15939543,
+            15940743
+          ],
+          [
+            15940904,
+            15941053
+          ],
+          [
+            15941948,
+            15942854
+          ],
+          [
+            15945493,
+            15947022
+          ]
+        ],
+        "exon_ids": [
+          "ENSE00004337245.1",
+          "ENSE00004337244.1",
+          "ENSE00004337243.1",
+          "ENSE00000999248.3",
+          "ENSE00004792293.1"
+        ],
+        "exon_order": [
+          "",
+          "",
+          "",
+          "",
+          ""
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "stop_codon_blocks": [
+          [
+            15946095,
+            15946097
+          ]
+        ],
+        "utr": [
+          [
+            15938396,
+            15938653
+          ],
+          [
+            15939543,
+            15940743
+          ],
+          [
+            15940904,
+            15941053
+          ],
+          [
+            15941948,
+            15942064
+          ],
+          [
+            15946095,
+            15947022
+          ]
+        ],
+        "utr5": [
+          [
+            15938396,
+            15938653
+          ],
+          [
+            15939543,
+            15940743
+          ],
+          [
+            15940904,
+            15941053
+          ],
+          [
+            15941948,
+            15942064
+          ]
+        ],
+        "utr3": [
+          [
+            15946098,
+            15947022
+          ]
+        ],
+        "junctions": [
+          [
+            15938653,
+            15939543
+          ],
+          [
+            15940743,
+            15940904
+          ],
+          [
+            15941053,
+            15941948
+          ],
+          [
+            15942854,
+            15945493
+          ]
+        ],
+        "mlen": 4046,
+        "sequence": "GAACCCATCCTGGCCTATTTTCACAGTCTTGCCACAGAAGATCTGGCCACCTTAGAAGGACTCATTCAGTGATCTTGGTCTTGAATAATACCATGAGTACTTACTATATACAGGTACACTGCTGTGCCGTAAGGATTCCCTCTGGAGCAAAACTGACCCAGGTCACAGGTTAGTGAGGGAGACTGAGCCTGTCTTCCACAGTGTCACGGAAGTGAGCACTAAACAAATACTCCCAGGCATGGATCATTACAAATGGAGTTTGGAATCAAGCTGTTTGAGCCGAGGCTGGGTCTCAGGAGGTGTGGACAGCACTTCCATCTCGGTAAATCAGATTCGCCTGCCCATAACTGGGGAGAATGGTGGCTTTGAAAAGGTTAACTTGGGAGCCCTGGGGACGGCTGCAGGGAACGTACGCCCATTCCCCCTAGGAAGCAGAGCCAGGCCGCCTCCTCCTCCGCAGTGGTGAGGACGCGTGGACAGTCCCGCGGGGGCGGCGGGAGACCTGCGGAGTGGCCGCACTCCAGGTCCGCGCCAAGGCCGGGCAGCTCCGCTTTCTGCTCAGTCTCCGCGAGGTGTCGCCTTCGGCCGAAGAAACCACCGCGGCGCCACCCTCGTAGCTCGCACTTATTTATTTATTTATTTTCAAACAAGGGGGGCGCCCCTCTTCTTTCAATTTGAAACTGGAAACATCCAGAGGTCTTGTTCCTAAGGGGGCGCGTCCTCTCCCTGCTATTTTGCACCTTCGGACTAGCCTTCTTTCGTAATTACACAGGAGCAACCTCCCTGCAAGGCCTTGCTCAACGTTGGCCTCGCGCTCAGCTGCACAACACGCAGTCAAAGCGGGGGCTGGGTTAGAAGCATCGGTCTCCCCTCCCCAACACACACCCCCGGAGCCCTCCGTAATTTTTTTTTCTTTTAATGACAAGCAATTGCCAGGCTCGCAGGGTGGGTGCTGCATTGCACCGCTCCGCGCGCAGCTGGTTCTCAGAGTGCAGCCGGTGCAAGCCCGGGGGTCCAAAAGGGCGGGAGGAGCACACCCTGGGCTTCCCAGCTTTGCAGCCTTCTCTCTGCAAAGAAAAGCAAGTGGCTTTTGGCGCGAAAGCCTTGGCGCCTCCCCTGATTTTTATGGAAATCAGGAGGGCGGGGTAAAGCCGCTTTCCTCTCCTTTCTCCCTCCCCCTTGTCTGCGCCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+        "sequence_sha256": "ce2085f77fef86223dca444b53be82940650f1a2be825510616d31f09ec514ef",
+        "protein_accession": "ENSP00000555160.1",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "protein_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec",
+        "cds_transcript_start": 1726,
+        "cds_transcript_end": 3118,
+        "source": "GENCODE v50",
+        "src": "GENCODE v50",
+        "gencode_release": "v50",
+        "biotype": "protein_coding",
+        "tags": [
+          "basic",
+          "TAGENE",
+          "appris_principal_1",
+          "CCDS"
+        ],
+        "annotation_level": "",
+        "transcript_support_level": "not supplied",
+        "appris": [
+          "appris_principal_1"
+        ],
+        "mane": [],
+        "basic": true,
+        "primary": false,
+        "annotation_attributes": {
+          "gene_id": [
+            "ENSG00000134323.15"
+          ],
+          "transcript_id": [
+            "ENST00000885101.2"
+          ],
+          "gene_type": [
+            "protein_coding"
+          ],
+          "gene_name": [
+            "MYCN"
+          ],
+          "transcript_type": [
+            "protein_coding"
+          ],
+          "transcript_name": [
+            "MYCN-204"
+          ],
+          "protein_id": [
+            "ENSP00000555160.1"
+          ],
+          "hgnc_id": [
+            "HGNC:7559"
+          ],
+          "tag": [
+            "basic",
+            "TAGENE",
+            "appris_principal_1",
+            "CCDS"
+          ],
+          "ccdsid": [
+            "CCDS1687.1"
+          ],
+          "havana_gene": [
+            "OTTHUMG00000039579.4"
+          ]
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "domains": [
+          {
+            "type": "Domain",
+            "description": "bHLH",
+            "start": 381,
+            "end": 433,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00981"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA",
+            "start": 19,
+            "end": 47,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA and FBXW7",
+            "start": 61,
+            "end": 89,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 129,
+            "end": 172,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 196,
+            "end": 294,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 334,
+            "end": 392,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Leucine-zipper",
+            "start": 433,
+            "end": 454,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Motif",
+            "description": "9aaTAD",
+            "start": 76,
+            "end": 84,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "34342803"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 149,
+            "end": 159,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Gly residues",
+            "start": 160,
+            "end": 170,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 208,
+            "end": 233,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Acidic residues",
+            "start": 259,
+            "end": 278,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          }
+        ],
+        "metadata": {
+          "gencode.v50.metadata.Annotation_remark.gz": [
+            [
+              "ENST00000885101.2",
+              "DanaFarber"
+            ],
+            [
+              "ENST00000885101.2",
+              "LEAP_3"
+            ]
+          ],
+          "gencode.v50.metadata.Exon_supporting_feature.gz": [
+            [
+              "ENST00000885101.2",
+              "BC005453.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "BC002712.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "AF320053.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "BX332091.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "BX393977.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "NM_005378.4",
+              "RefSeq_dna",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "BT007384.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "BQ070922.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "AI499031.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "P04198.2",
+              "Uniprot/SWISSPROT",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000885101.2",
+              "Q53XS5.1",
+              "Uniprot/SPTREMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ]
+          ],
+          "gencode.v50.metadata.RefSeq.gz": [],
+          "gencode.v50.metadata.SwissProt.gz": [],
+          "gencode.v50.metadata.Transcript_source.gz": [
+            [
+              "ENST00000885101.2",
+              "havana_tagene_homo_sapiens"
+            ]
+          ],
+          "gencode.v50.metadata.Transcript_supporting_feature.gz": []
+        },
+        "lab_alias": "TV6",
+        "history": {
+          "display_name": "MYCN-204",
+          "transcript_id": "ENST00000885101.1",
+          "source": "GENCODE v49",
+          "gencode_release": "v49",
+          "exons": [
+            [
+              15938396,
+              15938653
+            ],
+            [
+              15939543,
+              15940743
+            ],
+            [
+              15940904,
+              15941053
+            ],
+            [
+              15941948,
+              15942854
+            ],
+            [
+              15945493,
+              15947004
+            ]
+          ],
+          "cds": [
+            [
+              15942065,
+              15942854
+            ],
+            [
+              15945493,
+              15946094
+            ]
+          ],
+          "mlen": 4028,
+          "sequence": "GAACCCATCCTGGCCTATTTTCACAGTCTTGCCACAGAAGATCTGGCCACCTTAGAAGGACTCATTCAGTGATCTTGGTCTTGAATAATACCATGAGTACTTACTATATACAGGTACACTGCTGTGCCGTAAGGATTCCCTCTGGAGCAAAACTGACCCAGGTCACAGGTTAGTGAGGGAGACTGAGCCTGTCTTCCACAGTGTCACGGAAGTGAGCACTAAACAAATACTCCCAGGCATGGATCATTACAAATGGAGTTTGGAATCAAGCTGTTTGAGCCGAGGCTGGGTCTCAGGAGGTGTGGACAGCACTTCCATCTCGGTAAATCAGATTCGCCTGCCCATAACTGGGGAGAATGGTGGCTTTGAAAAGGTTAACTTGGGAGCCCTGGGGACGGCTGCAGGGAACGTACGCCCATTCCCCCTAGGAAGCAGAGCCAGGCCGCCTCCTCCTCCGCAGTGGTGAGGACGCGTGGACAGTCCCGCGGGGGCGGCGGGAGACCTGCGGAGTGGCCGCACTCCAGGTCCGCGCCAAGGCCGGGCAGCTCCGCTTTCTGCTCAGTCTCCGCGAGGTGTCGCCTTCGGCCGAAGAAACCACCGCGGCGCCACCCTCGTAGCTCGCACTTATTTATTTATTTATTTTCAAACAAGGGGGGCGCCCCTCTTCTTTCAATTTGAAACTGGAAACATCCAGAGGTCTTGTTCCTAAGGGGGCGCGTCCTCTCCCTGCTATTTTGCACCTTCGGACTAGCCTTCTTTCGTAATTACACAGGAGCAACCTCCCTGCAAGGCCTTGCTCAACGTTGGCCTCGCGCTCAGCTGCACAACACGCAGTCAAAGCGGGGGCTGGGTTAGAAGCATCGGTCTCCCCTCCCCAACACACACCCCCGGAGCCCTCCGTAATTTTTTTTTCTTTTAATGACAAGCAATTGCCAGGCTCGCAGGGTGGGTGCTGCATTGCACCGCTCCGCGCGCAGCTGGTTCTCAGAGTGCAGCCGGTGCAAGCCCGGGGGTCCAAAAGGGCGGGAGGAGCACACCCTGGGCTTCCCAGCTTTGCAGCCTTCTCTCTGCAAAGAAAAGCAAGTGGCTTTTGGCGCGAAAGCCTTGGCGCCTCCCCTGATTTTTATGGAAATCAGGAGGGCGGGGTAAAGCCGCTTTCCTCTCCTTTCTCCCTCCCCCTTGTCTGCGCCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+          "sequence_sha256": "e78c6f8ff2ff19023959c9563c7a8c7441af7048cc7334eee164b22171b72792",
+          "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+          "protein_length": 464,
+          "junctions": [
+            [
+              15938653,
+              15939543
+            ],
+            [
+              15940743,
+              15940904
+            ],
+            [
+              15941053,
+              15941948
+            ],
+            [
+              15942854,
+              15945493
+            ]
+          ]
+        }
+      },
+      "previous_orf_count": 47,
+      "current_orf_count": 33,
+      "domain_change": "Current domains require exact sequence identity to reviewed UniProt; prior claims not carried forward",
+      "evidence_change": [
+        "EVIDENCE_CHANGE",
+        "REMOVED_UNSUPPORTED_CLAIM"
+      ],
+      "note": "ORF counts use different enumerations and are not directly a gain/loss of expressed proteins."
+    },
+    {
+      "canonical_name": "MYCN-205",
+      "classifications": [
+        "BOUNDARY_CHANGE",
+        "SEQUENCE_CHANGE"
+      ],
+      "previous": {
+        "display_name": "MYCN-205",
+        "transcript_id": "ENST00000930195.1",
+        "source": "GENCODE v49",
+        "gencode_release": "v49",
+        "exons": [
+          [
+            15940473,
+            15941053
+          ],
+          [
+            15941948,
+            15942854
+          ],
+          [
+            15945493,
+            15947017
+          ]
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "mlen": 3013,
+        "sequence": "CCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAA",
+        "sequence_sha256": "0e8f20e7e80da6eac07e162f04a6c8028c5b2338b0da23b645817e2ca92b78fc",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "junctions": [
+          [
+            15941053,
+            15941948
+          ],
+          [
+            15942854,
+            15945493
+          ]
+        ]
+      },
+      "current": {
+        "id": "ENST00000930195.2",
+        "transcript_id": "ENST00000930195.2",
+        "display_name": "MYCN-205",
+        "gene_id": "ENSG00000134323.15",
+        "chrom": "chr2",
+        "strand": "+",
+        "exons": [
+          [
+            15940473,
+            15941053
+          ],
+          [
+            15941948,
+            15942854
+          ],
+          [
+            15945493,
+            15947022
+          ]
+        ],
+        "exon_ids": [
+          "ENSE00004406858.1",
+          "ENSE00000999248.3",
+          "ENSE00004792293.1"
+        ],
+        "exon_order": [
+          "",
+          "",
+          ""
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "stop_codon_blocks": [
+          [
+            15946095,
+            15946097
+          ]
+        ],
+        "utr": [
+          [
+            15940473,
+            15941053
+          ],
+          [
+            15941948,
+            15942064
+          ],
+          [
+            15946095,
+            15947022
+          ]
+        ],
+        "utr5": [
+          [
+            15940473,
+            15941053
+          ],
+          [
+            15941948,
+            15942064
+          ]
+        ],
+        "utr3": [
+          [
+            15946098,
+            15947022
+          ]
+        ],
+        "junctions": [
+          [
+            15941053,
+            15941948
+          ],
+          [
+            15942854,
+            15945493
+          ]
+        ],
+        "mlen": 3018,
+        "sequence": "CCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+        "sequence_sha256": "62c2847b73a5b8877d0e79a3b535d0ce8e407de50eaf08c886c74902cc92a72a",
+        "protein_accession": "ENSP00000600254.1",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "protein_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec",
+        "cds_transcript_start": 698,
+        "cds_transcript_end": 2090,
+        "source": "GENCODE v50",
+        "src": "GENCODE v50",
+        "gencode_release": "v50",
+        "biotype": "protein_coding",
+        "tags": [
+          "basic",
+          "TAGENE",
+          "appris_principal_1",
+          "CCDS"
+        ],
+        "annotation_level": "",
+        "transcript_support_level": "not supplied",
+        "appris": [
+          "appris_principal_1"
+        ],
+        "mane": [],
+        "basic": true,
+        "primary": false,
+        "annotation_attributes": {
+          "gene_id": [
+            "ENSG00000134323.15"
+          ],
+          "transcript_id": [
+            "ENST00000930195.2"
+          ],
+          "gene_type": [
+            "protein_coding"
+          ],
+          "gene_name": [
+            "MYCN"
+          ],
+          "transcript_type": [
+            "protein_coding"
+          ],
+          "transcript_name": [
+            "MYCN-205"
+          ],
+          "protein_id": [
+            "ENSP00000600254.1"
+          ],
+          "hgnc_id": [
+            "HGNC:7559"
+          ],
+          "tag": [
+            "basic",
+            "TAGENE",
+            "appris_principal_1",
+            "CCDS"
+          ],
+          "ccdsid": [
+            "CCDS1687.1"
+          ],
+          "havana_gene": [
+            "OTTHUMG00000039579.4"
+          ]
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "domains": [
+          {
+            "type": "Domain",
+            "description": "bHLH",
+            "start": 381,
+            "end": 433,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00981"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA",
+            "start": 19,
+            "end": 47,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA and FBXW7",
+            "start": 61,
+            "end": 89,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 129,
+            "end": 172,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 196,
+            "end": 294,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 334,
+            "end": 392,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Leucine-zipper",
+            "start": 433,
+            "end": 454,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Motif",
+            "description": "9aaTAD",
+            "start": 76,
+            "end": 84,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "34342803"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 149,
+            "end": 159,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Gly residues",
+            "start": 160,
+            "end": 170,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 208,
+            "end": 233,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Acidic residues",
+            "start": 259,
+            "end": 278,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          }
+        ],
+        "metadata": {
+          "gencode.v50.metadata.Annotation_remark.gz": [
+            [
+              "ENST00000930195.2",
+              "LEAP_3"
+            ],
+            [
+              "ENST00000930195.2",
+              "LRGASP"
+            ]
+          ],
+          "gencode.v50.metadata.Exon_supporting_feature.gz": [
+            [
+              "ENST00000930195.2",
+              "BC005453.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "BC002712.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "AF320053.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "BX332091.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "BX393977.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "NM_005378.4",
+              "RefSeq_dna",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "BT007384.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "BQ070922.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "AI499031.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "P04198.2",
+              "Uniprot/SWISSPROT",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00000930195.2",
+              "Q53XS5.1",
+              "Uniprot/SPTREMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ]
+          ],
+          "gencode.v50.metadata.RefSeq.gz": [
+            [
+              "ENST00000930195.2",
+              "NM_001293228.2",
+              "NP_001280157.1"
+            ]
+          ],
+          "gencode.v50.metadata.SwissProt.gz": [],
+          "gencode.v50.metadata.Transcript_source.gz": [
+            [
+              "ENST00000930195.2",
+              "havana_tagene_homo_sapiens"
+            ]
+          ],
+          "gencode.v50.metadata.Transcript_supporting_feature.gz": []
+        },
+        "lab_alias": "TV1",
+        "history": {
+          "display_name": "MYCN-205",
+          "transcript_id": "ENST00000930195.1",
+          "source": "GENCODE v49",
+          "gencode_release": "v49",
+          "exons": [
+            [
+              15940473,
+              15941053
+            ],
+            [
+              15941948,
+              15942854
+            ],
+            [
+              15945493,
+              15947017
+            ]
+          ],
+          "cds": [
+            [
+              15942065,
+              15942854
+            ],
+            [
+              15945493,
+              15946094
+            ]
+          ],
+          "mlen": 3013,
+          "sequence": "CCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAA",
+          "sequence_sha256": "0e8f20e7e80da6eac07e162f04a6c8028c5b2338b0da23b645817e2ca92b78fc",
+          "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+          "protein_length": 464,
+          "junctions": [
+            [
+              15941053,
+              15941948
+            ],
+            [
+              15942854,
+              15945493
+            ]
+          ]
+        }
+      },
+      "previous_orf_count": 42,
+      "current_orf_count": 29,
+      "domain_change": "Current domains require exact sequence identity to reviewed UniProt; prior claims not carried forward",
+      "evidence_change": [
+        "EVIDENCE_CHANGE",
+        "REMOVED_UNSUPPORTED_CLAIM"
+      ],
+      "note": "ORF counts use different enumerations and are not directly a gain/loss of expressed proteins."
+    },
+    {
+      "canonical_name": "MYCN-206",
+      "classifications": [
+        "UNCHANGED"
+      ],
+      "previous": {
+        "display_name": "MYCN-206",
+        "transcript_id": "ENST00000930196.1",
+        "source": "GENCODE v49",
+        "gencode_release": "v49",
+        "exons": [
+          [
+            15940502,
+            15942854
+          ],
+          [
+            15945493,
+            15947022
+          ]
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "mlen": 3883,
+        "sequence": "GGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGGTGCGTCCCCACCCCAGGCTGGGGTTCTTCTCCAAAGGGTGCCCCTGGAGGAAGAAGAGGGGGGGATTAGGCAGGGCGAGGCCGCCGCGGTCGCAATCTGGGTCACGGCTGCTCCAGCTTGGAGGAGAGGCGGCTCTCCCGGCGACCCTCCTCGCGCGGGCGCCCCTGCCATTCCCGGGAACAGGGGCTCAGCCTCTCCCTCCCTGGAAGAGGACGTTGTCGTGGGTTTGGAAGAGCAGGGGTGGGCTTAGAGAGCTTCCAATTAAGCTATTGGCAGGAGTATCCCTGCAGCGGGTGAATGCCGAGGGGCGTTTGCTCAAATTTGGGGAGGGGAAGGATTTGTGGATATGGGTGTCTGTTGTTGGTCTCTGTCTAGAGAAAGGCTTTTTTTTATTTGCAAAGTTTTCTAAATCCCCTGCTATCATTTGCACTCCTGAGGTTGCATTTTTACAAAGGGGGTAGAAGGTACTCCAAATACCATTCCCGGTAGCTGGGTCGGAGAGCCTGGGGCTTCCCCTGAGCAGCCGGCCCCACACCGCTGCGAGTGCGGTTGTCTGCGTGCTCGTGAGAGCTAGAATTCTGCAGCCAGGAACAGCCCCCTCCCCCAGGCAGTGCCTTGTGTGAATGAAATGGCAGTTTCCAAAGTTGCGGAGCCTCGCCACCACCCCCTGCATCTGCATGCCCCCTCCCACCCCCTGTCGTAGACAGCTTGTACACAAAAGGAGGGCGGGAGGGAGGGAGCGAGAGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+        "sequence_sha256": "2eff7cab963dab5557cf5ceb809d2db957a38bbb09fd589c211fba95815bd56a",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "junctions": [
+          [
+            15942854,
+            15945493
+          ]
+        ]
+      },
+      "current": {
+        "id": "ENST00000930196.1",
+        "transcript_id": "ENST00000930196.1",
+        "display_name": "MYCN-206",
+        "gene_id": "ENSG00000134323.15",
+        "chrom": "chr2",
+        "strand": "+",
+        "exons": [
+          [
+            15940502,
+            15942854
+          ],
+          [
+            15945493,
+            15947022
+          ]
+        ],
+        "exon_ids": [
+          "ENSE00004406859.1",
+          "ENSE00004792293.1"
+        ],
+        "exon_order": [
+          "",
+          ""
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "stop_codon_blocks": [
+          [
+            15946095,
+            15946097
+          ]
+        ],
+        "utr": [
+          [
+            15940502,
+            15942064
+          ],
+          [
+            15946095,
+            15947022
+          ]
+        ],
+        "utr5": [
+          [
+            15940502,
+            15942064
+          ]
+        ],
+        "utr3": [
+          [
+            15946098,
+            15947022
+          ]
+        ],
+        "junctions": [
+          [
+            15942854,
+            15945493
+          ]
+        ],
+        "mlen": 3883,
+        "sequence": "GGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGGTGCGTCCCCACCCCAGGCTGGGGTTCTTCTCCAAAGGGTGCCCCTGGAGGAAGAAGAGGGGGGGATTAGGCAGGGCGAGGCCGCCGCGGTCGCAATCTGGGTCACGGCTGCTCCAGCTTGGAGGAGAGGCGGCTCTCCCGGCGACCCTCCTCGCGCGGGCGCCCCTGCCATTCCCGGGAACAGGGGCTCAGCCTCTCCCTCCCTGGAAGAGGACGTTGTCGTGGGTTTGGAAGAGCAGGGGTGGGCTTAGAGAGCTTCCAATTAAGCTATTGGCAGGAGTATCCCTGCAGCGGGTGAATGCCGAGGGGCGTTTGCTCAAATTTGGGGAGGGGAAGGATTTGTGGATATGGGTGTCTGTTGTTGGTCTCTGTCTAGAGAAAGGCTTTTTTTTATTTGCAAAGTTTTCTAAATCCCCTGCTATCATTTGCACTCCTGAGGTTGCATTTTTACAAAGGGGGTAGAAGGTACTCCAAATACCATTCCCGGTAGCTGGGTCGGAGAGCCTGGGGCTTCCCCTGAGCAGCCGGCCCCACACCGCTGCGAGTGCGGTTGTCTGCGTGCTCGTGAGAGCTAGAATTCTGCAGCCAGGAACAGCCCCCTCCCCCAGGCAGTGCCTTGTGTGAATGAAATGGCAGTTTCCAAAGTTGCGGAGCCTCGCCACCACCCCCTGCATCTGCATGCCCCCTCCCACCCCCTGTCGTAGACAGCTTGTACACAAAAGGAGGGCGGGAGGGAGGGAGCGAGAGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+        "sequence_sha256": "2eff7cab963dab5557cf5ceb809d2db957a38bbb09fd589c211fba95815bd56a",
+        "protein_accession": "ENSP00000600255.1",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "protein_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec",
+        "cds_transcript_start": 1563,
+        "cds_transcript_end": 2955,
+        "source": "GENCODE v50",
+        "src": "GENCODE v50",
+        "gencode_release": "v50",
+        "biotype": "protein_coding",
+        "tags": [
+          "basic",
+          "TAGENE",
+          "appris_principal_1",
+          "CCDS"
+        ],
+        "annotation_level": "",
+        "transcript_support_level": "not supplied",
+        "appris": [
+          "appris_principal_1"
+        ],
+        "mane": [],
+        "basic": true,
+        "primary": false,
+        "annotation_attributes": {
+          "gene_id": [
+            "ENSG00000134323.15"
+          ],
+          "transcript_id": [
+            "ENST00000930196.1"
+          ],
+          "gene_type": [
+            "protein_coding"
+          ],
+          "gene_name": [
+            "MYCN"
+          ],
+          "transcript_type": [
+            "protein_coding"
+          ],
+          "transcript_name": [
+            "MYCN-206"
+          ],
+          "protein_id": [
+            "ENSP00000600255.1"
+          ],
+          "hgnc_id": [
+            "HGNC:7559"
+          ],
+          "tag": [
+            "basic",
+            "TAGENE",
+            "appris_principal_1",
+            "CCDS"
+          ],
+          "ccdsid": [
+            "CCDS1687.1"
+          ],
+          "havana_gene": [
+            "OTTHUMG00000039579.4"
+          ]
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "domains": [
+          {
+            "type": "Domain",
+            "description": "bHLH",
+            "start": 381,
+            "end": 433,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00981"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA",
+            "start": 19,
+            "end": 47,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA and FBXW7",
+            "start": 61,
+            "end": 89,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 129,
+            "end": 172,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 196,
+            "end": 294,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 334,
+            "end": 392,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Leucine-zipper",
+            "start": 433,
+            "end": 454,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Motif",
+            "description": "9aaTAD",
+            "start": 76,
+            "end": 84,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "34342803"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 149,
+            "end": 159,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Gly residues",
+            "start": 160,
+            "end": 170,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 208,
+            "end": 233,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Acidic residues",
+            "start": 259,
+            "end": 278,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          }
+        ],
+        "metadata": {
+          "gencode.v50.metadata.Annotation_remark.gz": [
+            [
+              "ENST00000930196.1",
+              "LRGASP"
+            ]
+          ],
+          "gencode.v50.metadata.Exon_supporting_feature.gz": [],
+          "gencode.v50.metadata.RefSeq.gz": [],
+          "gencode.v50.metadata.SwissProt.gz": [],
+          "gencode.v50.metadata.Transcript_source.gz": [
+            [
+              "ENST00000930196.1",
+              "havana_tagene_homo_sapiens"
+            ]
+          ],
+          "gencode.v50.metadata.Transcript_supporting_feature.gz": []
+        },
+        "lab_alias": "TV5",
+        "history": {
+          "display_name": "MYCN-206",
+          "transcript_id": "ENST00000930196.1",
+          "source": "GENCODE v49",
+          "gencode_release": "v49",
+          "exons": [
+            [
+              15940502,
+              15942854
+            ],
+            [
+              15945493,
+              15947022
+            ]
+          ],
+          "cds": [
+            [
+              15942065,
+              15942854
+            ],
+            [
+              15945493,
+              15946094
+            ]
+          ],
+          "mlen": 3883,
+          "sequence": "GGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGGTGCGTCCCCACCCCAGGCTGGGGTTCTTCTCCAAAGGGTGCCCCTGGAGGAAGAAGAGGGGGGGATTAGGCAGGGCGAGGCCGCCGCGGTCGCAATCTGGGTCACGGCTGCTCCAGCTTGGAGGAGAGGCGGCTCTCCCGGCGACCCTCCTCGCGCGGGCGCCCCTGCCATTCCCGGGAACAGGGGCTCAGCCTCTCCCTCCCTGGAAGAGGACGTTGTCGTGGGTTTGGAAGAGCAGGGGTGGGCTTAGAGAGCTTCCAATTAAGCTATTGGCAGGAGTATCCCTGCAGCGGGTGAATGCCGAGGGGCGTTTGCTCAAATTTGGGGAGGGGAAGGATTTGTGGATATGGGTGTCTGTTGTTGGTCTCTGTCTAGAGAAAGGCTTTTTTTTATTTGCAAAGTTTTCTAAATCCCCTGCTATCATTTGCACTCCTGAGGTTGCATTTTTACAAAGGGGGTAGAAGGTACTCCAAATACCATTCCCGGTAGCTGGGTCGGAGAGCCTGGGGCTTCCCCTGAGCAGCCGGCCCCACACCGCTGCGAGTGCGGTTGTCTGCGTGCTCGTGAGAGCTAGAATTCTGCAGCCAGGAACAGCCCCCTCCCCCAGGCAGTGCCTTGTGTGAATGAAATGGCAGTTTCCAAAGTTGCGGAGCCTCGCCACCACCCCCTGCATCTGCATGCCCCCTCCCACCCCCTGTCGTAGACAGCTTGTACACAAAAGGAGGGCGGGAGGGAGGGAGCGAGAGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+          "sequence_sha256": "2eff7cab963dab5557cf5ceb809d2db957a38bbb09fd589c211fba95815bd56a",
+          "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+          "protein_length": 464,
+          "junctions": [
+            [
+              15942854,
+              15945493
+            ]
+          ]
+        }
+      },
+      "previous_orf_count": 47,
+      "current_orf_count": 34,
+      "domain_change": "Current domains require exact sequence identity to reviewed UniProt; prior claims not carried forward",
+      "evidence_change": [
+        "EVIDENCE_CHANGE",
+        "REMOVED_UNSUPPORTED_CLAIM"
+      ],
+      "note": "ORF counts use different enumerations and are not directly a gain/loss of expressed proteins."
+    },
+    {
+      "canonical_name": "MYCN-207",
+      "classifications": [
+        "UNCHANGED"
+      ],
+      "previous": {
+        "display_name": "MYCN-207",
+        "transcript_id": "ENST00001138178.1",
+        "source": "GENCODE v50",
+        "gencode_release": "v50",
+        "exons": [
+          [
+            15940550,
+            15940743
+          ],
+          [
+            15941948,
+            15942854
+          ],
+          [
+            15945493,
+            15947022
+          ]
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "mlen": 2631,
+        "sequence": "AGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+        "sequence_sha256": "7ab7126ed6335a4a2aebc03f66f376f2a627adad25ccb9ce7c4ec54c1441729a",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "junctions": [
+          [
+            15940743,
+            15941948
+          ],
+          [
+            15942854,
+            15945493
+          ]
+        ]
+      },
+      "current": {
+        "id": "ENST00001138178.1",
+        "transcript_id": "ENST00001138178.1",
+        "display_name": "MYCN-207",
+        "gene_id": "ENSG00000134323.15",
+        "chrom": "chr2",
+        "strand": "+",
+        "exons": [
+          [
+            15940550,
+            15940743
+          ],
+          [
+            15941948,
+            15942854
+          ],
+          [
+            15945493,
+            15947022
+          ]
+        ],
+        "exon_ids": [
+          "ENSE00000804855.6",
+          "ENSE00000999248.3",
+          "ENSE00004792293.1"
+        ],
+        "exon_order": [
+          "",
+          "",
+          ""
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "stop_codon_blocks": [
+          [
+            15946095,
+            15946097
+          ]
+        ],
+        "utr": [
+          [
+            15940550,
+            15940743
+          ],
+          [
+            15941948,
+            15942064
+          ],
+          [
+            15946095,
+            15947022
+          ]
+        ],
+        "utr5": [
+          [
+            15940550,
+            15940743
+          ],
+          [
+            15941948,
+            15942064
+          ]
+        ],
+        "utr3": [
+          [
+            15946098,
+            15947022
+          ]
+        ],
+        "junctions": [
+          [
+            15940743,
+            15941948
+          ],
+          [
+            15942854,
+            15945493
+          ]
+        ],
+        "mlen": 2631,
+        "sequence": "AGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+        "sequence_sha256": "7ab7126ed6335a4a2aebc03f66f376f2a627adad25ccb9ce7c4ec54c1441729a",
+        "protein_accession": "ENSP00000804405.1",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "protein_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec",
+        "cds_transcript_start": 311,
+        "cds_transcript_end": 1703,
+        "source": "GENCODE v50",
+        "src": "GENCODE v50",
+        "gencode_release": "v50",
+        "biotype": "protein_coding",
+        "tags": [
+          "basic",
+          "Ensembl_canonical_extended",
+          "appris_principal_1",
+          "CCDS"
+        ],
+        "annotation_level": "",
+        "transcript_support_level": "not supplied",
+        "appris": [
+          "appris_principal_1"
+        ],
+        "mane": [],
+        "basic": true,
+        "primary": false,
+        "annotation_attributes": {
+          "gene_id": [
+            "ENSG00000134323.15"
+          ],
+          "transcript_id": [
+            "ENST00001138178.1"
+          ],
+          "gene_type": [
+            "protein_coding"
+          ],
+          "gene_name": [
+            "MYCN"
+          ],
+          "transcript_type": [
+            "protein_coding"
+          ],
+          "transcript_name": [
+            "MYCN-207"
+          ],
+          "protein_id": [
+            "ENSP00000804405.1"
+          ],
+          "hgnc_id": [
+            "HGNC:7559"
+          ],
+          "tag": [
+            "basic",
+            "Ensembl_canonical_extended",
+            "appris_principal_1",
+            "CCDS"
+          ],
+          "ccdsid": [
+            "CCDS1687.1"
+          ],
+          "havana_gene": [
+            "OTTHUMG00000039579.4"
+          ]
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "domains": [
+          {
+            "type": "Domain",
+            "description": "bHLH",
+            "start": 381,
+            "end": 433,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00981"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA",
+            "start": 19,
+            "end": 47,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA and FBXW7",
+            "start": 61,
+            "end": 89,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 129,
+            "end": 172,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 196,
+            "end": 294,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 334,
+            "end": 392,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Leucine-zipper",
+            "start": 433,
+            "end": 454,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Motif",
+            "description": "9aaTAD",
+            "start": 76,
+            "end": 84,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "34342803"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 149,
+            "end": 159,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Gly residues",
+            "start": 160,
+            "end": 170,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 208,
+            "end": 233,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Acidic residues",
+            "start": 259,
+            "end": 278,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          }
+        ],
+        "metadata": {
+          "gencode.v50.metadata.Annotation_remark.gz": [
+            [
+              "ENST00001138178.1",
+              "LEAP_3"
+            ]
+          ],
+          "gencode.v50.metadata.Exon_supporting_feature.gz": [
+            [
+              "ENST00001138178.1",
+              "BX393977.2",
+              "EMBL",
+              "ENSE00000804855.6",
+              "chr2:15940550-15940743"
+            ],
+            [
+              "ENST00001138178.1",
+              "BX332091.2",
+              "EMBL",
+              "ENSE00000804855.6",
+              "chr2:15940550-15940743"
+            ],
+            [
+              "ENST00001138178.1",
+              "NM_005378.4",
+              "RefSeq_dna",
+              "ENSE00000804855.6",
+              "chr2:15940550-15940743"
+            ],
+            [
+              "ENST00001138178.1",
+              "AF320053.1",
+              "EMBL",
+              "ENSE00000804855.6",
+              "chr2:15940550-15940743"
+            ],
+            [
+              "ENST00001138178.1",
+              "BC005453.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "BC002712.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "AF320053.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "BX332091.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "BX393977.2",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "NM_005378.4",
+              "RefSeq_dna",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "BT007384.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "BQ070922.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "AI499031.1",
+              "EMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "P04198.2",
+              "Uniprot/SWISSPROT",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ],
+            [
+              "ENST00001138178.1",
+              "Q53XS5.1",
+              "Uniprot/SPTREMBL",
+              "ENSE00000999248.3",
+              "chr2:15941948-15942854"
+            ]
+          ],
+          "gencode.v50.metadata.RefSeq.gz": [],
+          "gencode.v50.metadata.SwissProt.gz": [],
+          "gencode.v50.metadata.Transcript_source.gz": [
+            [
+              "ENST00001138178.1",
+              "ensembl_havana_transcript_homo_sapiens"
+            ]
+          ],
+          "gencode.v50.metadata.Transcript_supporting_feature.gz": []
+        },
+        "lab_alias": "TV2+",
+        "history": {
+          "display_name": "MYCN-207",
+          "transcript_id": "ENST00001138178.1",
+          "source": "GENCODE v50",
+          "gencode_release": "v50",
+          "exons": [
+            [
+              15940550,
+              15940743
+            ],
+            [
+              15941948,
+              15942854
+            ],
+            [
+              15945493,
+              15947022
+            ]
+          ],
+          "cds": [
+            [
+              15942065,
+              15942854
+            ],
+            [
+              15945493,
+              15946094
+            ]
+          ],
+          "mlen": 2631,
+          "sequence": "AGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+          "sequence_sha256": "7ab7126ed6335a4a2aebc03f66f376f2a627adad25ccb9ce7c4ec54c1441729a",
+          "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+          "protein_length": 464,
+          "junctions": [
+            [
+              15940743,
+              15941948
+            ],
+            [
+              15942854,
+              15945493
+            ]
+          ]
+        }
+      },
+      "previous_orf_count": 40,
+      "current_orf_count": 27,
+      "domain_change": "Current domains require exact sequence identity to reviewed UniProt; prior claims not carried forward",
+      "evidence_change": [
+        "EVIDENCE_CHANGE",
+        "REMOVED_UNSUPPORTED_CLAIM"
+      ],
+      "note": "ORF counts use different enumerations and are not directly a gain/loss of expressed proteins."
+    },
+    {
+      "canonical_name": "MYCN-XM",
+      "classifications": [
+        "UNCHANGED"
+      ],
+      "previous": {
+        "display_name": "MYCN-XM",
+        "transcript_id": "NM_001446166.1",
+        "source": "RefSeq (curated) - NM_001446166.1, transcript variant 4",
+        "gencode_release": "[NOT IN GENCODE - RefSeq curated transcript]",
+        "exons": [
+          [
+            15941799,
+            15942854
+          ],
+          [
+            15945493,
+            15947004
+          ]
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "mlen": 2568,
+        "sequence": "AGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+        "sequence_sha256": "133333d2be858989d5299a24bd6c99f12a7fb50f41b7f3a8f90249d833577f67",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "junctions": [
+          [
+            15942854,
+            15945493
+          ]
+        ]
+      },
+      "current": {
+        "id": "NM_001446166.1",
+        "transcript_id": "NM_001446166.1",
+        "display_name": "MYCN-XM",
+        "gene_id": "GeneID:4613",
+        "chrom": "chr2",
+        "strand": "+",
+        "exons": [
+          [
+            15941799,
+            15942854
+          ],
+          [
+            15945493,
+            15947004
+          ]
+        ],
+        "exon_ids": [],
+        "exon_order": [
+          "1",
+          "2"
+        ],
+        "cds": [
+          [
+            15942065,
+            15942854
+          ],
+          [
+            15945493,
+            15946094
+          ]
+        ],
+        "stop_codon_blocks": [
+          [
+            15946095,
+            15946097
+          ]
+        ],
+        "utr": [
+          [
+            15941799,
+            15942064
+          ],
+          [
+            15946098,
+            15947004
+          ]
+        ],
+        "utr5": [
+          [
+            15941799,
+            15942064
+          ]
+        ],
+        "utr3": [
+          [
+            15946098,
+            15947004
+          ]
+        ],
+        "junctions": [
+          [
+            15942854,
+            15945493
+          ]
+        ],
+        "mlen": 2568,
+        "sequence": "AGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+        "sequence_sha256": "133333d2be858989d5299a24bd6c99f12a7fb50f41b7f3a8f90249d833577f67",
+        "protein_accession": "NP_001433095.1",
+        "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+        "protein_length": 464,
+        "protein_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec",
+        "cds_transcript_start": 266,
+        "cds_transcript_end": 1658,
+        "source": "RefSeq reviewed transcript variant 4",
+        "src": "RefSeq",
+        "gencode_release": "not a GENCODE transcript",
+        "refseq_id": "NM_001446166.1",
+        "refseq_obsolete_id": "XM_047444434.1",
+        "refseq_history": [
+          "XM_047444434.1",
+          "XM_054342160.1"
+        ],
+        "placement_annotation_accession": "XM_047444434.1",
+        "placement_note": "Current reviewed mRNA is byte-identical to the explicitly replaced genomic mRNA annotation; every exon boundary and complete spliced sequence were verified.",
+        "biotype": "protein_coding",
+        "tags": [
+          "REVIEWED REFSEQ"
+        ],
+        "annotation_attributes": {},
+        "transcript_support_level": "NCBI reviewed",
+        "appris": [],
+        "mane": [],
+        "basic": false,
+        "primary": false,
+        "evidence_class": "DATABASE_ANNOTATED",
+        "domains": [
+          {
+            "type": "Domain",
+            "description": "bHLH",
+            "start": 381,
+            "end": 433,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000255",
+                "source": "PROSITE-ProRule",
+                "id": "PRU00981"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA",
+            "start": 19,
+            "end": 47,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Interaction with AURKA and FBXW7",
+            "start": 61,
+            "end": 89,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "27837025"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 129,
+            "end": 172,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 196,
+            "end": 294,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Disordered",
+            "start": 334,
+            "end": 392,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Region",
+            "description": "Leucine-zipper",
+            "start": 433,
+            "end": 454,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Motif",
+            "description": "9aaTAD",
+            "start": 76,
+            "end": 84,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000269",
+                "source": "PubMed",
+                "id": "34342803"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 149,
+            "end": 159,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Gly residues",
+            "start": 160,
+            "end": 170,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Low complexity",
+            "start": 208,
+            "end": 233,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          },
+          {
+            "type": "Compositional bias",
+            "description": "Acidic residues",
+            "start": 259,
+            "end": 278,
+            "source": "UniProt P04198",
+            "source_version": {
+              "firstPublicDate": "1987-03-20",
+              "lastAnnotationUpdateDate": "2026-09-02",
+              "lastSequenceUpdateDate": "1989-07-01",
+              "entryVersion": 244,
+              "sequenceVersion": 2
+            },
+            "evidence_class": "DATABASE_ANNOTATED",
+            "evidences": [
+              {
+                "evidenceCode": "ECO:0000256",
+                "source": "SAM",
+                "id": "MobiDB-lite"
+              }
+            ],
+            "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+          }
+        ],
+        "description": "Homo sapiens MYCN proto-oncogene, bHLH transcription factor (MYCN), transcript variant 4, mRNA",
+        "metadata": {},
+        "lab_alias": "TV4",
+        "history": {
+          "display_name": "MYCN-XM",
+          "transcript_id": "NM_001446166.1",
+          "source": "RefSeq (curated) - NM_001446166.1, transcript variant 4",
+          "gencode_release": "[NOT IN GENCODE - RefSeq curated transcript]",
+          "exons": [
+            [
+              15941799,
+              15942854
+            ],
+            [
+              15945493,
+              15947004
+            ]
+          ],
+          "cds": [
+            [
+              15942065,
+              15942854
+            ],
+            [
+              15945493,
+              15946094
+            ]
+          ],
+          "mlen": 2568,
+          "sequence": "AGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+          "sequence_sha256": "133333d2be858989d5299a24bd6c99f12a7fb50f41b7f3a8f90249d833577f67",
+          "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+          "protein_length": 464,
+          "junctions": [
+            [
+              15942854,
+              15945493
+            ]
+          ]
+        }
+      },
+      "previous_orf_count": 39,
+      "current_orf_count": 26,
+      "domain_change": "Current domains require exact sequence identity to reviewed UniProt; prior claims not carried forward",
+      "evidence_change": [
+        "EVIDENCE_CHANGE",
+        "REMOVED_UNSUPPORTED_CLAIM"
+      ],
+      "note": "ORF counts use different enumerations and are not directly a gain/loss of expressed proteins."
+    }
+  ],
+  "claim_changes": [
+    {
+      "class": "REMOVED_UNSUPPORTED_CLAIM",
+      "scope": "Legacy record-level MS, ribosome-profiling, conservation and functional assertions",
+      "reason": "Underlying analyses not recovered/reproduced for current ORFs; no implicit evidence transfer"
+    },
+    {
+      "class": "NEW_SUPPORTED_CLAIM",
+      "scope": "Current GENCODE/RefSeq structures, exact sequence-matched UniProt domains and explicit computational properties",
+      "reason": "Direct primary-database retrieval and sequence validation"
+    }
+  ]
+}

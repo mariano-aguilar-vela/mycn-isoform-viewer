@@ -1,11 +1,9 @@
-# Changes — 2026-10-28
+# Application 2.0.0 — 2026-10-28
 
-- Added the eight owner-supplied laboratory aliases through one shared mapping, exact alias search, accessible labels and figure metadata.
-- Added a keyboard-accessible data dialog and transcript-structure table, clearer frozen-reference provenance, research-use information, visible focus, and keyboard exon/shared-ORF controls.
-- Fixed transcript filtering being overridden by CSS, toolbar overflow at intermediate widths, narrow shared-ORF labels, and mobile drawer focus handling.
-- Regenerated coordinate downloads from the canonical metadata: corrected spliced CDS phases in GFF3 and included all 56 ORFs in BED.
-- Reconciled the terminal stop codons in eight nucleotide strings with their existing coordinate blocks and the retained locus sequence; amino-acid strings are unchanged.
-- Clarified that the 593-aa extension is predicted, that missing CDS annotation does not establish noncoding function, and that the below-30-aa instability-index threshold is a retained reporting policy rather than a mathematical limit.
-- Bundled D3 7.9.0 locally with its license, added reproducible static packaging, data/browser regression checks, metadata and a 404 page.
+- Rebuilt the complete GENCODE v50 MYCN set from official comprehensive annotation and transcript/protein FASTA; retained reviewed RefSeq NM_001446166.1 as MYCN-XM (TV4).
+- MYCN-202 now begins at chr2:15,940,044 and ends at 15,947,022. MYCN-204 and MYCN-205 now end at 15,947,022. Their `.2` accession versions, lengths, sequences and dependent ORF mappings change together.
+- Independently regenerated 42 unique AUG-to-first-stop ORFs under the explicit minimum-eight-amino-acid policy. The older 56 ORF IDs and experimental groupings are not carried forward.
+- Recalculated protein properties and retained UniProt features only on an exact sequence match. Removed unverified inherited MS/Ribo-seq/conservation/function claims from the active factual view.
+- Preserved the audited alias, keyboard, focus, mobile, search, export and vendored-D3 improvements. Added current provenance, scientific release history, comprehensive data export, source manifests, validated sequence downloads and a review-only monthly update checker.
 
-The frozen GENCODE v49/v50 plus RefSeq models remain pinned. A uniform v50 update needs separate model and sequence reconciliation for MYCN-202, -204 and -205. No new biological validation is claimed.
+The former public viewer remains a historical Git snapshot. No study-specific abundance estimates were included or silently reinterpreted.

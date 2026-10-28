@@ -4,10 +4,13 @@ import argparse, hashlib, json, shutil, re
 parser=argparse.ArgumentParser();parser.add_argument('--output',default='dist');args=parser.parse_args()
 root=Path(__file__).resolve().parents[1];dest=Path(args.output).resolve()
 if dest==root or root in dest.parents and dest.name!='dist':raise SystemExit('Choose dist or an external output directory')
-files=['index.html','app.js','styles.css','lab-aliases.js','favicon.svg','404.html','mycn_orfs.meta.json','mycn_locus_seq.json','chr2_cytoband.json','mycn_transcripts.gff3','mycn_orfs.bed','vendor/d3.v7.9.0.min.js','vendor/D3-LICENSE']
+files=['index.html','app.js','styles.css','lab-aliases.js','favicon.svg','404.html','mycn_locus_seq.json','chr2_cytoband.json','mycn_transcripts.gff3','mycn_orfs.bed','vendor/d3.v7.9.0.min.js','vendor/D3-LICENSE']
 from downloads import outputs
-for filename,content in outputs(json.loads((root/'mycn_orfs.meta.json').read_text())).items():
+for filename,content in outputs(json.loads((root/'data/current/reference.json').read_text())).items():
  if (root/filename).read_text()!=content:raise SystemExit('Stale coordinate download: '+filename)
+from validate_reference import validate
+validate(json.loads((root/'data/current/reference.json').read_text()),json.loads((root/'mycn_locus_seq.json').read_text()))
+files += [str(p.relative_to(root)) for p in sorted((root/'data').rglob('*')) if p.is_file()]
 patterns=[r'/(?:home|mnt|scratch|lustre)/[\w/.-]+',r'gh[pousr]_[A-Za-z0-9]{20,}',r'github_pat_[A-Za-z0-9_]+',r'-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY',r'(?i)(?:patient_id|sample_id)\s*["\x27]?\s*[:=]',r'https?://(?:localhost|127\.0\.0\.1)']
 for f in files:
  text=(root/f).read_text()

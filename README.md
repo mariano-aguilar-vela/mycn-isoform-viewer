@@ -1,109 +1,42 @@
-# MYCN isoform & ORF viewer
+# MYCN living transcript and ORF viewer
 
-An interactive viewer of the **MYCN** locus showing its **8 transcript isoforms** and the **56 annotated and predicted ORFs**,
-with per-transcript ORF specificity (unique vs shared), base-level sequence, and the encoded protein / uORF
-landscape. Built as a custom d3/SVG genome-browser-style viewer — transcript-first, with an ideogram, a
-genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
+Application **2.0.0** displays the complete **GENCODE v50 / GRCh38.p14 / Ensembl 116** MYCN transcript set and the reviewed **RefSeq NM_001446166.1** addition, shown as **MYCN-XM (TV4)**. Data were scientifically reviewed on **2026-10-28**. The current build is `gencode-50_refseq-NM_001446166.1_mycn-1`.
 
-**Live site:** https://mariano-aguilar-vela.github.io/mycn-isoform-viewer/
+[Public site](https://mariano-aguilar-vela.github.io/mycn-isoform-viewer/) · [Reference-update policy](REFERENCE_UPDATE_POLICY.md) · [Current source manifest](data/current/manifest.json) · [Scientific release changes](data/current/release-diff.json)
 
-## Data
+The structures are regenerated from official GENCODE annotation, transcript FASTA and protein FASTA, and NCBI transcript/protein/genomic records. Every transcript sequence matches concatenated genomic exons; annotated CDS translations match the official proteins. MYCN-202, MYCN-204 and MYCN-205 use the current `.2` accessions with their corresponding rebuilt exon boundaries, not relabelled v49 models.
 
-- Reference: **GRCh38**; transcript annotation from **GENCODE v49** (transcript 207 from v50; XM from RefSeq).
-- Transcript models and the ORF set were derived in the thesis project (MYCN transcript-isoform
-  characterisation). The staged locus reference sequence is the GRCh38 slice `chr2:15,938,000–15,947,200`.
-- Per-ORF metrics shown: amino-acid length, Kozak context, PhyloCSF, phyloP, MW / pI / GRAVY, net charge,
-  instability index, conservation, the **per-resource translation-evidence block**, **MS / protein evidence**,
-  accession, and the carrier transcripts.
-- **Instability index is blank below 30 aa**, with its reason shown in place. The retained reporting policy withholds values below that length; this is not a mathematical limit of the formula. For those ORFs the viewer renders *not reported* rather than a number. A blank
-  is not a zero, and GRAVY (uncalibrated, but defined) is retained for every ORF.
-- **Conservation caveat:** conservation is a *weak discriminator for short uORFs* — the known functional uORFs
-  **MYCNOT** (ORF9) and **MUSEP** (ORF10) are both conservation-negative yet functional. The viewer therefore
-  presents conservation as evidence, not a verdict.
-- **MS / protein evidence — the axis has TWO limits, and both bound every cell.**
-  The MS axis is **lysate mass spectrometry** (OpenProt 2.2), the lower-confidence MS assay.
-  - **COVERAGE.** **MYCNOT is MS-detected at 7 unique peptides** — the control proving the **assay fires** at
-    this locus. **It does not extend the search space.** OpenProt catalogues only **9 of the 763** ORFs; an ORF
-    with no OpenProt accession was **never in the search space and was therefore never searched** →
-    **NOT-ASSESSED, not a negative.** *Absent from the catalogue is not absent from the lysate.* The only real
-    MS negatives are the **3** ORFs that **are** catalogued and returned 0 peptides (*present-not-detected*).
-  - **ATTRIBUTION.** **No ORF at this locus is start-discriminated by lysate MS.** The locus is a dense nest of
-    same-stop ORFs, and **every MS-detected ORF has a same-stop host that contains it in its entirety** (N-Myc
-    18 hosts, MUSEP 5, ORF 24 two, ΔMYCN 1, **MYCNOT 1 — the control included**), so no peptide of it can ever
-    exclude that host. All four detections are therefore **`DETECTED (GROUP-LEVEL)`**, and the viewer draws the
-    evidence mark **once per stop group, never once per ORF** — a mark per ORF would let a reader count *N*
-    detections where the evidence supports **one**. **The named proteins are identified by ANNOTATION, not by
-    MS.** The honest ceiling of the axis is: ***"a protein from this stop group is translated."***
-  - **Peptide uniqueness is bounded.** Proteome-uniqueness **excludes a canonical-fragment explanation**; it
-    **cannot attribute the start**. The uniqueness search compared against four named proteins plus UniProt
-    (UP000005640, 147,506 seqs) — **and five of the six Region-1 candidates are absent from every reference
-    proteome**, so it ran against a database that **did not contain the competitors**. It was never capable of
-    discriminating them.
-  - No HLA-immunopeptidomics was tested, so *no immunopeptidomic support* is never an earned claim.
-  - Accessions follow **Table B's namespace** (`XP_047300390.1`, `ENSP00000491476.1`). The RefSeq ids
-    (`NP_001280157.1`, `NP_001280160.1`) are **aliases of the same proteins**, listed on one OpenProt record —
-    a database-namespace difference, **not a conflict**. Recorded so it is not "corrected" back.
-- **THE RIBO-SEQ AXIS HAS NO DEFENSIBLE NEGATIVES AT THIS LOCUS.** Evidence is reported per resource, in states
-  that are never conflated: *DETECTED*, *SUB-THRESHOLD*, *PRESENT-NOT-DETECTED* and *NOT-ASSESSED* (always with
-  its reason). **`ABSENT` is now UNUSED on every axis — no ORF qualifies for it.**
-  - **A catalogue's coverage is not an assay's power.** Every Ribo-seq resource here is a **catalogue of
-    positives**: it publishes the ORFs it **called**, not the candidate set it **tested**. An absence therefore
-    cannot distinguish *"tested, no evidence"* from *"never a candidate"* — **and neither is provable from the
-    artifact**, so an absence is unfalsifiable.
-  - **nuORFdb v1.2** — its **single** MYCN record (**NC-NEST-090**) is **not one of the ORFs in this table**.
-    Emitting one record proves the pipeline *can* call an ORF here; it says nothing about the search space.
-  - **sORFs.org** — **unpowered for negatives, and demonstrably so**: **MUSEP** (86 aa, a known functional uORF,
-    squarely in scope at ≤100 aa) is **missed entirely**, and all 17 hits fall in one ~575 bp island. A catalogue
-    proven to miss an in-scope true positive at this locus cannot supply a reliable negative here.
-  - **Ribo-uORF** covers the **uORF/uTIS class only**, and its records are per-sample **calls**, not candidates.
-  - **Five consensus catalogues return zero records anywhere at the MYCN locus** — **UNPOWERED, NOT-ASSESSED.**
-  - **What the axis has is POSITIVES:** 17 sORFs.org records (7 terminating ORFs across 6 regions, **one study**,
-    one ~575 bp island, **out-of-frame phasing where tested**), 1 nuORFdb record, 1 Ribo-uORF record.
-    **It can say nothing about anything it did not find.**
-- **The two axes agree on the ceiling.** MS: *"a protein from this stop group is translated"* — no start
-  discrimination. Ribo-seq: *"reads are present at these coordinates"* — no defensible absence. **The ORF
-  landscape is a search space with a handful of positives and no reliable negatives on either axis.**
-- **Status of the ORFs:** apart from the annotated proteins (N-Myc, ΔMYCN) and the known functional uORFs
-  (MYCNOT, MUSEP), the ORFs shown are **predictions**. **ORF 24** (OpenProt IP_083082) carries protein-level
-  evidence — 2 unique peptides by lysate MS, two-executor confirmed, frame-disjoint from N-Myc — **but at
-  GROUP LEVEL, not as a start claim**: those peptides are contained in 6 of the 8 Region-1 members and in 16
-  ORFs across the full 763-ORF catalogue, so **a protein IS translated from that stop group, but WHICH START
-  produced it is NOT established**. Detection is not function; and here, detection is not attribution.
-  ORF 24 is a bounded protein-level positive at the detection floor, not a discovery.
+TV1–TV6, TV2+, and NC are owner-supplied laboratory aliases, maintained centrally in `lab-aliases.js`. Current database names and accessions remain authoritative. MYCN-XM is a study display label for the reviewed RefSeq transcript variant 4, not a GENCODE name. Its replaced XM accessions and exact genomic placement verification are retained in provenance.
 
-## How to use
+## ORFs and evidence
 
-- **Click a transcript** (left gutter or its row) to expand and see the ORFs it encodes, ranked by specificity:
-  *unique to that transcript* first, then a collapsible *shared* group.
-- **By-ORF lens** (top-left toggle): browse the 56 ORFs grouped by class; selecting an ORF **highlights it on
-  every carrier transcript** and dims non-carriers, with full protein detail in the right rail.
-- **Navigate:** *scroll to zoom* (cursor-centred), *drag to move*, *drag the ruler to zoom to a region*; the
-  `chr2:start-end` box and the +/− / Reset buttons also work.
-- **Zoom in** far enough to reveal the **base-level reference sequence** (A/C/G/T) and, for a selected ORF, its
-  codons and amino acids (start green / stop red), with intron-spanning codons handled via the spliced sequence.
-- **Export** the current view as **SVG or PNG** (ideogram + ruler + reference + stack).
+The current sequences yield **42 distinct ORFs** under a declared computational policy: every AUG start to its first in-frame standard-code stop, at least 8 amino acids, including nested starts. Non-AUG and no-stop ORFs are not enumerated. These build-specific IDs do not correspond to the old 56-record ORF numbering. Counts do not represent expressed proteins.
 
-## Built with
+Annotated CDSs carry `DATABASE_ANNOTATED`; other ORFs and Biopython physicochemical values carry `COMPUTATIONAL_PREDICTION`. Domain/region coordinates are transferred only when the protein sequence exactly matches reviewed UniProt P04198, with sequence hashes, source versions and database evidence retained. No domain assigned does not mean no domain exists. Protein instability index and other properties are predictions, not experimental measurements.
 
-- [d3 v7.9.0](https://d3js.org/) (vendored locally with its license). No backend — the site is fully static (HTML/CSS/JS + JSON data).
+The old record-level mass-spectrometry, ribosome-profiling, conservation and functional assertions are removed from the current factual view because their underlying analyses have not been reproduced against these new ORFs. Historical structures and the previous public application commit remain reproducible; historical abundance estimates are neither included nor recalculated.
 
-## Provenance
+## Build and test
 
-Part of **Mariano Aguilar Vela's** PhD (QUT / APCRC-Q), on MYCN transcript-isoform characterisation.
+Use Node 20+, Python 3.13, and the pinned reference requirements:
 
+```
+pip install -r requirements-reference.txt
+npm ci
+npm test
+npm run build
+```
 
-## Laboratory aliases and reference versions
+The static build uses generated assets in `data/current/`, checks them against the JSON schema and scientific sequence rules, rejects stale coordinate exports and scans the allowlisted artifact for defined disclosure patterns. Serve `dist/` at `/mycn-isoform-viewer/`. D3 7.9.0 is vendored locally with its upstream license. There are no runtime CDN, analytics, cookie or persistent-storage dependencies.
 
-The viewer uses one owner-supplied alias map in `lab-aliases.js`. TV1–TV6, TV2+, and NC are laboratory terminology; canonical transcript accessions remain authoritative. The About the data dialog lists all mappings, pinned accessions and exon/CDS structures. SVG exports include separate canonical name, lab_alias and accession metadata; PNG labels retain canonical names.
+`npm run test:browser` uses Playwright and axe with `MYCN_TEST_URL` and `MYCN_TEST_OUTPUT`. All Chromium, Firefox and WebKit engines must pass. A compatible Playwright container is suitable when host WebKit libraries are unavailable. The existing GitHub Pages deployment method is unchanged; the separate monthly workflow only detects and prepares reference updates for review.
 
-The frozen reference is mixed: MYCN-201–206 use GENCODE v49; MYCN-207 uses v50; MYCN-XM is the study display label for RefSeq NM_001446166.1 (formerly XM_047444434.1). This is not a uniform v50 dataset. The v50 revisions to MYCN-202, -204 and -205 change exon boundaries and must be reconciled before replacing the frozen models or identifiers.
+See the reference-update policy for full-source download, checksum verification, regeneration and release-diff commands. Reference caches and private audit material belong outside the public repository. Never push private audit branches.
 
-## Verification and static packaging
+## Interaction, exports and accessibility
 
-Use Node 20+ and Python 3. `npm ci`, `npm test`, and `npm run build` create an allowlisted `dist/` artifact. `npm run test:browser` uses Playwright and axe against `MYCN_TEST_URL` (default: a local server mounted at `/mycn-isoform-viewer/`); browser binaries must be installed with `npx playwright install`. WebKit requires compatible system libraries. Browser logs go to `MYCN_TEST_OUTPUT` or ignored `test-results/`.
+Select a transcript to expand its ORFs; the ORF lens shows annotations and predictions separately. Search matches canonical names, exact laboratory aliases, versioned/stable accessions, protein accessions and transcript descriptions. TV2 and TV2+ stay distinct. Use the locus field, zoom buttons, Reset, pointer navigation, keyboard transcript/exon controls and structured data table.
 
-The existing Pages mechanism remains branch-based. Do not publish repository archives, test results, build logs or private audit material. The static packaging command excludes these. Unknown paths have a plain 404 page linking to the viewer. The application has no client-side routes, analytics, cookies, service worker or persistent browser storage.
+Reference and evidence shows current provenance, build versions, research-use limitations and sequence/coordinate downloads. History links the previous structural snapshot and scientific changes. Data JSON contains complete transcript/ORF structures, sequences, translations, laboratory aliases, sources, evidence statuses and build versions. Standard FASTA/GFF3/BED/TSV downloads provide format-specific records; the JSON and manifest are their full provenance sidecars. SVG and PNG exports show the current reference and build; SVG also carries detailed machine-readable metadata.
 
-For research and educational use, not clinical diagnosis. An annotated transcript or laboratory alias does not establish sample-specific expression or function. Accessibility checks are limited to the recorded automated and keyboard/browser checks; full WCAG conformance is not claimed.
-
-Coordinate downloads are derived from the same metadata using `python3 scripts/downloads.py --write`; `npm test` rejects stale files. GFF3 retains canonical transcript names/accessions and cumulative spliced CDS phase; BED includes all 56 ORFs and uses zero-based half-open blocks.
+The viewer is for research and education, not clinical diagnosis. Annotation and laboratory aliases do not establish sample-specific expression or function. Automated accessibility scores and keyboard/browser checks do not constitute formal WCAG certification.

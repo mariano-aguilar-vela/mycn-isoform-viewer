@@ -10,7 +10,7 @@ def outputs(meta):
     def feature(kind,a,b,phase,att):gff.append('\t'.join(map(str,['chr2','MYCN_viewer',kind,a,b,'.','+',phase,att])))
     for key,t in txs.items():
         name='MYCN-'+key
-        feature('mRNA',t['exons'][0][0],t['exons'][-1][1],'.',attrs(ID=name,Parent='MYCN',Name=name,transcript_id=t['transcript_id'],source_provenance=t['source']))
+        feature('mRNA',t['exons'][0][0],t['exons'][-1][1],'.',attrs(ID=name,Parent='MYCN',Name=name,transcript_id=t['transcript_id'],source_provenance=t['source'],lab_alias=t.get('lab_alias',''),reference_release=t['gencode_release'],assembly=meta['assembly'],evidence_status=t['evidence_class'],reference_build=meta['reference_build']))
         for a,b in t['exons']:feature('exon',a,b,'.',attrs(Parent=name))
         n=0
         for a,b in t['cds']:
@@ -18,13 +18,13 @@ def outputs(meta):
     bed=['track name="MYCN ORF landscape" itemRgb="On"']
     for key,o in meta['orfs'].items():
         blocks=o['blocks'];start=blocks[0][0]-1;end=blocks[-1][1];color=o['color'].lstrip('#');rgb=','.join(str(int(color[i:i+2],16)) for i in [0,2,4])
-        name=f"ORF{key}|{o['cls']}|{o['aa_len']}aa|{o['conserved']}"
+        name=f"ORF{key}|{o['cls']}|{o['aa_len']}aa|{o['evidence_class']}"
         sizes=','.join(str(b-a+1) for a,b in blocks)+',';offsets=','.join(str(a-1-start) for a,b in blocks)+','
         bed.append('\t'.join(map(str,['chr2',start,end,name,0,'+',start,end,rgb,len(blocks),sizes,offsets])))
     return {'mycn_transcripts.gff3':'\n'.join(gff)+'\n','mycn_orfs.bed':'\n'.join(bed)+'\n'}
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--write',action='store_true');p.add_argument('--check',action='store_true');args=p.parse_args()
-    for filename,text in outputs(json.loads((ROOT/'mycn_orfs.meta.json').read_text())).items():
+    for filename,text in outputs(json.loads((ROOT/'data/current/reference.json').read_text())).items():
         path=ROOT/filename
         if args.write:path.write_text(text)
         elif path.read_text()!=text:raise SystemExit('Stale coordinate download: '+filename)
