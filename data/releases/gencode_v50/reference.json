@@ -11064,7 +11064,7 @@
     "biopython": "1.87",
     "jsonschema": "4.25.1"
   },
-  "application_commit": "80eb6cc7d4d3c3e90378fc332bce69fcf31ca421",
+  "application_commit": "4d8c79b4cdc63b34bacd9c29ecb772d3243fa322",
   "structure_reference_build": "gencode-50_refseq-NM_001446166.1_mycn-1",
   "product_registry_version": "1.0.0",
   "products": {

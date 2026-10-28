@@ -20,13 +20,15 @@
     "non_AUG_calls": "not enumerated",
     "experimental_claims": "none; annotation and prediction do not establish expression or function"
   },
-  "application_commit": "80eb6cc7d4d3c3e90378fc332bce69fcf31ca421",
+  "application_commit": "4d8c79b4cdc63b34bacd9c29ecb772d3243fa322",
   "pipeline_versions": {
     "python": "3.13.5",
     "biopython": "1.87",
     "jsonschema": "4.25.1"
   },
-  "reference_sha256": "88564dbd6d4fc2cea12c1180896839cb7d538609a6240e9333303fe2a5449d99",
+  "structure_reference_build": "gencode-50_refseq-NM_001446166.1_mycn-1",
+  "product_registry_version": "1.0.0",
+  "reference_sha256": "c1ccdb4950bb7a63bea8ab6dc7d97a54f6b3f4a24155420b84a0abec51a32c64",
   "sources": {
     "gencode_release": 50,
     "assembly": "GRCh38.p14",
@@ -179,7 +181,5 @@
       }
     ],
     "unavailable_sources": []
-  },
-  "structure_reference_build": "gencode-50_refseq-NM_001446166.1_mycn-1",
-  "product_registry_version": "1.0.0"
+  }
 }
