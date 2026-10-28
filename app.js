@@ -558,7 +558,7 @@
   function isTablet(){ var w=vpW(); return w>=640 && w<1024; }
   // GUTTER (label lane) + PADR shrink on small screens so the plot isn't crowded; W tracks the container
   function computeGutter(){
-    if (isPhone()){ GUTTER=92; PADR=8; }
+    if (isPhone()){ GUTTER=132; PADR=8; }
     else if (isTablet()){ GUTTER=150; PADR=12; }
     else { GUTTER=200; PADR=18; }
   }
