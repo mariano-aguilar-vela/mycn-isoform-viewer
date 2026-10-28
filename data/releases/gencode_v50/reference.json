@@ -119,6 +119,8 @@
       "src": "GENCODE v50",
       "gencode_release": "v50",
       "biotype": "protein_coding",
+      "description": "MYCN-201: protein_coding",
+      "reference_release": "GENCODE v50",
       "tags": [
         "basic",
         "Ensembl_canonical",
@@ -789,6 +791,8 @@
       "src": "GENCODE v50",
       "gencode_release": "v50",
       "biotype": "protein_coding",
+      "description": "MYCN-202: protein_coding",
+      "reference_release": "GENCODE v50",
       "tags": [
         "basic",
         "CCDS"
@@ -963,6 +967,8 @@
       "src": "GENCODE v50",
       "gencode_release": "v50",
       "biotype": "protein_coding_CDS_not_defined",
+      "description": "MYCN-203: protein_coding_CDS_not_defined",
+      "reference_release": "GENCODE v50",
       "tags": [
         "RNA_Seq_supported_only"
       ],
@@ -1187,6 +1193,8 @@
       "src": "GENCODE v50",
       "gencode_release": "v50",
       "biotype": "protein_coding",
+      "description": "MYCN-204: protein_coding",
+      "reference_release": "GENCODE v50",
       "tags": [
         "basic",
         "TAGENE",
@@ -1775,6 +1783,8 @@
       "src": "GENCODE v50",
       "gencode_release": "v50",
       "biotype": "protein_coding",
+      "description": "MYCN-205: protein_coding",
+      "reference_release": "GENCODE v50",
       "tags": [
         "basic",
         "TAGENE",
@@ -2335,6 +2345,8 @@
       "src": "GENCODE v50",
       "gencode_release": "v50",
       "biotype": "protein_coding",
+      "description": "MYCN-206: protein_coding",
+      "reference_release": "GENCODE v50",
       "tags": [
         "basic",
         "TAGENE",
@@ -2817,6 +2829,8 @@
       "src": "GENCODE v50",
       "gencode_release": "v50",
       "biotype": "protein_coding",
+      "description": "MYCN-207: protein_coding",
+      "reference_release": "GENCODE v50",
       "tags": [
         "basic",
         "Ensembl_canonical_extended",
@@ -3683,6 +3697,7 @@
         }
       ],
       "description": "Homo sapiens MYCN proto-oncogene, bHLH transcription factor (MYCN), transcript variant 4, mRNA",
+      "reference_release": "RefSeq NM_001446166.1; record 12-SEP-2026",
       "metadata": {},
       "lab_alias": "TV4",
       "history": {
@@ -10859,5 +10874,11 @@
     "domains": "DATABASE_ANNOTATED only for exact sequence match to UniProt P04198",
     "laboratory_aliases": "OWNER_SUPPLIED_NOMENCLATURE",
     "legacy_MS_RiboSeq_conservation": "removed from current factual claims; not independently reproduced"
-  }
+  },
+  "pipeline_versions": {
+    "python": "3.13.5",
+    "biopython": "1.87",
+    "jsonschema": "4.25.1"
+  },
+  "application_commit": "7b8488cfb12bd531820d1be1bc804bd003b270dd"
 }
