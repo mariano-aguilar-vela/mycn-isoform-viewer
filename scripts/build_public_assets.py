@@ -18,7 +18,7 @@ def generate(data):
     for kind,key in [('orfs-nt','nt'),('orfs-protein','aa')]:
         (dest/(kind+'.fa')).write_text(''.join(f">{o['build_orf_id']} evidence={o['evidence_class']} build={data['reference_build']}\n{o[key]}\n" for o in data['orfs'].values()))
     with (dest/'transcripts.tsv').open('w') as f:
-        w=csv.writer(f,delimiter='\t');w.writerow(['display_name','lab_alias','accession','source','release','assembly','length_nt','exons','cds','protein_accession','protein_length','evidence','app_version','reference_build'])
+        w=csv.writer(f,delimiter='\t',lineterminator='\n');w.writerow(['display_name','lab_alias','accession','source','release','assembly','length_nt','exons','cds','protein_accession','protein_length','evidence','app_version','reference_build'])
         for t in data['transcripts'].values():w.writerow([t['display_name'],t.get('lab_alias',''),t['transcript_id'],t['source'],t['gencode_release'],data['assembly'],t['mlen'],json.dumps(t['exons']),json.dumps(t['cds']),t['protein_accession'],t['protein_length'],t['evidence_class'],data['application_version'],data['reference_build']])
     for name,text in outputs(data).items():(ROOT/name).write_text(text)
     from compare_reference_releases import compare

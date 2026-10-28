@@ -7,8 +7,10 @@ from io import StringIO
 from reference_lib import sha
 
 def check(manifest,page,record):
-    release=int(re.search(r'Release\s+(\d+)\s*\(',page).group(1));ref=SeqIO.read(StringIO(record),'genbank');change=release!=manifest['gencode_release'] or ref.id!=manifest['refseq_accession']
-    return {'checked_utc':datetime.now(timezone.utc).isoformat(),'status':'UPDATE_DETECTED' if change else 'NO_UPDATE','deployed_gencode':manifest['gencode_release'],'official_gencode':release,'deployed_refseq':manifest['refseq_accession'],'official_refseq':ref.id,'refseq_sequence_sha256':sha(str(ref.seq)),'record_reviewed':'REVIEWED REFSEQ' in ref.annotations.get('comment',''),'next_step':'FETCH_DIFF_REVIEW_TEST_DEPLOY' if change else 'REVIEW_EVIDENCE_AT_NEXT_SCHEDULE','automatic_publication':False}
+    comment=SeqIO.read(StringIO(record),'genbank').annotations.get('comment','')
+    replacement=re.search(r'(?:replaced|superseded) by\s+(NM_\d+(?:\.\d+)?)',comment,re.I)
+    release=int(re.search(r'Release\s+(\d+)\s*\(',page).group(1));ref=SeqIO.read(StringIO(record),'genbank');change=release!=manifest['gencode_release'] or ref.id!=manifest['refseq_accession'] or replacement is not None or 'REVIEWED REFSEQ' not in comment
+    return {'checked_utc':datetime.now(timezone.utc).isoformat(),'status':'UPDATE_DETECTED' if change else 'NO_UPDATE','deployed_gencode':manifest['gencode_release'],'official_gencode':release,'deployed_refseq':manifest['refseq_accession'],'official_refseq':ref.id,'refseq_sequence_sha256':sha(str(ref.seq)),'replacement_accession':replacement.group(1) if replacement else None,'record_reviewed':'REVIEWED REFSEQ' in ref.annotations.get('comment',''),'next_step':'FETCH_DIFF_REVIEW_TEST_DEPLOY' if change else 'REVIEW_EVIDENCE_AT_NEXT_SCHEDULE','automatic_publication':False}
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--manifest',default='data/current/manifest.json');p.add_argument('--output',default='reference-update-report.json');p.add_argument('--fixtures');p.add_argument('--manifest-url');p.add_argument('--report-only',action='store_true');p.add_argument('--candidate-output',default='reference-update-candidate');p.add_argument('--candidate-cache',default='.reference-update-cache');a=p.parse_args()
     if a.fixtures:
