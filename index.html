@@ -4,29 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MYCN isoform stack — transcripts, ORFs &amp; base-level browser</title>
-  <meta name="description" content="Explore MYCN transcript structures, versioned accessions, laboratory aliases, and annotated and predicted ORFs on GRCh38.">
-  <link rel="canonical" href="https://mariano-aguilar-vela.github.io/mycn-isoform-viewer/">
-  <meta property="og:title" content="MYCN transcript-structure viewer">
-  <meta property="og:description" content="MYCN transcript structures and annotated and predicted ORFs, with reference provenance and laboratory aliases.">
-  <meta property="og:url" content="https://mariano-aguilar-vela.github.io/mycn-isoform-viewer/">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=2.0.0">
+  <link rel="stylesheet" href="styles.css?temporary=20261028">
 </head>
 <body>
+  <div role="note" style="flex:0 0 auto;padding:10px 14px;background:#fff2c8;border-bottom:2px solid #8a5c00;color:#302700;font-size:14px;line-height:1.4"><strong>Previous reference release temporarily restored while the GENCODE v50 protein-product layer is corrected.</strong> This is the historical mixed-reference view. <a href="https://github.com/mariano-aguilar-vela/mycn-isoform-viewer/tree/v2.0.0">v2.0.0 archive</a>.</div>
   <!-- control bar (igv-style header) -->
   <header id="topbar">
     <div class="tb-title">
       <span class="tb-dot"></span>
-      <h1 id="tb-head">MYCN locus</h1>
+      <span id="tb-head">MYCN locus</span>
       <span class="tb-sub" id="tb-sub">— isoform stack</span>
     </div>
     <div class="tb-controls">
-      <button id="about-open" class="tb-btn" aria-label="Reference and evidence">Reference</button>
-      <button id="history-open" class="tb-btn" aria-label="Release history">History</button>
-      <button id="download-data" class="tb-btn">Data JSON</button>
       <form id="locus-form" autocomplete="off">
         <input id="locus-input" type="text" spellcheck="false"
                placeholder="chr2:15,938,000-15,947,200" aria-label="locus">
@@ -44,7 +33,6 @@
     </div>
   </header>
 
-  <p id="reference-banner" class="reference-banner">Current reference loading…</p>
   <!-- workspace: left drawer (push) | viewer (header + stack share one x-aligned column) -->
   <div id="workspace">
     <!-- LEFT drawer: browse index (lens toggle + search + grouped list + legend) -->
@@ -56,16 +44,15 @@
           <button id="lens-tx" class="lens-btn active" data-lens="tx">by transcript</button>
           <button id="lens-orf" class="lens-btn" data-lens="orf">by ORF</button>
         </div>
-        <div id="cue" class="cue">Select a transcript to explore its annotated and predicted ORFs.
+        <div id="cue" class="cue">Click a transcript to see the proteins it encodes.
           <button id="cue-dismiss" class="cue-x" title="dismiss" aria-label="dismiss">×</button>
         </div>
         <input id="feature-search" type="text" spellcheck="false"
-               placeholder="Search name, lab alias, accession…" aria-label="search features">
+               placeholder="Search id, class, carrier, conserved, accession…" aria-label="search features">
       </div>
-      <p id="search-status" class="sr-only" role="status"></p>
       <div id="feature-list" class="feature-list"></div>
       <div class="legend">
-        <div class="legend-title" id="legend-toggle" role="button" tabindex="0">Legend</div>
+        <div class="legend-title">Legend</div>
         <ul id="legend-list"></ul>
       </div>
     </aside>
@@ -74,7 +61,7 @@
     </button>
 
     <!-- VIEWER: ideogram + genomic ruler/ref strip + stack, all on ONE shared x-scale/width -->
-    <section id="viewer" aria-label="MYCN transcript diagrams">
+    <section id="viewer">
       <div id="ideo-wrap"><svg id="ideo" xmlns="http://www.w3.org/2000/svg"></svg></div>
       <div id="hdr-wrap"><svg id="hdr" xmlns="http://www.w3.org/2000/svg"></svg></div>
 
@@ -105,31 +92,9 @@
   </div>
 
   <div id="tip" class="tip" hidden></div>
-  <div id="loadmsg" class="loadmsg" role="status">Loading MYCN data…</div>
+  <div id="loadmsg" class="loadmsg">Loading MYCN data…</div>
 
-  <dialog id="about-data" aria-labelledby="about-title">
-    <button id="about-close" autofocus>Close</button>
-    <h2 id="about-title">Reference and evidence</h2>
-    <p id="reference-summary"></p><p id="reference-version"></p>
-    <p>The default displays the complete current GENCODE MYCN transcript set plus the reviewed RefSeq MYCN transcript variant 4, shown as MYCN-XM (TV4). MYCN-XM is a study display alias, not a GENCODE transcript name.</p>
-    <p>TV1–TV6, TV2+, and NC are laboratory aliases used by our laboratory. Current GENCODE and RefSeq identifiers remain authoritative.</p>
-    <p>ORFs are independently enumerated from the current official transcript sequences: every AUG start to the first in-frame standard-code stop, including nested starts, with a minimum of 8 amino acids. Non-AUG starts and no-stop ORFs are outside this enumeration. ORF numbers are specific to this build and do not map to the former 56-ORF viewer.</p>
-    <p>Annotated CDS: DATABASE_ANNOTATED. Other ORFs and physicochemical properties: COMPUTATIONAL_PREDICTION. Domain coordinates: DATABASE_ANNOTATED, shown only after an exact protein-sequence match to the cited UniProt record. No experimental expression, translation, stability, conservation or functional claim is assigned to a predicted ORF.</p>
-    <p>For research and educational use; this is not a clinical diagnostic tool. Annotation and laboratory nomenclature do not establish sample-specific expression or function. Historical laboratory MS, ribosome-profiling and conservation assertions have been removed from the current factual view because their underlying artifacts were not reproduced.</p>
-    <p id="reference-links"></p>
-    <p><a href="data/current/manifest.json">Source and build manifest</a> · <a href="data/current/reference.json">Complete generated data</a> · <a href="mycn_transcripts.gff3">Transcript GFF3</a> · <a href="mycn_orfs.bed">ORF BED</a> · <a href="data/current/transcripts.fa">Transcript FASTA</a> · <a href="data/current/proteins.fa">Annotated protein FASTA</a></p>
-    <h3>Transcript structures (accessible diagram alternative)</h3>
-    <p>Coordinates below are 1-based, inclusive, on chr2 (+ strand). CDS intervals exclude the stop codon. Use the transcript and ORF buttons in Features for selection; the locus field, zoom buttons and Reset provide keyboard navigation.</p>
-    <div class="table-scroll"><table><thead><tr><th scope="col">Transcript (lab alias)</th><th scope="col">Versioned accession</th><th scope="col">Source</th><th scope="col">Reference release</th><th scope="col">Length (nt)</th><th scope="col">Exons</th><th scope="col">CDS</th></tr></thead><tbody id="transcript-summary"></tbody></table></div>
-  </dialog>
-  <dialog id="release-history" aria-labelledby="history-title"><button id="history-close" autofocus>Close</button><h2 id="history-title">Scientific release history</h2>
-    <p>Application 2.0.0 introduced the complete GENCODE v50 MYCN set plus reviewed RefSeq. MYCN-202 has a changed first exon and 3′ end; MYCN-204 and MYCN-205 have extended 3′ ends. Structures, sequences, CDS checks, ORFs and protein properties were regenerated together.</p>
-    <p>Historical: July 2026 public viewer used GENCODE v49 for MYCN-201–206, v50 for MYCN-207, and RefSeq for MYCN-XM. Its ORF numbering and inherited experimental interpretations are not current annotations.</p>
-    <p><a href="data/current/release-diff.json">Detailed scientific changes</a> · <a href="data/releases/legacy-2026-07/reference.json">Historical structural snapshot</a> · <a href="https://github.com/mariano-aguilar-vela/mycn-isoform-viewer/tree/8e44fe57b2097e02c273fad86e1d996c0a22df7b">Reproducible historical application</a></p>
-    <p>Study-specific abundance estimates are not included or recalculated by this viewer. Future updates follow detect, diff, review, test, deploy; the checker never publishes automatically.</p>
-  </dialog>
   <script src="vendor/d3.v7.9.0.min.js"></script>
-  <script src="lab-aliases.js"></script>
-  <script src="app.js?v=2.0.0"></script>
+  <script src="app.js?temporary=20261028"></script>
 </body>
 </html>

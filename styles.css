@@ -403,26 +403,3 @@ button.memb:hover{color:#222a2e}
 .trow .tname,.trow .tacc,.trow .tmeta{grid-column:2; overflow:visible !important;
   white-space:normal !important; text-overflow:clip !important; word-break:normal; overflow-wrap:anywhere}
 .trow .tmeta{font-size:10px; line-height:1.4; color:#5f6a66}
-
-/* Audit corrections: visible focus, readable aliases and an accessible data alternative. */
-#tb-head{display:inline;font-size:inherit;margin:0}
-:focus-visible{outline:3px solid #2b2bb5 !important;outline-offset:2px}
-.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
-.trow .tname{white-space:normal;overflow-wrap:anywhere}
-#about-data{max-width:min(1100px,94vw);max-height:88vh;overflow:auto;border:1px solid #5f6a66;border-radius:8px;color:#222a2e;background:white}
-#about-data::backdrop{background:rgb(0 0 0 / .45)}
-#about-data p{max-width:85ch;line-height:1.5}
-#about-close{min-height:32px;padding:4px 14px;float:right}
-.table-scroll{overflow:auto} #about-data table{border-collapse:collapse} #about-data th,#about-data td{border:1px solid #a0a8aa;text-align:left;padding:8px;vertical-align:top;overflow-wrap:anywhere}
-.legend-title{cursor:pointer}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto !important;animation:none !important;transition:none !important}}
-@media(forced-colors:active){button,input{border:1px solid ButtonText}.gutter-hit:focus{stroke:Highlight;stroke-width:3px}}
-
-[hidden]{display:none !important}
-
-@media(max-width:1280px){#topbar{height:auto;min-height:52px;flex-wrap:wrap;gap:8px;padding:7px 12px}.tb-controls{gap:7px;flex-wrap:wrap}}
-
-.reference-banner{flex:0 0 auto;margin:0;padding:4px 14px;font-size:12px;background:#eef2f7;color:#33485c;overflow-wrap:anywhere}
-#release-history{max-width:min(850px,94vw);max-height:88vh;overflow:auto;color:#222a2e;background:white;border:1px solid #5f6a66;border-radius:8px}
-#release-history p{line-height:1.5;max-width:80ch} #history-close{float:right;min-height:32px} .rail-body svg{width:100%;height:auto}
-@media(max-width:1500px){#topbar{height:auto;min-height:52px;flex-wrap:wrap;gap:8px;padding:7px 12px}.tb-controls{gap:7px;flex-wrap:wrap}}
