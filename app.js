@@ -93,7 +93,7 @@
   // NOT WRAP: it just keeps going.
   // TXH and ORFH are DERIVED FROM CONTENT at each rebuild (see txRowH / orfRowH). The literals are
   // only the pre-measure defaults.
-  var TXH = 64, ORFH = 23, GRPH = 20, SHH = 27, EXPAD = 8;
+  var TXH = 64, ORFH = 23, GRPH = 20, SHH = 44, EXPAD = 8;
   // REGH: a collapsed-region row is TWO lines (label+badge / n starts · n stops · n frames).
   // It carries more text than a single-ORF row and must not be given a single-ORF row's box.
   var REGH = 52;   // 4 text lines' worth: name / badge / structure (which may need 2 lines)
@@ -107,6 +107,7 @@
   var STAIN = { gneg:"#ffffff", gpos25:"#c9cdd1", gpos50:"#9aa1a7", gpos75:"#6f767c",
                 gpos100:"#4a5157", gvar:"#c2c9cf", stalk:"#9aa7b0", acen:"#b06a80" };
 
+  var LAB = window.MYCNLab;
   var META = null, LOCSEQ = null, CYTO = null;
   var x0 = null, x = null, zt = null, zoom = null, rulerBrush = null, dragPrevY = null;
   var svg = null, hdr = null, ideo = null, gMain = null;
@@ -136,10 +137,45 @@
       fetch("chr2_cytoband.json").then(function(r){ if(!r.ok) throw new Error("cytoband HTTP "+r.status); return r.json(); })
     ]).then(function(res){
       META = res[0]; LOCSEQ = res[1]; CYTO = res[2];
+      validateMetadata();
       if (!verifyBaseMap()) throw new Error("base-map ATG spot-check FAILED at chr2:15,942,065");
-      init(); toast(null);
+      init(); buildDataSummary(); toast(null);
     }).catch(function(e){ console.error(e); toast("Failed to load MYCN data: "+e.message, true); });
   });
+
+
+  function validateMetadata(){
+    if(!LAB || !META || !META.transcripts || !META.orfs) throw new Error("Missing transcript metadata or laboratory aliases");
+    var ids={};
+    TX_ORDER.forEach(function(t){
+      var tx=META.transcripts[t];
+      if(!tx || !tx.transcript_id || tx.id!==tx.transcript_id || ids[tx.id] || !tx.source || !tx.gencode_release || !LAB.alias(t) || !Array.isArray(tx.exons) || !tx.exons.length || !Array.isArray(tx.cds)) throw new Error("Invalid transcript record: "+t);
+      ids[tx.id]=true;
+      var len=0,last=0;
+      tx.exons.forEach(function(e){ if(e.length!==2 || !Number.isInteger(e[0]) || !Number.isInteger(e[1]) || e[0]>e[1] || e[0]<=last) throw new Error("Invalid exon: "+t); last=e[1]; len+=e[1]-e[0]+1; });
+      if(len!==tx.mlen) throw new Error("Transcript length mismatch: "+t);
+    });
+    Object.keys(META.orfs).forEach(function(id){var o=META.orfs[id];if(!o.carriers || !o.carriers.length || o.carriers.some(function(t){return TX_ORDER.indexOf(t)<0;}) || !o.blocks || !o.blocks.length || typeof o.aa!=="string" || o.aa.length!==o.aa_len) throw new Error("Invalid ORF: "+id);});
+  }
+  function buildDataSummary(){
+    var body=$("transcript-summary");
+    TX_ORDER.forEach(function(t){
+      var tx=META.transcripts[t],row=document.createElement("tr");
+      [LAB.label(t),txAcc(t),txSrc(t),txRel(t),String(tx.mlen),tx.exons.map(function(e){return e.join("–");}).join("; "),tx.cds.length?tx.cds.map(function(e){return e.join("–");}).join("; "):"No annotated CDS"].forEach(function(v){var cell=document.createElement("td");cell.textContent=v;row.appendChild(cell);});
+      body.appendChild(row);
+    });
+    $("about-open").addEventListener("click",function(){$("about-data").showModal();});
+    $("about-close").addEventListener("click",function(){$("about-data").close();});
+    $("legend-toggle").addEventListener("keydown",function(e){if(e.key===" "||e.key==="Enter"){e.preventDefault();e.currentTarget.click();}});
+    document.addEventListener("keydown",function(e){if(e.key==="Escape"){hideTip();if(!$("about-data").open){pickOrf(null);$("about-open").focus();}}});
+  }
+  function wireDiagramKeyboard(){
+    document.querySelectorAll("#stack .gutter-hit").forEach(function(n){
+      var t=n.parentNode.getAttribute("data-tx");
+      n.setAttribute("tabindex","0");n.setAttribute("role","button");n.setAttribute("aria-label",LAB.accessible(t)+", "+txAcc(t)+", "+txSrc(t)+", reference "+txRel(t));n.setAttribute("aria-expanded",String(state[t].open));
+      n.onkeydown=function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();pickTx(t);var next=document.querySelector('#stack .tx-row[data-tx="'+t+'"] .gutter-hit');if(next)next.focus();}};
+    });
+  }
 
   // base-map integrity: canonical ATG at genomic 15,942,065 must read ATG (index = pos - DMIN)
   function verifyBaseMap(){
@@ -174,7 +210,8 @@
     var lg=document.querySelector(".legend"), tt=document.querySelector(".legend-title");
     if (!lg || !tt) return;
     if (isPhone()) lg.classList.add("collapsed");
-    tt.addEventListener("click", function(){ lg.classList.toggle("collapsed"); });
+    tt.setAttribute("aria-expanded",String(!lg.classList.contains("collapsed")));
+    tt.addEventListener("click", function(){ lg.classList.toggle("collapsed");tt.setAttribute("aria-expanded",String(!lg.classList.contains("collapsed"))); });
   }
 
   // ---- derivations from meta ----
@@ -278,7 +315,7 @@
   function buildHeader(){
     var nT = TX_ORDER.length, nO = Object.keys(META.orfs).length;
     $("tb-head").textContent = "MYCN locus";
-    $("tb-sub").textContent = "— " + nT + " isoforms, " + nO + " encoded ORFs";
+    $("tb-sub").textContent = "— " + nT + " transcripts · " + nO + " ORFs";
   }
   function buildLegendData(){
     LEGEND = [
@@ -341,10 +378,23 @@
   // On phone the drawers are full-screen sheets, so only ONE may be open at a time (opening one closes
   // the other). The guards can't recurse: setLeft only calls openRight when opening, and vice versa.
   function setLeft(open){ if(open && isPhone() && selectedOrf!=null) pickOrf(null);   // phone: opening Features deselects (keeps panel-visibility === selection, no desync)
-    $("features").hidden=!open; $("features-strip").hidden=open; }
+    if(open && isPhone() && rightOpen) openRight(false);
+    $("features").hidden=!open; $("features-strip").hidden=open; syncDrawerAccessibility(); }
   // RIGHT (Details): ONE explicit source of truth. Always writes both DOM states to match `open`
   // (never a blind toggle), so every selection path lands in the same, correct state.
-  function openRight(open){ rightOpen=!!open; if(rightOpen && isPhone()) setLeft(false); $("details").hidden=!rightOpen; $("details-strip").hidden=rightOpen; }
+  function openRight(open){ rightOpen=!!open; if(rightOpen && isPhone()) setLeft(false); $("details").hidden=!rightOpen; $("details-strip").hidden=rightOpen; syncDrawerAccessibility(); }
+
+  function syncDrawerAccessibility(){
+    var phone=isPhone(), left=!$("features").hidden, right=!$("details").hidden, overlay=phone&&(left||right);
+    ["topbar","viewer","features-strip","details-strip"].forEach(function(id){$(id).inert=overlay;});
+    [["features",left,"Transcript and ORF features"],["details",right,"Feature details"]].forEach(function(v){
+      var el=$(v[0]);el.setAttribute("role",phone&&v[1]?"dialog":"complementary");el.setAttribute("aria-label",v[2]);
+      if(phone&&v[1])el.setAttribute("aria-modal","true");else el.removeAttribute("aria-modal");
+    });
+    var active=document.activeElement;
+    if(overlay && !$(left?"features":"details").contains(active)) $(left?"feature-search":"details-close").focus();
+    else if(!overlay && active && active.closest && active.closest("aside[hidden]")) $(phone?"features-strip":"about-open").focus();
+  }
 
   // ================= zoom / navigation =================
   function plotL(){ return GUTTER; }
@@ -460,7 +510,9 @@
   }
   function zoomButton(factor){
     var c = (plotL()+plotR())/2;
-    svg.transition().duration(180).call(zoom.scaleBy, factor, [c,0]);
+    svg.interrupt();
+    if(window.matchMedia("(prefers-reduced-motion: reduce)").matches) svg.call(zoom.scaleBy,factor,[c,0]);
+    else svg.transition().duration(180).call(zoom.scaleBy, factor, [c,0]);
   }
   // navigate so [g0,g1] fills the plot (feature-padded)
   function flyTo(g0, g1, animate){
@@ -477,7 +529,8 @@
     var k = clamp((plotR()-plotL())/(x0(b)-x0(a)), 1, zoom.scaleExtent()[1]);
     var tx = plotL() - k*x0(a);
     var t = d3.zoomIdentity.translate(tx,0).scale(k);
-    if (animate && !NOANIM) svg.transition().duration(360).call(zoom.transform, t);
+    svg.interrupt();
+    if (animate && !NOANIM && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) svg.transition().duration(360).call(zoom.transform, t);
     else svg.call(zoom.transform, t);
   }
   var NOANIM = false;   // set true only by headless tests so transitions apply synchronously
@@ -525,7 +578,7 @@
       rows.push({kind:"tx", t:t, y:y}); y+=TXH;
       if (state[t].open){
         var g=specGroups(t);
-        y=pushGroup(rows,"Unique to MYCN-"+t,g.uniq,true,t,y);
+        y=pushGroup(rows,"Unique to "+LAB.label(t),g.uniq,true,t,y);
         if (g.shared.length){
           rows.push({kind:"shared",t:t,y:y,n:g.shared.length}); y+=SHH;
           if (state[t].sharedOpen) eventsOf(g.shared).forEach(function(e){
@@ -563,7 +616,7 @@
     drawIdeogramBar();
     draw();
   }
-  function onResize(){ var v=viewG.slice(); rebuild(); applyRange(v[0],v[1],false); }
+  function onResize(){ syncDrawerAccessibility(); var v=viewG.slice(); rebuild(); applyRange(v[0],v[1],false); }
   // debounced resize: recompute GUTTER + W, relayout, and redraw at the new width, keeping the current view
   var resizeTimer=null;
   function onResizeDebounced(){ if(resizeTimer) clearTimeout(resizeTimer); resizeTimer=setTimeout(onResize,120); }
@@ -575,6 +628,7 @@
     renderStack();
     updateIdeoMarker();
     updateNow();
+    wireDiagramKeyboard();
     $("locus-input").value = "chr2:"+fmt(viewG[0])+"-"+fmt(viewG[1]);
   }
 
@@ -889,7 +943,7 @@
     // ---- labels (unclipped, gutter lane) ----
     g.append("rect").attr("class","gutter-hit").attr("x",0).attr("y",r.y).attr("width",GUTTER-8).attr("height",TXH)
       .attr("fill","transparent").on("click",function(){ pickTx(t); })
-      .on("mouseenter",function(ev){ tip(ev,"<b>MYCN-"+t+"</b><br><span class='mono'>"+esc(txAcc(t))+"</span><br><span class='dim'>"+
+      .on("mouseenter",function(ev){ tip(ev,"<b>"+esc(LAB.label(t))+"</b><br>Laboratory alias: "+esc(LAB.alias(t))+"<br>Reference: "+esc(txRel(t))+"<br><span class='mono'>"+esc(txAcc(t))+"</span><br><span class='dim'>"+
           esc(txSrc(t))+"<br>"+orfIdsOfTx(t).length+" records · "+eventCountOfTx(t)+" events (records are NOT events)<br>click to "+(state[t].open?"collapse":"expand")+"</span>"); })
       .on("mousemove",moveTip).on("mouseleave",hideTip);
     // on a narrow (phone) gutter, shorten "MYCN-201" -> "201" and drop "coding ·" from the meta line;
@@ -900,7 +954,7 @@
     txLines(t).forEach(function(L){
       var tn=g.append("text").attr("class",L.cls).attr("x",14).attr("y",yy).attr("font-size",L.fs)
         .attr("fill", L.cls==="tx-label" ? (selectedTx===t?PAL.nmyc:"#222a2e")
-                    : L.cls==="tx-acc"   ? (txOffV49(t)?"#a5322c":"#8a9791")
+                    : L.cls==="tx-acc"   ? (txOffV49(t)?"#a5322c":"#5f6a66")
                     : L.cls==="tx-class" ? (coding==="non-coding"?"#a5322c":"#5f6a66")
                     : "#5f6a66");
       if(L.fw)   tn.attr("font-weight",L.fw);
@@ -927,7 +981,9 @@
       exonSegments(t,exon).forEach(function(s){
         var h=s.type==="cds"?THICK:(s.type==="ri"?RIH:THIN), xa=x(s.a), xb=x(s.b+1), w=Math.max(1.2,xb-xa);
         gc.append("rect").attr("class","exon").attr("x",xa).attr("y",mid-h/2).attr("width",w).attr("height",h).attr("rx",1.5)
-          .attr("fill",segFill(t,s.type))
+          .attr("fill",segFill(t,s.type)).attr("role","button").attr("tabindex",0)
+          .attr("aria-label",LAB.accessible(t)+", exon "+(ei+1)+", chr2:"+exon[0]+"–"+exon[1]+", "+s.type)
+          .on("keydown",function(ev){if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();showExon(t,exon,ei);$("details-close").focus();}})
           .on("click",function(ev){ ev.stopPropagation(); showExon(t,exon,ei); })
           .on("mouseenter",function(ev){ tip(ev,exonTip(t,exon,ei,s)); }).on("mousemove",moveTip).on("mouseleave",hideTip);
       });
@@ -945,9 +1001,12 @@
     var t=r.t, g=gMain.append("g");
     g.append("rect").attr("class","shared-toggle-hit").attr("x",20).attr("y",r.y+3).attr("width",GUTTER-40).attr("height",SHH-8)
       .attr("rx",5).attr("fill","#f2f4f6").attr("stroke","#d5dbe2").attr("stroke-dasharray","3 3")
+      .attr("role","button").attr("tabindex",0).attr("aria-label",LAB.accessible(t)+", toggle shared ORFs").attr("aria-expanded",String(state[t].sharedOpen))
+      .on("keydown",function(ev){if(ev.key==="Enter"||ev.key===" "){ev.preventDefault();state[t].sharedOpen=!state[t].sharedOpen;rebuild();var n=document.querySelector('.gutter-hit[aria-expanded="true"]');if(n)n.focus();}})
       .on("click",function(){ state[t].sharedOpen=!state[t].sharedOpen; rebuild(); });
-    g.append("text").attr("class","shared-toggle-lbl").attr("x",30).attr("y",r.y+SHH/2+2).attr("font-size",11)
-      .attr("font-weight",600).attr("fill",PAL.nmyc).text((state[t].sharedOpen?"▾ hide ":"▸ show ")+r.n+" shared ORFs");
+    g.append("text").attr("class","shared-toggle-lbl").attr("x",25).attr("y",r.y+15).attr("font-size",10)
+      .attr("font-weight",600).attr("fill",PAL.nmyc).text("Shared ORFs")
+      .append("tspan").attr("x",25).attr("dy",14).text((state[t].sharedOpen?"▾ Hide ":"▸ Show ")+r.n);
   }
   // ================= D1 — THE COLLAPSE RULE =================
   // ONE BAR PER START THE EVIDENCE CAN DISTINGUISH. The rest of a REGION collapses into ONE bar with
@@ -1267,8 +1326,9 @@
     var avail = GUTTER - 22 - 14;                 // lane minus padding
     var coding=txCoding(t), nOrf=orfIdsOfTx(t).length, nEv=eventCountOfTx(t);
     var out=[];
-    out.push({txt:"MYCN-"+t, fs:13, fw:600, cls:"tx-label"});
-    packTokens([coding], avail, 10.5).forEach(function(l){ out.push({txt:l, fs:10.5, cls:"tx-class"}); });
+    out.push({txt:LAB.canonical(t), fs:13, fw:600, cls:"tx-label"});
+    out.push({txt:"Lab alias: "+LAB.alias(t), fs:11, cls:"tx-alias"});
+    packTokens([coding==="non-coding"?"no annotated CDS":"annotated CDS"], avail, 10.5).forEach(function(l){ out.push({txt:l, fs:10.5, cls:"tx-class"}); });
     packTokens((txAcc(t)+txTagShort(t)).split(" · "), avail, 9.5, null, MONO).forEach(function(l){
       out.push({txt:l, fs:9.5, cls:"tx-acc", mono:true}); });
     packTokens([nOrf+" records", nEv+" events"], avail, 10.5).forEach(function(l){
@@ -1360,7 +1420,7 @@
     // zoom/pan/locus — the 8 isoforms share ONE genomic axis so they can be compared, and the ORFs
     // render at their real coordinates within the current view. Navigation is deliberate: the locus
     // box / +- / scroll-pinch / ruler-brush / Reset. Name updates; coord stays = view.
-    setNow(state[t].open ? ("MYCN-"+t) : "MYCN locus", null);
+    setNow(state[t].open ? LAB.label(t) : "MYCN locus", null);
     renderFeatureList();
   }
 
@@ -1429,7 +1489,7 @@
       railHasContent=false;
       $("rail-body").innerHTML = renderLanding(); wireCard();
       openRight(false);
-      setNow(selectedTx?("MYCN-"+selectedTx):"MYCN locus", selectedTx?txSpan(selectedTx):null);
+      setNow(selectedTx?LAB.label(selectedTx):"MYCN locus", selectedTx?txSpan(selectedTx):null);
     } else {
       var o=META.orfs[id], sp=o.span;
       $("rail-body").innerHTML = renderCard(id,o); wireCard();
@@ -1453,15 +1513,16 @@
     cds.forEach(function(c,ci){ if(!(c[1]<exon[0]||c[0]>exon[1])){ isCds=true; if(phase===null) phase=CDS_PHASE[t][ci]; } });
     var len=exon[1]-exon[0]+1, riHit=(RETAINED[t]||[]).some(function(iv){ return !(iv[1]<exon[0]||iv[0]>exon[1]); });
     var h='<div class="exon-detail"><h2>Exon detail</h2>';
-    h+='<p class="exon-title">MYCN-'+esc(t)+' · exon '+(ei+1)+'</p><table class="props">';
+    h+='<p class="exon-title">'+esc(LAB.label(t))+' · exon '+(ei+1)+'</p><table class="props">';
     h+='<tr><td class="k">Coordinates</td><td class="v">chr2:'+fmt(exon[0])+'–'+fmt(exon[1])+'</td></tr>';
     h+='<tr><td class="k">Length</td><td class="v">'+fmt(len)+' bp</td></tr>';
-    h+='<tr><td class="k">Content</td><td class="v">'+(isCds?"coding (CDS)":"non-coding (UTR)")+'</td></tr>';
+    h+='<tr><td class="k">Content</td><td class="v">'+(isCds?"contains coding sequence (may include UTR)":(txCoding(t)==="non-coding"?"non-coding exon":"untranslated exon"))+'</td></tr>';
     if (isCds) h+='<tr><td class="k">CDS phase (+ strand)</td><td class="v">'+phase+'</td></tr>';
     if (riHit) h+='<tr><td class="k">Retained intron</td><td class="v">yes ('+esc(t)+')</td></tr>';
     h+='<tr><td class="k">Strand</td><td class="v">'+esc(META.transcripts[t].strand)+'</td></tr>';
     // B-ADD: the identifier IN FULL. source + gencode_release are RENDERED, not merely stored.
     var _x=META.transcripts[t]||{};
+    h+=propRow('Laboratory alias',LAB.alias(t));
     h+='<tr><td class="k">Transcript ID</td><td class="v mono">'+esc(txAcc(t))+'</td></tr>';
     h+='<tr><td class="k">Source</td><td class="v">'+esc(txSrc(t))+'</td></tr>';
     h+='<tr><td class="k">GENCODE release</td><td class="v">'+esc(txRel(t))+'</td></tr>';
@@ -1502,7 +1563,7 @@
     if(_x.id_note) h+='<p class="txnote warn">'+esc(_x.id_note)+'</p>';
     h+='<p class="rail-empty">Click an ORF (expand the transcript) to see its protein detail.</p></div>';
     $("rail-body").innerHTML=h; railHasContent=true; openRight(true);
-    setNow("MYCN-"+t+" exon "+(ei+1), exon);
+    setNow(LAB.label(t)+" exon "+(ei+1), exon);
     // FIX 2: opening Details is a WIDTH change on desktop/tablet — re-render at the new width NOW (mirror
     // pickOrf's tail) instead of waiting for the next resize, preserving the genomic window (no pan/zoom).
     var target = viewG.slice(); rebuild(); applyRange(target[0], target[1], false);
@@ -1517,8 +1578,8 @@
     if (ty+th+8>vh) ty=Math.max(8, ev.clientY-th-14);
     el.style.left=lx+"px"; el.style.top=ty+"px"; }
   function hideTip(){ $("tip").hidden=true; }
-  function exonTip(t,exon,ei,s){ var kind=s.type==="cds"?"CDS":(s.type==="ri"?"retained intron":"UTR");
-    return "<b>MYCN-"+t+" exon "+(ei+1)+"</b> · "+kind+"<br><span class='dim'>chr2:"+fmt(exon[0])+"-"+fmt(exon[1])+" · "+fmt(exon[1]-exon[0]+1)+" bp</span>"; }
+  function exonTip(t,exon,ei,s){ var kind=s.type==="cds"?"CDS":(s.type==="ri"?"retained intron":(txCoding(t)==="non-coding"?"no annotated CDS":"UTR"));
+    return "<b>"+esc(LAB.label(t))+" exon "+(ei+1)+"</b> · "+kind+"<br>Laboratory alias: "+esc(LAB.alias(t))+"<br>"+esc(txAcc(t))+"<br>"+esc(txSrc(t))+"<br>Reference: "+esc(txRel(t))+"<br><span class='dim'>chr2:"+fmt(exon[0])+"-"+fmt(exon[1])+" · "+fmt(exon[1]-exon[0]+1)+" bp</span>"; }
   function orfTip(id){ var o=META.orfs[id], nm=NAME[id]?(" · "+NAME[id]):"";
     return "<b>ORF"+id+nm+"</b> · "+esc(o.cls)+"<br><span class='dim'>"+o.aa_len+" aa · "+carrierCount(id)+" carrier"+(carrierCount(id)===1?"":"s")+" · click for detail</span>"; }
 
@@ -1528,22 +1589,23 @@
     lens=l;
     $("lens-tx").classList.toggle("active",l==="tx"); $("lens-orf").classList.toggle("active",l==="orf");
     $("cue").firstChild && ($("cue").childNodes[0].nodeValue = l==="tx"
-      ? "Click a transcript to see the proteins it encodes." : "Click an ORF to view it on the stack.");
+      ? "Select a transcript to explore its annotated and predicted ORFs." : "Click an ORF to view it on the stack.");
     renderFeatureList();
     var sq=$("feature-search").value; if (sq) filterList(sq);
   }
-  function renderFeatureList(){ if (lens==="orf") renderOrfList(); else renderTxList(); markFeatureActive(); }
+  function renderFeatureList(){ var active=document.activeElement, key=active && active.getAttribute("data-tx"); if (lens==="orf") renderOrfList(); else renderTxList(); markFeatureActive(); if(key){ var next=document.querySelector('.trow[data-tx="'+key+'"]'); if(next) next.focus(); }
+    if($("feature-search").value) filterList($("feature-search").value); }
 
   function renderTxList(){
     novelOpen=false;
     var host=$("feature-list"), h='<div class="fgroup">';
     TX_ORDER.forEach(function(t){
       var n=orfIdsOfTx(t).length, coding=txCoding(t), nEv=eventCountOfTx(t);
-      h+='<button class="trow" data-tx="'+t+'" title="MYCN-'+t+'">'+
+      h+='<button class="trow" data-tx="'+t+'" title="'+esc(LAB.label(t))+'" aria-label="'+esc(LAB.accessible(t)+", "+txAcc(t))+'" aria-expanded="'+state[t].open+'">'+
          '<span class="tchev">'+(state[t].open?"▾":"▸")+'</span>'+
-         '<span class="tname">MYCN-'+esc(t)+'</span>'+
+         '<span class="tname">'+esc(LAB.label(t))+'</span>'+
          '<span class="tacc'+(txOffV49(t)?' toff':'')+'">'+esc(txAcc(t))+esc(txTag(t))+'</span>'+
-         '<span class="tmeta">'+n+' records · '+nEv+' events · <span class="'+(coding==="non-coding"?"tnc":"")+'">'+coding+'</span></span></button>';
+         '<span class="tmeta">'+n+' records · '+nEv+' events · <span class="'+(coding==="non-coding"?"tnc":"")+'">'+(coding==="non-coding"?"no annotated CDS":"annotated CDS")+'</span></span></button>';
     });
     h+='</div>'; host.innerHTML=h;
     Array.prototype.forEach.call(host.querySelectorAll(".trow"),function(btn){
@@ -1587,14 +1649,16 @@
                // T2.2: include the DISPLAYED conservation wording so search matches the UI
                (String(o.conserved).toUpperCase()==="YES"?"conserved conservation-supported":"not conserved not conservation-supported")+" conservation",
                o.acc||""].join(" ").toLowerCase();
-      var hit=!q||hay.indexOf(q)>=0; btn.style.display=hit?"":"none";
+      var hit=/^(?:tv\d+\+?|nc)$/.test(q) ? (o.carriers||[]).some(function(t){return LAB.matches(t,txAcc(t),q);}) : (!q||hay.indexOf(q)>=0); btn.hidden=!hit;
       if (hit&&q&&btn.closest(".novel-body")) anyNovel=true;
     });
     Array.prototype.forEach.call(host.querySelectorAll(".trow"),function(btn){
-      var t=btn.getAttribute("data-tx"), hay=("MYCN-"+t+" "+txCoding(t)).toLowerCase();
-      btn.style.display=(!q||hay.indexOf(q)>=0)?"":"none";
+      var t=btn.getAttribute("data-tx");
+      btn.hidden=!LAB.matches(t,txAcc(t),q,txCoding(t));
     });
     if (q&&anyNovel&&!novelOpen) setNovel(true);
+    var visible=Array.prototype.filter.call(host.querySelectorAll(".trow,.frow"),function(b){return !b.hidden;}).length;
+    $("search-status").textContent=visible ? visible+" matching features" : "No matching features";
   }
   function markFeatureActive(){
     Array.prototype.forEach.call(document.querySelectorAll(".frow.active,.trow.active"),function(b){ b.classList.remove("active"); });
@@ -1647,7 +1711,7 @@
       b.push('<span class="badge evid-warn">start NOT established'+(n>1?" · "+n+" ORFs share this stop":"")+'</span>');
     }
     // T2.1: aa counts derived from o.aa_len (not hardcoded 593/575)
-    if (id==="3")  b.push('<span class="badge canon">canonical '+o.aa_len+' aa · two-executor confirmed</span>');
+    if (id==="3")  b.push('<span class="badge canon">predicted extension · '+o.aa_len+' aa</span>');
     if (id==="4")  b.push('<span class="badge cand">second candidate ('+o.aa_len+' aa)</span>');
     if (o.cls==="N-Myc-frame-ext"&&id!=="3"&&id!=="4") b.push('<span class="badge canon">predicted N-term extension</span>');
     // T2.1: the 206 intron-retention set = ORFs unique to 206 (derived from carriers, not hardcoded)
@@ -1655,7 +1719,7 @@
     return b.join("");
   }
   function propRow(k,v){ return (v===null||v===undefined||v==="")?"":'<tr><td class="k">'+esc(k)+'</td><td class="v">'+esc(v)+"</td></tr>"; }
-  // A value that is UNDEFINED, not zero and not missing. propRow() drops empties and would
+  // A value withheld by the retained reporting policy, not zero. propRow() drops empties and would
   // silently delete the row; a 0 would read as a measurement. Neither is honest, so an
   // undefined quantity renders as a blank WITH ITS REASON.
   function propRowNA(k,reason){ return '<tr><td class="k">'+esc(k)+'</td><td class="v na">'+esc(reason)+"</td></tr>"; }
@@ -1715,7 +1779,7 @@
   }
   function renderCard(id,o){
     var swatch='<span class="orf-swatch" style="background:'+esc(o.color)+'"></span>';
-    var span=o.span?("chr2:"+o.span[0].toLocaleString()+"–"+o.span[1].toLocaleString()):"", carr=(o.carriers||[]).join(", ");
+    var span=o.span?("chr2:"+o.span[0].toLocaleString()+"–"+o.span[1].toLocaleString()):"", carr=(o.carriers||[]).map(LAB.label).join(", ");
     var cons=String(o.conserved).toUpperCase()==="YES";
     var h='<h2>ORF detail</h2>';
     h+='<p class="orf-id">'+swatch+"ORF "+esc(id)+(NAME[id]?' <span class="orf-alias">'+esc(NAME[id])+'</span>':"")+"</p>";
@@ -1735,6 +1799,7 @@
     // otherwise someone "corrects" it back in six weeks and silently breaks the trace to the table.
     if (o.ms && o.ms.acc_alias_note) h+='<p class="acc-note">'+esc(o.ms.acc_alias_note)+'</p>';
     h+="<table class=\"props\">";
+    if(o.start_codon && o.start_codon!=="ATG") h+='<p class="scope-note">The stored amino-acid sequence is a standard-code translation of the predicted ORF. Translation initiation and the initiating residue have not been established by this viewer.</p>';
     h+=propRow("Length",(o.aa_len!=null?o.aa_len+" aa":""));
     h+=propRow("Genomic span",span); h+=propRow("Carrier transcripts",carr);
     h+=propRow("Kozak (−3/+4)",o.kozak); h+=propRow("PhyloCSF",o.phylocsf); h+=propRow("phyloP (100-way)",o.phylop);
@@ -1742,7 +1807,7 @@
     h+=propRow("MW (Da)",o.mw); h+=propRow("pI",o.pI);
     h+=propRow("GRAVY",o.gravy); h+=propRow("Net charge (pH 7)",o.netq);
     // GRAVY is uncalibrated, not undefined — it is kept for every ORF. The instability
-    // index genuinely IS undefined below 30 aa, so it renders as a reasoned blank.
+    // index is withheld below 30 aa by the retained reporting policy.
     h+=(o.instab!==null&&o.instab!==undefined)
         ? propRow("Instability index",o.instab)
         : propRowNA("Instability index", o.instab_note||"not computed");
@@ -1771,6 +1836,8 @@
     var out=document.createElementNS(SVGNS,"svg");   // namespace implicit via createElementNS (don't re-add xmlns -> would duplicate)
     out.setAttribute("width",W); out.setAttribute("height",totalH); out.setAttribute("viewBox","0 0 "+W+" "+totalH);
     var style=document.createElementNS(SVGNS,"style"); style.textContent="text{font-family:"+FONT+"}"; out.appendChild(style);
+    var metadata=document.createElementNS(SVGNS,"metadata");
+    metadata.textContent=JSON.stringify(TX_ORDER.map(function(t){return {canonical_name:LAB.canonical(t),lab_alias:LAB.alias(t),accession:txAcc(t),source:txSrc(t),reference_release:txRel(t)};})); out.appendChild(metadata);
     var bg=document.createElementNS(SVGNS,"rect");
     bg.setAttribute("x",0); bg.setAttribute("y",0); bg.setAttribute("width",W); bg.setAttribute("height",totalH); bg.setAttribute("fill","#ffffff");
     out.appendChild(bg);

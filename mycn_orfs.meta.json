@@ -1867,7 +1867,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (26 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (26 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -1953,7 +1953,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (25 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (25 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -2039,7 +2039,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (24 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (24 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -2125,7 +2125,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (23 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (23 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -2211,7 +2211,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (20 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (20 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -2307,7 +2307,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (17 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (17 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -2393,7 +2393,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (7 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -3398,7 +3398,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (28 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (28 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -3519,7 +3519,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (26 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (26 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": "Region 6",
    "region_members": [
@@ -3643,7 +3643,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (19 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (19 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": "Region 2",
    "region_members": [
@@ -3768,7 +3768,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (18 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (18 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": "Region 2",
    "region_members": [
@@ -3893,7 +3893,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (18 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (18 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -4014,7 +4014,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (15 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (15 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -4135,7 +4135,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (13 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (13 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -4251,7 +4251,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (12 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (12 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -4372,7 +4372,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (9 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": "Region 5",
    "region_members": [
@@ -4490,7 +4490,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (9 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -4606,7 +4606,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (9 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (9 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -4727,7 +4727,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (8 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -4843,7 +4843,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (8 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -4959,7 +4959,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (8 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (8 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -5080,7 +5080,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (7 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -5196,7 +5196,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (7 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (7 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -5312,7 +5312,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (6 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (6 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -5428,7 +5428,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (4 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (4 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -5544,7 +5544,7 @@
      "state": "NOT-ASSESSED"
     }
    },
-   "instab_note": "not computed (4 aa — the dipeptide-weighted index is undefined below 30 aa)",
+   "instab_note": "not reported (4 aa — withheld below 30 aa by the retained reporting policy; this is not a mathematical limit)",
    "start_codon": "ATG",
    "region_id": null,
    "region_members": [],
@@ -5599,7 +5599,7 @@
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
    "aa": "LWRSGVPPPTPRLSPHSPSLCVPRTQPWVPGGLSPAS",
-   "nt": "CTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGC",
+   "nt": "CTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGA",
    "blocks": [
     [
      15945544,
@@ -5728,7 +5728,7 @@
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
    "aa": "LSPHSPSLCVPRTQPWVPGGLSPAS",
-   "nt": "CTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGC",
+   "nt": "CTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGA",
    "blocks": [
     [
      15945580,
@@ -5858,7 +5858,7 @@
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
    "aa": "LCVPRTQPWVPGGLSPAS",
-   "nt": "CTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGC",
+   "nt": "CTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGA",
    "blocks": [
     [
      15945601,
@@ -5988,7 +5988,7 @@
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14); start codon GTG",
    "aa": "VRMHPHRRR",
-   "nt": "GTGAGGATGCACCCCCACAGAAGAAGA",
+   "nt": "GTGAGGATGCACCCCCACAGAAGAAGATAA",
    "blocks": [
     [
      15945724,
@@ -6113,7 +6113,7 @@
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14); start codon GTG",
    "aa": "VSSPQRLRA",
-   "nt": "GTGTCATCCCCCCAAAGGCTAAGAGCT",
+   "nt": "GTGTCATCCCCCCAAAGGCTAAGAGCTTGA",
    "blocks": [
     [
      15945784,
@@ -6236,7 +6236,7 @@
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
    "aa": "LTRRTVSVAETTTSWSASAATTFGPAFSRSGTTCRSW",
-   "nt": "CTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGG",
+   "nt": "CTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAA",
    "blocks": [
     [
      15945826,
@@ -6359,7 +6359,7 @@
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14); start codon GTG",
    "aa": "VSVAETTTSWSASAATTFGPAFSRSGTTCRSW",
-   "nt": "GTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGG",
+   "nt": "GTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAA",
    "blocks": [
     [
      15945841,
@@ -6482,7 +6482,7 @@
    "acc": "none - predicted",
    "source": "GENCODE v49 (GRCh38.p14); start codon CTG",
    "aa": "LSMSTPSRPRSTSFCWKRKNCRQDSSSC",
-   "nt": "CTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGC",
+   "nt": "CTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAA",
    "blocks": [
     [
      15945982,

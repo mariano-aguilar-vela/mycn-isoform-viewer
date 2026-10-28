@@ -4,6 +4,15 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MYCN isoform stack — transcripts, ORFs &amp; base-level browser</title>
+  <meta name="description" content="Explore MYCN transcript structures, versioned accessions, laboratory aliases, and annotated and predicted ORFs on GRCh38.">
+  <link rel="canonical" href="https://mariano-aguilar-vela.github.io/mycn-isoform-viewer/">
+  <meta property="og:title" content="MYCN transcript-structure viewer">
+  <meta property="og:description" content="MYCN transcript structures and annotated and predicted ORFs, with reference provenance and laboratory aliases.">
+  <meta property="og:url" content="https://mariano-aguilar-vela.github.io/mycn-isoform-viewer/">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -11,10 +20,11 @@
   <header id="topbar">
     <div class="tb-title">
       <span class="tb-dot"></span>
-      <span id="tb-head">MYCN locus</span>
+      <h1 id="tb-head">MYCN locus</h1>
       <span class="tb-sub" id="tb-sub">— isoform stack</span>
     </div>
     <div class="tb-controls">
+      <button id="about-open" class="tb-btn">About the data</button>
       <form id="locus-form" autocomplete="off">
         <input id="locus-input" type="text" spellcheck="false"
                placeholder="chr2:15,938,000-15,947,200" aria-label="locus">
@@ -43,15 +53,16 @@
           <button id="lens-tx" class="lens-btn active" data-lens="tx">by transcript</button>
           <button id="lens-orf" class="lens-btn" data-lens="orf">by ORF</button>
         </div>
-        <div id="cue" class="cue">Click a transcript to see the proteins it encodes.
+        <div id="cue" class="cue">Select a transcript to explore its annotated and predicted ORFs.
           <button id="cue-dismiss" class="cue-x" title="dismiss" aria-label="dismiss">×</button>
         </div>
         <input id="feature-search" type="text" spellcheck="false"
-               placeholder="Search id, class, carrier, conserved, accession…" aria-label="search features">
+               placeholder="Search name, lab alias, accession…" aria-label="search features">
       </div>
+      <p id="search-status" class="sr-only" role="status"></p>
       <div id="feature-list" class="feature-list"></div>
       <div class="legend">
-        <div class="legend-title">Legend</div>
+        <div class="legend-title" id="legend-toggle" role="button" tabindex="0">Legend</div>
         <ul id="legend-list"></ul>
       </div>
     </aside>
@@ -60,7 +71,7 @@
     </button>
 
     <!-- VIEWER: ideogram + genomic ruler/ref strip + stack, all on ONE shared x-scale/width -->
-    <section id="viewer">
+    <section id="viewer" aria-label="MYCN transcript diagrams">
       <div id="ideo-wrap"><svg id="ideo" xmlns="http://www.w3.org/2000/svg"></svg></div>
       <div id="hdr-wrap"><svg id="hdr" xmlns="http://www.w3.org/2000/svg"></svg></div>
 
@@ -91,9 +102,22 @@
   </div>
 
   <div id="tip" class="tip" hidden></div>
-  <div id="loadmsg" class="loadmsg">Loading MYCN data…</div>
+  <div id="loadmsg" class="loadmsg" role="status">Loading MYCN data…</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+  <dialog id="about-data" aria-labelledby="about-title">
+    <button id="about-close" autofocus>Close</button>
+    <h2 id="about-title">About the data</h2>
+    <p>Content version: 2026-10-28. GRCh38 transcript models retain their original reference versions: MYCN-201–206 from GENCODE v49, MYCN-207 from GENCODE v50, plus the RefSeq addition MYCN-XM (NM_001446166.1, formerly XM_047444434.1). MYCN-XM is a study-specific display alias, not an official GENCODE name.</p>
+    <p>TV1–TV6, TV2+, and NC are owner-supplied laboratory aliases used by our laboratory. Canonical GENCODE and RefSeq transcript identifiers remain authoritative.</p>
+    <p>The frozen models have not been replaced with a uniform GENCODE v50 reference. The requested v50 versions for MYCN-202, -204 and -205 differ from the retained v49 records; a reference update requires model and sequence reconciliation.</p>
+    <p>For research and educational use; this viewer is not a clinical diagnostic tool. Transcript annotation and laboratory aliases do not establish sample-specific expression or function. ORFs include annotations and predictions; evidence and its limits are shown in the detail panels.</p>
+    <p><a href="https://www.gencodegenes.org/human/release_49.html">GENCODE v49</a> · <a href="https://www.gencodegenes.org/human/release_50.html">GENCODE v50</a> · <a href="https://www.ncbi.nlm.nih.gov/nuccore/NM_001446166.1">RefSeq NM_001446166.1</a></p>
+    <h3>Transcript structures (accessible diagram alternative)</h3>
+    <p>Coordinates below are 1-based, inclusive, on chr2 (+ strand). CDS intervals exclude the stop codon. Use the transcript and ORF buttons in Features for selection; the locus field, zoom buttons and Reset provide keyboard navigation.</p>
+    <div class="table-scroll"><table><thead><tr><th scope="col">Transcript (lab alias)</th><th scope="col">Versioned accession</th><th scope="col">Source</th><th scope="col">Reference release</th><th scope="col">Length (nt)</th><th scope="col">Exons</th><th scope="col">CDS</th></tr></thead><tbody id="transcript-summary"></tbody></table></div>
+  </dialog>
+  <script src="vendor/d3.v7.9.0.min.js"></script>
+  <script src="lab-aliases.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

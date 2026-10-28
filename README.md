@@ -1,6 +1,6 @@
 # MYCN isoform & ORF viewer
 
-An interactive viewer of the **MYCN** locus showing its **8 transcript isoforms** and the **48 encoded ORFs**,
+An interactive viewer of the **MYCN** locus showing its **8 transcript isoforms** and the **56 annotated and predicted ORFs**,
 with per-transcript ORF specificity (unique vs shared), base-level sequence, and the encoded protein / uORF
 landscape. Built as a custom d3/SVG genome-browser-style viewer — transcript-first, with an ideogram, a
 genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
@@ -15,8 +15,7 @@ genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
 - Per-ORF metrics shown: amino-acid length, Kozak context, PhyloCSF, phyloP, MW / pI / GRAVY, net charge,
   instability index, conservation, the **per-resource translation-evidence block**, **MS / protein evidence**,
   accession, and the carrier transcripts.
-- **Instability index is blank below 30 aa**, with its reason shown in place. The dipeptide-weighted index is
-  undefined at that length, so for those ORFs the viewer renders *not computed* rather than a number. A blank
+- **Instability index is blank below 30 aa**, with its reason shown in place. The retained reporting policy withholds values below that length; this is not a mathematical limit of the formula. For those ORFs the viewer renders *not reported* rather than a number. A blank
   is not a zero, and GRAVY (uncalibrated, but defined) is retained for every ORF.
 - **Conservation caveat:** conservation is a *weak discriminator for short uORFs* — the known functional uORFs
   **MYCNOT** (ORF9) and **MUSEP** (ORF10) are both conservation-negative yet functional. The viewer therefore
@@ -76,7 +75,7 @@ genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
 
 - **Click a transcript** (left gutter or its row) to expand and see the ORFs it encodes, ranked by specificity:
   *unique to that transcript* first, then a collapsible *shared* group.
-- **By-ORF lens** (top-left toggle): browse the 48 ORFs grouped by class; selecting an ORF **highlights it on
+- **By-ORF lens** (top-left toggle): browse the 56 ORFs grouped by class; selecting an ORF **highlights it on
   every carrier transcript** and dims non-carriers, with full protein detail in the right rail.
 - **Navigate:** *scroll to zoom* (cursor-centred), *drag to move*, *drag the ruler to zoom to a region*; the
   `chr2:start-end` box and the +/− / Reset buttons also work.
@@ -86,8 +85,25 @@ genomic ruler, a reference-sequence strip, zoom/pan, and figure export.
 
 ## Built with
 
-- [d3 v7](https://d3js.org/) (loaded from CDN). No backend — the site is fully static (HTML/CSS/JS + JSON data).
+- [d3 v7.9.0](https://d3js.org/) (vendored locally with its license). No backend — the site is fully static (HTML/CSS/JS + JSON data).
 
 ## Provenance
 
 Part of **Mariano Aguilar Vela's** PhD (QUT / APCRC-Q), on MYCN transcript-isoform characterisation.
+
+
+## Laboratory aliases and reference versions
+
+The viewer uses one owner-supplied alias map in `lab-aliases.js`. TV1–TV6, TV2+, and NC are laboratory terminology; canonical transcript accessions remain authoritative. The About the data dialog lists all mappings, pinned accessions and exon/CDS structures. SVG exports include separate canonical name, lab_alias and accession metadata; PNG labels retain canonical names.
+
+The frozen reference is mixed: MYCN-201–206 use GENCODE v49; MYCN-207 uses v50; MYCN-XM is the study display label for RefSeq NM_001446166.1 (formerly XM_047444434.1). This is not a uniform v50 dataset. The v50 revisions to MYCN-202, -204 and -205 change exon boundaries and must be reconciled before replacing the frozen models or identifiers.
+
+## Verification and static packaging
+
+Use Node 20+ and Python 3. `npm ci`, `npm test`, and `npm run build` create an allowlisted `dist/` artifact. `npm run test:browser` uses Playwright and axe against `MYCN_TEST_URL` (default: a local server mounted at `/mycn-isoform-viewer/`); browser binaries must be installed with `npx playwright install`. WebKit requires compatible system libraries. Browser logs go to `MYCN_TEST_OUTPUT` or ignored `test-results/`.
+
+The existing Pages mechanism remains branch-based. Do not publish repository archives, test results, build logs or private audit material. The static packaging command excludes these. Unknown paths have a plain 404 page linking to the viewer. The application has no client-side routes, analytics, cookies, service worker or persistent browser storage.
+
+For research and educational use, not clinical diagnosis. An annotated transcript or laboratory alias does not establish sample-specific expression or function. Accessibility checks are limited to the recorded automated and keyboard/browser checks; full WCAG conformance is not claimed.
+
+Coordinate downloads are derived from the same metadata using `python3 scripts/downloads.py --write`; `npm test` rejects stale files. GFF3 retains canonical transcript names/accessions and cumulative spliced CDS phase; BED includes all 56 ORFs and uses zero-based half-open blocks.

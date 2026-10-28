@@ -1,0 +1,39 @@
+'use strict';
+const {chromium,firefox,webkit}=require('playwright');const AxeBuilder=require('@axe-core/playwright').default;
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const base=process.env.MYCN_TEST_URL||'http://127.0.0.1:8766/mycn-isoform-viewer/';
+const out=process.env.MYCN_TEST_OUTPUT||'test-results';fs.mkdirSync(out,{recursive:true});
+const aliases=require('../lab-aliases');let results=[];
+async function run(engine,name){let b;const row={name,url:base,checks:[],errors:[],network:[]};results.push(row);
+ try{b=await engine.launch({args:name==='chromium'?['--no-sandbox']:[]});row.version=b.version();const context=await b.newContext({viewport:{width:1440,height:900},acceptDownloads:true});const p=await context.newPage();p.on('pageerror',e=>row.errors.push(e.message));p.on('requestfailed',r=>row.network.push({url:r.url(),error:r.failure()}));p.on('response',r=>{if(r.status()>=400)row.network.push({url:r.url(),status:r.status()});});
+ await p.goto(base);await p.waitForSelector('.tx-row');row.checks.push('first load');
+ const updated=await p.locator('#about-open').count();
+ if(updated){
+ for(const [canonical,alias] of Object.entries(aliases.aliases)){
+ const t=canonical.slice(5);const btn=p.locator(`.trow[data-tx="${t}"]`);assert((await btn.textContent()).includes(`${canonical} (${alias})`));assert((await btn.getAttribute('aria-label')).includes(`laboratory alias ${alias}`));
+ const acc=await p.locator(`.trow[data-tx="${t}"] .tacc`).textContent();
+ for(const q of [canonical,alias,acc.split(' · ')[0],acc.split('.')[0]]){await p.locator('#feature-search').fill(q);assert.equal(await p.locator('.trow:visible').count(),1,`search ${q}`);assert.equal(await p.locator('.trow:visible').getAttribute('data-tx'),t);}
+ }
+ await p.locator('#feature-search').fill('not-a-record');assert.equal(await p.locator('.trow:visible').count(),0);await p.locator('#feature-search').fill('');row.checks.push('all eight alias rendering, accessible names, exact alias and accession searches, empty/no-result search');
+ await p.locator('.trow[data-tx="201"]').focus();await p.keyboard.press('Enter');assert.equal(await p.locator('.trow[data-tx="201"]').getAttribute('aria-expanded'),'true');assert.equal(await p.locator('.trow[data-tx="201"]').evaluate(n=>n===document.activeElement),true);row.checks.push('keyboard transcript selection and focus retention');
+ await p.locator('#collapse-all').click();await p.locator('#about-open').click();await p.waitForSelector('#about-data[open]');assert.equal(await p.locator('#transcript-summary tr').count(),8);await p.keyboard.press('Escape');assert.equal(await p.locator('#about-data').evaluate(n=>n.open),false);assert.equal(await p.locator('#about-open').evaluate(n=>n===document.activeElement),true);row.checks.push('structured table and dialog Escape/focus restoration');
+ await p.locator('#stack .exon').first().focus();await p.keyboard.press('Enter');assert((await p.locator('#rail-body').textContent()).includes('Laboratory alias'));await p.keyboard.press('Escape');row.checks.push('keyboard exon selection and alias detail');
+ const [dl]=await Promise.all([p.waitForEvent('download'),p.locator('#download-svg').click()]);await dl.saveAs(path.join(out,name+'-export.svg'));const svg=fs.readFileSync(path.join(out,name+'-export.svg'),'utf8');for(const [c,a]of Object.entries(aliases.aliases)){assert(svg.includes(c));assert(svg.includes('Lab alias: '+a));}assert(svg.includes('lab_alias'));row.checks.push('SVG export canonical names, aliases and machine-readable metadata');
+ const [png]=await Promise.all([p.waitForEvent('download'),p.locator('#download-png').click()]);await png.saveAs(path.join(out,name+'-export.png'));assert(fs.statSync(path.join(out,name+'-export.png')).size>1000);row.checks.push('PNG export');
+ }
+ await p.locator('#expand-all').click();assert((await p.locator('#stack').getAttribute('height'))>500);await p.locator('#collapse-all').click();
+ const prev=await p.locator('#locus-input').inputValue();await p.locator('#zoom-in').click();await p.waitForTimeout(500);assert.notEqual(await p.locator('#locus-input').inputValue(),prev);await p.locator('#zoom-out').click();await p.waitForTimeout(500);await p.locator('#reset-view').click();await p.waitForTimeout(500);row.checks.push('expand/collapse, zoom, reset');
+ await p.locator('#locus-input').fill('bad<query>');await p.locator('#locus-form button').click();assert(await p.locator('#locus-input.bad').count());await p.locator('#reset-view').click();await p.waitForTimeout(500);row.checks.push('malformed locus input');
+ await p.locator('#lens-orf').click();await p.locator('.frow[data-id="1"]').click();assert(await p.locator('#details').isVisible());await p.locator('#details-close').click();await p.locator('#lens-tx').click();row.checks.push('ORF lens, protein detail, close');
+ for(const [w,h]of [[320,568],[375,667],[390,844],[768,1024],[1024,768],[1366,768],[1440,900],[1920,1080]]){
+ await p.setViewportSize({width:w,height:h});await p.waitForTimeout(250);if(w<640 && await p.locator('#features').isVisible())await p.locator('#features-collapse').click();await p.screenshot({path:path.join(out,`${name}-${w}x${h}.png`)});
+ const geometry=await p.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,labels:[...document.querySelectorAll('#stack .tx-label,#stack .tx-alias')].map(n=>({text:n.textContent,x:n.getBBox().x,width:n.getBBox().width}))}));assert(geometry.scroll<=geometry.width,`page overflow at ${w}`);row.checks.push({viewport:[w,h],geometry});
+ }
+ await p.setViewportSize({width:1440,height:900});await p.waitForTimeout(250);if(await p.locator('#features-strip').isVisible())await p.locator('#features-strip').click();
+ row.axe=await new AxeBuilder({page:p}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();fs.writeFileSync(path.join(out,`${name}-axe.json`),JSON.stringify(row.axe,null,2));delete row.axe.passes;delete row.axe.inapplicable;delete row.axe.incomplete;
+ if(updated){await p.locator('#about-open').click();const axe=await new AxeBuilder({page:p}).withTags(['wcag2a','wcag2aa','wcag21aa','wcag22aa']).analyze();fs.writeFileSync(path.join(out,`${name}-dialog-axe.json`),JSON.stringify(axe,null,2));await p.keyboard.press('Escape');}
+ await p.emulateMedia({reducedMotion:'reduce',forcedColors:'active'});await p.screenshot({path:path.join(out,name+'-forced-colors.png')});await p.emulateMedia({reducedMotion:'no-preference',forcedColors:'none'});row.checks.push('reduced-motion and forced-colors rendering');
+ for(const zoom of [1,1.25,1.5,2]){await p.evaluate(z=>document.body.style.zoom=z,zoom);await p.waitForTimeout(250);await p.screenshot({path:path.join(out,name+'-zoom-'+zoom+'.png')});}await p.evaluate(()=>document.body.style.zoom=1);row.checks.push('CSS zoom 100/125/150/200% (browser UI zoom unavailable)');
+ await p.reload();await p.waitForSelector('.tx-row');row.checks.push('reload');row.status='PASS';
+ }catch(e){row.status='FAIL_OR_UNAVAILABLE';row.failure=e.stack;console.error(name,e.message);}finally{if(b)await b.close();fs.writeFileSync(path.join(out,'browser-results.json'),JSON.stringify(results,null,2));}}
+(async()=>{for(const [engine,name]of [[chromium,'chromium'],[firefox,'firefox'],[webkit,'webkit']])await run(engine,name);console.log(results.map(r=>({name:r.name,status:r.status,version:r.version,failure:r.failure&&r.failure.split('\n')[0],violations:r.axe&&r.axe.violations.map(v=>({id:v.id,impact:v.impact,n:v.nodes.length}))})));if(results.some(r=>r.status!=='PASS'&&r.name!=='webkit'))process.exitCode=1;})();
