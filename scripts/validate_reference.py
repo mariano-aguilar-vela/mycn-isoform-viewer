@@ -33,6 +33,13 @@ def validate(data,loc):
             tx=data['transcripts'][t];r=o['transcript_records'][t];a=r['start']-1;b=r['end'];assert tx['sequence'][a:b]==o['nt'];assert blocks_for_slice(positions(tx['exons'],tx['strand']),a,b)==o['blocks'];observed[t].add((a,b))
         for d in o['domains']:assert d['input_sequence_sha256']==sha(o['aa']) and 1<=d['start']<=d['end']<=o['aa_len']
     for key,t in data['transcripts'].items():assert observed[key]==set(find_orfs(t['sequence'],8)),key
+    assert set(data['products'])=={'nmyc','dmycn','mycnot','musep'}
+    for product in data['products'].values():
+        o=data['orfs'][product['orf_id']];assert o['aa']==product['protein_sequence'];assert sha(o['aa'])==product['protein_sequence_hash'];assert product['primary_transcript'] in o['carriers'];assert o['color']==product['color']
+    features=data['relationships']['features']
+    for unit,count in data['relationships']['counts'].items():
+        chosen=[f for f in features if f['unit']==unit];assert count['all']==len(chosen);assert count['unique']==sum(f['relationship']=='unique' for f in chosen);assert count['shared']==sum(f['relationship']=='shared' for f in chosen)
+    assert data['relationships']['counts']['protein_sequence']['unique']>0 and data['relationships']['counts']['protein_sequence']['shared']>0
     return {'transcripts':len(ids),'orfs':len(data['orfs']),'status':'PASS','coordinate_conventions':{'genomic':'1-based inclusive','transcript_public':'1-based inclusive','python_slices':'0-based half-open'},'checks':['complete enumerated AUG ORFs','exon sum','genomic splice equals official transcript','CDS translation equals official protein','start/stop','domain sequence hash','source release identity','RefSeq separation','carrier blocks','UTR/CDS nonoverlap']}
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--reference',default='data/current/reference.json');p.add_argument('--locus',default='mycn_locus_seq.json');a=p.parse_args();print(json.dumps(validate(json.loads(Path(a.reference).read_text()),json.loads(Path(a.locus).read_text())),indent=2))

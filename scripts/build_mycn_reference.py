@@ -118,19 +118,24 @@ def build(cache,review):
     data={'schema_version':'2.0.0','application_version':'2.0.0','reference_build':buildid,'status':'CURRENT','review_date':review,'assembly':assembly,'ensembl_release':sm['ensembl_release'],'gencode_release':release,'refseq_accession':ref.id,'transcript_order':list(txs),'transcripts':txs,'orfs':orfs,'regions':{},'palette':{'nmyc':'#4A6FA5','dmycn':'#D98A3D','mycnot':'#C0504D','musep':'#B0568C','ri_line':'#2F7A57','ri_bg':'#C3E0D4','pred_ext':'#8FA9C9','utr':'#C7CFCC','term':'#8A9791','gold':'#C9A227'},'prediction_policy':{'method':'AUG_FIRST_STOP_MIN8_STANDARD_CODE_V1','start_codons':['ATG'],'minimum_amino_acids':8,'genetic_code':1,'include_nested_starts':True,'include_no_stop':False,'non_AUG_calls':'not enumerated','experimental_claims':'none; annotation and prediction do not establish expression or function'},'official_source_manifest':sm,'official_metadata':metadata,'claim_policy':{'structures':'DATABASE_ANNOTATED','ORF_enumeration':'COMPUTATIONAL_PREDICTION','physicochemical_properties':'COMPUTATIONAL_PREDICTION','domains':'DATABASE_ANNOTATED only for exact sequence match to UniProt P04198','laboratory_aliases':'OWNER_SUPPLIED_NOMENCLATURE','legacy_MS_RiboSeq_conservation':'removed from current factual claims; not independently reproduced'}}
     return data,loc
 
+def prepare_layers(data):
+    aliases=json.loads(re.search(r'var aliases = Object.freeze\((\{.*?\})\);',(ROOT/'lab-aliases.js').read_text(),re.S).group(1))
+    previous=json.loads((ROOT/'data/releases/legacy-2026-07/reference.json').read_text())['transcripts']
+    for k,t in data['transcripts'].items():t['lab_alias']=aliases.get(t['display_name'],'');t['history']=previous.get(k)
+    from build_product_layers import augment
+    return augment(data)
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--cache',required=True);p.add_argument('--review-date',required=True);p.add_argument('--application-commit');args=p.parse_args()
     data,loc=build(Path(args.cache),args.review_date)
     import subprocess,platform,importlib.metadata
     data['pipeline_versions']={'python':platform.python_version(),'biopython':Bio.__version__,'jsonschema':importlib.metadata.version('jsonschema')}
     data['application_commit']=args.application_commit or subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
+    prepare_layers(data)
     from validate_reference import validate
     validate(data,loc)
-    aliases=json.loads(re.search(r'var aliases = Object.freeze\((\{.*?\})\);',(ROOT/'lab-aliases.js').read_text(),re.S).group(1))
-    previous=json.loads((ROOT/'data/releases/legacy-2026-07/reference.json').read_text())['transcripts']
-    for k,t in data['transcripts'].items():t['lab_alias']=aliases.get(t['display_name'],'');t['history']=previous.get(k)
     write(ROOT/'data/current/reference.json',data);write(ROOT/f'data/releases/gencode_v{data["gencode_release"]}/reference.json',data);write(ROOT/'mycn_locus_seq.json',loc)
-    manifest={k:data[k] for k in ['schema_version','application_version','reference_build','status','review_date','assembly','ensembl_release','gencode_release','refseq_accession','prediction_policy','application_commit','pipeline_versions']};manifest['reference_sha256']=sha((ROOT/'data/current/reference.json').read_text());manifest['sources']=data['official_source_manifest'];write(ROOT/'data/current/manifest.json',manifest);write(ROOT/f'data/manifests/{data["reference_build"]}.json',manifest)
+    manifest={k:data[k] for k in ['schema_version','application_version','reference_build','status','review_date','assembly','ensembl_release','gencode_release','refseq_accession','prediction_policy','application_commit','pipeline_versions','structure_reference_build','product_registry_version']};manifest['reference_sha256']=sha((ROOT/'data/current/reference.json').read_text());manifest['sources']=data['official_source_manifest'];write(ROOT/'data/current/manifest.json',manifest);write(ROOT/f'data/manifests/{data["reference_build"]}.json',manifest)
     # Retain exact official locus subsets with complete-file source hashes in the manifest.
     cache=Path(args.cache);release=data['gencode_release'];sub=[]
     with gzip.open(cache/f'gencode.v{release}.annotation.gtf.gz','rt') as f:

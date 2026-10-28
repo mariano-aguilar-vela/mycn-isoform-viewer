@@ -1,0 +1,185 @@
+{
+  "schema_version": "2.1.0",
+  "application_version": "2.1.0",
+  "reference_build": "gencode-50_refseq-NM_001446166.1_mycn-2",
+  "status": "CURRENT",
+  "review_date": "2026-10-28",
+  "assembly": "GRCh38.p14",
+  "ensembl_release": 116,
+  "gencode_release": 50,
+  "refseq_accession": "NM_001446166.1",
+  "prediction_policy": {
+    "method": "AUG_FIRST_STOP_MIN8_STANDARD_CODE_V1",
+    "start_codons": [
+      "ATG"
+    ],
+    "minimum_amino_acids": 8,
+    "genetic_code": 1,
+    "include_nested_starts": true,
+    "include_no_stop": false,
+    "non_AUG_calls": "not enumerated",
+    "experimental_claims": "none; annotation and prediction do not establish expression or function"
+  },
+  "application_commit": "80eb6cc7d4d3c3e90378fc332bce69fcf31ca421",
+  "pipeline_versions": {
+    "python": "3.13.5",
+    "biopython": "1.87",
+    "jsonschema": "4.25.1"
+  },
+  "reference_sha256": "88564dbd6d4fc2cea12c1180896839cb7d538609a6240e9333303fe2a5449d99",
+  "sources": {
+    "gencode_release": 50,
+    "assembly": "GRCh38.p14",
+    "ensembl_release": 116,
+    "sources": [
+      {
+        "file": "gencode-current.html",
+        "url": "https://www.gencodegenes.org/human/",
+        "sha256": "f417ed02805b665d2c2608d4826123442f01c517bb364ec1bdfdd01d91a88e35",
+        "bytes": 24985,
+        "retrieved_utc": "2026-10-28T07:33:18.954524+00:00",
+        "source_identity": "www.gencodegenes.org"
+      },
+      {
+        "file": "gencode.v50.annotation.gtf.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.annotation.gtf.gz",
+        "sha256": "83fba3e9b03f0b8c958f3595c6c350adc55f468abf8b0e47b6d5284cfe13a453",
+        "bytes": 124527720,
+        "retrieved_utc": "2026-10-28T07:33:19.053763+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "2d273848c6068682fabea72fae4896a9"
+      },
+      {
+        "file": "gencode.v50.transcripts.fa.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.transcripts.fa.gz",
+        "sha256": "5a320f524d73b5793518eb19b118829033713443d0f42af20a67bb31cc06cf56",
+        "bytes": 183554921,
+        "retrieved_utc": "2026-10-28T07:33:19.095183+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "4d5bd41b247480e12c0b370490f52ddd"
+      },
+      {
+        "file": "gencode.v50.pc_translations.fa.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.pc_translations.fa.gz",
+        "sha256": "5d6408c3a1c22d864c96a55367cf5b69f1031dea1fe2cd6d03e366ae3fc56a45",
+        "bytes": 21136991,
+        "retrieved_utc": "2026-10-28T07:33:18.980946+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "509a89a4c3bb8c594baac50d4d57e589"
+      },
+      {
+        "file": "gencode.v50.metadata.RefSeq.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.metadata.RefSeq.gz",
+        "sha256": "a82f562c420bcc01cce560cee2294a7ef2e5db91f1faef53c1d3fd82deca82d4",
+        "bytes": 1002322,
+        "retrieved_utc": "2026-10-28T07:33:18.966665+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "5b7926da3dbcce9dc2c0ee9619810605"
+      },
+      {
+        "file": "gencode.v50.metadata.SwissProt.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.metadata.SwissProt.gz",
+        "sha256": "29dbba835ae8e3c63c2968eff809f91c21d7b3c309b63326c2e676cba80cc814",
+        "bytes": 430081,
+        "retrieved_utc": "2026-10-28T07:33:18.967412+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "128157af9b49729c1ef17024ca482aa0"
+      },
+      {
+        "file": "gencode.v50.metadata.Transcript_source.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.metadata.Transcript_source.gz",
+        "sha256": "139b9cc70b3ff103dde0e8a84b71be5d28d636b3b378e6040bcbfd2d7c1e0bad",
+        "bytes": 2575355,
+        "retrieved_utc": "2026-10-28T07:33:18.970751+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "475320927a10a5ca122188b729524584"
+      },
+      {
+        "file": "gencode.v50.metadata.Annotation_remark.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.metadata.Annotation_remark.gz",
+        "sha256": "af9354aac2a953cbb38bea7772006bb25f2689ea3556fbd86403565868b5c1de",
+        "bytes": 3459016,
+        "retrieved_utc": "2026-10-28T07:33:18.973563+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "946ac82e71f1ce37d3145210dafac8ce"
+      },
+      {
+        "file": "gencode.v50.metadata.Transcript_supporting_feature.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.metadata.Transcript_supporting_feature.gz",
+        "sha256": "5b87d11498e22fc89de644d81977110ebdb280992bd857063cdca5110b9f0d50",
+        "bytes": 90885,
+        "retrieved_utc": "2026-10-28T07:33:18.973917+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "1a1cf8aa603ee0c6dd2c1645959708c4"
+      },
+      {
+        "file": "gencode.v50.metadata.Exon_supporting_feature.gz",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/gencode.v50.metadata.Exon_supporting_feature.gz",
+        "sha256": "f025d894d17a5de351dcf1665e330ee0d5eb2fc0c5df7f1d6860805c1c47ec44",
+        "bytes": 155579934,
+        "retrieved_utc": "2026-10-28T07:33:19.084476+00:00",
+        "source_identity": "ftp.ebi.ac.uk",
+        "publisher_md5": "d4af127bc14bf2003aaa894fb16d9d38"
+      },
+      {
+        "file": "MD5SUMS",
+        "url": "https://ftp.ebi.ac.uk/pub/databases/gencode/Gencode_human/release_50/MD5SUMS",
+        "sha256": "b681a9bbebc0a6ea3d05370ab8511efc12aa806738013f45ffb473730ecc3b36",
+        "bytes": 3074,
+        "retrieved_utc": "2026-10-28T07:33:20.034570+00:00",
+        "source_identity": "ftp.ebi.ac.uk"
+      },
+      {
+        "file": "refseq-protein.gb",
+        "url": "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=NP_001433095.1&db=protein&report=genbank&retmode=text",
+        "sha256": "24ab8e88d3478f264dc809bedf72c3f333cf391b0289e741cc7c195f35384f27",
+        "bytes": 11585,
+        "retrieved_utc": "2026-10-28T07:33:19.938841+00:00",
+        "source_identity": "www.ncbi.nlm.nih.gov"
+      },
+      {
+        "file": "gencode-releases.html",
+        "url": "https://www.gencodegenes.org/human/releases.html",
+        "sha256": "8461c9a7ec1b7ec2fd29913c0ddf1107b7834c0ff8fcc12764ff0130a6b3f8fc",
+        "bytes": 30009,
+        "retrieved_utc": "2026-10-28T07:33:20.913176+00:00",
+        "source_identity": "www.gencodegenes.org"
+      },
+      {
+        "file": "refseq-transcript.gb",
+        "url": "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=NM_001446166&db=nuccore&report=genbank&retmode=text",
+        "sha256": "97dbf26d69a4b50b470a6dd5039e5eb692b9dcb5a8e35aae66112bb011434369",
+        "bytes": 16544,
+        "retrieved_utc": "2026-10-28T07:33:19.809289+00:00",
+        "source_identity": "www.ncbi.nlm.nih.gov"
+      },
+      {
+        "file": "refseq-genomic.gb",
+        "url": "https://www.ncbi.nlm.nih.gov/sviewer/viewer.fcgi?id=NC_000002.12&db=nuccore&report=genbank&retmode=text&from=15938000&to=15947200",
+        "sha256": "8f2ecdca428ffef25335b7c389ee7afe19e6e9461c4568d786245b4ad246409e",
+        "bytes": 45644,
+        "retrieved_utc": "2026-10-28T07:33:22.879700+00:00",
+        "source_identity": "www.ncbi.nlm.nih.gov"
+      },
+      {
+        "file": "refseq-gene.json",
+        "url": "https://api.ncbi.nlm.nih.gov/datasets/v2/gene/id/4613",
+        "sha256": "fcdccc6c0fc006bd9e8e964fafa32b11aebc9a46db62f56fc62c3b6eca94517e",
+        "bytes": 7159,
+        "retrieved_utc": "2026-10-28T07:33:20.694263+00:00",
+        "source_identity": "api.ncbi.nlm.nih.gov"
+      },
+      {
+        "file": "uniprot-P04198.json",
+        "url": "https://rest.uniprot.org/uniprotkb/P04198.json",
+        "sha256": "0814e6ec50f1a581099eccba9014bcb96a773c7ecd363df5d1036ed08c3bd08d",
+        "bytes": 50120,
+        "retrieved_utc": "2026-10-28T07:33:22.023367+00:00",
+        "source_identity": "rest.uniprot.org"
+      }
+    ],
+    "unavailable_sources": []
+  },
+  "structure_reference_build": "gencode-50_refseq-NM_001446166.1_mycn-1",
+  "product_registry_version": "1.0.0"
+}

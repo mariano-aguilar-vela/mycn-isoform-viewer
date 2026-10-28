@@ -5,6 +5,13 @@ from downloads import outputs
 ROOT=Path(__file__).resolve().parents[1]
 def generate(data):
     dest=ROOT/'data/current';dest.mkdir(parents=True,exist_ok=True)
+    if 'products' in data:
+        (dest/'products.json').write_text(json.dumps(data['products'],indent=2,ensure_ascii=False)+'\n')
+        (dest/'relationships.json').write_text(json.dumps(data['relationships'],indent=2,ensure_ascii=False)+'\n')
+        (dest/'products.fa').write_text(''.join('>'+p['display_name']+' product_id='+p['product_id']+' evidence='+','.join(p['evidence_status'])+' scope=four_displayed_MYCN_products\n'+p['protein_sequence']+'\n' for p in data['products'].values()))
+        with (dest/'relationships.tsv').open('w') as out:
+            w=csv.writer(out,delimiter='\t',lineterminator='\n');w.writerow(['feature_id','unit','classification','carriers','coordinates','scope','minimum_length','matching','sequence'])
+            for f in data['relationships']['features']:w.writerow([f['feature_id'],f['unit'],f['classification'],','.join(f['carriers']),json.dumps(f['coordinates']),f['scope'],f['minimum_length'],f['matching'],f['sequence']])
     def fasta(kind):
         rows=[]
         for key,t in data['transcripts'].items():

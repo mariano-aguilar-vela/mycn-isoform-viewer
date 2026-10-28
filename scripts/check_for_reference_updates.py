@@ -22,10 +22,10 @@ if __name__=='__main__':
     if report['status']=='UPDATE_DETECTED' and not a.report_only and not a.fixtures:
         import subprocess,sys
         subprocess.run([sys.executable,str(Path(__file__).with_name('fetch_reference_sources.py')),'--cache',a.candidate_cache],check=True)
-        from build_mycn_reference import build
+        from build_mycn_reference import build,prepare_layers
         from validate_reference import validate
         from compare_reference_releases import compare
-        candidate,loc=build(Path(a.candidate_cache),datetime.now(timezone.utc).date().isoformat());validate(candidate,loc)
+        candidate,loc=build(Path(a.candidate_cache),datetime.now(timezone.utc).date().isoformat());prepare_layers(candidate);validate(candidate,loc)
         dest=Path(a.candidate_output);dest.mkdir(parents=True,exist_ok=True)
         (dest/'candidate-reference.json').write_text(json.dumps(candidate,indent=2)+'\n')
         current=json.load(urllib.request.urlopen(a.manifest_url.rsplit('/',1)[0]+'/reference.json',timeout=60)) if a.manifest_url else json.loads(Path(a.manifest).with_name('reference.json').read_text())

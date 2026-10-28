@@ -4,7 +4,7 @@ import argparse, hashlib, json, shutil, re
 parser=argparse.ArgumentParser();parser.add_argument('--output',default='dist');args=parser.parse_args()
 root=Path(__file__).resolve().parents[1];dest=Path(args.output).resolve()
 if dest==root or root in dest.parents and dest.name!='dist':raise SystemExit('Choose dist or an external output directory')
-files=['index.html','app.js','styles.css','lab-aliases.js','favicon.svg','404.html','mycn_locus_seq.json','chr2_cytoband.json','mycn_transcripts.gff3','mycn_orfs.bed','vendor/d3.v7.9.0.min.js','vendor/D3-LICENSE']
+files=['index.html','app.js','styles.css','lab-aliases.js','layers-ui.js','favicon.svg','404.html','mycn_locus_seq.json','chr2_cytoband.json','mycn_transcripts.gff3','mycn_orfs.bed','vendor/d3.v7.9.0.min.js','vendor/D3-LICENSE']
 from downloads import outputs
 for filename,content in outputs(json.loads((root/'data/current/reference.json').read_text())).items():
  if (root/filename).read_text()!=content:raise SystemExit('Stale coordinate download: '+filename)

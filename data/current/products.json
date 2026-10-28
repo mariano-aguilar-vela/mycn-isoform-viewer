@@ -1,0 +1,631 @@
+{
+  "nmyc": {
+    "product_id": "nmyc",
+    "display_name": "N-Myc",
+    "alternate_names": [],
+    "product_class": "canonical_CDS",
+    "laboratory_name": "N-Myc",
+    "primary_transcript": "201",
+    "protein_length": 464,
+    "protein_sequence_hash": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec",
+    "color": "#4A6FA5",
+    "evidence_status": [
+      "REFSEQ_ANNOTATED_PRODUCT",
+      "GENCODE_ANNOTATED_TRANSLATION"
+    ],
+    "primary_source": [
+      "https://www.uniprot.org/uniprotkb/P04198/entry"
+    ],
+    "database_source": "ENSP00000281043.3",
+    "experimental_status": "Published detection is limited to the cited studies; no sample-specific detection is inferred",
+    "prediction_status": "Current ORF and transcript compatibility validated from sequence",
+    "function_status": "Database-annotated transcription-factor product",
+    "description": "Canonical annotated MYCN protein; current sequence matches reviewed UniProt P04198.",
+    "release_introduced": "historical curated viewer; restored in 2.1.0",
+    "release_last_reviewed": "2026-10-28",
+    "nomenclature_authority": "Owner directive and retained curated product identity; published names cited separately",
+    "orf_id": "1",
+    "build_orf_id": "gencode-50-orf-0001",
+    "protein_sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+    "nucleotide_sequence": "ATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAG",
+    "genomic_blocks": [
+      [
+        15942065,
+        15942854
+      ],
+      [
+        15945493,
+        15946097
+      ]
+    ],
+    "source_transcripts": [
+      {
+        "key": "201",
+        "canonical_name": "MYCN-201",
+        "accession": "ENST00000281043.4",
+        "lab_alias": "TV2",
+        "translation_start": 312,
+        "translation_end": 1706
+      },
+      {
+        "key": "204",
+        "canonical_name": "MYCN-204",
+        "accession": "ENST00000885101.2",
+        "lab_alias": "TV6",
+        "translation_start": 1727,
+        "translation_end": 3121
+      },
+      {
+        "key": "205",
+        "canonical_name": "MYCN-205",
+        "accession": "ENST00000930195.2",
+        "lab_alias": "TV1",
+        "translation_start": 699,
+        "translation_end": 2093
+      },
+      {
+        "key": "206",
+        "canonical_name": "MYCN-206",
+        "accession": "ENST00000930196.1",
+        "lab_alias": "TV5",
+        "translation_start": 1564,
+        "translation_end": 2958
+      },
+      {
+        "key": "207",
+        "canonical_name": "MYCN-207",
+        "accession": "ENST00001138178.1",
+        "lab_alias": "TV2+",
+        "translation_start": 312,
+        "translation_end": 1706
+      },
+      {
+        "key": "XM",
+        "canonical_name": "MYCN-XM",
+        "accession": "NM_001446166.1",
+        "lab_alias": "TV4",
+        "translation_start": 267,
+        "translation_end": 1661
+      }
+    ],
+    "active_status": "ACTIVE",
+    "orf_evidence_class": "DATABASE_ANNOTATED",
+    "domains": [
+      {
+        "type": "Domain",
+        "description": "bHLH",
+        "start": 381,
+        "end": 433,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00981"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Region",
+        "description": "Interaction with AURKA",
+        "start": 19,
+        "end": 47,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27837025"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Region",
+        "description": "Interaction with AURKA and FBXW7",
+        "start": 61,
+        "end": 89,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "27837025"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Region",
+        "description": "Disordered",
+        "start": 129,
+        "end": 172,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "SAM",
+            "id": "MobiDB-lite"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Region",
+        "description": "Disordered",
+        "start": 196,
+        "end": 294,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "SAM",
+            "id": "MobiDB-lite"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Region",
+        "description": "Disordered",
+        "start": 334,
+        "end": 392,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "SAM",
+            "id": "MobiDB-lite"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Region",
+        "description": "Leucine-zipper",
+        "start": 433,
+        "end": 454,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Motif",
+        "description": "9aaTAD",
+        "start": 76,
+        "end": 84,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000269",
+            "source": "PubMed",
+            "id": "34342803"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Compositional bias",
+        "description": "Low complexity",
+        "start": 149,
+        "end": 159,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "SAM",
+            "id": "MobiDB-lite"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Compositional bias",
+        "description": "Gly residues",
+        "start": 160,
+        "end": 170,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "SAM",
+            "id": "MobiDB-lite"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Compositional bias",
+        "description": "Low complexity",
+        "start": 208,
+        "end": 233,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "SAM",
+            "id": "MobiDB-lite"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      },
+      {
+        "type": "Compositional bias",
+        "description": "Acidic residues",
+        "start": 259,
+        "end": 278,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "DATABASE_ANNOTATED",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000256",
+            "source": "SAM",
+            "id": "MobiDB-lite"
+          }
+        ],
+        "input_sequence_sha256": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec"
+      }
+    ],
+    "unique_sequence_features": [
+      "protein_sequence-0001"
+    ],
+    "shared_sequence_features": [
+      "protein_sequence-0002"
+    ]
+  },
+  "dmycn": {
+    "product_id": "dmycn",
+    "display_name": "ΔMYCN",
+    "alternate_names": [
+      "DeltaMYCN",
+      "DeltMYCN",
+      "delta-MYCN"
+    ],
+    "product_class": "alternative_CDS",
+    "laboratory_name": "ΔMYCN",
+    "primary_transcript": "202",
+    "protein_length": 253,
+    "protein_sequence_hash": "77350d39392b3bc08ad126c20d8062874afddb716097116826ddc28c477e1b00",
+    "color": "#D98A3D",
+    "evidence_status": [
+      "REFSEQ_ANNOTATED_PRODUCT",
+      "GENCODE_ANNOTATED_TRANSLATION"
+    ],
+    "primary_source": [
+      "https://www.ncbi.nlm.nih.gov/protein/NP_001280160.1",
+      "https://pubmed.ncbi.nlm.nih.gov/15821734/"
+    ],
+    "database_source": "ENSP00000491476.1",
+    "experimental_status": "The RefSeq and GENCODE translation is sequence-validated. No direct product-specific experimental detection claim is made here.",
+    "prediction_status": "Current ORF and transcript compatibility validated from sequence",
+    "function_status": "FUNCTION_UNRESOLVED: sequence/annotation does not establish product-specific physiological function",
+    "description": "MYCN-202 (TV3) omits the exon corresponding to MYCN-201 exon 2. The 253-aa product has an alternative N-terminus and an exact C-terminal sequence shared with N-Myc; bHLH/zipper coordinates are sequence projections.",
+    "release_introduced": "historical curated viewer; restored in 2.1.0",
+    "release_last_reviewed": "2026-10-28",
+    "nomenclature_authority": "Owner directive and retained curated product identity; published names cited separately",
+    "orf_id": "2",
+    "build_orf_id": "gencode-50-orf-0002",
+    "protein_sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+    "nucleotide_sequence": "ATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAG",
+    "genomic_blocks": [
+      [
+        15940587,
+        15940743
+      ],
+      [
+        15945493,
+        15946097
+      ]
+    ],
+    "source_transcripts": [
+      {
+        "key": "202",
+        "canonical_name": "MYCN-202",
+        "accession": "ENST00000638417.2",
+        "lab_alias": "TV3",
+        "translation_start": 544,
+        "translation_end": 1305
+      }
+    ],
+    "active_status": "ACTIVE",
+    "orf_evidence_class": "DATABASE_ANNOTATED",
+    "domains": [
+      {
+        "type": "Domain",
+        "description": "bHLH",
+        "start": 170,
+        "end": 222,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "SEQUENCE_RELATIONSHIP_ONLY",
+        "evidences": [
+          {
+            "evidenceCode": "ECO:0000255",
+            "source": "PROSITE-ProRule",
+            "id": "PRU00981"
+          }
+        ],
+        "input_sequence_sha256": "77350d39392b3bc08ad126c20d8062874afddb716097116826ddc28c477e1b00",
+        "source_coordinates": [
+          381,
+          433
+        ],
+        "source_product": "N-Myc",
+        "projection": "Exact complete-feature sequence match, not direct experimental domain validation in ΔMYCN"
+      },
+      {
+        "type": "Region",
+        "description": "Leucine-zipper",
+        "start": 222,
+        "end": 243,
+        "source": "UniProt P04198",
+        "source_version": {
+          "firstPublicDate": "1987-03-20",
+          "lastAnnotationUpdateDate": "2026-09-02",
+          "lastSequenceUpdateDate": "1989-07-01",
+          "entryVersion": 244,
+          "sequenceVersion": 2
+        },
+        "evidence_class": "SEQUENCE_RELATIONSHIP_ONLY",
+        "evidences": [],
+        "input_sequence_sha256": "77350d39392b3bc08ad126c20d8062874afddb716097116826ddc28c477e1b00",
+        "source_coordinates": [
+          433,
+          454
+        ],
+        "source_product": "N-Myc",
+        "projection": "Exact complete-feature sequence match, not direct experimental domain validation in ΔMYCN"
+      }
+    ],
+    "unique_sequence_features": [
+      "protein_sequence-0004"
+    ],
+    "shared_sequence_features": [
+      "protein_sequence-0003",
+      "protein_sequence-0005"
+    ]
+  },
+  "mycnot": {
+    "product_id": "mycnot",
+    "display_name": "MYCNOT",
+    "alternate_names": [],
+    "product_class": "uORF_product",
+    "laboratory_name": "MYCNOT",
+    "primary_transcript": "201",
+    "protein_length": 112,
+    "protein_sequence_hash": "778ba78b65f4636661ff406fdf146ca60a7e0a78f3ac041f818d7a6c5f5fba2d",
+    "color": "#C0504D",
+    "evidence_status": [
+      "REFSEQ_ANNOTATED_PRODUCT",
+      "PRIMARY_LITERATURE_DETECTED"
+    ],
+    "primary_source": [
+      "https://www.ncbi.nlm.nih.gov/protein/NP_001280162.1",
+      "https://www.uniprot.org/uniprotkb/Q9H224/entry",
+      "https://pubmed.ncbi.nlm.nih.gov/20017904/",
+      "https://pubmed.ncbi.nlm.nih.gov/37682868/"
+    ],
+    "database_source": "NP_001280162.1; UniProt Q9H224 (unreviewed TrEMBL)",
+    "experimental_status": "Published detection is limited to the cited studies; no sample-specific detection is inferred",
+    "prediction_status": "Current ORF and transcript compatibility validated from sequence",
+    "function_status": "FUNCTION_UNRESOLVED: sequence/annotation does not establish product-specific physiological function",
+    "description": "The exon-1b-excluded MYCN-201 (TV2) context encodes this 112-aa upstream/overlapping ORF product. Published studies report detection in defined experimental systems; its physiological function is unresolved.",
+    "release_introduced": "historical curated viewer; restored in 2.1.0",
+    "release_last_reviewed": "2026-10-28",
+    "nomenclature_authority": "Owner directive and retained curated product identity; published names cited separately",
+    "orf_id": "9",
+    "build_orf_id": "gencode-50-orf-0009",
+    "protein_sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGVLEVGAGPRLPRPPREGSTPGIKTNGAERSPQSPAGRRADAELLHVHHAGHDLQEPRPRV",
+    "nucleotide_sequence": "ATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGA",
+    "genomic_blocks": [
+      [
+        15940587,
+        15940743
+      ],
+      [
+        15941948,
+        15942129
+      ]
+    ],
+    "source_transcripts": [
+      {
+        "key": "201",
+        "canonical_name": "MYCN-201",
+        "accession": "ENST00000281043.4",
+        "lab_alias": "TV2",
+        "translation_start": 38,
+        "translation_end": 376
+      },
+      {
+        "key": "207",
+        "canonical_name": "MYCN-207",
+        "accession": "ENST00001138178.1",
+        "lab_alias": "TV2+",
+        "translation_start": 38,
+        "translation_end": 376
+      }
+    ],
+    "active_status": "ACTIVE",
+    "orf_evidence_class": "COMPUTATIONAL_PREDICTION",
+    "domains": [],
+    "unique_sequence_features": [
+      "protein_sequence-0007"
+    ],
+    "shared_sequence_features": [
+      "protein_sequence-0006"
+    ]
+  },
+  "musep": {
+    "product_id": "musep",
+    "display_name": "MUSEP",
+    "alternate_names": [
+      "MNOP"
+    ],
+    "product_class": "uORF_product",
+    "laboratory_name": "MUSEP",
+    "primary_transcript": "205",
+    "protein_length": 86,
+    "protein_sequence_hash": "c6acd7472e0463419a5084aa5d50718d17c94d67fb7fc140b234c56781559bbd",
+    "color": "#B0568C",
+    "evidence_status": [
+      "COMPUTATIONAL_ORF_PREDICTION",
+      "FUNCTION_UNRESOLVED"
+    ],
+    "primary_source": [
+      "https://pubmed.ncbi.nlm.nih.gov/37682868/"
+    ],
+    "database_source": "No dedicated protein accession asserted",
+    "experimental_status": "The cited paper reports MNOP detection in its experimental systems. This 86-aa sequence-to-MNOP assignment is project curation validated here against current RNA, not an independently accessioned experimental sequence identification.",
+    "prediction_status": "Current ORF and transcript compatibility validated from sequence",
+    "function_status": "FUNCTION_UNRESOLVED: sequence/annotation does not establish product-specific physiological function",
+    "description": "MUSEP is the project-facing name of the validated 86-aa product in the exon-1b-retained MYCN-205 (TV1) context. MNOP is a published designation. The current sequence mapping is project curation verified against current transcript sequence; the published MNOP detection claim is not a sample-specific or independently accessioned sequence assignment.",
+    "release_introduced": "historical curated viewer; restored in 2.1.0",
+    "release_last_reviewed": "2026-10-28",
+    "nomenclature_authority": "Owner directive and retained curated product identity; published names cited separately",
+    "literature_evidence": {
+      "designation": "MNOP",
+      "status": "PRIMARY_LITERATURE_DETECTED",
+      "source": "https://pubmed.ncbi.nlm.nih.gov/37682868/",
+      "exact_published_sequence_assignment": "Not independently accession-verified; MUSEP/MNOP naming equivalence is project/owner curation"
+    },
+    "orf_id": "12",
+    "build_orf_id": "gencode-50-orf-0012",
+    "protein_sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGGKEQGLQTARRPGKRRAPGQGKPWTGLRRAHRAP",
+    "nucleotide_sequence": "ATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAA",
+    "genomic_blocks": [
+      [
+        15940587,
+        15940847
+      ]
+    ],
+    "source_transcripts": [
+      {
+        "key": "205",
+        "canonical_name": "MYCN-205",
+        "accession": "ENST00000930195.2",
+        "lab_alias": "TV1",
+        "translation_start": 115,
+        "translation_end": 375
+      },
+      {
+        "key": "206",
+        "canonical_name": "MYCN-206",
+        "accession": "ENST00000930196.1",
+        "lab_alias": "TV5",
+        "translation_start": 86,
+        "translation_end": 346
+      }
+    ],
+    "active_status": "ACTIVE",
+    "orf_evidence_class": "COMPUTATIONAL_PREDICTION",
+    "domains": [],
+    "unique_sequence_features": [
+      "protein_sequence-0009"
+    ],
+    "shared_sequence_features": [
+      "protein_sequence-0008"
+    ]
+  }
+}

@@ -1,0 +1,3046 @@
+{
+  "version": "1.0.0",
+  "features": [
+    {
+      "feature_id": "orf-0001",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 1 · N-Myc",
+      "orf_id": "1",
+      "sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "coordinates": [
+        [
+          15942065,
+          15942854
+        ],
+        [
+          15945493,
+          15946097
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0002",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "202"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 2 · ΔMYCN",
+      "orf_id": "2",
+      "sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "coordinates": [
+        [
+          15940587,
+          15940743
+        ],
+        [
+          15945493,
+          15946097
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0003",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 3",
+      "orf_id": "3",
+      "sequence": "MKWQFPKLRSLATTPCICMPPPTPCRRQLVHKRRAGGREREAQLPPPSGAVGRVGGLEGRLGNLVRGGAHCLSPRSAPFAHPLRCVCRLQCWRSAPAPAFRAPHGKEAPPVLKRTGRKEALSRRPGGEPMPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "coordinates": [
+        [
+          15941678,
+          15942854
+        ],
+        [
+          15945493,
+          15946097
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0004",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 4",
+      "orf_id": "4",
+      "sequence": "MPPPTPCRRQLVHKRRAGGREREAQLPPPSGAVGRVGGLEGRLGNLVRGGAHCLSPRSAPFAHPLRCVCRLQCWRSAPAPAFRAPHGKEAPPVLKRTGRKEALSRRPGGEPMPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "coordinates": [
+        [
+          15941732,
+          15942854
+        ],
+        [
+          15945493,
+          15946097
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0005",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 5",
+      "orf_id": "5",
+      "sequence": "MPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "coordinates": [
+        [
+          15942089,
+          15942854
+        ],
+        [
+          15945493,
+          15946097
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0006",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 6",
+      "orf_id": "6",
+      "sequence": "MICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "coordinates": [
+        [
+          15942098,
+          15942854
+        ],
+        [
+          15945493,
+          15946097
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0007",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 7",
+      "orf_id": "7",
+      "sequence": "MLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "coordinates": [
+        [
+          15942305,
+          15942854
+        ],
+        [
+          15945493,
+          15946097
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0008",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 8",
+      "orf_id": "8",
+      "sequence": "MWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "coordinates": [
+        [
+          15942410,
+          15942854
+        ],
+        [
+          15945493,
+          15946097
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0009",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "207"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 9 · MYCNOT",
+      "orf_id": "9",
+      "sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGVLEVGAGPRLPRPPREGSTPGIKTNGAERSPQSPAGRRADAELLHVHHAGHDLQEPRPRV",
+      "coordinates": [
+        [
+          15940587,
+          15940743
+        ],
+        [
+          15941948,
+          15942129
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0010",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 10",
+      "orf_id": "10",
+      "sequence": "MTSTSAAPTRPPRGRTSGRSLSCCPRPRCRPAVASRSTAPSPRAGSRRCCLRTSCGAARPRRTRSAWGDWVASPPTRSSSRTACGAASPPARSWSAP",
+      "coordinates": [
+        [
+          15942162,
+          15942455
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0011",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 11",
+      "orf_id": "11",
+      "sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGEKPVPAPKASWLEETRPNPFAALTGGSNGFCEKKFPRL",
+      "coordinates": [
+        [
+          15940587,
+          15940743
+        ],
+        [
+          15940904,
+          15941019
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0012",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "205",
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 12 · MUSEP",
+      "orf_id": "12",
+      "sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAGGKEQGLQTARRPGKRRAPGQGKPWTGLRRAHRAP",
+      "coordinates": [
+        [
+          15940587,
+          15940847
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0013",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "202",
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 13",
+      "orf_id": "13",
+      "sequence": "MTSNCQARRVGAALHRSARSWFSECSRCKPGGPKGREEHTLGFPALQPSLCKEKQVAFGAKALAPPLIFMEIRRAG",
+      "coordinates": [
+        [
+          15940203,
+          15940433
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0014",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 14",
+      "orf_id": "14",
+      "sequence": "MDHYKWSLESSCLSRGWVSGGVDSTSISVNQIRLPITGENGGFEKVNLGALGTAAGNVRPFPLGSRARPPPPPQW",
+      "coordinates": [
+        [
+          15938634,
+          15938653
+        ],
+        [
+          15939543,
+          15939750
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0015",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "205",
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 15",
+      "orf_id": "15",
+      "sequence": "MPGGLFLLPKQNHLWVFPEKPVPAPKASWLEETRPNPFAALTGGSNGFCEKKFPRL",
+      "coordinates": [
+        [
+          15940849,
+          15941019
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0016",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 16",
+      "orf_id": "16",
+      "sequence": "MMKMMKRKMKRKKSTWSLWRSGVPPPTPRLSPHSPSLCVPRTQPWVPGGLSPAS",
+      "coordinates": [
+        [
+          15945493,
+          15945657
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0017",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 17",
+      "orf_id": "17",
+      "sequence": "MKMMKRKMKRKKSTWSLWRSGVPPPTPRLSPHSPSLCVPRTQPWVPGGLSPAS",
+      "coordinates": [
+        [
+          15945496,
+          15945657
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0018",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 18",
+      "orf_id": "18",
+      "sequence": "MMKRKMKRKKSTWSLWRSGVPPPTPRLSPHSPSLCVPRTQPWVPGGLSPAS",
+      "coordinates": [
+        [
+          15945502,
+          15945657
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0019",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 19",
+      "orf_id": "19",
+      "sequence": "MKRKMKRKKSTWSLWRSGVPPPTPRLSPHSPSLCVPRTQPWVPGGLSPAS",
+      "coordinates": [
+        [
+          15945505,
+          15945657
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0020",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 20",
+      "orf_id": "20",
+      "sequence": "MKRKKSTWSLWRSGVPPPTPRLSPHSPSLCVPRTQPWVPGGLSPAS",
+      "coordinates": [
+        [
+          15945517,
+          15945657
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0021",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 21",
+      "orf_id": "21",
+      "sequence": "MEFGIKLFEPRLGLRRCGQHFHLGKSDSPAHNWGEWWL",
+      "coordinates": [
+        [
+          15938648,
+          15938653
+        ],
+        [
+          15939543,
+          15939653
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0022",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 22",
+      "orf_id": "22",
+      "sequence": "MTALNVGDGWEPLGLLKSPCVFQVSKQQKVIPSF",
+      "coordinates": [
+        [
+          15946324,
+          15946428
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0023",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 23",
+      "orf_id": "23",
+      "sequence": "MFEEHVLYTNILLISVMYCTNSYTACIL",
+      "coordinates": [
+        [
+          15946610,
+          15946696
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0024",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 24",
+      "orf_id": "24",
+      "sequence": "MSTYYIQVHCCAVRIPSGAKLTQVTG",
+      "coordinates": [
+        [
+          15938488,
+          15938568
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0025",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 25",
+      "orf_id": "25",
+      "sequence": "MSTPSRPRSTSFCWKRKNCRQDSSSC",
+      "coordinates": [
+        [
+          15945988,
+          15946068
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0026",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 26",
+      "orf_id": "26",
+      "sequence": "MPRGVCSNLGRGRICGYGCLLLVSV",
+      "coordinates": [
+        [
+          15941352,
+          15941429
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0027",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 27",
+      "orf_id": "27",
+      "sequence": "MAVSKVAEPRHHPLHLHAPSHPLS",
+      "coordinates": [
+        [
+          15941683,
+          15941757
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0028",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 28",
+      "orf_id": "28",
+      "sequence": "MVALKRLTWEPWGRLQGTYAHSP",
+      "coordinates": [
+        [
+          15939641,
+          15939712
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0029",
+      "unit": "orf",
+      "classification": "ORF_UNIQUE_TO_TRANSCRIPT",
+      "relationship": "unique",
+      "carriers": [
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 29",
+      "orf_id": "29",
+      "sequence": "MGVCCWSLSRERLFFICKVF",
+      "coordinates": [
+        [
+          15941401,
+          15941463
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0030",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 30",
+      "orf_id": "30",
+      "sequence": "MPSHPPAAQLCRPLSLRGE",
+      "coordinates": [
+        [
+          15945668,
+          15945727
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0031",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 31",
+      "orf_id": "31",
+      "sequence": "MPPPLPTWRVRMHPHRRR",
+      "coordinates": [
+        [
+          15945697,
+          15945753
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0032",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 32",
+      "orf_id": "32",
+      "sequence": "MLVYFQIGPLSSSALGGQ",
+      "coordinates": [
+        [
+          15946179,
+          15946235
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0033",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "204",
+        "205",
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 33",
+      "orf_id": "33",
+      "sequence": "MASAKRNSLGSRRSVCV",
+      "coordinates": [
+        [
+          15940985,
+          15941038
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0034",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 34",
+      "orf_id": "34",
+      "sequence": "MVLKFQQMPHKGFAI",
+      "coordinates": [
+        [
+          15946430,
+          15946477
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0035",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 35",
+      "orf_id": "35",
+      "sequence": "MLGGPAASSTSPP",
+      "coordinates": [
+        [
+          15946286,
+          15946327
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0036",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 36",
+      "orf_id": "36",
+      "sequence": "MYCTNSYTACIL",
+      "coordinates": [
+        [
+          15946658,
+          15946696
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0037",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 37",
+      "orf_id": "37",
+      "sequence": "MRRPPRWSF",
+      "coordinates": [
+        [
+          15945943,
+          15945972
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0038",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 38",
+      "orf_id": "38",
+      "sequence": "MRGGFCGQY",
+      "coordinates": [
+        [
+          15946542,
+          15946571
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0039",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 39",
+      "orf_id": "39",
+      "sequence": "MKMSCESFE",
+      "coordinates": [
+        [
+          15946740,
+          15946769
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0040",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 40",
+      "orf_id": "40",
+      "sequence": "MPHKGFAI",
+      "coordinates": [
+        [
+          15946451,
+          15946477
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0041",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 41",
+      "orf_id": "41",
+      "sequence": "MFCIQIYC",
+      "coordinates": [
+        [
+          15946623,
+          15946649
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "orf-0042",
+      "unit": "orf",
+      "classification": "ORF_SHARED_ACROSS_TRANSCRIPTS",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ORF 42",
+      "orf_id": "42",
+      "sequence": "MYLFMFGA",
+      "coordinates": [
+        [
+          15946861,
+          15946887
+        ]
+      ],
+      "scope": "Exact ORF model (genomic blocks + nucleotide sequence) among the eight current displayed transcripts; not protein-sequence or proteome uniqueness",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact sequence and genomic blocks; transcript reading frame retained"
+    },
+    {
+      "feature_id": "exon-0001",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15938396–15938653",
+      "coordinates": [
+        15938396,
+        15938653
+      ],
+      "sequence": "GAACCCATCCTGGCCTATTTTCACAGTCTTGCCACAGAAGATCTGGCCACCTTAGAAGGACTCATTCAGTGATCTTGGTCTTGAATAATACCATGAGTACTTACTATATACAGGTACACTGCTGTGCCGTAAGGATTCCCTCTGGAGCAAAACTGACCCAGGTCACAGGTTAGTGAGGGAGACTGAGCCTGTCTTCCACAGTGTCACGGAAGTGAGCACTAAACAAATACTCCCAGGCATGGATCATTACAAATGGAG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0002",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15939543–15940743",
+      "coordinates": [
+        15939543,
+        15940743
+      ],
+      "sequence": "TTTGGAATCAAGCTGTTTGAGCCGAGGCTGGGTCTCAGGAGGTGTGGACAGCACTTCCATCTCGGTAAATCAGATTCGCCTGCCCATAACTGGGGAGAATGGTGGCTTTGAAAAGGTTAACTTGGGAGCCCTGGGGACGGCTGCAGGGAACGTACGCCCATTCCCCCTAGGAAGCAGAGCCAGGCCGCCTCCTCCTCCGCAGTGGTGAGGACGCGTGGACAGTCCCGCGGGGGCGGCGGGAGACCTGCGGAGTGGCCGCACTCCAGGTCCGCGCCAAGGCCGGGCAGCTCCGCTTTCTGCTCAGTCTCCGCGAGGTGTCGCCTTCGGCCGAAGAAACCACCGCGGCGCCACCCTCGTAGCTCGCACTTATTTATTTATTTATTTTCAAACAAGGGGGGCGCCCCTCTTCTTTCAATTTGAAACTGGAAACATCCAGAGGTCTTGTTCCTAAGGGGGCGCGTCCTCTCCCTGCTATTTTGCACCTTCGGACTAGCCTTCTTTCGTAATTACACAGGAGCAACCTCCCTGCAAGGCCTTGCTCAACGTTGGCCTCGCGCTCAGCTGCACAACACGCAGTCAAAGCGGGGGCTGGGTTAGAAGCATCGGTCTCCCCTCCCCAACACACACCCCCGGAGCCCTCCGTAATTTTTTTTTCTTTTAATGACAAGCAATTGCCAGGCTCGCAGGGTGGGTGCTGCATTGCACCGCTCCGCGCGCAGCTGGTTCTCAGAGTGCAGCCGGTGCAAGCCCGGGGGTCCAAAAGGGCGGGAGGAGCACACCCTGGGCTTCCCAGCTTTGCAGCCTTCTCTCTGCAAAGAAAAGCAAGTGGCTTTTGGCGCGAAAGCCTTGGCGCCTCCCCTGATTTTTATGGAAATCAGGAGGGCGGGGTAAAGCCGCTTTCCTCTCCTTTCTCCCTCCCCCTTGTCTGCGCCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0003",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "202"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940044–15940743",
+      "coordinates": [
+        15940044,
+        15940743
+      ],
+      "sequence": "CGTAATTACACAGGAGCAACCTCCCTGCAAGGCCTTGCTCAACGTTGGCCTCGCGCTCAGCTGCACAACACGCAGTCAAAGCGGGGGCTGGGTTAGAAGCATCGGTCTCCCCTCCCCAACACACACCCCCGGAGCCCTCCGTAATTTTTTTTTCTTTTAATGACAAGCAATTGCCAGGCTCGCAGGGTGGGTGCTGCATTGCACCGCTCCGCGCGCAGCTGGTTCTCAGAGTGCAGCCGGTGCAAGCCCGGGGGTCCAAAAGGGCGGGAGGAGCACACCCTGGGCTTCCCAGCTTTGCAGCCTTCTCTCTGCAAAGAAAAGCAAGTGGCTTTTGGCGCGAAAGCCTTGGCGCCTCCCCTGATTTTTATGGAAATCAGGAGGGCGGGGTAAAGCCGCTTTCCTCTCCTTTCTCCCTCCCCCTTGTCTGCGCCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0004",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "205"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940473–15941053",
+      "coordinates": [
+        15940473,
+        15941053
+      ],
+      "sequence": "CCACAGCCCCCTTCTCTCCCCGCCCCCCGGGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0005",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940502–15942854",
+      "coordinates": [
+        15940502,
+        15942854
+      ],
+      "sequence": "GGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGCAGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAGGTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAGAAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCGGTGCGTCCCCACCCCAGGCTGGGGTTCTTCTCCAAAGGGTGCCCCTGGAGGAAGAAGAGGGGGGGATTAGGCAGGGCGAGGCCGCCGCGGTCGCAATCTGGGTCACGGCTGCTCCAGCTTGGAGGAGAGGCGGCTCTCCCGGCGACCCTCCTCGCGCGGGCGCCCCTGCCATTCCCGGGAACAGGGGCTCAGCCTCTCCCTCCCTGGAAGAGGACGTTGTCGTGGGTTTGGAAGAGCAGGGGTGGGCTTAGAGAGCTTCCAATTAAGCTATTGGCAGGAGTATCCCTGCAGCGGGTGAATGCCGAGGGGCGTTTGCTCAAATTTGGGGAGGGGAAGGATTTGTGGATATGGGTGTCTGTTGTTGGTCTCTGTCTAGAGAAAGGCTTTTTTTTATTTGCAAAGTTTTCTAAATCCCCTGCTATCATTTGCACTCCTGAGGTTGCATTTTTACAAAGGGGGTAGAAGGTACTCCAAATACCATTCCCGGTAGCTGGGTCGGAGAGCCTGGGGCTTCCCCTGAGCAGCCGGCCCCACACCGCTGCGAGTGCGGTTGTCTGCGTGCTCGTGAGAGCTAGAATTCTGCAGCCAGGAACAGCCCCCTCCCCCAGGCAGTGCCTTGTGTGAATGAAATGGCAGTTTCCAAAGTTGCGGAGCCTCGCCACCACCCCCTGCATCTGCATGCCCCCTCCCACCCCCTGTCGTAGACAGCTTGTACACAAAAGGAGGGCGGGAGGGAGGGAGCGAGAGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0006",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_SHARED_EXON",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "207"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940550–15940743",
+      "coordinates": [
+        15940550,
+        15940743
+      ],
+      "sequence": "AGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0007",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940904–15941053",
+      "coordinates": [
+        15940904,
+        15941053
+      ],
+      "sequence": "AAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0008",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15941799–15942854",
+      "coordinates": [
+        15941799,
+        15942854
+      ],
+      "sequence": "AGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAGTGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0009",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_SHARED_EXON",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "207"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15941948–15942854",
+      "coordinates": [
+        15941948,
+        15942854
+      ],
+      "sequence": "TGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0010",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "203"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15943557–15943695",
+      "coordinates": [
+        15943557,
+        15943695
+      ],
+      "sequence": "CTCCCTCCCTCCATTCAGCAGCTGGCTGCAAGTGCAACAGCAGTTGTGTACATTCTCAGGGGGCCTCCTCTTTCCAGTGTGCAGTGGAAACTGGCTGTAGTTTTGTCTTCCAGCCTGAATTCCAGGCCTAATTTGAGAT",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0011",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_UNIQUE_EXON",
+      "relationship": "unique",
+      "carriers": [
+        "203"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15945493–15946539",
+      "coordinates": [
+        15945493,
+        15946539
+      ],
+      "sequence": "ATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGG",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0012",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_SHARED_EXON",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15945493–15947004",
+      "coordinates": [
+        15945493,
+        15947004
+      ],
+      "sequence": "ATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "exon-0013",
+      "unit": "exon",
+      "classification": "TRANSCRIPT_SHARED_EXON",
+      "relationship": "shared",
+      "carriers": [
+        "202",
+        "204",
+        "205",
+        "206",
+        "207"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15945493–15947022",
+      "coordinates": [
+        15945493,
+        15947022
+      ],
+      "sequence": "ATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGGTAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAATGATGCAACTCAACCTTT",
+      "scope": "Exact inclusive exon boundary pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "junction-0001",
+      "unit": "junction",
+      "classification": "TRANSCRIPT_UNIQUE_JUNCTION",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15938653–15939543",
+      "coordinates": [
+        15938653,
+        15939543
+      ],
+      "sequence": "",
+      "scope": "Exact splice donor/acceptor coordinate pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "junction-0002",
+      "unit": "junction",
+      "classification": "TRANSCRIPT_UNIQUE_JUNCTION",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940743–15940904",
+      "coordinates": [
+        15940743,
+        15940904
+      ],
+      "sequence": "",
+      "scope": "Exact splice donor/acceptor coordinate pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "junction-0003",
+      "unit": "junction",
+      "classification": "TRANSCRIPT_SHARED_JUNCTION",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "207"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940743–15941948",
+      "coordinates": [
+        15940743,
+        15941948
+      ],
+      "sequence": "",
+      "scope": "Exact splice donor/acceptor coordinate pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "junction-0004",
+      "unit": "junction",
+      "classification": "TRANSCRIPT_UNIQUE_JUNCTION",
+      "relationship": "unique",
+      "carriers": [
+        "202"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940743–15945493",
+      "coordinates": [
+        15940743,
+        15945493
+      ],
+      "sequence": "",
+      "scope": "Exact splice donor/acceptor coordinate pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "junction-0005",
+      "unit": "junction",
+      "classification": "TRANSCRIPT_SHARED_JUNCTION",
+      "relationship": "shared",
+      "carriers": [
+        "204",
+        "205"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15941053–15941948",
+      "coordinates": [
+        15941053,
+        15941948
+      ],
+      "sequence": "",
+      "scope": "Exact splice donor/acceptor coordinate pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "junction-0006",
+      "unit": "junction",
+      "classification": "TRANSCRIPT_SHARED_JUNCTION",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15942854–15945493",
+      "coordinates": [
+        15942854,
+        15945493
+      ],
+      "sequence": "",
+      "scope": "Exact splice donor/acceptor coordinate pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "junction-0007",
+      "unit": "junction",
+      "classification": "TRANSCRIPT_UNIQUE_JUNCTION",
+      "relationship": "unique",
+      "carriers": [
+        "203"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15943695–15945493",
+      "coordinates": [
+        15943695,
+        15945493
+      ],
+      "sequence": "",
+      "scope": "Exact splice donor/acceptor coordinate pair among the eight current displayed transcripts; not substring uniqueness",
+      "minimum_length": null,
+      "length_unit": "bp",
+      "matching": "exact genomic coordinate pairs on the annotated + strand"
+    },
+    {
+      "feature_id": "nucleotide_region-0001",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_UNIQUE_NUCLEOTIDE_REGION",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15938396–15938653",
+      "coordinates": [
+        15938396,
+        15938653
+      ],
+      "sequence": "GAACCCATCCTGGCCTATTTTCACAGTCTTGCCACAGAAGATCTGGCCACCTTAGAAGGACTCATTCAGTGATCTTGGTCTTGAATAATACCATGAGTACTTACTATATACAGGTACACTGCTGTGCCGTAAGGATTCCCTCTGGAGCAAAACTGACCCAGGTCACAGGTTAGTGAGGGAGACTGAGCCTGTCTTCCACAGTGTCACGGAAGTGAGCACTAAACAAATACTCCCAGGCATGGATCATTACAAATGGAG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0002",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_UNIQUE_NUCLEOTIDE_REGION",
+      "relationship": "unique",
+      "carriers": [
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15939543–15940043",
+      "coordinates": [
+        15939543,
+        15940043
+      ],
+      "sequence": "TTTGGAATCAAGCTGTTTGAGCCGAGGCTGGGTCTCAGGAGGTGTGGACAGCACTTCCATCTCGGTAAATCAGATTCGCCTGCCCATAACTGGGGAGAATGGTGGCTTTGAAAAGGTTAACTTGGGAGCCCTGGGGACGGCTGCAGGGAACGTACGCCCATTCCCCCTAGGAAGCAGAGCCAGGCCGCCTCCTCCTCCGCAGTGGTGAGGACGCGTGGACAGTCCCGCGGGGGCGGCGGGAGACCTGCGGAGTGGCCGCACTCCAGGTCCGCGCCAAGGCCGGGCAGCTCCGCTTTCTGCTCAGTCTCCGCGAGGTGTCGCCTTCGGCCGAAGAAACCACCGCGGCGCCACCCTCGTAGCTCGCACTTATTTATTTATTTATTTTCAAACAAGGGGGGCGCCCCTCTTCTTTCAATTTGAAACTGGAAACATCCAGAGGTCTTGTTCCTAAGGGGGCGCGTCCTCTCCCTGCTATTTTGCACCTTCGGACTAGCCTTCTTT",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0003",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "202",
+        "204"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940044–15940472",
+      "coordinates": [
+        15940044,
+        15940472
+      ],
+      "sequence": "CGTAATTACACAGGAGCAACCTCCCTGCAAGGCCTTGCTCAACGTTGGCCTCGCGCTCAGCTGCACAACACGCAGTCAAAGCGGGGGCTGGGTTAGAAGCATCGGTCTCCCCTCCCCAACACACACCCCCGGAGCCCTCCGTAATTTTTTTTTCTTTTAATGACAAGCAATTGCCAGGCTCGCAGGGTGGGTGCTGCATTGCACCGCTCCGCGCGCAGCTGGTTCTCAGAGTGCAGCCGGTGCAAGCCCGGGGGTCCAAAAGGGCGGGAGGAGCACACCCTGGGCTTCCCAGCTTTGCAGCCTTCTCTCTGCAAAGAAAAGCAAGTGGCTTTTGGCGCGAAAGCCTTGGCGCCTCCCCTGATTTTTATGGAAATCAGGAGGGCGGGGTAAAGCCGCTTTCCTCTCCTTTCTCCCTCCCCCTTGTCTGCG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0004",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "202",
+        "204",
+        "205"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940473–15940501",
+      "coordinates": [
+        15940473,
+        15940501
+      ],
+      "sequence": "CCACAGCCCCCTTCTCTCCCCGCCCCCCG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0005",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "202",
+        "204",
+        "205",
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940502–15940549",
+      "coordinates": [
+        15940502,
+        15940549
+      ],
+      "sequence": "GGTGTGTCAGATTTTTCAGTTAATAATATCCCCCGAGCTTCAAAGCGC",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0006",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "204",
+        "205",
+        "206",
+        "207"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940550–15940743",
+      "coordinates": [
+        15940550,
+        15940743
+      ],
+      "sequence": "AGGCTGTGACAGTCATCTGTCTGGACGCGCTGGGTGGATGCGGGGGGCTCCTGGGAACTGTGTTGGAGCCGAGCAAGCGCTAGCCAGGCGCAAGCGCGCACAGACTGTAGCCATCCGAGGACACCCCCGCCCCCCCGGCCCACCCGGAGACACCCGCGCAGAATCGCCTCCGGATCCCCTGCAGTCGGCGGGAG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0007",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "205",
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940744–15940903",
+      "coordinates": [
+        15940744,
+        15940903
+      ],
+      "sequence": "GTAAGGAGCAGGGCTTGCAAACCGCCCGGCGCCCAGGGAAGCGACGAGCGCCGGGGCAAGGCAAGCCCTGGACGGGATTGCGACGTGCGCACCGGGCGCCCTAATATGCCCGGGGGACTGTTTCTGCTTCCGAAACAAAACCATCTCTGGGTTTTCCCAG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0008",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "204",
+        "205",
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15940904–15941053",
+      "coordinates": [
+        15940904,
+        15941053
+      ],
+      "sequence": "AAAAGCCAGTTCCAGCCCCGAAGGCATCCTGGCTAGAGGAGACCCGCCCTAATCCTTTTGCAGCCCTTACCGGGGGGAGTAATGGCTTCTGCGAAAAGAAATTCCCTCGGCTCTAGAAGATCTGTCTGTGTTTGAGCTGTCGGAGAGCCG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0009",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_UNIQUE_NUCLEOTIDE_REGION",
+      "relationship": "unique",
+      "carriers": [
+        "206"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15941054–15941798",
+      "coordinates": [
+        15941054,
+        15941798
+      ],
+      "sequence": "GTGCGTCCCCACCCCAGGCTGGGGTTCTTCTCCAAAGGGTGCCCCTGGAGGAAGAAGAGGGGGGGATTAGGCAGGGCGAGGCCGCCGCGGTCGCAATCTGGGTCACGGCTGCTCCAGCTTGGAGGAGAGGCGGCTCTCCCGGCGACCCTCCTCGCGCGGGCGCCCCTGCCATTCCCGGGAACAGGGGCTCAGCCTCTCCCTCCCTGGAAGAGGACGTTGTCGTGGGTTTGGAAGAGCAGGGGTGGGCTTAGAGAGCTTCCAATTAAGCTATTGGCAGGAGTATCCCTGCAGCGGGTGAATGCCGAGGGGCGTTTGCTCAAATTTGGGGAGGGGAAGGATTTGTGGATATGGGTGTCTGTTGTTGGTCTCTGTCTAGAGAAAGGCTTTTTTTTATTTGCAAAGTTTTCTAAATCCCCTGCTATCATTTGCACTCCTGAGGTTGCATTTTTACAAAGGGGGTAGAAGGTACTCCAAATACCATTCCCGGTAGCTGGGTCGGAGAGCCTGGGGCTTCCCCTGAGCAGCCGGCCCCACACCGCTGCGAGTGCGGTTGTCTGCGTGCTCGTGAGAGCTAGAATTCTGCAGCCAGGAACAGCCCCCTCCCCCAGGCAGTGCCTTGTGTGAATGAAATGGCAGTTTCCAAAGTTGCGGAGCCTCGCCACCACCCCCTGCATCTGCATGCCCCCTCCCACCCCCTGTCGTAGACAGCTTGTACACAAAAGGAGGGCGGGAGGGAGGGAGCGAG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0010",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "206",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15941799–15941947",
+      "coordinates": [
+        15941799,
+        15941947
+      ],
+      "sequence": "AGGCACAACTTCCTCCACCTTCGGGAGCAGTGGGCAGAGTGGGGGGCTTGGAGGGAAGATTGGGGAACCTGGTTAGAGGGGGCGCCCATTGCCTATCCCCTCGGTCTGCCCCGTTTGCCCACCCTCTCCGGTGTGTCTGTCGGTTGCAG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0011",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15941948–15942854",
+      "coordinates": [
+        15941948,
+        15942854
+      ],
+      "sequence": "TGTTGGAGGTCGGCGCCGGCCCCCGCCTTCCGCGCCCCCCACGGGAAGGAAGCACCCCCGGTATTAAAACGAACGGGGCGGAAAGAAGCCCTCAGTCGCCGGCCGGGAGGCGAGCCGATGCCGAGCTGCTCCACGTCCACCATGCCGGGCATGATCTGCAAGAACCCAGACCTCGAGTTTGACTCGCTACAGCCCTGCTTCTACCCGGACGAAGATGACTTCTACTTCGGCGGCCCCGACTCGACCCCCCCGGGGGAGGACATCTGGAAGAAGTTTGAGCTGCTGCCCACGCCCCCGCTGTCGCCCAGCCGTGGCTTCGCGGAGCACAGCTCCGAGCCCCCGAGCTGGGTCACGGAGATGCTGCTTGAGAACGAGCTGTGGGGCAGCCCGGCCGAGGAGGACGCGTTCGGCCTGGGGGGACTGGGTGGCCTCACCCCCAACCCGGTCATCCTCCAGGACTGCATGTGGAGCGGCTTCTCCGCCCGCGAGAAGCTGGAGCGCGCCGTGAGCGAGAAGCTGCAGCACGGCCGCGGGCCGCCAACCGCCGGTTCCACCGCCCAGTCCCCGGGAGCCGGCGCCGCCAGCCCTGCGGGTCGCGGGCACGGCGGGGCTGCGGGAGCCGGCCGCGCCGGGGCCGCCCTGCCCGCCGAGCTCGCCCACCCGGCCGCCGAGTGCGTGGATCCCGCCGTGGTCTTCCCCTTTCCCGTGAACAAGCGCGAGCCAGCGCCCGTGCCCGCAGCCCCGGCCAGTGCCCCGGCGGCGGGCCCTGCGGTCGCCTCGGGGGCGGGTATTGCCGCCCCAGCCGGGGCCCCGGGGGTCGCCCCTCCGCGCCCAGGCGGCCGCCAGACCAGCGGCGGCGACCACAAGGCCCTCAGTACCTCCGGAGAGGACACCCTGAGCGATTCAG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0012",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_UNIQUE_NUCLEOTIDE_REGION",
+      "relationship": "unique",
+      "carriers": [
+        "203"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15943557–15943695",
+      "coordinates": [
+        15943557,
+        15943695
+      ],
+      "sequence": "CTCCCTCCCTCCATTCAGCAGCTGGCTGCAAGTGCAACAGCAGTTGTGTACATTCTCAGGGGGCCTCCTCTTTCCAGTGTGCAGTGGAAACTGGCTGTAGTTTTGTCTTCCAGCCTGAATTCCAGGCCTAATTTGAGAT",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0013",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15945493–15946539",
+      "coordinates": [
+        15945493,
+        15946539
+      ],
+      "sequence": "ATGATGAAGATGATGAAGAGGAAGATGAAGAGGAAGAAATCGACGTGGTCACTGTGGAGAAGCGGCGTTCCTCCTCCAACACCAAGGCTGTCACCACATTCACCATCACTGTGCGTCCCAAGAACGCAGCCCTGGGTCCCGGGAGGGCTCAGTCCAGCGAGCTGATCCTCAAACGATGCCTTCCCATCCACCAGCAGCACAACTATGCCGCCCCCTCTCCCTACGTGGAGAGTGAGGATGCACCCCCACAGAAGAAGATAAAGAGCGAGGCGTCCCCACGTCCGCTCAAGAGTGTCATCCCCCCAAAGGCTAAGAGCTTGAGCCCCCGAAACTCTGACTCGGAGGACAGTGAGCGTCGCAGAAACCACAACATCCTGGAGCGCCAGCGCCGCAACGACCTTCGGTCCAGCTTTCTCACGCTCAGGGACCACGTGCCGGAGTTGGTAAAGAATGAGAAGGCCGCCAAGGTGGTCATTTTGAAAAAGGCCACTGAGTATGTCCACTCCCTCCAGGCCGAGGAGCACCAGCTTTTGCTGGAAAAGGAAAAATTGCAGGCAAGACAGCAGCAGTTGCTAAAGAAAATTGAACACGCTCGGACTTGCTAGACGCTTCTCAAAACTGGACAGTCACTGCCACTTTGCACATTTTGATTTTTTTTTTAAACAAACATTGTGTTGACATTAAGAATGTTGGTTTACTTTCAAATCGGTCCCCTGTCGAGTTCGGCTCTGGGTGGGCAGTAGGACCACCAGTGTGGGGTTCTGCTGGGACCTTGGAGAGCCTGCATCCCAGGATGCTGGGTGGCCCTGCAGCCTCCTCCACCTCACCTCCATGACAGCGCTAAACGTTGGTGACGGTTGGGAGCCTCTGGGGCTGTTGAAGTCACCTTGTGTGTTCCAAGTTTCCAAACAACAGAAAGTCATTCCTTCTTTTTAAAATGGTGCTTAAGTTCCAGCAGATGCCACATAAGGGGTTTGCCATTTGATACCCCTGGGGAACATTTCTGTAAATACCATTGACACATCCGCCTTTTGTATACATCCTGGG",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0014",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "201",
+        "202",
+        "204",
+        "205",
+        "206",
+        "207",
+        "XM"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15946540–15947004",
+      "coordinates": [
+        15946540,
+        15947004
+      ],
+      "sequence": "TAATGAGAGGTGGCTTTTGCGGCCAGTATTAGACTGGAAGTTCATACCTAAGTACTGTAATAATACCTCAATGTTTGAGGAGCATGTTTTGTATACAAATATATTGTTAATCTCTGTTATGTACTGTACTAATTCTTACACTGCCTGTATACTTTAGTATGACGCTGATACATAACTAAATTTGATACTTATATTTTCGTATGAAAATGAGTTGTGAAAGTTTTGAGTAGATATTACTTTATCACTTTTTGAACTAAGAAACTTTTGTAAAGAAATTTACTATATATATATGCCTTTTTCCTAGCCTGTTTCTTCCTGTTAATGTATTTGTTCATGTTTGGTGCATAGAACTGGGTAAATGCAAAGTTCTGTGTTTAATTTCTTCAAAATGTATATATTTAGTGCTGCATCTTATAGCACTTTGAAATACCTCATGTTTATGAAAATAAATAGCTTAAAATTAAA",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "nucleotide_region-0015",
+      "unit": "nucleotide_region",
+      "classification": "TRANSCRIPT_SHARED_NUCLEOTIDE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "202",
+        "204",
+        "205",
+        "206",
+        "207"
+      ],
+      "universe": [
+        "ENST00000281043.4",
+        "ENST00000638417.2",
+        "ENST00000703162.1",
+        "ENST00000885101.2",
+        "ENST00000930195.2",
+        "ENST00000930196.1",
+        "ENST00001138178.1",
+        "NM_001446166.1"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "chr2:15947005–15947022",
+      "coordinates": [
+        15947005,
+        15947022
+      ],
+      "sequence": "TGATGCAACTCAACCTTT",
+      "scope": "Exonic genomic-position coverage among eight current transcripts; not a genome-wide nucleotide substring comparison",
+      "minimum_length": 1,
+      "length_unit": "bp",
+      "matching": "exact position coverage on the annotated strand; reverse-complement searching is not used"
+    },
+    {
+      "feature_id": "protein_sequence-0001",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_UNIQUE_SEQUENCE_REGION",
+      "relationship": "unique",
+      "carriers": [
+        "nmyc"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "N-Myc aa 1–270",
+      "product_id": "nmyc",
+      "coordinates": [
+        1,
+        270
+      ],
+      "window_start_range": [
+        1,
+        263
+      ],
+      "window_count": 263,
+      "sequence": "MPSCSTSTMPGMICKNPDLEFDSLQPCFYPDEDDFYFGGPDSTPPGEDIWKKFELLPTPPLSPSRGFAEHSSEPPSWVTEMLLENELWGSPAEEDAFGLGGLGGLTPNPVILQDCMWSGFSAREKLERAVSEKLQHGRGPPTAGSTAQSPGAGAASPAGRGHGGAAGAGRAGAALPAELAHPAAECVDPAVVFPFPVNKREPAPVPAAPASAPAAGPAVASGAGIAAPAGAPGVAPPRPGGRQTSGGDHKALSTSGEDTLSDSDDEDDEE",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    },
+    {
+      "feature_id": "protein_sequence-0002",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_SHARED_SEQUENCE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "dmycn",
+        "nmyc"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "N-Myc aa 264–464",
+      "product_id": "nmyc",
+      "coordinates": [
+        264,
+        464
+      ],
+      "window_start_range": [
+        264,
+        457
+      ],
+      "window_count": 194,
+      "sequence": "DDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    },
+    {
+      "feature_id": "protein_sequence-0003",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_SHARED_SEQUENCE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "dmycn",
+        "musep",
+        "mycnot"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ΔMYCN aa 1–52",
+      "product_id": "dmycn",
+      "coordinates": [
+        1,
+        52
+      ],
+      "window_start_range": [
+        1,
+        45
+      ],
+      "window_count": 45,
+      "sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAG",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    },
+    {
+      "feature_id": "protein_sequence-0004",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_UNIQUE_SEQUENCE_REGION",
+      "relationship": "unique",
+      "carriers": [
+        "dmycn"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ΔMYCN aa 46–59",
+      "product_id": "dmycn",
+      "coordinates": [
+        46,
+        59
+      ],
+      "window_start_range": [
+        46,
+        52
+      ],
+      "window_count": 7,
+      "sequence": "DPLQSAGDDEDDEE",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    },
+    {
+      "feature_id": "protein_sequence-0005",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_SHARED_SEQUENCE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "dmycn",
+        "nmyc"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "ΔMYCN aa 53–253",
+      "product_id": "dmycn",
+      "coordinates": [
+        53,
+        253
+      ],
+      "window_start_range": [
+        53,
+        246
+      ],
+      "window_count": 194,
+      "sequence": "DDEDDEEEDEEEEIDVVTVEKRRSSSNTKAVTTFTITVRPKNAALGPGRAQSSELILKRCLPIHQQHNYAAPSPYVESEDAPPQKKIKSEASPRPLKSVIPPKAKSLSPRNSDSEDSERRRNHNILERQRRNDLRSSFLTLRDHVPELVKNEKAAKVVILKKATEYVHSLQAEEHQLLLEKEKLQARQQQLLKKIEHARTC",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    },
+    {
+      "feature_id": "protein_sequence-0006",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_SHARED_SEQUENCE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "dmycn",
+        "musep",
+        "mycnot"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "MYCNOT aa 1–52",
+      "product_id": "mycnot",
+      "coordinates": [
+        1,
+        52
+      ],
+      "window_start_range": [
+        1,
+        45
+      ],
+      "window_count": 45,
+      "sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAG",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    },
+    {
+      "feature_id": "protein_sequence-0007",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_UNIQUE_SEQUENCE_REGION",
+      "relationship": "unique",
+      "carriers": [
+        "mycnot"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "MYCNOT aa 46–112",
+      "product_id": "mycnot",
+      "coordinates": [
+        46,
+        112
+      ],
+      "window_start_range": [
+        46,
+        105
+      ],
+      "window_count": 60,
+      "sequence": "DPLQSAGVLEVGAGPRLPRPPREGSTPGIKTNGAERSPQSPAGRRADAELLHVHHAGHDLQEPRPRV",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    },
+    {
+      "feature_id": "protein_sequence-0008",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_SHARED_SEQUENCE_REGION",
+      "relationship": "shared",
+      "carriers": [
+        "dmycn",
+        "musep",
+        "mycnot"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "MUSEP aa 1–52",
+      "product_id": "musep",
+      "coordinates": [
+        1,
+        52
+      ],
+      "window_start_range": [
+        1,
+        45
+      ],
+      "window_count": 45,
+      "sequence": "MRGAPGNCVGAEQALARRKRAQTVAIRGHPRPPGPPGDTRAESPPDPLQSAG",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    },
+    {
+      "feature_id": "protein_sequence-0009",
+      "unit": "protein_sequence",
+      "classification": "PRODUCT_UNIQUE_SEQUENCE_REGION",
+      "relationship": "unique",
+      "carriers": [
+        "musep"
+      ],
+      "universe": [
+        "nmyc",
+        "dmycn",
+        "mycnot",
+        "musep"
+      ],
+      "evidence_status": "SEQUENCE_RELATIONSHIP_ONLY",
+      "label": "MUSEP aa 46–86",
+      "product_id": "musep",
+      "coordinates": [
+        46,
+        86
+      ],
+      "window_start_range": [
+        46,
+        79
+      ],
+      "window_count": 34,
+      "sequence": "DPLQSAGGKEQGLQTARRPGKRRAPGQGKPWTGLRRAHRAP",
+      "scope": "Exact 8-aa windows among the four displayed MYCN products only; not the human proteome and not experimental peptide evidence",
+      "minimum_length": 8,
+      "length_unit": "aa",
+      "matching": "exact, case-sensitive standard amino-acid sequence; no substitutions, reverse complement or nucleotide-frame comparison",
+      "display_note": "Consecutive window starts with identical product carrier sets are merged; neighbouring displayed regions may overlap by 7 aa"
+    }
+  ],
+  "counts": {
+    "orf": {
+      "all": 42,
+      "unique": 11,
+      "shared": 31
+    },
+    "exon": {
+      "all": 13,
+      "unique": 9,
+      "shared": 4
+    },
+    "junction": {
+      "all": 7,
+      "unique": 4,
+      "shared": 3
+    },
+    "nucleotide_region": {
+      "all": 15,
+      "unique": 4,
+      "shared": 11
+    },
+    "protein_sequence": {
+      "all": 9,
+      "unique": 4,
+      "shared": 5
+    }
+  },
+  "protein_window_length": 8,
+  "peptide_evidence_categories": "Not implemented: no retained experimental peptide-discrimination evidence is inferred from these sequence comparisons"
+}

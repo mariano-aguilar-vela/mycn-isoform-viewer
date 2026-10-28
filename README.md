@@ -1,12 +1,18 @@
 # MYCN living transcript and ORF viewer
 
-Application **2.0.0** displays the complete **GENCODE v50 / GRCh38.p14 / Ensembl 116** MYCN transcript set and the reviewed **RefSeq NM_001446166.1** addition, shown as **MYCN-XM (TV4)**. Data were scientifically reviewed on **2026-10-28**. The current build is `gencode-50_refseq-NM_001446166.1_mycn-1`.
+Application **2.1.0** displays the complete **GENCODE v50 / GRCh38.p14 / Ensembl 116** MYCN transcript set and the reviewed **RefSeq NM_001446166.1** addition, shown as **MYCN-XM (TV4)**. Data were scientifically reviewed on **2026-10-28**. The current build is `gencode-50_refseq-NM_001446166.1_mycn-2`.
 
 [Public site](https://mariano-aguilar-vela.github.io/mycn-isoform-viewer/) · [Reference-update policy](REFERENCE_UPDATE_POLICY.md) · [Current source manifest](data/current/manifest.json) · [Scientific release changes](data/current/release-diff.json)
 
 The structures are regenerated from official GENCODE annotation, transcript FASTA and protein FASTA, and NCBI transcript/protein/genomic records. Every transcript sequence matches concatenated genomic exons; annotated CDS translations match the official proteins. MYCN-202, MYCN-204 and MYCN-205 use the current `.2` accessions with their corresponding rebuilt exon boundaries, not relabelled v49 models.
 
 TV1–TV6, TV2+, and NC are owner-supplied laboratory aliases, maintained centrally in `lab-aliases.js`. Current database names and accessions remain authoritative. MYCN-XM is a study display label for the reviewed RefSeq transcript variant 4, not a GENCODE name. Its replaced XM accessions and exact genomic placement verification are retained in provenance.
+
+## Curated products and relationships
+
+The versioned registry `data/curation/products.v1.json` restores N-Myc (blue), ΔMYCN (orange), MYCNOT (red) and MUSEP (purple), with MNOP searchable as a curated alternate designation. Products are mapped by verified protein hash and transcript membership, independent of local ORF numbering. Protein products opens source transcripts, ORFs, sequences, citations and evidence. ΔMYCN domain coordinates are exact sequence projections from N-Myc, not direct experimental domain validation. MUSEP/MNOP nomenclature is project curation; the 86-aa sequence is validated against current RNA, while exact identity to the published detected MNOP has not been independently accession-verified.
+
+Unique and shared features exposes all/unique/shared filters for ORFs, exon intervals, splice junctions, exonic genomic coverage and exact 8-aa protein windows. The 42 ORFs include 11 single-transcript and 31 multi-transcript models. Genomic features compare the eight displayed transcript models; protein windows compare the four displayed products only. Adjacent window runs can overlap seven residues. No proteome-wide uniqueness or experimental peptide evidence is inferred. FASTA and JSON exports preserve sequences and comparison scope.
 
 ## ORFs and evidence
 

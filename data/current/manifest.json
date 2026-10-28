@@ -1,7 +1,7 @@
 {
-  "schema_version": "2.0.0",
-  "application_version": "2.0.0",
-  "reference_build": "gencode-50_refseq-NM_001446166.1_mycn-1",
+  "schema_version": "2.1.0",
+  "application_version": "2.1.0",
+  "reference_build": "gencode-50_refseq-NM_001446166.1_mycn-2",
   "status": "CURRENT",
   "review_date": "2026-10-28",
   "assembly": "GRCh38.p14",
@@ -26,7 +26,7 @@
     "biopython": "1.87",
     "jsonschema": "4.25.1"
   },
-  "reference_sha256": "565bb5f6aa502822a9c57c5f1c171b45cd24ef32a9d98321b8bf1df0c98ef0fe",
+  "reference_sha256": "88564dbd6d4fc2cea12c1180896839cb7d538609a6240e9333303fe2a5449d99",
   "sources": {
     "gencode_release": 50,
     "assembly": "GRCh38.p14",
@@ -179,5 +179,7 @@
       }
     ],
     "unavailable_sources": []
-  }
+  },
+  "structure_reference_build": "gencode-50_refseq-NM_001446166.1_mycn-1",
+  "product_registry_version": "1.0.0"
 }

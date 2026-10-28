@@ -21,6 +21,27 @@ class ReferenceTests(unittest.TestCase):
         self.assertEqual(data['transcripts']['204']['exons'][-1][1],15947022)
         self.assertEqual(data['transcripts']['205']['exons'][-1][1],15947022)
         for t in data['transcripts'].values():self.assertEqual(t['evidence_class'],'DATABASE_ANNOTATED')
+class ProductTests(unittest.TestCase):
+    def setUp(self):
+        self.data=json.loads(Path('data/current/reference.json').read_text())
+    def test_curated_identity_and_original_palette(self):
+        expected={'nmyc':('201',464,'#4A6FA5'),'dmycn':('202',253,'#D98A3D'),'mycnot':('201',112,'#C0504D'),'musep':('205',86,'#B0568C')}
+        import hashlib
+        for key,(tx,length,color) in expected.items():
+            p=self.data['products'][key];o=self.data['orfs'][p['orf_id']]
+            self.assertEqual(p['primary_transcript'],tx);self.assertIn(tx,o['carriers']);self.assertEqual(p['protein_length'],length);self.assertEqual(p['color'],color);self.assertEqual(o['color'],color)
+            self.assertEqual(p['protein_sequence'],translate(o['nt'])[:-1]);self.assertEqual(hashlib.sha256(p['protein_sequence'].encode()).hexdigest(),p['protein_sequence_hash'])
+        self.assertIn('MNOP',self.data['products']['musep']['alternate_names'])
+        ps=self.data['products'];self.assertEqual(ps['dmycn']['protein_sequence'][:52],ps['mycnot']['protein_sequence'][:52]);self.assertEqual(ps['dmycn']['protein_sequence'][:52],ps['musep']['protein_sequence'][:52]);self.assertEqual(ps['dmycn']['protein_sequence'][52:],ps['nmyc']['protein_sequence'][263:])
+    def test_singleton_preservation_and_exact_window_scope(self):
+        rel=self.data['relationships'];self.assertEqual(rel['counts']['orf'],{'all':42,'unique':11,'shared':31})
+        for f in rel['features']:
+            self.assertTrue(f['scope']);self.assertTrue(f['universe']);self.assertEqual(f['relationship']=='unique',len(f['carriers'])==1)
+            if f['unit']=='protein_sequence':
+                seq=self.data['products'][f['product_id']]['protein_sequence'];a,b=f['window_start_range']
+                for i in range(a-1,b):
+                    carriers=sorted(k for k,p in self.data['products'].items() if seq[i:i+8] in p['protein_sequence'])
+                    self.assertEqual(carriers,f['carriers'])
 class UpdateTests(unittest.TestCase):
     def test_release_and_refseq_detection(self):
         from check_for_reference_updates import check

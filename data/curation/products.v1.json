@@ -1,0 +1,127 @@
+{
+  "version": "1.0.0",
+  "review_date": "2026-10-28",
+  "color_authority": "Exact historical curated palette, restored by owner directive",
+  "products": [
+    {
+      "product_id": "nmyc",
+      "display_name": "N-Myc",
+      "alternate_names": [],
+      "product_class": "canonical_CDS",
+      "laboratory_name": "N-Myc",
+      "primary_transcript": "201",
+      "protein_length": 464,
+      "protein_sequence_hash": "fa79938c9ec63152d698af4c3ac193e588946975729afe36c817875af7f19dec",
+      "color": "#4A6FA5",
+      "evidence_status": [
+        "REFSEQ_ANNOTATED_PRODUCT",
+        "GENCODE_ANNOTATED_TRANSLATION"
+      ],
+      "primary_source": [
+        "https://www.uniprot.org/uniprotkb/P04198/entry"
+      ],
+      "database_source": "ENSP00000281043.3",
+      "experimental_status": "Published detection is limited to the cited studies; no sample-specific detection is inferred",
+      "prediction_status": "Current ORF and transcript compatibility validated from sequence",
+      "function_status": "Database-annotated transcription-factor product",
+      "description": "Canonical annotated MYCN protein; current sequence matches reviewed UniProt P04198.",
+      "release_introduced": "historical curated viewer; restored in 2.1.0",
+      "release_last_reviewed": "2026-10-28",
+      "nomenclature_authority": "Owner directive and retained curated product identity; published names cited separately"
+    },
+    {
+      "product_id": "dmycn",
+      "display_name": "ΔMYCN",
+      "alternate_names": [
+        "DeltaMYCN",
+        "DeltMYCN",
+        "delta-MYCN"
+      ],
+      "product_class": "alternative_CDS",
+      "laboratory_name": "ΔMYCN",
+      "primary_transcript": "202",
+      "protein_length": 253,
+      "protein_sequence_hash": "77350d39392b3bc08ad126c20d8062874afddb716097116826ddc28c477e1b00",
+      "color": "#D98A3D",
+      "evidence_status": [
+        "REFSEQ_ANNOTATED_PRODUCT",
+        "GENCODE_ANNOTATED_TRANSLATION"
+      ],
+      "primary_source": [
+        "https://www.ncbi.nlm.nih.gov/protein/NP_001280160.1",
+        "https://pubmed.ncbi.nlm.nih.gov/15821734/"
+      ],
+      "database_source": "ENSP00000491476.1",
+      "experimental_status": "The RefSeq and GENCODE translation is sequence-validated. No direct product-specific experimental detection claim is made here.",
+      "prediction_status": "Current ORF and transcript compatibility validated from sequence",
+      "function_status": "FUNCTION_UNRESOLVED: sequence/annotation does not establish product-specific physiological function",
+      "description": "MYCN-202 (TV3) omits the exon corresponding to MYCN-201 exon 2. The 253-aa product has an alternative N-terminus and an exact C-terminal sequence shared with N-Myc; bHLH/zipper coordinates are sequence projections.",
+      "release_introduced": "historical curated viewer; restored in 2.1.0",
+      "release_last_reviewed": "2026-10-28",
+      "nomenclature_authority": "Owner directive and retained curated product identity; published names cited separately"
+    },
+    {
+      "product_id": "mycnot",
+      "display_name": "MYCNOT",
+      "alternate_names": [],
+      "product_class": "uORF_product",
+      "laboratory_name": "MYCNOT",
+      "primary_transcript": "201",
+      "protein_length": 112,
+      "protein_sequence_hash": "778ba78b65f4636661ff406fdf146ca60a7e0a78f3ac041f818d7a6c5f5fba2d",
+      "color": "#C0504D",
+      "evidence_status": [
+        "REFSEQ_ANNOTATED_PRODUCT",
+        "PRIMARY_LITERATURE_DETECTED"
+      ],
+      "primary_source": [
+        "https://www.ncbi.nlm.nih.gov/protein/NP_001280162.1",
+        "https://www.uniprot.org/uniprotkb/Q9H224/entry",
+        "https://pubmed.ncbi.nlm.nih.gov/20017904/",
+        "https://pubmed.ncbi.nlm.nih.gov/37682868/"
+      ],
+      "database_source": "NP_001280162.1; UniProt Q9H224 (unreviewed TrEMBL)",
+      "experimental_status": "Published detection is limited to the cited studies; no sample-specific detection is inferred",
+      "prediction_status": "Current ORF and transcript compatibility validated from sequence",
+      "function_status": "FUNCTION_UNRESOLVED: sequence/annotation does not establish product-specific physiological function",
+      "description": "The exon-1b-excluded MYCN-201 (TV2) context encodes this 112-aa upstream/overlapping ORF product. Published studies report detection in defined experimental systems; its physiological function is unresolved.",
+      "release_introduced": "historical curated viewer; restored in 2.1.0",
+      "release_last_reviewed": "2026-10-28",
+      "nomenclature_authority": "Owner directive and retained curated product identity; published names cited separately"
+    },
+    {
+      "product_id": "musep",
+      "display_name": "MUSEP",
+      "alternate_names": [
+        "MNOP"
+      ],
+      "product_class": "uORF_product",
+      "laboratory_name": "MUSEP",
+      "primary_transcript": "205",
+      "protein_length": 86,
+      "protein_sequence_hash": "c6acd7472e0463419a5084aa5d50718d17c94d67fb7fc140b234c56781559bbd",
+      "color": "#B0568C",
+      "evidence_status": [
+        "COMPUTATIONAL_ORF_PREDICTION",
+        "FUNCTION_UNRESOLVED"
+      ],
+      "primary_source": [
+        "https://pubmed.ncbi.nlm.nih.gov/37682868/"
+      ],
+      "database_source": "No dedicated protein accession asserted",
+      "experimental_status": "The cited paper reports MNOP detection in its experimental systems. This 86-aa sequence-to-MNOP assignment is project curation validated here against current RNA, not an independently accessioned experimental sequence identification.",
+      "prediction_status": "Current ORF and transcript compatibility validated from sequence",
+      "function_status": "FUNCTION_UNRESOLVED: sequence/annotation does not establish product-specific physiological function",
+      "description": "MUSEP is the project-facing name of the validated 86-aa product in the exon-1b-retained MYCN-205 (TV1) context. MNOP is a published designation. The current sequence mapping is project curation verified against current transcript sequence; the published MNOP detection claim is not a sample-specific or independently accessioned sequence assignment.",
+      "release_introduced": "historical curated viewer; restored in 2.1.0",
+      "release_last_reviewed": "2026-10-28",
+      "nomenclature_authority": "Owner directive and retained curated product identity; published names cited separately",
+      "literature_evidence": {
+        "designation": "MNOP",
+        "status": "PRIMARY_LITERATURE_DETECTED",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/37682868/",
+        "exact_published_sequence_assignment": "Not independently accession-verified; MUSEP/MNOP naming equivalence is project/owner curation"
+      }
+    }
+  ]
+}
