@@ -539,21 +539,23 @@
         });
     }
     function setLeft(open) {
-        if (open && isPhone() && selectedOrf != null) pickOrf(null);
-        if (open && isPhone() && rightOpen) openRight(false);
+        if (open && vpW() < 1200 && selectedOrf != null) pickOrf(null);
+        if (open && vpW() < 1200 && rightOpen) openRight(false);
         $("features").hidden = !open;
         $("features-strip").hidden = open;
         syncDrawerAccessibility();
     }
     function openRight(open) {
         rightOpen = !!open;
-        if (rightOpen && isPhone()) setLeft(false);
+        if (rightOpen && vpW() < 1200) setLeft(false);
         $("details").hidden = !rightOpen;
         $("details-strip").hidden = rightOpen;
         syncDrawerAccessibility();
     }
     function syncDrawerAccessibility() {
-        var phone = isPhone(), left = !$("features").hidden, right = !$("details").hidden, overlay = phone && (left || right);
+        var phone = isPhone(), left = !$("features").hidden, right = !$("details").hidden;
+        if(!phone && right && vpW()<1200 && left){$("features").hidden=true;$("features-strip").hidden=false;left=false;}
+        var overlay = phone && (left || right);
         [ "topbar", "viewer", "features-strip", "details-strip" ].forEach(function(id) {
             $(id).inert = overlay;
         });
@@ -793,8 +795,7 @@
     function computeW() {
         computeGutter();
         var box = $("stack-scroll"), cw = box ? box.clientWidth : 900;
-        var floor = isPhone() ? 300 : isTablet() ? 480 : 720;
-        W = Math.max(floor, cw - 2);
+        W = Math.max(GUTTER + PADR + 60, cw - 2);
     }
     var SHORT_LBL_MAX = 130;
     function shortLabels() {
@@ -1767,13 +1768,13 @@
         h += "<h3>Protein annotations</h3>" + proteinDiagram(o);
         h += "<p>Physicochemical values are computational predictions, not measurements of cellular stability. Domain annotations are shown only for an exact sequence match to their cited database record.</p>";
         [ [ "Nucleotide sequence (including stop)", o.nt ], [ "Amino-acid sequence", o.aa ] ].forEach(function(pair) {
-            h += '<div class="seqblock"><div class="seqhead"><span>' + esc(pair[0]) + '</span><button class="copy" data-seq="' + esc(pair[1]) + '">Copy</button></div><div class="seq">' + esc(pair[1]) + "</div></div>";
+            h += '<div class="seqblock"><div class="seqhead"><span>' + esc(pair[0]) + '</span><button class="copy" data-seq="' + esc(pair[1]) + '">Copy</button></div><div class="seq" tabindex="0" role="region" aria-label="' + esc(pair[0]) + '">' + esc(pair[1]) + "</div></div>";
         });
         return h;
     }
     var SVGNS = "http://www.w3.org/2000/svg";
     function composeExport() {
-        var GAP = 6, TITLEH = 48, totalH = TITLEH + IDEO_H + GAP + HDR_H + GAP + H;
+        var GAP=6, titleLines=packTokens(["CURRENT","GENCODE "+META.gencode_release,META.assembly,"RefSeq "+META.refseq_accession],W-28,11), versionLines=packTokens(["App "+META.application_version].concat(META.reference_build.split("_")),W-28,9), TITLEH=10+titleLines.length*15+versionLines.length*12, totalH=TITLEH+IDEO_H+GAP+HDR_H+GAP+H;
         var out = document.createElementNS(SVGNS, "svg");
         out.setAttribute("width", W);
         out.setAttribute("height", totalH);
@@ -1807,18 +1808,9 @@
         bg.setAttribute("height", totalH);
         bg.setAttribute("fill", "#ffffff");
         out.appendChild(bg);
-        var title = document.createElementNS(SVGNS, "text");
-        title.setAttribute("x", 14);
-        title.setAttribute("y", 20);
-        title.setAttribute("font-size", 12);
-        title.textContent = "CURRENT · GENCODE " + META.gencode_release + " · " + META.assembly + " · RefSeq " + META.refseq_accession;
-        out.appendChild(title);
-        var version = document.createElementNS(SVGNS, "text");
-        version.setAttribute("x", 14);
-        version.setAttribute("y", 38);
-        version.setAttribute("font-size", 10);
-        version.textContent = "App " + META.application_version + " · " + META.reference_build;
-        out.appendChild(version);
+        var titleY=14;
+        titleLines.forEach(function(line){var title=document.createElementNS(SVGNS,"text");title.setAttribute("x",14);title.setAttribute("y",titleY);title.setAttribute("font-size",11);title.textContent=line;out.appendChild(title);titleY+=15;});
+        versionLines.forEach(function(line){var version=document.createElementNS(SVGNS,"text");version.setAttribute("x",14);version.setAttribute("y",titleY);version.setAttribute("font-size",9);version.textContent=line;out.appendChild(version);titleY+=12;});
         [ [ "ideo", TITLEH ], [ "hdr", TITLEH + IDEO_H + GAP ], [ "stack", TITLEH + IDEO_H + GAP + HDR_H + GAP ] ].forEach(function(pair) {
             var src = $(pair[0]);
             if (!src) return;
