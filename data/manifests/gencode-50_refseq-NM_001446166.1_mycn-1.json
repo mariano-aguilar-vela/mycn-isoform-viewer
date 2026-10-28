@@ -20,13 +20,13 @@
     "non_AUG_calls": "not enumerated",
     "experimental_claims": "none; annotation and prediction do not establish expression or function"
   },
-  "application_commit": "7b8488cfb12bd531820d1be1bc804bd003b270dd",
+  "application_commit": "80eb6cc7d4d3c3e90378fc332bce69fcf31ca421",
   "pipeline_versions": {
     "python": "3.13.5",
     "biopython": "1.87",
     "jsonschema": "4.25.1"
   },
-  "reference_sha256": "8bf6d7be41267645ec8ae1bd65abe01b7f5c00909a1bc95abb29ec448caad30c",
+  "reference_sha256": "565bb5f6aa502822a9c57c5f1c171b45cd24ef32a9d98321b8bf1df0c98ef0fe",
   "sources": {
     "gencode_release": 50,
     "assembly": "GRCh38.p14",
